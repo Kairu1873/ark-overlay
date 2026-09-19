@@ -1,12 +1,13 @@
 :root {
-  --bg: #0f1412;
-  --card: #18201c;
-  --card-2: #1f2a25;
-  --line: #2c3a33;
-  --text: #e8efe9;
-  --muted: #8fa298;
-  --accent: #f0a93b;
-  --accent-ink: #1a1206;
+  --bg: #0d121b;
+  --card: #151c28;
+  --card-2: #1c2533;
+  --line: #2a3547;
+  --text: #e6ecf5;
+  --muted: #8c9ab0;
+  --accent: #3f74b8;
+  --accent-text: #86aee0;
+  --accent-ink: #ffffff;
   --ok: #6fd08c;
   --danger: #e2685c;
   --radius: 14px;
@@ -21,7 +22,7 @@ body {
 input { -webkit-user-select: text; user-select: text; }
 main { max-width: 640px; margin: 0 auto; padding: 0 16px 32px; }
 .top { max-width: 640px; margin: 0 auto; padding: 16px 16px 8px; }
-h1 { margin: 0; font-size: 22px; letter-spacing: .04em; color: var(--accent); }
+h1 { margin: 0; font-size: 22px; letter-spacing: .04em; color: var(--accent-text); }
 h1 span { color: var(--text); margin-left: 6px; font-weight: 600; }
 h2 { font-size: 14px; margin: 0; color: var(--muted); font-weight: 600; letter-spacing: .06em; }
 .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px; }
@@ -46,7 +47,7 @@ button {
 button:active { transform: scale(.97); }
 button.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); font-weight: 700; }
 button.danger { color: var(--danger); }
-button.link { background: none; border: 0; color: var(--accent); padding: 4px 0; font-size: 14px; }
+button.link { background: none; border: 0; color: var(--accent-text); padding: 4px 0; font-size: 14px; }
 .error { color: var(--danger); font-size: 13px; margin: 8px 0 0; }
 section { margin-top: 22px; }
 .section-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; min-height: 28px; }
@@ -57,7 +58,7 @@ section { margin-top: 22px; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .chip { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; padding: 9px 14px; position: relative; text-align: left; }
 .chip-name { font-weight: 700; }
-.chip-time { font-size: 12px; color: var(--accent); }
+.chip-time { font-size: 12px; color: var(--accent-text); }
 .chip-del {
   display: none; position: absolute; top: -8px; right: -8px; width: 24px; height: 24px; line-height: 22px;
   border-radius: 50%; background: var(--danger); color: #fff; text-align: center; font-size: 15px;

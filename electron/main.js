@@ -29,7 +29,7 @@ function createWindow() {
     height: 760,
     minWidth: 340,
     minHeight: 480,
-    backgroundColor: '#0f1412',
+    backgroundColor: '#0d121b',
     title: 'ARKタイマー',
     icon: path.join(__dirname, 'icon.png'),
     show: !process.argv.includes('--hidden'),
