@@ -1,10 +1,10 @@
 name: Build
 
+# main への push では動かさない（Private リポジトリの Actions 枠を節約するため）
 on:
-  push:
-    branches: [main]
-    tags: ['v*']
   workflow_dispatch:
+  push:
+    tags: ['v*']
 
 jobs:
   windows:

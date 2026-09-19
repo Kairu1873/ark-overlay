@@ -15,15 +15,14 @@ Macは不要。iOSのビルドはGitHubのクラウド上のMacで行う。
 
 ## 1. ビルドする（GitHub Actions）
 
-ビルドは `.github/workflows/build.yml` で定義しており、次のいずれかで始まる。
+ビルドは `.github/workflows/build.yml` で定義しており、明示的に実行したときだけ動く。`main` への push では動かない。
 
 | きっかけ | 動き |
 |---|---|
-| `main` への push | Windows・iOS の両方をビルド |
-| Actions タブ → **Build** → **Run workflow** | 手動で同じビルドを実行 |
+| Actions タブ → **Build** → **Run workflow**（または `gh workflow run build.yml`） | Windows・iOS の両方をビルド |
 | `v*` タグの push（例：`git tag v1.0.0 && git push origin v1.0.0`） | ビルドに加えて Releases ページに成果物を置く |
 
-1. リポジトリの **Actions** タブ → 一番上の実行を開く（10分前後で完了）
+1. リポジトリの **Actions** タブ → 一番上の実行を開く（数分で完了）
 2. 完了した実行ページ下部の **Artifacts** から2つダウンロード
    - `ARKTimer-Windows` … Windowsインストーラー（zipの中に .exe）
    - `ARKTimer-iOS-unsigned` … iPhone用（zipの中に .ipa）
@@ -107,5 +106,5 @@ ios/        iOSのXcodeプロジェクト（Capacitor）
 ```
 
 - PCで試す：`npm install` → `npm start`
-- 画面を変えたら push するだけで両OS分が再ビルドされる
+- 画面を変えたら push したあと、Actions で Build を実行すると両OS分が再ビルドされる
 - iOSの通知はOSに予約する（最大64件）。Windowsはメインプロセスが1秒ごとに監視する
