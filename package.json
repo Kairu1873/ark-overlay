@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "ARK用マルチタイマー（孵化・インプリントなど）",
   "main": "electron/main.js",
-  "author": "Kairu1873",
+  "author": "Kairu",
   "license": "MIT",
   "scripts": {
     "build:web": "esbuild src/app.js --bundle --format=iife --target=es2019 --outfile=www/app.js",
