@@ -1,0 +1,42 @@
+name: Data
+
+# Wiki から生物・アイテムのデータを取り込んで data/ を更新する。
+# ビルド（build.yml）とは独立して回す。
+on:
+  workflow_dispatch:
+  schedule:
+    # 毎週月曜 18:00 UTC（日本時間 火曜 03:00）
+    - cron: '0 18 * * 1'
+
+jobs:
+  update:
+    name: データ更新
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: 取得
+        run: node tools/fetch-wiki.mjs
+
+      # 検証が落ちたらここで止まる。壊れたデータはコミットさせない
+      - name: 検証
+        run: node tools/validate-data.mjs
+
+      - name: 差分があればコミット
+        run: |
+          if git diff --quiet -- data/; then
+            echo "更新なし"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git commit -m "Wiki からデータを更新する
+
+          $(node -e "const m=require('./data/meta.json');console.log('生物 '+m.counts.creatures+'件 / アイテム '+m.counts.items+'件')")"
+          git push
