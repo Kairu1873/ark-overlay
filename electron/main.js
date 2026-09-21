@@ -1,5 +1,6 @@
 const { app, BrowserWindow, Tray, Menu, Notification, ipcMain, nativeImage } = require('electron');
 const path = require('path');
+const wikiData = require('./data');
 
 const APP_ID = 'com.kairu.arktimer'; // package.json の build.appId と同じにする（Windows通知に必要）
 let win = null;
@@ -21,6 +22,10 @@ function init() {
   createTray();
   // メインプロセスで時刻を監視（ウィンドウを閉じてもトレイ常駐中は通知される）
   setInterval(checkSchedules, 1000);
+  // データ更新は起動を待たせない。失敗しても同梱データで動く
+  wikiData.checkUpdateInBackground((data) => {
+    if (win && !win.isDestroyed()) win.webContents.send('data:updated', data);
+  });
 }
 
 function createWindow() {
@@ -102,6 +107,8 @@ const fmt = (ms) => {
   const d = new Date(ms);
   return `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
 };
+
+ipcMain.handle('data:get', () => wikiData.get());
 
 ipcMain.on('schedules:sync', (_e, list) => {
   // 画面側が「完了」にした直後の同期で消えてしまわないよう、先に期限切れ分を通知する

@@ -1,16 +1,21 @@
-import { platform, requestPermission, syncSchedules, notifyNow, onNotificationTap } from './notifier.js';
+import { platform, requestPermission, syncSchedules, notifyNow } from './notifier.js';
+import { initCreatures } from './ui/creatures.js';
 
 const STORE_KEY = 'arkTimer.v1';
 const DEFAULT_PRESETS = [{ id: 'p1', name: 'ルミナ孵化', seconds: 90 * 60 }];
 
 // ---------- 状態 ----------
+// rates（サーバー倍率）と overrides（生物ごとの手入力値）は後から足した任意キー。
+// 既存の保存内容を壊さないよう、STORE_KEY は据え置きで既定値を埋める。
 let state = load();
 function load() {
   try {
     const s = JSON.parse(localStorage.getItem(STORE_KEY));
-    if (s && Array.isArray(s.presets) && Array.isArray(s.timers)) return s;
+    if (s && Array.isArray(s.presets) && Array.isArray(s.timers)) {
+      return { rates: undefined, overrides: {}, ...s };
+    }
   } catch (_) {}
-  return { presets: DEFAULT_PRESETS, timers: [] };
+  return { presets: DEFAULT_PRESETS, timers: [], rates: undefined, overrides: {} };
 }
 function save() {
   try {
@@ -277,7 +282,6 @@ function bind() {
     const b = e.target.closest('[data-act]');
     if (b) act(b.dataset.id, b.dataset.act);
   });
-  onNotificationTap(() => render());
   document.addEventListener('visibilitychange', () => document.visibilityState === 'visible' && tick());
 }
 
@@ -286,4 +290,12 @@ bind();
 tick();
 commit();
 setInterval(tick, 250);
+initCreatures({
+  state,
+  save,
+  startTimer: (name, seconds) => {
+    startTimer(name, seconds);
+    requestPermission();
+  },
+});
 if (state.timers.length === 0) requestPermission();

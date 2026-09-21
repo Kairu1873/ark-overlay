@@ -1,0 +1,94 @@
+{
+ "Raw Meat": {
+  "foodValue": 50,
+  "affinity": 50
+ },
+ "Cooked Meat": {
+  "foodValue": 25,
+  "affinity": 25
+ },
+ "Raw Mutton": {
+  "foodValue": 50,
+  "affinity": 187.5
+ },
+ "Cooked Lamb Chop": {
+  "foodValue": 49.945,
+  "affinity": 101.25
+ },
+ "Cooked Meat Jerky": {
+  "foodValue": 25,
+  "affinity": 25
+ },
+ "Raw Prime Meat": {
+  "foodValue": 50,
+  "affinity": 150
+ },
+ "Cooked Prime Meat": {
+  "foodValue": 49.945,
+  "affinity": 75
+ },
+ "Prime Meat Jerky": {
+  "foodValue": 49.945,
+  "affinity": 75
+ },
+ "Raw Fish Meat": {
+  "foodValue": 25,
+  "affinity": 20
+ },
+ "Raw Prime Fish Meat": {
+  "foodValue": 25,
+  "affinity": 60
+ },
+ "Cooked Fish Meat": {
+  "foodValue": 12.5,
+  "affinity": 10
+ },
+ "Cooked Prime Fish Meat": {
+  "foodValue": 25.686001,
+  "affinity": 30
+ },
+ "Spoiled Meat": {
+  "foodValue": 50,
+  "affinity": 100
+ },
+ "Vegetables": {
+  "foodValue": 40,
+  "affinity": 40
+ },
+ "Mejoberry": {
+  "foodValue": 30,
+  "affinity": 30
+ },
+ "Berries": {
+  "foodValue": 19.9999995,
+  "affinity": 20
+ },
+ "Fresh Tea Leaves (Primitive Plus)": {
+  "foodValue": 20,
+  "affinity": 40
+ },
+ "Fresh Sorghum (Primitive Plus)": {
+  "foodValue": 20,
+  "affinity": 40
+ },
+ "Fresh Barley (Primitive Plus)": {
+  "foodValue": 40,
+  "affinity": 40
+ },
+ "Fresh Wheat (Primitive Plus)": {
+  "foodValue": 40,
+  "affinity": 40
+ },
+ "Soybean (Primitive Plus)": {
+  "foodValue": 40,
+  "affinity": 40
+ },
+ "Dried Wheat (Primitive Plus)": {
+  "foodValue": 80,
+  "affinity": 40
+ },
+ "Kibble": {
+  "foodValue": 53.28,
+  "affinity": 400
+ }
+}

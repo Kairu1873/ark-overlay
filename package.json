@@ -7,18 +7,14 @@
   "author": "Kairu1873",
   "license": "MIT",
   "scripts": {
-    "build:web": "esbuild src/app.js --bundle --format=iife --target=es2019,safari15 --outfile=www/app.js",
+    "build:web": "esbuild src/app.js --bundle --format=iife --target=es2019 --outfile=www/app.js",
     "start": "npm run build:web && electron .",
-    "sync:ios": "npm run build:web && cap sync ios",
-    "dist:win": "npm run build:web && electron-builder --win nsis --publish never"
-  },
-  "dependencies": {
-    "@capacitor/core": "^8.5.2",
-    "@capacitor/ios": "^8.5.2",
-    "@capacitor/local-notifications": "^8.3.1"
+    "dist:win": "npm run build:web && electron-builder --win nsis --publish never",
+    "data:fetch": "node tools/fetch-wiki.mjs",
+    "data:validate": "node tools/validate-data.mjs",
+    "test": "node tools/test-timers.mjs"
   },
   "devDependencies": {
-    "@capacitor/cli": "^8.5.2",
     "electron": "^44.4.3",
     "electron-builder": "^26.15.3",
     "esbuild": "^0.25.0"
@@ -26,7 +22,7 @@
   "build": {
     "appId": "com.kairu.arktimer",
     "productName": "ARKタイマー",
-    "files": ["electron/**", "www/**", "package.json", "!node_modules/**"],
+    "files": ["electron/**", "www/**", "data/**", "package.json", "!node_modules/**"],
     "win": { "target": "nsis", "icon": "build/icon.png", "artifactName": "ARKTimer-Setup-${version}.exe" },
     "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true, "shortcutName": "ARKタイマー" }
   }
