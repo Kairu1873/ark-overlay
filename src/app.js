@@ -1,4 +1,4 @@
-import { platform, requestPermission, syncSchedules, notifyNow, onNotificationTap } from './notifier.js';
+import { platform, requestPermission, syncSchedules, notifyNow } from './notifier.js';
 
 const STORE_KEY = 'arkTimer.v1';
 const DEFAULT_PRESETS = [{ id: 'p1', name: 'ルミナ孵化', seconds: 90 * 60 }];
@@ -277,7 +277,6 @@ function bind() {
     const b = e.target.closest('[data-act]');
     if (b) act(b.dataset.id, b.dataset.act);
   });
-  onNotificationTap(() => render());
   document.addEventListener('visibilitychange', () => document.visibilityState === 'visible' && tick());
 }
 
