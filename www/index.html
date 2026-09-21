@@ -30,6 +30,22 @@
       </div>
     </form>
 
+    <section id="creatureSection" hidden>
+      <div class="section-head">
+        <h2>生物から作る</h2>
+        <button id="editRates" class="link" type="button">サーバー倍率</button>
+      </div>
+      <div id="rates" class="card" hidden></div>
+      <div class="card">
+        <label class="field">
+          <span>生物を探す（英名）</span>
+          <input id="creatureQuery" type="text" placeholder="例：Rex" maxlength="40" autocomplete="off" />
+        </label>
+        <div id="creatureResults" class="chips"></div>
+      </div>
+      <div id="creatureDetail"></div>
+    </section>
+
     <section>
       <div class="section-head">
         <h2>プリセット</h2>

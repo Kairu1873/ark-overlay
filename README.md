@@ -52,13 +52,41 @@ npm run dist:win   # dist/ARKTimer-Setup-<version>.exe ができる
 
 ---
 
+## 生物データについて
+
+`data/` 配下の生物・アイテムデータは [ARK Official Community Wiki](https://ark.wiki.gg/)（および日本語の [ARK: Survival Ascended 攻略Wiki](https://wikiwiki.jp/arksa/)）から取得したものである。
+
+- **ライセンスはリポジトリ本体（MIT）とは別**であり、**CC BY-NC-SA 4.0** が適用される。詳細は [data/NOTICE.md](data/NOTICE.md) を参照。
+- 取得は `.github/workflows/data.yml` が週1回まとめて行う。アプリの実行時にWikiへアクセスすることはない。
+
+### 2つのWikiの使い分け
+
+| | 供給するもの |
+|---|---|
+| 英語Wiki | 数値全般（孵化・成長・交配・テイム係数・ステータス・レシピ） |
+| 日本語Wiki | テイム方法・餌の優先順位・繁殖方式、および**英語側に無い繁殖時間** |
+
+ASAで新規追加された生物は英語Wikiに数値が無いものが多いが、日本語Wikiの「ブリーディング」節には
+`孵化：4時間59分59秒` の形で載っている。これを取り込むことで ASA新規種の充足率が 8% → 74% になる。
+
+**数値が両方にある場合は英語側を採る。** 英語Wikiの数値はゲームファイル由来の構造化データで、人手の転記を挟まない分だけ確かなため。
+食い違った箇所は `data/meta.json` の `conflicts` に記録される（現在7件。Baryonyx と Basilisk は孵化・成長とも入れ替わっており、どちらかのWikiが2種を取り違えていると見られる）。
+
+それでも埋まらない生物はアプリ上で「データなし」と表示され、自分で秒数を入力できる。入力するのは
+**いまのサーバーでの実測値**で、内部では1x基準に直して保存するため、後から倍率を変えても追従する。
+
+---
+
 ## 開発メモ
 
 ```
 src/        画面のロジック（app.js）と通知の振り分け（notifier.js）
 www/        画面（index.html / style.css）※ app.js はビルドで生成
-electron/   トレイ常駐・通知
+electron/   トレイ常駐・通知・データの取得
+tools/      Wikiからのデータ収集スクリプト
+data/       収集済みの生物・アイテムデータ（JSON）
 .github/workflows/build.yml   クラウドビルド設定
+.github/workflows/data.yml    データ収集の定期実行
 ```
 
 - PCで試す：`npm install` → `npm start`
@@ -66,4 +94,11 @@ electron/   トレイ常駐・通知
     トレイの常駐を止めたくないときは、userData を分けて起動する：
     `npx electron . --user-data-dir=%TEMP%\ark-timer-dev`
     こうすると本番のプリセットや実行中タイマーにも触らずに試せる
+- データを手元で更新する：`npm run data:fetch` → `npm run data:validate`
+  - `--skip-ja` で日本語Wikiの取得を飛ばせる。wikiwiki.jp はレート制限が厳しく
+    8〜12秒に1ページしか取れないため、そこだけで30分ほどかかる（英語Wikiは数十秒で終わる）
+  - 取得結果は `tools/.cache/` に12時間キャッシュされるので、やり直しは速い
+- 倍率計算のテスト：`npm test`
+  - 孵化・成長は「速度」の倍率なので時間を**割る**、交配・インプリントは「間隔」の倍率なので時間を**掛ける**。
+    向きを取り違えても画面上はそれらしい数字が出てしまうため、既知の値で固定してある
 - 通知はメインプロセスが1秒ごとに監視する（ウィンドウを閉じていても鳴る）
