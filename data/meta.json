@@ -1,0 +1,83 @@
+{
+ "generatedAt": "2026-09-21T21:42:46.934Z",
+ "license": {
+  "name": "Creative Commons Attribution-Non-Commercial-ShareAlike 4.0 License",
+  "url": "https://creativecommons.org/licenses/by-nc-sa/4.0"
+ },
+ "sources": {
+  "ark.wiki.gg": {
+   "cargo": {
+    "creatures": 966,
+    "items": 2620
+   },
+   "modules": {
+    "Module:TamingTable/creatures": {
+     "revid": 485487,
+     "timestamp": "2022-08-07T19:47:02Z"
+    },
+    "Module:Dv/data": {
+     "revid": 586165,
+     "timestamp": "2026-06-01T10:11:30Z"
+    },
+    "Module:TamingTable/food": {
+     "revid": 26371,
+     "timestamp": "2019-05-19T22:46:03Z"
+    }
+   }
+  },
+  "wikiwiki.jp/arksa": {
+   "creatures": 162,
+   "breedingTimes": 114,
+   "filledGaps": 31,
+   "skipped": false
+  }
+ },
+ "counts": {
+  "creatures": 207,
+  "items": 2593
+ },
+ "conflicts": [
+  {
+   "name": "Baryonyx",
+   "field": "incubationSec",
+   "en": 7199,
+   "ja": 22498
+  },
+  {
+   "name": "Baryonyx",
+   "field": "maturationSec",
+   "en": 166667,
+   "ja": 666667
+  },
+  {
+   "name": "Basilisk",
+   "field": "incubationSec",
+   "en": 22498,
+   "ja": 7199
+  },
+  {
+   "name": "Basilisk",
+   "field": "maturationSec",
+   "en": 666667,
+   "ja": 166667
+  },
+  {
+   "name": "Deinosuchus",
+   "field": "incubationSec",
+   "en": 8999,
+   "ja": 10799
+  },
+  {
+   "name": "Managarmr",
+   "field": "gestationSec",
+   "en": 14286,
+   "ja": 21978
+  },
+  {
+   "name": "Managarmr",
+   "field": "maturationSec",
+   "en": 333333,
+   "ja": 256410
+  }
+ ]
+}
