@@ -9,7 +9,9 @@
   "scripts": {
     "build:web": "esbuild src/app.js --bundle --format=iife --target=es2019 --outfile=www/app.js",
     "start": "npm run build:web && electron .",
-    "dist:win": "npm run build:web && electron-builder --win nsis --publish never"
+    "dist:win": "npm run build:web && electron-builder --win nsis --publish never",
+    "data:fetch": "node tools/fetch-wiki.mjs",
+    "data:validate": "node tools/validate-data.mjs"
   },
   "devDependencies": {
     "electron": "^44.4.3",
