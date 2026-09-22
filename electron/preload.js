@@ -9,6 +9,11 @@ contextBridge.exposeInMainWorld('arkOverlayDesktop', {
   // 起動後にデータが更新されたとき呼ばれる
   onDataUpdated: (cb) => ipcRenderer.on('data:updated', (_e, data) => cb(data)),
 
+  // クリップボード（アイテム名の共通文字列をコピーする）
+  clipboard: {
+    write: (text) => ipcRenderer.send('clipboard:write', text),
+  },
+
   // 枠なしウィンドウの操作
   window: {
     minimize: () => ipcRenderer.send('window:minimize'),

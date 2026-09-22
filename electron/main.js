@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Tray, Menu, Notification, ipcMain, nativeImage } = require('electron');
+const { app, BrowserWindow, Tray, Menu, Notification, ipcMain, nativeImage, clipboard } = require('electron');
 const path = require('path');
 const wikiData = require('./data');
 
@@ -137,6 +137,9 @@ ipcMain.on('window:minimize', () => win?.minimize());
 ipcMain.on('window:hide', () => win?.close()); // close は握って hide になる
 ipcMain.on('window:always-on-top', (_e, on) => setAlwaysOnTop(Boolean(on)));
 ipcMain.handle('window:state', () => ({ alwaysOnTop }));
+
+// アイテム名の共通文字列をゲームの検索欄に貼るため、画面側からコピーできるようにする
+ipcMain.on('clipboard:write', (_e, text) => clipboard.writeText(String(text ?? '')));
 
 ipcMain.on('schedules:sync', (_e, list) => {
   // 画面側が「完了」にした直後の同期で消えてしまわないよう、先に期限切れ分を通知する
