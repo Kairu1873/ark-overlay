@@ -245,10 +245,18 @@ function buildTaming(dvEntry, tt) {
     favoriteFood: str(dvEntry?.tamingfood?.favoritefood),
     eats: Array.isArray(tt?.eats) ? tt.eats : null,
     specialFoodValues: tt?.specialFoodValues ?? null,
+    // 以下はテイム計算に要る補正。持っている生物の方が少ない
+    wakeAffinityMult: num(tt?.wakeAffinityMult),
+    wakeFoodDeplMult: num(tt?.wakeFoodDeplMult),
+    usesCustomAffinityLogic: tt?.usesCustomAffinityLogic ? true : null,
+    constantFeedingInterval: num(tt?.constantFeedingInterval),
+    resultCorrection: num(tt?.resultCorrection),
   };
   if (t) {
     out.method = t.knockouttame === 'Yes' ? 'knockout' : t.nonviolenttame === 'Yes' ? 'passive' : null;
   }
+  // Dv/data にテイム方法が無い生物は、TamingTable の nonViolentTame で判る
+  if (!out.method && tt) out.method = tt.nonViolentTame ? 'passive' : 'knockout';
   const value = orNull(out);
   if (!value) return { value: null, source: null };
   const source = [t && 'dv', tt && 'tamingTable'].filter(Boolean).join('+');

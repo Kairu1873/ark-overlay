@@ -176,7 +176,12 @@
     "Raw Fish Meat",
     "Cooked Fish Meat"
    ],
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 630,
@@ -361,7 +366,12 @@
      "value": -15,
      "affinity": 1.5
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 700,
@@ -475,7 +485,12 @@
      "value": 50,
      "affinity": 50
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 125,
@@ -668,7 +683,12 @@
     "Raw Fish Meat",
     "Cooked Fish Meat"
    ],
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 365,
@@ -869,7 +889,12 @@
      "value": 7.5,
      "affinity": 6
     }
-   }
+   },
+   "wakeAffinityMult": 1.6,
+   "wakeFoodDeplMult": 2,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 500,
@@ -953,7 +978,12 @@
    "favoriteKibble": "Extraordinary Kibble",
    "favoriteFood": "Raw Mutton",
    "eats": null,
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 2800,
@@ -1041,7 +1071,12 @@
    "favoriteKibble": null,
    "favoriteFood": null,
    "eats": null,
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 325,
@@ -1213,7 +1248,12 @@
     "Raw Fish Meat",
     "Cooked Fish Meat"
    ],
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 440,
@@ -1330,7 +1370,12 @@
      "value": 262.5,
      "affinity": 500
     }
-   }
+   },
+   "wakeAffinityMult": 1.6,
+   "wakeFoodDeplMult": 2,
+   "usesCustomAffinityLogic": true,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 2750,
@@ -1445,7 +1490,12 @@
      "value": 319.679993,
      "affinity": 500
     }
-   }
+   },
+   "wakeAffinityMult": 1.6,
+   "wakeFoodDeplMult": 5,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": 0.04
   },
   "stats": {
    "health": 2400,
@@ -1558,7 +1608,12 @@
     "Raw Fish Meat",
     "Cooked Fish Meat"
    ],
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 220,
@@ -1730,7 +1785,12 @@
    "favoriteKibble": null,
    "favoriteFood": null,
    "eats": null,
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 450,
@@ -1912,7 +1972,12 @@
      "value": -15,
      "affinity": 1.5
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 2070,
@@ -2100,7 +2165,12 @@
      "value": -1,
      "affinity": -1
     }
-   }
+   },
+   "wakeAffinityMult": 1.65,
+   "wakeFoodDeplMult": 2,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 145,
@@ -2295,7 +2365,12 @@
      "value": -15,
      "affinity": 1.5
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 700,
@@ -2410,7 +2485,12 @@
     "Raw Fish Meat",
     "Cooked Fish Meat"
    ],
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 420,
@@ -2528,7 +2608,12 @@
      "value": -15,
      "affinity": 1.5
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 450,
@@ -2789,7 +2874,12 @@
      "value": -15,
      "affinity": 1.5
     }
-   }
+   },
+   "wakeAffinityMult": 1.6,
+   "wakeFoodDeplMult": 2,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 600,
@@ -2952,7 +3042,12 @@
    "favoriteKibble": null,
    "favoriteFood": null,
    "eats": null,
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 30,
@@ -3368,7 +3463,12 @@
      "value": 12.5,
      "affinity": 2
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 900,
@@ -3559,7 +3659,12 @@
    "favoriteKibble": null,
    "favoriteFood": null,
    "eats": null,
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 200,
@@ -3893,7 +3998,12 @@
     "Raw Fish Meat",
     "Cooked Fish Meat"
    ],
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 350,
@@ -4006,7 +4116,12 @@
     "Raw Fish Meat",
     "Cooked Fish Meat"
    ],
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 125,
@@ -4121,7 +4236,12 @@
     "Raw Fish Meat",
     "Cooked Fish Meat"
    ],
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 250,
@@ -4243,7 +4363,12 @@
      "value": -15,
      "affinity": 1.5
     }
-   }
+   },
+   "wakeAffinityMult": 3,
+   "wakeFoodDeplMult": 2,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 1700,
@@ -4366,7 +4491,12 @@
      "value": 80,
      "affinity": 400
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 400,
@@ -4482,7 +4612,12 @@
     "Raw Fish Meat",
     "Cooked Fish Meat"
    ],
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 330,
@@ -4600,7 +4735,12 @@
      "value": -15,
      "affinity": 1.5
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 40,
@@ -4719,7 +4859,12 @@
      "value": -15,
      "affinity": 1.5
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 850,
@@ -5112,7 +5257,12 @@
      "value": 7.5,
      "affinity": 6
     }
-   }
+   },
+   "wakeAffinityMult": 1,
+   "wakeFoodDeplMult": 2,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 200,
@@ -5228,7 +5378,12 @@
      "value": 79.800003,
      "affinity": 400
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 710,
@@ -5432,7 +5587,12 @@
      "value": 45,
      "affinity": 200
     }
-   }
+   },
+   "wakeAffinityMult": 1.6,
+   "wakeFoodDeplMult": 4,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 180,
@@ -5513,7 +5673,12 @@
    "favoriteKibble": null,
    "favoriteFood": null,
    "eats": null,
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 375,
@@ -5670,7 +5835,12 @@
      "value": -15,
      "affinity": 1.5
     }
-   }
+   },
+   "wakeAffinityMult": 1.6,
+   "wakeFoodDeplMult": 2,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 240,
@@ -5818,7 +5988,12 @@
    "favoriteKibble": null,
    "favoriteFood": null,
    "eats": null,
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 2000,
@@ -5994,7 +6169,12 @@
      "value": -1,
      "affinity": -1
     }
-   }
+   },
+   "wakeAffinityMult": 1.65,
+   "wakeFoodDeplMult": 2,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 115,
@@ -6083,7 +6263,12 @@
    "favoriteKibble": null,
    "favoriteFood": "Element",
    "eats": null,
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 55,
@@ -6251,7 +6436,12 @@
      "value": 8,
      "affinity": 16
     }
-   }
+   },
+   "wakeAffinityMult": 1.6,
+   "wakeFoodDeplMult": 2,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 750,
@@ -6369,7 +6559,12 @@
      "value": -15,
      "affinity": 1.5
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 150,
@@ -6484,7 +6679,12 @@
      "value": -15,
      "affinity": 1.5
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 650,
@@ -6579,7 +6779,12 @@
    "favoriteKibble": "Simple Kibble",
    "favoriteFood": "Rare Flower",
    "eats": null,
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 80,
@@ -6765,7 +6970,12 @@
     "Raw Fish Meat",
     "Cooked Fish Meat"
    ],
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 80000,
@@ -6887,7 +7097,12 @@
      "value": -15,
      "affinity": 1.5
     }
-   }
+   },
+   "wakeAffinityMult": 1.65,
+   "wakeFoodDeplMult": 2,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 640,
@@ -7211,7 +7426,12 @@
      "value": -1,
      "affinity": -1
     }
-   }
+   },
+   "wakeAffinityMult": 1.65,
+   "wakeFoodDeplMult": 2,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 115,
@@ -7387,7 +7607,12 @@
      "value": 49.945,
      "affinity": 67.5
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 950,
@@ -7563,7 +7788,12 @@
    "favoriteKibble": null,
    "favoriteFood": "Dead Fish",
    "eats": null,
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 95,
@@ -7639,7 +7869,12 @@
    "favoriteKibble": null,
    "favoriteFood": null,
    "eats": null,
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 100,
@@ -7717,7 +7952,12 @@
    "favoriteKibble": null,
    "favoriteFood": null,
    "eats": null,
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 175,
@@ -7891,7 +8131,12 @@
     "Raw Fish Meat",
     "Cooked Fish Meat"
    ],
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 50,
@@ -8003,7 +8248,12 @@
     "Raw Fish Meat",
     "Cooked Fish Meat"
    ],
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": 1.6,
+   "wakeFoodDeplMult": 2.5,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 275,
@@ -8120,7 +8370,12 @@
      "value": 20,
      "affinity": 20
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 250,
@@ -8279,7 +8534,12 @@
      "value": -15,
      "affinity": 1.5
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 55,
@@ -8462,7 +8722,12 @@
     "Raw Fish Meat",
     "Cooked Fish Meat"
    ],
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 95,
@@ -8576,7 +8841,12 @@
     "Raw Fish Meat",
     "Cooked Fish Meat"
    ],
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 200,
@@ -8689,7 +8959,12 @@
      "value": 7.5,
      "affinity": 6
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 1200,
@@ -8816,7 +9091,12 @@
      "value": -15,
      "affinity": 1.5
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 650,
@@ -8902,7 +9182,12 @@
    "favoriteKibble": null,
    "favoriteFood": null,
    "eats": null,
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 40,
@@ -8985,7 +9270,12 @@
    "favoriteKibble": null,
    "favoriteFood": null,
    "eats": null,
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 40,
@@ -9137,7 +9427,12 @@
      "value": 100,
      "affinity": 200
     }
-   }
+   },
+   "wakeAffinityMult": 1.6,
+   "wakeFoodDeplMult": 4,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 3200,
@@ -9381,7 +9676,12 @@
      "value": -15,
      "affinity": 1.5
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 260,
@@ -9501,7 +9801,12 @@
      "value": -15,
      "affinity": 1.5
     }
-   }
+   },
+   "wakeAffinityMult": 1.6,
+   "wakeFoodDeplMult": 1.1,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 90,
@@ -9581,7 +9886,12 @@
    "favoriteKibble": null,
    "favoriteFood": null,
    "eats": null,
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": null,
   "growth": null,
@@ -9713,7 +10023,12 @@
    "favoriteKibble": null,
    "favoriteFood": null,
    "eats": null,
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 700,
@@ -9936,7 +10251,12 @@
     "Raw Fish Meat",
     "Cooked Fish Meat"
    ],
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 825,
@@ -10044,7 +10364,12 @@
      "value": 24,
      "affinity": 50
     }
-   }
+   },
+   "wakeAffinityMult": 1.6,
+   "wakeFoodDeplMult": 1,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 320,
@@ -10183,7 +10508,12 @@
      "value": 7.5,
      "affinity": 6
     }
-   }
+   },
+   "wakeAffinityMult": 1,
+   "wakeFoodDeplMult": 2,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": 180,
+   "resultCorrection": null
   },
   "stats": {
    "health": 275,
@@ -10276,7 +10606,12 @@
    "favoriteKibble": null,
    "favoriteFood": "Parakeet Fish School",
    "eats": null,
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 1920,
@@ -10393,7 +10728,12 @@
      "value": 85.248001,
      "affinity": 400
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 480,
@@ -10510,7 +10850,12 @@
      "value": -15,
      "affinity": 1.5
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 300,
@@ -10621,7 +10966,12 @@
     "Raw Fish Meat",
     "Cooked Fish Meat"
    ],
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 600,
@@ -10738,7 +11088,12 @@
      "value": 90,
      "affinity": 400
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 1025,
@@ -11030,7 +11385,12 @@
      "value": 80,
      "affinity": 300
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 740,
@@ -11108,7 +11468,12 @@
    "favoriteKibble": null,
    "favoriteFood": null,
    "eats": null,
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 5500,
@@ -11197,7 +11562,12 @@
      "value": -15,
      "affinity": 1.5
     }
-   }
+   },
+   "wakeAffinityMult": 1.65,
+   "wakeFoodDeplMult": 2,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 115,
@@ -11360,7 +11730,12 @@
      "value": 12.5,
      "affinity": 2.4
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 130,
@@ -11576,7 +11951,12 @@
      "value": -15,
      "affinity": 1.5
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 400,
@@ -11692,7 +12072,12 @@
      "value": 53.28,
      "affinity": 550
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 3600,
@@ -11844,7 +12229,12 @@
      "value": 850,
      "affinity": 140
     }
-   }
+   },
+   "wakeAffinityMult": 2.5,
+   "wakeFoodDeplMult": 1.2,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 375,
@@ -12068,7 +12458,12 @@
    "favoriteKibble": null,
    "favoriteFood": "Live Creatures (Noglin)",
    "eats": null,
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 50,
@@ -12286,7 +12681,12 @@
    "favoriteKibble": null,
    "favoriteFood": "Dead Fish",
    "eats": null,
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 40,
@@ -12494,7 +12894,12 @@
      "value": 150,
      "affinity": 9
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 140,
@@ -12606,7 +13011,12 @@
      "value": 20,
      "affinity": 200000
     }
-   }
+   },
+   "wakeAffinityMult": 1.6,
+   "wakeFoodDeplMult": 2,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 100,
@@ -12727,7 +13137,12 @@
      "value": -15,
      "affinity": 1.5
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 375,
@@ -12896,7 +13311,12 @@
      "value": -15,
      "affinity": 1.5
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 1026,
@@ -13091,7 +13511,12 @@
      "value": -15,
      "affinity": 1.5
     }
-   }
+   },
+   "wakeAffinityMult": 1.6,
+   "wakeFoodDeplMult": 2,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 120,
@@ -13193,7 +13618,12 @@
     "Raw Fish Meat",
     "Cooked Fish Meat"
    ],
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 240,
@@ -13308,7 +13738,12 @@
      "value": -15,
      "affinity": 1.5
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 300,
@@ -13401,7 +13836,12 @@
    "favoriteKibble": null,
    "favoriteFood": null,
    "eats": null,
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 640,
@@ -13540,7 +13980,12 @@
     "Raw Fish Meat",
     "Cooked Fish Meat"
    ],
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 2400,
@@ -13652,7 +14097,12 @@
      "value": 50,
      "affinity": 45
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 400,
@@ -13767,7 +14217,12 @@
     "Raw Fish Meat",
     "Cooked Fish Meat"
    ],
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 210,
@@ -13885,7 +14340,12 @@
      "value": 7.5,
      "affinity": 6
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 280,
@@ -14007,7 +14467,12 @@
      "value": 53.279999,
      "affinity": 400
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 275,
@@ -14206,7 +14671,12 @@
     "Raw Fish Meat",
     "Cooked Fish Meat"
    ],
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 200,
@@ -14323,7 +14793,12 @@
      "value": 107.024994,
      "affinity": 540
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 400,
@@ -14520,7 +14995,12 @@
     "Raw Fish Meat",
     "Cooked Fish Meat"
    ],
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 1100,
@@ -14616,7 +15096,12 @@
    "favoriteKibble": null,
    "favoriteFood": null,
    "eats": null,
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 1950,
@@ -14727,7 +15212,12 @@
      "value": 50,
      "affinity": 7
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 25000,
@@ -14889,7 +15379,12 @@
      "value": -15,
      "affinity": 1.5
     }
-   }
+   },
+   "wakeAffinityMult": 1.6,
+   "wakeFoodDeplMult": 2,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 850,
@@ -14978,7 +15473,12 @@
    "favoriteKibble": "Mobile:Kibble (Griffin Egg)",
    "favoriteFood": "Raw Prime Meat",
    "eats": null,
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": null,
   "growth": null,
@@ -15056,7 +15556,12 @@
     "Raw Fish Meat",
     "Cooked Fish Meat"
    ],
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 250,
@@ -15149,7 +15654,12 @@
    "favoriteKibble": null,
    "favoriteFood": null,
    "eats": null,
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 65,
@@ -15343,7 +15853,12 @@
    "favoriteKibble": null,
    "favoriteFood": "Fish",
    "eats": null,
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 825,
@@ -15532,7 +16047,12 @@
      "value": -1,
      "affinity": -1
     }
-   }
+   },
+   "wakeAffinityMult": 1.65,
+   "wakeFoodDeplMult": 2,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 115,
@@ -15670,7 +16190,12 @@
     "Raw Fish Meat",
     "Cooked Fish Meat"
    ],
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 325,
@@ -15851,7 +16376,12 @@
      "value": -15,
      "affinity": 1.5
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 650,
@@ -16003,7 +16533,12 @@
     "Raw Fish Meat",
     "Cooked Fish Meat"
    ],
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 325,
@@ -16084,7 +16619,12 @@
    "favoriteKibble": null,
    "favoriteFood": null,
    "eats": null,
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 4000,
@@ -16169,7 +16709,12 @@
     "Raw Fish Meat",
     "Cooked Fish Meat"
    ],
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 270,
@@ -16349,7 +16894,12 @@
      "value": 12.5,
      "affinity": 8
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 260,
@@ -16570,7 +17120,12 @@
      "value": 25,
      "affinity": 2
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 700,
@@ -16778,7 +17333,12 @@
      "value": 150,
      "affinity": 20
     }
-   }
+   },
+   "wakeAffinityMult": 1.6,
+   "wakeFoodDeplMult": 2,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 170,
@@ -16863,7 +17423,12 @@
    "favoriteKibble": null,
    "favoriteFood": null,
    "eats": [],
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 230000,
@@ -16982,7 +17547,12 @@
      "value": -15,
      "affinity": 1.5
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 375,
@@ -17074,7 +17644,12 @@
    "favoriteKibble": null,
    "favoriteFood": null,
    "eats": null,
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 160,
@@ -17163,7 +17738,12 @@
    "favoriteKibble": null,
    "favoriteFood": "Live Creatures",
    "eats": null,
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 200,
@@ -17253,7 +17833,12 @@
    "favoriteKibble": "Exceptional Kibble",
    "favoriteFood": "Raw Mutton",
    "eats": null,
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 360,
@@ -17406,7 +17991,12 @@
      "value": 375,
      "affinity": 20
     }
-   }
+   },
+   "wakeAffinityMult": 1,
+   "wakeFoodDeplMult": 2,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 2700,
@@ -17662,7 +18252,12 @@
     "Raw Fish Meat",
     "Cooked Fish Meat"
    ],
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 440,
@@ -17750,7 +18345,12 @@
    "favoriteKibble": null,
    "favoriteFood": null,
    "eats": null,
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 1295,
@@ -17831,7 +18431,12 @@
      "value": 7.5,
      "affinity": 6
     }
-   }
+   },
+   "wakeAffinityMult": 1.6,
+   "wakeFoodDeplMult": 2,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 125,
@@ -17924,7 +18529,12 @@
    "favoriteKibble": null,
    "favoriteFood": null,
    "eats": null,
-   "specialFoodValues": null
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 1295,
@@ -18175,7 +18785,12 @@
      "value": 85.248001,
      "affinity": 400
     }
-   }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
   },
   "stats": {
    "health": 1100,
