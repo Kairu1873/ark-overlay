@@ -632,13 +632,52 @@ function pickJaName(name, overrides, arkja, dossier) {
   return { value: null, source: null };
 }
 
+/**
+ * 卵とサドルの日本語名を、生物の日本語名から作る。
+ *
+ * 日本語Wikiの書き方に合わせてある（Rex Egg → ティラノサウルスの卵 /
+ * Rex Saddle → サドル(ティラノサウルス) / Astrocetus Tek Saddle → TEKサドル(アストロセタス)）。
+ * ASA新規の生物は装備のページがまだ無いことが多く、ここで埋まる。
+ * 生物が一意に決まらない接頭辞は、取り違えるより出さない方がましなので諦める。
+ */
+function deriveItemNameJa(name, creatures) {
+  const patterns = [
+    [/^(.+) Tek Saddle$/, (ja) => `TEKサドル(${ja})`],
+    [/^(.+) Saddle$/, (ja) => `サドル(${ja})`],
+    [/^Fertilized (.+) Egg$/, (ja) => `${ja}の受精卵`],
+    [/^(.+) Egg$/, (ja) => `${ja}の卵`],
+  ];
+  for (const [re, make] of patterns) {
+    const m = re.exec(name);
+    if (!m) continue;
+    const prefix = m[1].trim().toLowerCase();
+    // 完全一致を優先し、無ければ「その接頭辞で始まる生物がちょうど1種」のときだけ採る
+    const exact = creatures.find((c) => c.name.toLowerCase() === prefix);
+    const starts = creatures.filter((c) => c.name.toLowerCase().startsWith(prefix));
+    const hit = exact ?? (starts.length === 1 ? starts[0] : null);
+    if (hit?.nameJa) return make(hit.nameJa);
+    return null;
+  }
+  return null;
+}
+
 /** アイテムとレシピをまとめる */
-export function mergeItems({ items, craftables, consumables, resources }) {
+export function mergeItems({ items, craftables, consumables, resources, jaNames = {}, creatures = [] }) {
   const byPage = new Map();
   const touch = (pageName) => {
     const name = str(pageName);
     if (!name) return null;
-    if (!byPage.has(name)) byPage.set(name, { key: norm(name), name });
+    if (!byPage.has(name)) {
+      const fromWiki = str(jaNames[name]);
+      const derived = fromWiki ? null : deriveItemNameJa(name, creatures);
+      byPage.set(name, {
+        key: norm(name),
+        name,
+        nameJa: fromWiki ?? derived,
+        // 生物名から組み立てたものは後から見分けられるようにしておく
+        nameJaSource: fromWiki ? 'wiki' : derived ? 'derived' : null,
+      });
+    }
     return byPage.get(name);
   };
 

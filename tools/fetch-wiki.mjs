@@ -102,7 +102,14 @@ async function main() {
   log('\n[5/6] 日本語名（ark.wiki.gg/ja）');
   const jaNames = await fetchJaNames(targetNames);
   const nameOverrides = await loadNameOverrides();
-  log(`  日本語版と一致 ${Object.keys(jaNames).length}/${targetNames.length} / 手書きの補完 ${Object.keys(nameOverrides).length}`);
+  log(`  生物 ${Object.keys(jaNames).length}/${targetNames.length} / 手書きの補完 ${Object.keys(nameOverrides).length}`);
+
+  // アイテムも日本語名で引けるようにする。2600件ほどあるので少し時間がかかる
+  const itemNames = [...new Set(items.map((r) => String(r._pageName ?? '').trim()).filter(Boolean))];
+  const jaItemNames = await fetchJaNames(itemNames, (done, total) => {
+    if (done % 400 === 0 || done === total) log(`  アイテム ${done}/${total}`);
+  });
+  log(`  アイテム ${Object.keys(jaItemNames).length}/${itemNames.length}`);
 
   log('\n[6/6] マージ');
   const merged = mergeCreatures({
@@ -110,9 +117,15 @@ async function main() {
     jaNames, jaDossierNames, jaStats, nameOverrides,
     asb: asbValues.byEntityId,
   });
-  const mergedItems = mergeItems({ items, craftables, consumables, resources });
+  const mergedItems = mergeItems({
+    items, craftables, consumables, resources,
+    jaNames: jaItemNames,
+    creatures: merged.creatures, // 卵とサドルの日本語名を生物名から作るのに使う
+  });
   report(merged);
-  log(`  アイテム        ${mergedItems.stats.total}`);
+  const itemsJa = mergedItems.items.filter((i) => i.nameJa).length;
+  const itemsDerived = mergedItems.items.filter((i) => i.nameJaSource === 'derived').length;
+  log(`  アイテム        ${mergedItems.stats.total}（日本語名あり ${itemsJa} / うち生物名から作成 ${itemsDerived}）`);
 
   const rights = await fetchRightsInfo();
   const meta = {
@@ -120,7 +133,10 @@ async function main() {
     license: { name: rights.text, url: rights.url },
     sources: {
       'ark.wiki.gg': { cargo: { creatures: creatures.length, items: items.length }, modules: revisions },
-      'ark.wiki.gg/ja': { names: Object.keys(jaNames).length },
+      'ark.wiki.gg/ja': {
+        creatureNames: Object.keys(jaNames).length,
+        itemNames: Object.keys(jaItemNames).length,
+      },
       'ARKStatsExtractor': {
         versions: asbValues.versions,
         matched: merged.stats.asb.matched,

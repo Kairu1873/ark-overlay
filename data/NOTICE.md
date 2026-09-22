@@ -11,7 +11,7 @@
 | `creatures.json`（英名・分類・食性・気性・サドル・アイテム関連） | [ARK Official Community Wiki](https://ark.wiki.gg/) | CC BY-NC-SA 4.0 |
 | `creatures.json` の `stats` `growth` `wildMaps`、および `sources` が `ja` の数値 | [ARK: Survival Ascended 攻略Wiki](https://wikiwiki.jp/arksa/) | 各Wikiの規定に従う |
 | `creatures.json` の `ja` フィールド、および `sources.breeding` が `ja(...)` の繁殖時間 | [ARK: Survival Ascended 攻略Wiki](https://wikiwiki.jp/arksa/) | 各Wikiの規定に従う |
-| `creatures.json` の `nameJa`（`sources.nameJa` が `arkja`） | [ARKコミュニティ公式Wiki 日本語版](https://ark.wiki.gg/ja/) | CC BY-NC-SA 4.0 |
+| `creatures.json` の `nameJa`（`sources.nameJa` が `arkja`）、`items.json` の `nameJa`（`nameJaSource` が `wiki`） | [ARKコミュニティ公式Wiki 日本語版](https://ark.wiki.gg/ja/) | CC BY-NC-SA 4.0 |
 | `creatures.json` の `nameJa`（`sources.nameJa` が `wikiwiki`） | [ARK: Survival Ascended 攻略Wiki](https://wikiwiki.jp/arksa/) | 各Wikiの規定に従う |
 | `ja-names.json` | どちらのWikiにも日本語名が無い生物の手書き補完（日本語Wikiの本文表記に合わせた） | — |
 | `items.json` | [ARK Official Community Wiki](https://ark.wiki.gg/) | CC BY-NC-SA 4.0 |
@@ -83,6 +83,11 @@ Wiki は Smart Breeding に無い25種の穴埋めと、日本語名・分類・
 3. 日本語Wikiのドシエ訳の「名称：」 → `wikiwiki`
 
 どれにも無い場合は `null` とし、アプリでは英名だけで表示・検索する。
+
+アイテムの日本語名は日本語版のページ名から引く。向こうにページが無いもの（スキン・チビペット・
+モバイル専用品など）は埋まらず、全体の6割ほどが付く。ただし**卵とサドルだけは生物の日本語名から
+組み立てる**（`Rex Egg` → `ティラノサウルスの卵` / `Rex Saddle` → `サドル(ティラノサウルス)`）。
+日本語版の書き方に合わせてあり、生成したものは `nameJaSource` が `derived` になる。
 
 ## データの欠損について
 
