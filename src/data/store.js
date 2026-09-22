@@ -33,29 +33,54 @@ export async function loadData() {
   return data;
 }
 
-const fold = (s) => String(s ?? '').toLowerCase();
+/**
+ * 検索用に表記を均す。
+ * NFKC で全角英数と半角カナを直し、平仮名を片仮名に寄せ、長音・中黒・空白を落とす。
+ * 「てぃらの」「ﾃｨﾗﾉ」「ティラノ」がどれも「ティラノサウルス」に当たるようにするため。
+ */
+const fold = (s) =>
+  String(s ?? '')
+    .normalize('NFKC')
+    .toLowerCase()
+    .replace(/[\u3041-\u3096]/g, (c) => String.fromCharCode(c.charCodeAt(0) + 0x60))
+    .replace(/[ー・\s_-]/g, '');
+
+const NO_MATCH = 99;
+
+/** 完全一致 0 / 前方一致 1 / 部分一致 2 / 一致しない */
+function matchScore(folded, q) {
+  if (!folded) return NO_MATCH;
+  if (folded === q) return 0;
+  if (folded.startsWith(q)) return 1;
+  return folded.includes(q) ? 2 : NO_MATCH;
+}
 
 /**
- * 生物を名前で探す。ARK は日本語版でも生物名が英語表記なので英名で引く。
+ * 読み込み済みの生物を名前で探す。英名でも日本語名でも引ける。
  * @param {string} query
  * @param {{breedableOnly?: boolean, tameableOnly?: boolean, limit?: number}} opt
  */
-export function searchCreatures(query, opt = {}) {
-  const q = fold(query).trim();
-  let list = data.creatures;
+export const searchCreatures = (query, opt = {}) => searchIn(data.creatures, query, opt);
+
+/**
+ * 検索の中身。読み込み済みデータに依らないので、テストから直接呼べる。
+ * @param {object[]} creatures
+ * @param {string} query
+ * @param {{breedableOnly?: boolean, tameableOnly?: boolean, limit?: number}} opt
+ */
+export function searchIn(creatures, query, opt = {}) {
+  const q = fold(query);
+  let list = creatures;
   if (opt.breedableOnly) list = list.filter((c) => c.breedable);
   if (opt.tameableOnly) list = list.filter((c) => c.tameable);
   if (!q) return list.slice(0, opt.limit ?? 50);
 
   const scored = [];
   for (const c of list) {
-    const name = fold(c.name);
-    let score;
-    if (name === q) score = 0;
-    else if (name.startsWith(q)) score = 1;
-    else if (name.includes(q)) score = 2;
-    else if (fold(c.group).includes(q)) score = 3;
-    else continue;
+    // 英名と日本語名は同じ重みで見て、良い方を採る
+    let score = Math.min(matchScore(fold(c.name), q), matchScore(fold(c.nameJa), q));
+    if (score === NO_MATCH && fold(c.group).includes(q)) score = 3;
+    if (score === NO_MATCH) continue;
     scored.push([score, c]);
   }
   scored.sort((a, b) => a[0] - b[0] || a[1].name.localeCompare(b[1].name));
