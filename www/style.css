@@ -150,6 +150,7 @@ input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; }
 .stat { display: flex; flex-direction: column; gap: 2px; padding: 8px 10px; border-radius: 10px; background: var(--card-2); }
 .stat span { font-size: 11px; color: var(--muted); }
 .stat b { font-size: 16px; font-variant-numeric: tabular-nums; }
+.stat i { font-style: normal; font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
 .kv { margin: 0 0 6px; font-size: 13px; line-height: 1.5; }
 .kv b { display: inline-block; min-width: 5.5em; margin-right: 8px; color: var(--muted); font-size: 12px; font-weight: 600; }
 .tag {

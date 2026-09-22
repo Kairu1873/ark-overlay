@@ -175,21 +175,24 @@ function timerRowsHtml(c) {
     .join('');
 }
 
-/** レベル1の基礎ステータス。レベルによる伸びはここでは扱わない */
+/** レベル1の基礎ステータスと、野生1レベルあたりの伸び */
 function statsHtml(c) {
   const rows = STAT_LABELS.map(([key, label]) => [key, label, c.stats?.[key]]).filter(
     ([, , v]) => Number.isFinite(v),
   );
   if (!rows.length) return '';
+  const wild = c.growth?.wild ?? null;
   return `<div class="dex-block">
-    <h4>ステータス<em>レベル1の基礎値</em></h4>
+    <h4>ステータス<em>レベル1の基礎値${wild ? '／野生1レベルごとの伸び' : ''}</em></h4>
     <div class="stat-grid">
       ${rows
-        .map(
+        .map(([key, label, v]) => {
           // 移動速度だけは倍率（%）で、他は実数
-          ([key, label, v]) =>
-            `<div class="stat"><span>${esc(label)}</span><b>${key === 'speed' ? `${v}%` : v}</b></div>`,
-        )
+          const value = key === 'speed' ? `${v}%` : v;
+          const per = wild?.[key];
+          const growth = Number.isFinite(per) ? `<i>+${per} /Lv</i>` : '';
+          return `<div class="stat"><span>${esc(label)}</span><b>${value}</b>${growth}</div>`;
+        })
         .join('')}
     </div>
   </div>`;
