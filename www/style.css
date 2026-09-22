@@ -192,6 +192,19 @@ input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; }
 .dex-block h4 .chk { float: right; display: flex; align-items: center; gap: 4px; margin: 0 10px 0 0; font-weight: 400; }
 .dex-block h4 .chk input { width: auto; margin: 0; }
 
+/* アイテムタブ */
+.picked { margin: 0 0 4px; font-size: 13px; line-height: 1.6; color: var(--accent-text); }
+.common-list { display: grid; gap: 6px; }
+.common { display: flex; align-items: center; gap: 10px; }
+.common code {
+  flex: 1; min-width: 0; padding: 7px 10px; border-radius: 8px;
+  background: var(--shade); border: 1px solid var(--line);
+  font-family: Consolas, "Courier New", monospace; font-size: 14px;
+  white-space: pre; overflow: hidden; text-overflow: ellipsis;
+}
+.common .sub { white-space: nowrap; font-size: 12px; }
+.common button { padding: 6px 12px; font-size: 13px; white-space: nowrap; }
+
 .kv { margin: 0 0 6px; font-size: 13px; line-height: 1.5; }
 .kv b { display: inline-block; min-width: 5.5em; margin-right: 8px; color: var(--muted); font-size: 12px; font-weight: 600; }
 .tag {

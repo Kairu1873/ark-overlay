@@ -1,5 +1,6 @@
 import { platform, requestPermission, syncSchedules, notifyNow } from './notifier.js';
 import { initCreatures } from './ui/creatures.js';
+import { initItems } from './ui/items.js';
 
 const STORE_KEY = 'arkOverlay.v1';
 const DEFAULT_PRESETS = [{ id: 'p1', name: 'ルミナ孵化', seconds: 90 * 60 }];
@@ -143,6 +144,12 @@ function setTab(tab) {
 function setDexAvailable(ok) {
   $('#tabDex').hidden = !ok;
   if (!ok && state.tab === 'dex') setTab('timer');
+}
+
+/** アイテムも同様に、データがあるときだけタブを出す */
+function setItemsAvailable(ok) {
+  $('#tabItems').hidden = !ok;
+  if (!ok && state.tab === 'items') setTab('timer');
 }
 
 function render() {
@@ -325,7 +332,7 @@ function bindWindowControls() {
 document.documentElement.dataset.platform = platform;
 bind();
 bindWindowControls();
-setTab(state.tab === 'dex' ? 'dex' : 'timer');
+setTab(['dex', 'items'].includes(state.tab) ? state.tab : 'timer');
 tick();
 commit();
 setInterval(tick, 250);
@@ -339,4 +346,5 @@ initCreatures({
   showTimers: () => setTab('timer'),
   setDexAvailable,
 });
+initItems({ state, save, setItemsAvailable });
 if (state.timers.length === 0) requestPermission();

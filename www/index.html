@@ -13,6 +13,7 @@
     <nav id="tabs" class="tabs">
       <button type="button" class="tab on" data-tab="timer">タイマー</button>
       <button type="button" class="tab" data-tab="dex" id="tabDex" hidden>図鑑</button>
+      <button type="button" class="tab" data-tab="items" id="tabItems" hidden>アイテム</button>
     </nav>
     <div id="winCtl" class="win-ctl" hidden>
       <button type="button" id="winPin" class="on" title="常に手前に表示">前面</button>
@@ -71,6 +72,22 @@
         </div>
         <div id="creatureResults" class="dex-list"></div>
         <div id="creatureDetail"></div>
+      </section>
+    </div>
+
+    <div data-panel="items" hidden>
+      <section>
+        <div class="section-head">
+          <h2>アイテム <span id="itemCount" class="count"></span></h2>
+        </div>
+        <div class="card">
+          <label class="field">
+            <span>アイテムを探す（英名）</span>
+            <input id="itemQuery" type="text" placeholder="例：Raw / Kibble / Saddle" maxlength="40" autocomplete="off" />
+          </label>
+        </div>
+        <div id="itemPicked"></div>
+        <div id="itemResults" class="dex-list"></div>
       </section>
     </div>
   </main>
