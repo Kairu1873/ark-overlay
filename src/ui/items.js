@@ -3,12 +3,18 @@
 // 「非対象」に積んだものに当たってしまう候補は出さない。腐った肉は対象にしたいが生肉は外したい、
 // のように似た名前を分けたいときに使う。
 // 出すのは「一番短い候補」1件だけ。非対象を指定してあれば、短くても取りこぼさない。
-// 選ぶと検索欄が空になり、そのまま次の語を打てる。積んだものは × で個別に外せる。
+//
+// 品質（Ascendant など）を指定すると、「その品質のものだけ」に当たる文字列を探す。
+// ゲーム内では `Ascendant Gacha Crystal` のように名前の頭に品質が付くので、対象の名前に
+// その品質を足したうえで、**同じ物の他の品質**（`Mastercraft Gacha Crystal` や品質なしの
+// `Gacha Crystal`）を自動で非対象に回す。品質語がまるごと入るとは限らず、`nt Gacha C` の
+// ように境目をまたぐ短い文字列になることが多い。
+// 選んでも検索欄はそのまま残る（「肉」で出した中から続けて選べる）。積んだものは × で個別に外せる。
 // 探すのは日本語名で構わないが、**出す共通文字列は英名から作る**。
 // 候補は「一致件数の少ない順」＝絞り込める順に並ぶ。計算は src/data/items.js。
 
 import { getData, onDataChanged } from '../data/store.js';
-import { searchItems, commonStrings } from '../data/items.js';
+import { searchItems, commonStrings, qualityString } from '../data/items.js';
 
 const $ = (sel) => document.querySelector(sel);
 const esc = (s) =>
@@ -20,6 +26,8 @@ let ctx = null; // { state, save }
 
 const picks = () => (Array.isArray(ctx.state.itemPicks) ? ctx.state.itemPicks : []);
 const excludes = () => (Array.isArray(ctx.state.itemExcludes) ? ctx.state.itemExcludes : []);
+/** 名前の頭に付ける品質。空なら付けない */
+const quality = () => String(ctx.state.itemQuality ?? '').trim();
 /** いま選んだものを入れる先。'pick'（対象）か 'exclude'（非対象） */
 const mode = () => (ctx.state.itemPickMode === 'exclude' ? 'exclude' : 'pick');
 
@@ -104,14 +112,14 @@ function renderPicked() {
     return;
   }
   const allNames = getData().items.map((i) => i.name);
+  const targets = chosen.map((i) => i.name);
+  const avoid = skipped.map((i) => i.name);
   // 出すのは一番短い1件だけ。候補を並べても選びようがない
-  const candidates = chosen.length
-    ? commonStrings(chosen.map((i) => i.name), allNames, {
-        limit: 1,
-        order: 'length',
-        exclude: skipped.map((i) => i.name),
-      })
-    : [];
+  const candidates = !chosen.length
+    ? []
+    : quality()
+      ? [qualityString(targets, allNames, { quality: quality(), exclude: avoid })].filter(Boolean)
+      : commonStrings(targets, allNames, { limit: 1, order: 'length', exclude: avoid });
 
   el.innerHTML = `<div class="card">
     <div class="section-head">
@@ -121,7 +129,7 @@ function renderPicked() {
     ${chosen.length ? chipsHtml(chosen, 'pick') : ''}
     ${skipped.length ? `<p class="hint">非対象（この文字列に当たってほしくないもの）</p>${chipsHtml(skipped, 'exclude')}` : ''}
     <div class="dex-block">
-      <h4>共通する文字列<em>英名から作る</em></h4>
+      <h4>共通する文字列<em>${quality() ? `${esc(quality())} だけに当たるもの` : '英名から作る'}</em></h4>
       ${
         candidates.length
           ? `<div class="common-list">${candidates
@@ -129,16 +137,22 @@ function renderPicked() {
                 // 前後の空白があるかどうかで一致件数が変わるので、引用符で囲んで見えるようにする
                 (c) => `<div class="common">
                   <code>"${esc(c.text)}"</code>
-                  <span class="sub">全${c.hits}件に一致</span>
+                  <span class="sub">全${c.hits}件に一致${quality() ? '（目安）' : ''}</span>
                   <button type="button" data-copy="${esc(c.text)}">コピー</button>
                 </div>`,
               )
-              .join('')}</div>`
+              .join('')}</div>${
+              quality()
+                ? `<p class="hint">件数は、どのアイテムにも品質が付くと見なして数えた目安</p>`
+                : ''
+            }`
           : !chosen.length
             ? `<p class="empty">対象にアイテムを選ぶ</p>`
-            : skipped.length
-              ? `<p class="empty">非対象に当たらない文字列が無い（非対象を減らすか、対象を絞る）</p>`
-              : `<p class="empty">共通する文字列がない（2文字以上で共通する部分が必要）</p>`
+            : quality()
+              ? `<p class="empty">この品質だけに当たる文字列が無い（非対象を減らすか、対象を絞る）</p>`
+              : skipped.length
+                ? `<p class="empty">非対象に当たらない文字列が無い（非対象を減らすか、対象を絞る）</p>`
+                : `<p class="empty">共通する文字列がない（2文字以上で共通する部分が必要）</p>`
       }
     </div>
   </div>`;
@@ -148,6 +162,8 @@ function renderMode() {
   for (const b of document.querySelectorAll('[data-mode]')) {
     b.classList.toggle('on', b.dataset.mode === mode());
   }
+  const select = $('#itemQuality');
+  if (select) select.value = quality();
 }
 
 export function renderItemSection() {
@@ -159,7 +175,7 @@ export function renderItemSection() {
 
 // ---------- 操作 ----------
 
-/** 1つ積む。検索欄は空にして、そのまま次の語を打てるようにする */
+/** 1つ積む。検索欄は残す。同じ検索語から続けて何個も選べるようにするため */
 function add(key) {
   // 同じものが両方に入らないようにする
   ctx.state.itemPicks = picks().filter((k) => k !== key);
@@ -168,10 +184,8 @@ function add(key) {
   else ctx.state.itemPicks = [...ctx.state.itemPicks, key];
   ctx.save();
 
-  const input = $('#itemQuery');
-  if (input) input.value = '';
   renderItemSection();
-  input?.focus();
+  $('#itemQuery')?.focus();
 }
 
 function remove(key, kind) {
@@ -194,6 +208,12 @@ function bindEvents() {
   $('#itemMode').addEventListener('click', (e) => {
     const b = e.target.closest('[data-mode]');
     if (b) setMode(b.dataset.mode);
+  });
+
+  $('#itemQuality').addEventListener('change', (e) => {
+    ctx.state.itemQuality = e.target.value;
+    ctx.save();
+    renderPicked();
   });
 
   $('#itemResults').addEventListener('click', (e) => {
