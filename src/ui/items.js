@@ -1,5 +1,6 @@
-// 「アイテム」タブ。日本語名でも英名でも探せて、複数選ぶと共通する文字列を候補として出す。
+// 「アイテム」タブ。探して1つ選ぶ、をくり返して積み上げ、共通する文字列を候補として出す。
 //
+// 選ぶと検索欄が空になり、そのまま次の語を打てる。積んだものは × で個別に外せる。
 // 探すのは日本語名で構わないが、**出す共通文字列は英名から作る**。
 // 候補は「一致件数の少ない順」＝絞り込める順に並ぶ。計算は src/data/items.js。
 
@@ -45,9 +46,14 @@ function renderResults() {
     return;
   }
   const query = $('#itemQuery').value;
-  const list = searchItems(all, query, { limit: LIST_LIMIT });
   const chosen = new Set(picks());
-  $('#itemCount').textContent = query.trim() ? `${list.length}/${all.length}` : `${all.length}`;
+  if (!query.trim()) {
+    $('#itemCount').textContent = `${all.length}`;
+    el.innerHTML = `<p class="empty">検索して1つ選ぶ、をくり返すと積み上がる</p>`;
+    return;
+  }
+  const list = searchItems(all, query, { limit: LIST_LIMIT });
+  $('#itemCount').textContent = `${list.length}/${all.length}`;
 
   el.innerHTML = list.length
     ? list
@@ -81,9 +87,14 @@ function renderPicked() {
       <h4>選択中 ${chosen.length}件</h4>
       <button type="button" id="clearPicks" class="link">すべて解除</button>
     </div>
-    <p class="picked">${chosen
-      .map((i) => (i.nameJa ? `${esc(i.nameJa)}<em>${esc(i.name)}</em>` : esc(i.name)))
-      .join(' ／ ')}</p>
+    <div class="picks">${chosen
+      .map(
+        (i) => `<span class="pick">
+          <b>${esc(i.nameJa ?? i.name)}</b>${i.nameJa ? `<em>${esc(i.name)}</em>` : ''}
+          <button type="button" class="pick-del" data-unpick="${esc(i.key)}" title="外す">×</button>
+        </span>`,
+      )
+      .join('')}</div>
     <div class="dex-block">
       <h4>共通する文字列<em>英名から作る</em></h4>
       ${
@@ -112,9 +123,20 @@ export function renderItemSection() {
 
 // ---------- 操作 ----------
 
-function toggle(key) {
-  const next = picks().includes(key) ? picks().filter((k) => k !== key) : [...picks(), key];
-  ctx.state.itemPicks = next;
+/** 1つ積む。検索欄は空にして、そのまま次の語を打てるようにする */
+function add(key) {
+  if (!picks().includes(key)) {
+    ctx.state.itemPicks = [...picks(), key];
+    ctx.save();
+  }
+  const input = $('#itemQuery');
+  if (input) input.value = '';
+  renderItemSection();
+  input?.focus();
+}
+
+function remove(key) {
+  ctx.state.itemPicks = picks().filter((k) => k !== key);
   ctx.save();
   renderItemSection();
 }
@@ -124,10 +146,13 @@ function bindEvents() {
 
   $('#itemResults').addEventListener('click', (e) => {
     const row = e.target.closest('[data-item]');
-    if (row) toggle(row.dataset.item);
+    if (row) add(row.dataset.item);
   });
 
   $('#itemPicked').addEventListener('click', async (e) => {
+    const unpick = e.target.closest('[data-unpick]');
+    if (unpick) return remove(unpick.dataset.unpick);
+
     if (e.target.closest('#clearPicks')) {
       ctx.state.itemPicks = [];
       ctx.save();

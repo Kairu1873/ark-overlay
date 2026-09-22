@@ -198,8 +198,19 @@ input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; }
 .dex-block h4 .chk input { width: auto; margin: 0; }
 
 /* アイテムタブ */
-.picked { margin: 0 0 4px; font-size: 13px; line-height: 1.7; color: var(--accent-text); }
-.picked em { font-style: normal; margin-left: 4px; font-size: 11px; color: var(--muted); }
+.picks { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 4px; }
+.pick {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 5px 6px 5px 10px; border-radius: 999px;
+  background: var(--shade); border: 1px solid var(--line); font-size: 13px;
+}
+.pick b { font-weight: 700; color: var(--accent-text); }
+.pick em { font-style: normal; font-size: 11px; color: var(--muted); }
+.pick-del {
+  width: 20px; height: 20px; padding: 0; line-height: 1; font-size: 14px;
+  border-radius: 50%; background: none; border: 0; color: var(--muted);
+}
+.pick-del:hover { color: var(--danger); }
 .common-list { display: grid; gap: 6px; }
 .common { display: flex; align-items: center; gap: 10px; }
 .common code {
