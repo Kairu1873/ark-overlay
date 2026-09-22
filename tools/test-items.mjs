@@ -7,7 +7,14 @@
 
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
-import { searchItems, commonStrings, countMatches } from '../src/data/items.js';
+import {
+  searchItems,
+  commonStrings,
+  countMatches,
+  qualityString,
+  qualityVariants,
+  QUALITIES,
+} from '../src/data/items.js';
 
 const items = JSON.parse(
   readFileSync(path.join(import.meta.dirname, '..', 'data', 'items.json'), 'utf8'),
@@ -100,6 +107,35 @@ console.log('\n短い順（画面はこれを1件だけ出す）');
   eq('分けられないときは null', shortest(['Raw Meat', 'Raw Prime Meat'], ['Raw Mutton', 'Raw Fish Meat']), null);
   // 既定の並び（一致件数の少ない順）は変わっていない
   eq('既定は絞り込める順のまま', commonStrings(['Raw Meat', 'Raw Prime Meat'], FIXTURE, { limit: 1 })[0].text, 'Raw ');
+}
+
+console.log('\n品質で絞るとき');
+{
+  const plan = (sel, exclude, quality) => qualityString(sel, allNames, { quality, exclude });
+  const text = (...a) => plan(...a)?.text ?? null;
+
+  eq('品質は6段', QUALITIES.length, 6);
+  eq('取りうる名前は品質なし＋6段', qualityVariants('Gacha Crystal').length, 7);
+  eq('品質なしも候補に入る', qualityVariants('Gacha Crystal')[0], 'Gacha Crystal');
+
+  // 他の品質のガチャ・クリスタルに当たってはいけないので、Cr だけでは足りない
+  const only = text(['Gacha Crystal'], [], 'Ascendant');
+  eq('他の品質に当たらない', QUALITIES.filter((q) => q !== 'Ascendant').every((q) => !`${q} Gacha Crystal`.includes(only)), true);
+  eq('品質なしにも当たらない', 'Gacha Crystal'.includes(only), false);
+  eq('その品質の名前には当たる', 'Ascendant Gacha Crystal'.includes(only), true);
+
+  // 非対象を足すと、そこに当たる候補は避ける（品質が違っても避ける）
+  const sharp = text(['Gacha Crystal'], ['Gacha Saddle'], 'Ascendant');
+  eq('非対象を避けた文字列', sharp, 'nt Gacha C');
+  eq('非対象の全品質に当たらない', QUALITIES.every((q) => !`${q} Gacha Saddle`.includes(sharp)), true);
+  eq('対象には当たる', 'Ascendant Gacha Crystal'.includes(sharp), true);
+  eq('品質を変えれば文字列も変わる', text(['Gacha Crystal'], ['Gacha Saddle'], 'Mastercraft'), 'ft Gacha C');
+
+  // 名前の先頭から始まる必要はない（Ascendant Gacha C のような長い前置きを出さない）
+  eq('必要以上に長くならない', sharp.length < 'Ascendant Gacha C'.length, true);
+  eq('件数はゲーム内に並びうる名前で数える', plan(['Gacha Crystal'], ['Gacha Saddle'], 'Ascendant').hits, countMatches(allNames.flatMap((n) => qualityVariants(n)), sharp));
+  eq('品質を渡さなければ何も出ない', qualityString(['Gacha Crystal'], allNames, { quality: '' }), null);
+  eq('対象が無ければ何も出ない', qualityString([], allNames, { quality: 'Ascendant' }), null);
 }
 
 console.log('\n日本語名でも引ける');

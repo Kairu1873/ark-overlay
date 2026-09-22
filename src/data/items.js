@@ -44,6 +44,49 @@ export function countMatches(allNames, text) {
 }
 
 /**
+ * 品質。ゲーム内では名前の頭に付く（`Ascendant Gacha Crystal`）。低いものから並べてある。
+ */
+export const QUALITIES = ['Primitive', 'Ramshackle', 'Apprentice', 'Journeyman', 'Mastercraft', 'Ascendant'];
+
+/** その名前がゲーム内で取りうる表示名。品質なしと、各品質を頭に付けたもの */
+export function qualityVariants(name) {
+  return [name, ...QUALITIES.map((q) => `${q} ${name}`)];
+}
+
+/**
+ * 品質を選んだときの共通文字列。その品質のものだけに当たる、一番短いものを1つ返す。
+ *
+ * 対象の名前に品質を足したうえで、**同じ物の他の品質**（`Mastercraft Gacha Crystal` や
+ * 品質なしの `Gacha Crystal`）を自動で避ける。非対象は品質を問わず避ける。
+ * 品質語がまるごと入るとは限らず、`nt Gacha C` のように境目をまたぐ短い文字列になりやすい。
+ *
+ * @param {string[]} targetNames 対象の英名（品質は付けない）
+ * @param {string[]} allNames 全アイテムの英名
+ * @param {{quality: string, exclude?: string[]}} opt
+ * @returns {{text: string, hits: number}|null}
+ */
+export function qualityString(targetNames, allNames, { quality, exclude = [] } = {}) {
+  const names = (targetNames ?? []).filter((n) => typeof n === 'string' && n.length);
+  if (!names.length || !quality) return null;
+
+  const rest = QUALITIES.filter((q) => q !== quality);
+  const avoid = [
+    ...(exclude ?? []).flatMap((n) => qualityVariants(n)), // 非対象はどの品質でも避ける
+    ...names.flatMap((n) => [n, ...rest.map((q) => `${q} ${n}`)]), // 同じ物の別の品質も避ける
+  ];
+  // 件数はゲーム内に並びうる名前（品質なし＋各品質）で数える。どれにも品質が付く前提の目安
+  const universe = (allNames ?? []).flatMap((n) => qualityVariants(n));
+
+  return (
+    commonStrings(names.map((n) => `${quality} ${n}`), universe, {
+      limit: 1,
+      order: 'length',
+      exclude: avoid,
+    })[0] ?? null
+  );
+}
+
+/**
  * 選んだ名前すべてに共通する文字列の候補を出す。
  *
  * より長い候補と一致件数が同じで、かつその中に含まれている候補は捨てる。
@@ -86,7 +129,11 @@ export function commonStrings(
     }
   }
 
-  candidates.sort((a, b) => b.length - a.length || a.localeCompare(b));
+  // 同じ件数しか拾えない候補は1つに畳む。どちらを残すかは、最後に何を上に出すかで変える
+  const shortFirst = order === 'length';
+  candidates.sort((a, b) =>
+    shortFirst ? a.length - b.length || a.localeCompare(b) : b.length - a.length || a.localeCompare(b),
+  );
 
   const excluded = (exclude ?? []).filter((n) => typeof n === 'string' && n.length).map(lower);
 
@@ -95,8 +142,14 @@ export function commonStrings(
     // 除外したい名前に当たってしまう候補は、そもそも使えないので落とす
     if (excluded.some((n) => n.includes(lower(text)))) continue;
     const hits = countMatches(allNames ?? [], text);
-    // より長い候補と同じ件数しか拾えないなら、短いほうは出さない
-    if (kept.some((k) => k.hits === hits && lower(k.text).includes(lower(text)))) continue;
+    const same = kept.some((k) =>
+      k.hits !== hits
+        ? false
+        : shortFirst
+          ? lower(text).includes(lower(k.text)) // すでに短いので、伸ばしても拾える数が同じなら要らない
+          : lower(k.text).includes(lower(text)), // すでに長いので、縮めても拾える数が同じなら要らない
+    );
+    if (same) continue;
     kept.push({ text, hits });
   }
   if (order === 'length') {
