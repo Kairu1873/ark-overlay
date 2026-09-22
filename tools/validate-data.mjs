@@ -19,6 +19,9 @@ const FLOOR = {
   // ASA新規生物の数値は日本語Wikiだけが供給源。
   // wikiwiki.jp の書式が変わるとここが静かにゼロになるので、下限を置いて検知する
   jaFilled: 20,
+  // 日本語名は ark.wiki.gg 日本語版のリダイレクトに頼っている。
+  // 向こうの構成が変わると静かに全滅するので、下限を置いて検知する
+  withNameJa: 150,
 };
 
 const problems = [];
@@ -83,6 +86,20 @@ async function main() {
   if (withTaming < FLOOR.withTaming) {
     fail(`テイム係数を持つ生物が少なすぎます: ${withTaming} < ${FLOOR.withTaming}`);
   }
+  const withNameJa = creatures.filter((c) => c.nameJa).length;
+  if (withNameJa < FLOOR.withNameJa) {
+    fail(
+      `日本語名を持つ生物が少なすぎます: ${withNameJa} < ${FLOOR.withNameJa}` +
+        '（ark.wiki.gg 日本語版の構成が変わった可能性がある）',
+    );
+  }
+  // 英名をそのまま日本語名として拾ってしまっていないか
+  for (const c of creatures) {
+    if (c.nameJa && !/[ぁ-んァ-ヶ一-龥]/.test(c.nameJa)) {
+      fail(`creature[${c.name}].nameJa に日本語が含まれていません: ${c.nameJa}`);
+    }
+  }
+
   const jaFilled = creatures.filter((c) => (c.sources?.breeding ?? '').includes('ja(')).length;
   if (jaFilled < FLOOR.jaFilled) {
     fail(
@@ -118,6 +135,7 @@ async function main() {
   const asaNew = creatures.filter((c) => c.origin === 'asa').length;
   console.log(`生物 ${creatures.length}件（ASE由来 ${creatures.length - asaNew} / ASA新規 ${asaNew}）`);
   console.log(`  成体までの時間あり ${withMaturation} / テイム係数あり ${withTaming} / 日本語Wikiで穴埋め ${jaFilled}`);
+  console.log(`  日本語名あり ${withNameJa}`);
   if (meta.conflicts?.length) {
     console.log(`  両Wikiで食い違い ${meta.conflicts.length}件（英語側を採用）`);
   }

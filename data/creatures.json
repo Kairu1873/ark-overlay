@@ -2,6 +2,7 @@
  {
   "key": "abyssalustentacle",
   "name": "Abyssalus Tentacle",
+  "nameJa": null,
   "origin": "asa",
   "entityId": "KrakenTentacle_Character_BP_C",
   "group": null,
@@ -20,12 +21,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": null
+   "ja": null,
+   "nameJa": null
   }
  },
  {
   "key": "acrocanthosaurus",
   "name": "Acrocanthosaurus",
+  "nameJa": "アクロカントサウルス",
   "origin": "asa",
   "entityId": "Acrocanthosaurus_Character_BP_C",
   "group": "Dinosaurs",
@@ -71,12 +74,14 @@
   "sources": {
    "breeding": "cargo(BabyTime x10)",
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "manual"
   }
  },
  {
   "key": "allosaurus",
   "name": "Allosaurus",
+  "nameJa": "アロサウルス",
   "origin": "ase",
   "entityId": "Allo_Character_BP_C",
   "group": "Dinosaurs",
@@ -148,6 +153,7 @@
   },
   "ja": {
    "wildMaps": "原種：The Island, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, ValgueroX種：Genesis: Part 1",
+   "temperament": "攻撃的",
    "diet": "肉食",
    "breedingNote": "卵生。キブル(優)の素材。",
    "drops": "生肉、霜降り肉、皮、ケラチン、アロサウルスの脳(確定で1個)",
@@ -159,12 +165,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "ammonite",
   "name": "Ammonite",
+  "nameJa": "アンモナイト",
   "origin": "ase",
   "entityId": "Ammonite_Character_C",
   "group": "Invertebrates",
@@ -200,6 +208,7 @@
   },
   "ja": {
    "wildMaps": "The Island, Genesis: Part 1, The Center, Ragnarok",
+   "temperament": "受動的",
    "diet": "不明",
    "breedingNote": "不可",
    "drops": "生肉、アンモナイトの胆汁、キチン、原油、シリカ真珠、黒真珠",
@@ -209,12 +218,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "ankylosaurus",
   "name": "Ankylosaurus",
+  "nameJa": "アンキロサウルス",
   "origin": "ase",
   "entityId": "Ankylo_Character_BP_C",
   "group": "Dinosaurs",
@@ -291,6 +302,7 @@
   },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：AberrationX種：Genesis: Part 1",
+   "temperament": "中立",
    "diet": "草食",
    "breedingNote": "卵生。キブル(通常)の素材",
    "drops": "生肉、皮、ケラチン",
@@ -302,12 +314,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "archaeopteryx",
   "name": "Archaeopteryx",
+  "nameJa": "始祖鳥",
   "origin": "ase",
   "entityId": "Archa_Character_BP_C",
   "group": "Dinosaurs",
@@ -379,6 +393,7 @@
   },
   "ja": {
    "wildMaps": "The Island, Scorched Earth, Extinction, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
+   "temperament": "逃走",
    "diet": "キチン?のみ。",
    "breedingNote": "卵生。キブル(簡易)の素材。",
    "drops": "生肉、皮",
@@ -389,12 +404,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "archelon",
   "name": "Archelon",
+  "nameJa": "アーケロン",
   "origin": "asa",
   "entityId": "Archelon_Character_BP_ASA_C",
   "group": "Reptiles",
@@ -440,12 +457,14 @@
   "sources": {
    "breeding": "cargo(BabyTime x10)",
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "manual"
   }
  },
  {
   "key": "argentavis",
   "name": "Argentavis",
+  "nameJa": "アルゲンタヴィス",
   "origin": "ase",
   "entityId": "Argent_Character_BP_C",
   "group": "Birds",
@@ -518,6 +537,7 @@
   },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, ValgueroX種：Genesis: Part 1",
+   "temperament": "攻撃的",
    "diet": "肉食",
    "breedingNote": "卵生。キブル(優)の素材。",
    "drops": "生肉、霜降り肉、皮、アルゲンタヴィスの鉤爪",
@@ -529,12 +549,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "armadoggo",
   "name": "Armadoggo",
+  "nameJa": "アルマドッゴ",
   "origin": "asa",
   "entityId": "Doggo_Character_BP_C",
   "group": "Mammals",
@@ -581,12 +603,14 @@
   "sources": {
    "breeding": "ja(gestationSec,maturationSec)",
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "wikiwiki"
   }
  },
  {
   "key": "arthropluera",
   "name": "Arthropluera",
+  "nameJa": "アースロプレウラ",
   "origin": "ase",
   "entityId": "Arthro_Character_BP_C",
   "group": "Invertebrates",
@@ -666,6 +690,7 @@
   },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Astraeos",
+   "temperament": "攻撃的",
    "diet": "腐肉食",
    "breedingNote": "卵生。無精卵をドロップしない。",
    "drops": "生肉、キチン",
@@ -677,12 +702,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "astrocetus",
   "name": "Astrocetus",
+  "nameJa": "アストロセタス",
   "origin": "ase",
   "entityId": "SpaceWhale_Character_BP_C",
   "group": "Mammals",
@@ -725,6 +752,7 @@
   },
   "ja": {
    "wildMaps": "Genesis: Part 1",
+   "temperament": "テリトリー型",
    "drops": "生肉,霜降り肉,皮,アンバーグリス",
    "tamingMethod": "昏睡テイム",
    "foodPriority": "特級キブル >羊肉 >ラムチョップ >霜降り肉 >こんがり霜降り肉 >大トロ >生肉",
@@ -734,12 +762,14 @@
   "sources": {
    "breeding": null,
    "taming": "dv",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "astrodelphis",
   "name": "Astrodelphis",
+  "nameJa": "アストロデルフィス",
   "origin": "ase",
   "entityId": "SpaceDolphin_Character_BP_C",
   "group": "Mammals",
@@ -792,12 +822,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv",
-   "ja": null
+   "ja": null,
+   "nameJa": "arkja"
   }
  },
  {
   "key": "attackdrone",
   "name": "Attack Drone",
+  "nameJa": "アタックドローン",
   "origin": "ase",
   "entityId": "EndDrone_Character_BP_C",
   "group": "Mechanical Creatures",
@@ -816,12 +848,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": null
+   "ja": null,
+   "nameJa": "arkja"
   }
  },
  {
   "key": "aureliax",
   "name": "Aureliax",
+  "nameJa": "オーレリアックス",
   "origin": "asa",
   "entityId": "SnowDragon_Character_BP_C",
   "group": "Reptiles",
@@ -866,12 +900,14 @@
   "sources": {
    "breeding": "ja(incubationSec,maturationSec)",
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "wikiwiki"
   }
  },
  {
   "key": "baryonyx",
   "name": "Baryonyx",
+  "nameJa": "バリオニクス",
   "origin": "ase",
   "entityId": "Baryonyx_Character_BP_C",
   "group": "Dinosaurs",
@@ -938,6 +974,7 @@
   },
   "ja": {
    "wildMaps": "原種：The Island, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Valguero",
+   "temperament": "攻撃的",
    "diet": "魚食",
    "breedingNote": "卵生。キブル(通常)の素材。",
    "drops": "生肉、皮",
@@ -949,12 +986,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "basilisk",
   "name": "Basilisk",
+  "nameJa": "バジリスク",
   "origin": "ase",
   "entityId": "Basilisk_Character_BP_C",
   "group": "Reptiles",
@@ -1043,12 +1082,14 @@
   "sources": {
    "breeding": "cargo(BabyTime x10)",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "basilosaurus",
   "name": "Basilosaurus",
+  "nameJa": "バシロサウルス",
   "origin": "ase",
   "entityId": "Basilosaurus_Character_BP_C",
   "group": "Mammals",
@@ -1124,6 +1165,7 @@
   },
   "ja": {
    "wildMaps": "原種：The Island, The Center, Astraeos, Ragnarok, ValgueroX種：Genesis: Part 1",
+   "temperament": "友好的",
    "diet": "肉食",
    "breedingNote": "胎生。水中ブリーディング。",
    "drops": "霜降り肉、皮、原油、バシロサウルスの脂肪(2個確定)",
@@ -1135,12 +1177,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "beelzebufo",
   "name": "Beelzebufo",
+  "nameJa": "ベールゼブフォ",
   "origin": "ase",
   "entityId": "Toad_Character_BP_C",
   "group": "Amphibians",
@@ -1213,6 +1257,7 @@
   },
   "ja": {
    "wildMaps": "原種：The Island, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Valguero",
+   "temperament": "受動的",
    "diet": "肉食",
    "breedingNote": "胎生。水中ブリーディング。卵、幼体を陸上に上げると死亡する。",
    "drops": "生肉、皮",
@@ -1224,12 +1269,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "bison",
   "name": "Bison",
+  "nameJa": "バイソン",
   "origin": "asa",
   "entityId": "Bison_Character_BP_C",
   "group": "Mammals",
@@ -1276,12 +1323,14 @@
   "sources": {
    "breeding": "ja(gestationSec,maturationSec)",
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "wikiwiki"
   }
  },
  {
   "key": "bloodstalker",
   "name": "Bloodstalker",
+  "nameJa": "ブラッドストーカー",
   "origin": "ase",
   "entityId": "BogSpider_Character_BP_C",
   "group": "Invertebrates",
@@ -1333,6 +1382,7 @@
   },
   "ja": {
    "wildMaps": "Genesis: Part 1",
+   "temperament": "攻撃的",
    "breedingNote": "可能",
    "drops": "生肉、キチン",
    "tamingMethod": "特殊テイム",
@@ -1343,12 +1393,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "boaratos",
   "name": "Boaratos",
+  "nameJa": "ボアラトス",
   "origin": "asa",
   "entityId": "Boaratos_Character_BP_C",
   "group": "Mammals",
@@ -1385,12 +1437,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "manual"
   }
  },
  {
   "key": "brontosaurus",
   "name": "Brontosaurus",
+  "nameJa": "ブロントサウルス",
   "origin": "ase",
   "entityId": "Sauropod_Character_BP_C",
   "group": "Dinosaurs",
@@ -1467,12 +1521,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": null
+   "ja": null,
+   "nameJa": "arkja"
   }
  },
  {
   "key": "broodmotherlysrix",
   "name": "Broodmother Lysrix",
+  "nameJa": "ブルードマザー",
   "origin": "ase",
   "entityId": "SpiderL_Character_BP_C",
   "group": "Bosses",
@@ -1500,12 +1556,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": null
+   "ja": null,
+   "nameJa": "arkja"
   }
  },
  {
   "key": "bulbdog",
   "name": "Bulbdog",
+  "nameJa": "バルブドッグ",
   "origin": "ase",
   "entityId": "LanternPug_Character_BP_C",
   "group": "Mammals",
@@ -1653,12 +1711,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "burrowbuck",
   "name": "Burrowbuck",
+  "nameJa": "ブローバック",
   "origin": "asa",
   "entityId": "Jackalope_Character_BP_C",
   "group": "Mammals",
@@ -1693,6 +1753,7 @@
   },
   "ja": {
    "wildMaps": "Scorched Earth, Aberration, Extinction, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
+   "temperament": "逃走",
    "breedingNote": "胎生",
    "tamingMethod": "手渡しテイム",
    "foodPriority": "ニンジン、キブル",
@@ -1701,12 +1762,14 @@
   "sources": {
    "breeding": "ja(gestationSec,maturationSec)",
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "wikiwiki"
   }
  },
  {
   "key": "carbonemys",
   "name": "Carbonemys",
+  "nameJa": "カルボネミス",
   "origin": "ase",
   "entityId": "Turtle_Character_BP_C",
   "group": "Reptiles",
@@ -1782,6 +1845,7 @@
   },
   "ja": {
    "wildMaps": "原種：The Island, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Astraeos, Valguero",
+   "temperament": "受動的",
    "diet": "草食",
    "breedingNote": "卵生。キブル(通常)の素材。",
    "drops": "生肉、皮、ケラチン",
@@ -1793,12 +1857,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "carnotaurus",
   "name": "Carnotaurus",
+  "nameJa": "カルノタウルス",
   "origin": "ase",
   "entityId": "Carno_Character_BP_C",
   "group": "Dinosaurs",
@@ -1872,6 +1938,7 @@
   },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Astraeos",
+   "temperament": "攻撃的",
    "diet": "肉食",
    "breedingNote": "卵生。キブル(通常)の素材。",
    "drops": "生肉、霜降り肉、皮、ケラチン",
@@ -1883,12 +1950,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "castoroides",
   "name": "Castoroides",
+  "nameJa": "カストロイデス",
   "origin": "ase",
   "entityId": "Beaver_Character_BP_C",
   "group": "Mammals",
@@ -1963,6 +2032,7 @@
   },
   "ja": {
    "wildMaps": "The Island, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
+   "temperament": "中立。ダムにアクセスすると攻撃的になる。",
    "diet": "草食",
    "breedingNote": "胎生",
    "drops": "生肉、皮、毛皮",
@@ -1974,12 +2044,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "cat",
   "name": "Cat",
+  "nameJa": "ネコ",
   "origin": "asa",
   "entityId": "Cat_Character_BP_C",
   "group": "Mammals",
@@ -2024,12 +2096,14 @@
   "sources": {
    "breeding": "ja(gestationSec,maturationSec)",
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "manual"
   }
  },
  {
   "key": "ceratosaurus",
   "name": "Ceratosaurus",
+  "nameJa": "ケラトサウルス",
   "origin": "asa",
   "entityId": "Ceratosaurus_Character_BP_ASA_C",
   "group": "Dinosaurs",
@@ -2075,12 +2149,14 @@
   "sources": {
    "breeding": "ja(incubationSec,maturationSec)",
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "manual"
   }
  },
  {
   "key": "chalicotherium",
   "name": "Chalicotherium",
+  "nameJa": "カリコテリウム",
   "origin": "ase",
   "entityId": "Chalico_Character_BP_C",
   "group": "Mammals",
@@ -2152,6 +2228,7 @@
   },
   "ja": {
    "wildMaps": "The Island, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
+   "temperament": "テリトリー型",
    "diet": "草食",
    "breedingNote": "胎生",
    "drops": "生肉、皮、霜降り肉",
@@ -2163,12 +2240,14 @@
   "sources": {
    "breeding": "dv+ja(incubationSec)",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "cnidaria",
   "name": "Cnidaria",
+  "nameJa": "クニダリア",
   "origin": "ase",
   "entityId": "Cnidaria_Character_BP_C",
   "group": "Invertebrates",
@@ -2205,6 +2284,7 @@
   },
   "ja": {
    "wildMaps": "原種：The Island, Genesis: Part 1, The Center, Astraeos, Ragnarok, Valguero変種：Aberration",
+   "temperament": "攻撃的",
    "drops": "バイオトキシン?",
    "tamingMethod": "不可",
    "foodPriority": "-",
@@ -2213,12 +2293,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "coelacanth",
   "name": "Coelacanth",
+  "nameJa": "シーラカンス",
   "origin": "ase",
   "entityId": "Coel_Character_BP_C",
   "group": "Fish",
@@ -2271,6 +2353,7 @@
   },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration",
+   "temperament": "臆病",
    "diet": "肉食",
    "breedingNote": "不可",
    "drops": "魚肉",
@@ -2280,12 +2363,14 @@
   "sources": {
    "breeding": null,
    "taming": "dv",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "colossus",
   "name": "Colossus",
+  "nameJa": "コロッサス",
   "origin": "asa",
   "entityId": "Coloss_Character_BP_Big_C",
   "group": "Bosses",
@@ -2304,12 +2389,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": null
+   "ja": null,
+   "nameJa": "manual"
   }
  },
  {
   "key": "concavenator",
   "name": "Concavenator",
+  "nameJa": "コンカヴェナトル",
   "origin": "asa",
   "entityId": "Concavenator_Character_BP_C",
   "group": "Dinosaurs",
@@ -2341,12 +2428,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "manual"
   }
  },
  {
   "key": "corruptedmastercontroller",
   "name": "Corrupted Master Controller",
+  "nameJa": "汚染された支配者",
   "origin": "ase",
   "entityId": "VRMainBoss_Character_C",
   "group": "Bosses",
@@ -2365,12 +2454,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": null
+   "ja": null,
+   "nameJa": "arkja"
   }
  },
  {
   "key": "cosmo",
   "name": "Cosmo",
+  "nameJa": "コスモ",
   "origin": "asa",
   "entityId": "JumpingSpider_Character_BP_C",
   "group": "Invertebrates",
@@ -2415,12 +2506,14 @@
   "sources": {
    "breeding": "ja(incubationSec,maturationSec)",
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "manual"
   }
  },
  {
   "key": "cryolophosaurus",
   "name": "Cryolophosaurus",
+  "nameJa": "クライオロフォサウルス",
   "origin": "asa",
   "entityId": "Cryolophosaurus_Character_BP_C",
   "group": "Dinosaurs",
@@ -2466,12 +2559,14 @@
   "sources": {
    "breeding": "ja(incubationSec,maturationSec)",
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "wikiwiki"
   }
  },
  {
   "key": "daeodon",
   "name": "Daeodon",
+  "nameJa": "ダエオドン",
   "origin": "ase",
   "entityId": "Daeodon_Character_BP_C",
   "group": "Mammals",
@@ -2585,6 +2680,7 @@
   },
   "ja": {
    "wildMaps": "The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
+   "temperament": "攻撃的",
    "diet": "肉食。焼肉を好む。",
    "breedingNote": "胎生",
    "drops": "生肉、皮、ケラチン",
@@ -2596,12 +2692,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "deathworm",
   "name": "Deathworm",
+  "nameJa": "デスワーム",
   "origin": "ase",
   "entityId": "Deathworm_Character_BP_C",
   "group": "Invertebrates",
@@ -2633,12 +2731,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": null
+   "ja": null,
+   "nameJa": "arkja"
   }
  },
  {
   "key": "defenseunit",
   "name": "Defense Unit",
+  "nameJa": "防御ユニット",
   "origin": "ase",
   "entityId": "EndTank_Character_BP_C",
   "group": "Mechanical Creatures",
@@ -2662,12 +2762,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "deinonychus",
   "name": "Deinonychus",
+  "nameJa": "デイノニクス",
   "origin": "ase",
   "entityId": "Deinonychus_Character_BP_C",
   "group": "Dinosaurs",
@@ -2719,6 +2821,7 @@
   },
   "ja": {
    "wildMaps": "Valguero",
+   "temperament": "攻撃的",
    "drops": "生肉 , 皮",
    "tamingMethod": "特殊テイム。卵を盗んで育てる",
    "rideable": "可能",
@@ -2727,12 +2830,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "deinosuchus",
   "name": "Deinosuchus",
+  "nameJa": "デイノスクス",
   "origin": "asa",
   "entityId": "DeinosuchusASA_Character_BP_C",
   "group": "Reptiles",
@@ -2778,12 +2883,14 @@
   "sources": {
    "breeding": "cargo(BabyTime x10)",
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "manual"
   }
  },
  {
   "key": "deinotherium",
   "name": "Deinotherium",
+  "nameJa": "デイノテリウム",
   "origin": "asa",
   "entityId": "DeinotheriumASA_Character_BP_C",
   "group": "Mammals",
@@ -2829,12 +2936,14 @@
   "sources": {
    "breeding": "ja(gestationSec,maturationSec)",
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "manual"
   }
  },
  {
   "key": "deserttitan",
   "name": "Desert Titan",
+  "nameJa": "デザート・タイタン",
   "origin": "ase",
   "entityId": "DesertKaiju_Character_BP_C",
   "group": "Bosses",
@@ -2862,12 +2971,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": null
+   "ja": null,
+   "nameJa": "arkja"
   }
  },
  {
   "key": "dimetrodon",
   "name": "Dimetrodon",
+  "nameJa": "ディメトロドン",
   "origin": "ase",
   "entityId": "Dimetro_Character_BP_C",
   "group": "Synapsids",
@@ -2940,6 +3051,7 @@
   },
   "ja": {
    "wildMaps": "原種：The Island, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Valguero",
+   "temperament": "中立",
    "diet": "肉食",
    "breedingNote": "可。卵生。キブル(通常)の素材。",
    "drops": "生肉、霜降り肉、皮",
@@ -2951,12 +3063,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "dimorphodon",
   "name": "Dimorphodon",
+  "nameJa": "ディモルフォドン",
   "origin": "ase",
   "entityId": "Dimorph_Character_BP_C",
   "group": "Reptiles",
@@ -3028,6 +3142,7 @@
   },
   "ja": {
    "wildMaps": "原種：The Island, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Astraeos, Valguero",
+   "temperament": "中立",
    "diet": "肉食",
    "breedingNote": "卵生。キブル(簡易)の素材。",
    "drops": "生肉、皮",
@@ -3039,12 +3154,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "diplocaulus",
   "name": "Diplocaulus",
+  "nameJa": "ディプロカウルス",
   "origin": "ase",
   "entityId": "Diplocaulus_Character_BP_C",
   "group": "Amphibians",
@@ -3117,6 +3234,7 @@
   },
   "ja": {
    "wildMaps": "原種：The Island, Extinction, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Valguero",
+   "temperament": "逃走",
    "diet": "肉食",
    "breedingNote": "卵生。水中でのみ交配可能。卵、幼体を陸に上げると死亡する。",
    "drops": "生肉、皮",
@@ -3127,12 +3245,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "diplodocus",
   "name": "Diplodocus",
+  "nameJa": "ディプロドクス",
   "origin": "ase",
   "entityId": "Diplodocus_Character_BP_C",
   "group": "Dinosaurs",
@@ -3211,6 +3331,7 @@
   },
   "ja": {
    "wildMaps": "原種：The Island, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration",
+   "temperament": "テリトリー型",
    "diet": "草食",
    "breedingNote": "卵生。キブル(通常)の素材。",
    "drops": "生肉?、皮?、霜降り肉?、竜脚類の仙骨(1個確定)",
@@ -3221,12 +3342,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "direbear",
   "name": "Dire Bear",
+  "nameJa": "ショートフェイスベア",
   "origin": "ase",
   "entityId": "Direbear_Character_BP_C",
   "group": "Mammals",
@@ -3307,6 +3430,7 @@
   },
   "ja": {
    "wildMaps": "原種：The Island, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Astraeos, Valguero",
+   "temperament": "テリトリー型",
    "diet": "雑食",
    "breedingNote": "胎生",
    "drops": "生肉、皮、毛皮",
@@ -3318,12 +3442,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "direwolf",
   "name": "Direwolf",
+  "nameJa": "ダイアウルフ",
   "origin": "ase",
   "entityId": "Direwolf_Character_BP_C",
   "group": "Mammals",
@@ -3396,6 +3522,7 @@
   },
   "ja": {
    "wildMaps": "The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
+   "temperament": "攻撃的",
    "diet": "肉食",
    "breedingNote": "胎生",
    "drops": "生肉、皮、毛皮",
@@ -3406,12 +3533,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "dodo",
   "name": "Dodo",
+  "nameJa": "ドードー",
   "origin": "ase",
   "entityId": "Dodo_Character_BP_C",
   "group": "Birds",
@@ -3498,12 +3627,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "doedicurus",
   "name": "Doedicurus",
+  "nameJa": "ドエディクルス",
   "origin": "ase",
   "entityId": "Doed_Character_BP_C",
   "group": "Mammals",
@@ -3580,6 +3711,7 @@
   },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Astraeos, Ragnarok",
+   "temperament": "中立",
    "diet": "草食",
    "breedingNote": "胎生",
    "drops": "生肉、皮、ケラチン",
@@ -3591,12 +3723,14 @@
   "sources": {
    "breeding": "dv+ja(incubationSec)",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "dragon",
   "name": "Dragon",
+  "nameJa": "ドラゴン",
   "origin": "ase",
   "entityId": "Dragon_Character_BP_Boss_C",
   "group": "Bosses",
@@ -3615,12 +3749,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": null
+   "ja": null,
+   "nameJa": "arkja"
   }
  },
  {
   "key": "drakeling",
   "name": "Drakeling",
+  "nameJa": "ドレイクリング",
   "origin": "asa",
   "entityId": "ShoulderDragon_Character_BP_C",
   "group": "Reptiles",
@@ -3663,12 +3799,14 @@
   "sources": {
    "breeding": "ja(incubationSec,maturationSec)",
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "manual"
   }
  },
  {
   "key": "dreadmare",
   "name": "Dreadmare",
+  "nameJa": "ドレッドメア",
   "origin": "asa",
   "entityId": "DarkPegasus_Character_BP_C",
   "group": "Mammals",
@@ -3713,12 +3851,14 @@
   "sources": {
    "breeding": "ja(gestationSec,maturationSec)",
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "wikiwiki"
   }
  },
  {
   "key": "dreadnoughtus",
   "name": "Dreadnoughtus",
+  "nameJa": "ドレッドノータス",
   "origin": "asa",
   "entityId": "Dreadnoughtus_Character_BP_C",
   "group": "Dinosaurs",
@@ -3764,12 +3904,14 @@
   "sources": {
    "breeding": "ja(incubationSec,maturationSec)",
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "dungbeetle",
   "name": "Dung Beetle",
+  "nameJa": "フンコロガシ",
   "origin": "ase",
   "entityId": "DungBeetle_Character_BP_C",
   "group": "Invertebrates",
@@ -3855,6 +3997,7 @@
   },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration",
+   "temperament": "中立",
    "diet": "糞類、生肉、腐った肉",
    "breedingNote": "不可",
    "drops": "生肉、キチン",
@@ -3865,12 +4008,14 @@
   "sources": {
    "breeding": null,
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "dunkleosteus",
   "name": "Dunkleosteus",
+  "nameJa": "ダンクルオステウス",
   "origin": "ase",
   "entityId": "Dunkle_Character_BP_C",
   "group": "Fish",
@@ -3946,6 +4091,7 @@
   },
   "ja": {
    "wildMaps": "原種：The Island, Genesis: Part 1,The Center, Astraeos, Ragnarok, ValgueroX種：Genesis: Part 1",
+   "temperament": "攻撃的。索敵範囲は狭い。",
    "diet": "肉食",
    "breedingNote": "胎生",
    "drops": "魚肉、大トロ、キチン",
@@ -3957,12 +4103,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "elderclaw",
   "name": "Elderclaw",
+  "nameJa": "エルダークロウ",
   "origin": "asa",
   "entityId": "SpiritBear_Character_BP_C",
   "group": "Mammals",
@@ -4009,12 +4157,14 @@
   "sources": {
    "breeding": "ja(maturationSec)",
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "wikiwiki"
   }
  },
  {
   "key": "electrophorus",
   "name": "Electrophorus",
+  "nameJa": "デンキウナギ",
   "origin": "ase",
   "entityId": "Eel_Character_BP_C",
   "group": "Fish",
@@ -4091,6 +4241,7 @@
   },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Valguero",
+   "temperament": "攻撃的",
    "diet": "肉食",
    "breedingNote": "卵生。水中ブリーディング。",
    "drops": "魚肉、大トロ",
@@ -4101,12 +4252,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "enforcer",
   "name": "Enforcer",
+  "nameJa": "エンフォーサー",
   "origin": "ase",
   "entityId": "Enforcer_Character_BP_C",
   "group": "Mechanical Creatures",
@@ -4149,6 +4302,7 @@
   },
   "ja": {
    "wildMaps": "Extinction",
+   "temperament": "サバイバー以外テリトリー型 サバイバーには中立（市街の建造物（電灯やイスや机等）を採取するのも反応する。",
    "breedingNote": "不可",
    "drops": "エレメントダスト、くず鉄、原油、電子基板+設計図",
    "tamingMethod": "シティターミナルかTEKレプリケーターからの製造。素材は水晶、電子基板、エレメントダスト、鉄のインゴットとポリマー",
@@ -4157,12 +4311,14 @@
   "sources": {
    "breeding": null,
    "taming": "dv",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "equus",
   "name": "Equus",
+  "nameJa": "エクウス",
   "origin": "ase",
   "entityId": "Equus_Character_BP_C",
   "group": "Mammals",
@@ -4281,6 +4437,7 @@
   },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero 変種：Aberration, Astraeos, Valguero",
+   "temperament": "逃走",
    "diet": "草食",
    "breedingNote": "胎生",
    "drops": "生肉、皮、毛皮",
@@ -4292,12 +4449,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "eurypterid",
   "name": "Eurypterid",
+  "nameJa": "ウミサソリ",
   "origin": "ase",
   "entityId": "Euryp_Character_C",
   "group": "Invertebrates",
@@ -4333,6 +4492,7 @@
   },
   "ja": {
    "wildMaps": "The Island, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
+   "temperament": "攻撃的",
    "diet": "不明",
    "breedingNote": "不可",
    "drops": "生肉、キチン、原油、シリカ真珠、黒真珠",
@@ -4342,12 +4502,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "exomek",
   "name": "Exo-Mek",
+  "nameJa": "エクソMEK",
   "origin": "ase",
   "entityId": "Exosuit_Character_BP_C",
   "group": null,
@@ -4389,12 +4551,14 @@
   "sources": {
    "breeding": null,
    "taming": "dv",
-   "ja": null
+   "ja": null,
+   "nameJa": "arkja"
   }
  },
  {
   "key": "fasolasuchus",
   "name": "Fasolasuchus",
+  "nameJa": "ファソラスクス",
   "origin": "asa",
   "entityId": "Fasola_Character_BP_C",
   "group": "Reptiles",
@@ -4441,12 +4605,14 @@
   "sources": {
    "breeding": "ja(incubationSec,maturationSec)",
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "featherlight",
   "name": "Featherlight",
+  "nameJa": "フェザーライト",
   "origin": "ase",
   "entityId": "LanternBird_Character_BP_C",
   "group": "Birds",
@@ -4540,12 +4706,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "ferox",
   "name": "Ferox",
+  "nameJa": "フェロクス",
   "origin": "ase",
   "entityId": "Shapeshifter_Small_Character_BP_C",
   "group": "Mammals",
@@ -4599,6 +4767,7 @@
   },
   "ja": {
    "wildMaps": "Genesis: Part 1",
+   "temperament": "通常時:友好的 変身時:攻撃的",
    "drops": "生肉 , 毛皮 , 皮",
    "tamingMethod": "手渡しテイム",
    "foodPriority": "エレメント",
@@ -4608,12 +4777,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "foresttitan",
   "name": "Forest Titan",
+  "nameJa": "フォレスト・タイタン",
   "origin": "ase",
   "entityId": "ForestKaiju_Character_BP_C",
   "group": "Bosses",
@@ -4641,12 +4812,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": null
+   "ja": null,
+   "nameJa": "arkja"
   }
  },
  {
   "key": "gacha",
   "name": "Gacha",
+  "nameJa": "ガチャ",
   "origin": "ase",
   "entityId": "Gacha_Character_BP_C",
   "group": "Mammals",
@@ -4736,6 +4909,7 @@
   },
   "ja": {
    "wildMaps": "Extinction, Astraeos",
+   "temperament": "臆病",
    "breedingNote": "可",
    "drops": "生肉・皮・石・霜降り肉",
    "tamingMethod": "特殊テイム。Oキーで捨てたアイテムを拾わせることでテイム可能",
@@ -4746,12 +4920,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "gallimimus",
   "name": "Gallimimus",
+  "nameJa": "ガリミムス",
   "origin": "ase",
   "entityId": "Galli_Character_BP_C",
   "group": "Dinosaurs",
@@ -4827,6 +5003,7 @@
   },
   "ja": {
    "wildMaps": "The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
+   "temperament": "逃走",
    "diet": "草食",
    "breedingNote": "卵生。キブル(簡易)の素材。",
    "drops": "生肉、皮",
@@ -4838,12 +5015,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "gasbags",
   "name": "Gasbags",
+  "nameJa": "ガスバッグ",
   "origin": "ase",
   "entityId": "GasBags_Character_BP_C",
   "group": "Invertebrates",
@@ -4916,6 +5095,7 @@
   },
   "ja": {
    "wildMaps": "Extinction, Genesis: Part 1, Astraeos",
+   "temperament": "受動的",
    "breedingNote": "可能",
    "drops": "生肉? , 皮?、ガスバッグの浮袋",
    "tamingMethod": "昏睡テイム。",
@@ -4926,12 +5106,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "giantbee",
   "name": "Giant Bee",
+  "nameJa": "巨大ハチ",
   "origin": "ase",
   "entityId": "Bee_Character_BP_C",
   "group": "Invertebrates",
@@ -4984,6 +5166,7 @@
   },
   "ja": {
    "wildMaps": "The Island, Scorched Earth, Aberration, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
+   "temperament": "巨大女王バチ：テリトリー型巨大ハチ：攻撃的",
    "diet": "肉食(蜂状態)。レアフラワー(ハチの巣状態)。",
    "breedingNote": "不可",
    "drops": "生肉、キチン",
@@ -4994,12 +5177,14 @@
   "sources": {
    "breeding": null,
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "gigadesmodus",
   "name": "Gigadesmodus",
+  "nameJa": "ギガデスモダス",
   "origin": "asa",
   "entityId": "BossBat_Character_BP_C",
   "group": "Mammals",
@@ -5045,12 +5230,14 @@
   "sources": {
    "breeding": "ja(incubationSec,maturationSec)",
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "wikiwiki"
   }
  },
  {
   "key": "giganotosaurus",
   "name": "Giganotosaurus",
+  "nameJa": "ギガノトサウルス",
   "origin": "ase",
   "entityId": "Gigant_Character_BP_C",
   "group": "Dinosaurs",
@@ -5121,6 +5308,7 @@
   },
   "ja": {
    "wildMaps": "The Island, Extinction, The Center, Astraeos, Ragnarok, Valguero",
+   "temperament": "攻撃的",
    "diet": "肉食",
    "breedingNote": "卵生。キブル(超級)の素材。",
    "drops": "生肉、霜降り肉、皮、ギガノトサウルスの心臓(1個確定)",
@@ -5132,12 +5320,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "gigantopithecus",
   "name": "Gigantopithecus",
+  "nameJa": "ギガントピテクス",
   "origin": "ase",
   "entityId": "Bigfoot_Character_BP_C",
   "group": "Mammals",
@@ -5215,6 +5405,7 @@
   },
   "ja": {
    "wildMaps": "原種：The Island, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration",
+   "temperament": "テリトリー型",
    "diet": "草食",
    "breedingNote": "胎生",
    "drops": "生肉、皮",
@@ -5225,12 +5416,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "gigantoraptor",
   "name": "Gigantoraptor",
+  "nameJa": "ギガントラプトル",
   "origin": "asa",
   "entityId": "Gigantoraptor_Character_BP_C",
   "group": "Dinosaurs",
@@ -5276,12 +5469,14 @@
   "sources": {
    "breeding": "ja(incubationSec,maturationSec)",
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "gloon",
   "name": "Gloon",
+  "nameJa": "グルーン",
   "origin": "asa",
   "entityId": "LostCharge_LanternPet_Char_BP_C",
   "group": "Amphibians",
@@ -5316,6 +5511,7 @@
   },
   "ja": {
    "wildMaps": "Lost Colony",
+   "temperament": "攻撃的",
    "diet": "雑食",
    "breedingNote": "可",
    "drops": "生肉、皮",
@@ -5326,12 +5522,14 @@
   "sources": {
    "breeding": "ja(gestationSec,maturationSec)",
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "wikiwiki"
   }
  },
  {
   "key": "glowbug",
   "name": "Glowbug",
+  "nameJa": "グローバグ",
   "origin": "ase",
   "entityId": "Lightbug_Character_BaseBP_C",
   "group": "Invertebrates",
@@ -5366,12 +5564,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": null
+   "ja": null,
+   "nameJa": "arkja"
   }
  },
  {
   "key": "glowtail",
   "name": "Glowtail",
+  "nameJa": "グローテール",
   "origin": "ase",
   "entityId": "LanternLizard_Character_BP_C",
   "group": "Reptiles",
@@ -5465,12 +5665,14 @@
   "sources": {
    "breeding": "dv+ja(gestationSec)",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "grandtortugar",
   "name": "Grand Tortugar",
+  "nameJa": "グランド・トルトゥガー",
   "origin": "asa",
   "entityId": "GrandTortugar_Character_BP_C",
   "group": "Reptiles",
@@ -5505,6 +5707,7 @@
   },
   "ja": {
    "wildMaps": "Astraeos",
+   "temperament": "攻撃的",
    "breedingNote": "可。卵生",
    "tamingMethod": "昏睡テイム。",
    "foodPriority": "メジョベリー<生肉<霜降り肉<羊肉<キブル(優)",
@@ -5514,12 +5717,14 @@
   "sources": {
    "breeding": "ja(incubationSec,maturationSec)",
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "manual"
   }
  },
  {
   "key": "griffin",
   "name": "Griffin",
+  "nameJa": "グリフィン",
   "origin": "ase",
   "entityId": "Griffin_Character_BP_C",
   "group": "Birds",
@@ -5589,6 +5794,7 @@
   },
   "ja": {
    "wildMaps": "Ragnarok",
+   "temperament": "攻撃的",
    "breedingNote": "可。卵生",
    "tamingMethod": "可。",
    "foodPriority": "生肉 < 霜降り肉 < 羊肉 < キブル(特級)",
@@ -5597,12 +5803,14 @@
   "sources": {
    "breeding": null,
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "helicoprion",
   "name": "Helicoprion",
+  "nameJa": "ヘリコプリオン",
   "origin": "asa",
   "entityId": "Helicoprion_Character_BP_C",
   "group": "Fish",
@@ -5649,12 +5857,14 @@
   "sources": {
    "breeding": "ja(incubationSec,maturationSec)",
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "wikiwiki"
   }
  },
  {
   "key": "hesperornis",
   "name": "Hesperornis",
+  "nameJa": "ヘスペロルニス",
   "origin": "ase",
   "entityId": "Hesperornis_Character_BP_C",
   "group": "Birds",
@@ -5714,6 +5924,7 @@
   },
   "ja": {
    "wildMaps": "The Island, Extinction, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
+   "temperament": "テリトリー型",
    "drops": "生肉、皮、有機ポリマー",
    "tamingMethod": "手渡しテイム",
    "foodPriority": "魚の死体をつかんだ状態で近寄りコマンドが表示されてる状態でEキーを押すことで餌付けができる",
@@ -5722,12 +5933,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "human",
   "name": "Human",
+  "nameJa": "人間",
   "origin": "ase",
   "entityId": "PlayerPawnTest_Male_C",
   "group": "Mammals",
@@ -5757,17 +5970,20 @@
   },
   "stats": null,
   "ja": {
+   "temperament": "様々",
    "drops": "Raw Meat、検体インプラント 戦利品(pvpのみ) スキン"
   },
   "sources": {
    "breeding": null,
    "taming": "dv",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "hyaenodon",
   "name": "Hyaenodon",
+  "nameJa": "ヒエノドン",
   "origin": "ase",
   "entityId": "Hyaenodon_Character_BP_C",
   "group": "Mammals",
@@ -5827,6 +6043,7 @@
   },
   "ja": {
    "wildMaps": "The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
+   "temperament": "臆病。3体以上群れると攻撃的。昏睡中、体力低下した個体にも攻撃的になる。",
    "diet": "肉食",
    "breedingNote": "胎生",
    "drops": "生肉、霜降り肉、皮、ケラチン",
@@ -5837,12 +6054,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "hydraskos",
   "name": "Hydraskos",
+  "nameJa": null,
   "origin": "asa",
   "entityId": "Hydra_Character_BP_Boss_Hard_C",
   "group": "Bosses",
@@ -5861,12 +6080,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": null
+   "ja": null,
+   "nameJa": null
   }
  },
  {
   "key": "icetitan",
   "name": "Ice Titan",
+  "nameJa": "アイス・タイタン",
   "origin": "ase",
   "entityId": "IceKaiju_Character_BP_C",
   "group": "Bosses",
@@ -5894,12 +6115,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": null
+   "ja": null,
+   "nameJa": "arkja"
   }
  },
  {
   "key": "ichthyornis",
   "name": "Ichthyornis",
+  "nameJa": "イクチオルニス",
   "origin": "ase",
   "entityId": "Ichthyornis_Character_BP_C",
   "group": "Birds",
@@ -5965,6 +6188,7 @@
   },
   "ja": {
    "wildMaps": "The Island, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
+   "temperament": "攻撃的",
    "diet": "魚食",
    "breedingNote": "卵生。キブル(通常)の素材。",
    "drops": "生肉、皮",
@@ -5975,12 +6199,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "ichthyosaurus",
   "name": "Ichthyosaurus",
+  "nameJa": "イクチオサウルス",
   "origin": "ase",
   "entityId": "Dolphin_Character_BP_C",
   "group": "Reptiles",
@@ -6051,6 +6277,7 @@
   },
   "ja": {
    "wildMaps": "原種：The Island, Genesis: Part 1,The Center, Astraeos, Ragnarok, ValgueroX種：Genesis: Part 1",
+   "temperament": "友好的(サバイバーに積極的に接近する。攻撃を受けると逃走)",
    "diet": "肉食",
    "breedingNote": "胎生",
    "drops": "生肉",
@@ -6062,12 +6289,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "iguanodon",
   "name": "Iguanodon",
+  "nameJa": "イグアノドン",
   "origin": "ase",
   "entityId": "Iguanodon_Character_BP_C",
   "group": "Dinosaurs",
@@ -6144,6 +6373,7 @@
   },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Astraeos, Valguero",
+   "temperament": "中立",
    "diet": "草食",
    "breedingNote": "卵生。キブル(通常)の素材。",
    "drops": "生肉、皮",
@@ -6155,12 +6385,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "insectswarm",
   "name": "Insect Swarm",
+  "nameJa": "虫の大群",
   "origin": "ase",
   "entityId": "InsectSwarmChar_BP_C",
   "group": "Invertebrates",
@@ -6192,12 +6424,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": null
+   "ja": null,
+   "nameJa": "arkja"
   }
  },
  {
   "key": "jerboa",
   "name": "Jerboa",
+  "nameJa": "トビネズミ",
   "origin": "ase",
   "entityId": "Jerboa_Character_BP_C",
   "group": "Mammals",
@@ -6272,6 +6506,7 @@
   },
   "ja": {
    "wildMaps": "Scorched Earth, Genesis: Part 1, Ragnarok, Valguero",
+   "temperament": "受動的",
    "drops": "生肉、皮",
    "tamingMethod": "昏睡テイム",
    "foodPriority": "各種ベリー< メジョベリー <プラントYの種",
@@ -6280,12 +6515,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "jugbug",
   "name": "Jug Bug",
+  "nameJa": "ジャグ・バグ",
   "origin": "ase",
   "entityId": "Jugbug_Character_BaseBP_C",
   "group": "Invertebrates",
@@ -6319,6 +6556,7 @@
   },
   "ja": {
    "wildMaps": "Scorched Earth, Extinction, Astraeos, Ragnarok",
+   "temperament": "受動的",
    "drops": "キチン、生肉",
    "tamingMethod": "不可",
    "rideable": "不可"
@@ -6326,12 +6564,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "kairuku",
   "name": "Kairuku",
+  "nameJa": "カイルクペンギン",
   "origin": "ase",
   "entityId": "Kairuku_Character_BP_C",
   "group": "Birds",
@@ -6402,6 +6642,7 @@
   },
   "ja": {
    "wildMaps": "The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
+   "temperament": "臆病",
    "diet": "肉食",
    "breedingNote": "卵生。キブル(基本)の素材。",
    "drops": "生肉、霜降り肉、皮、有機ポリマー。幼生は霜降り肉と有機ポリマーのドロップ量が多い。(野生のみ)",
@@ -6413,12 +6654,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "kaprosuchus",
   "name": "Kaprosuchus",
+  "nameJa": "カプロスクス",
   "origin": "ase",
   "entityId": "Kaprosuchus_Character_BP_C",
   "group": "Reptiles",
@@ -6491,6 +6734,7 @@
   },
   "ja": {
    "wildMaps": "The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
+   "temperament": "攻撃的",
    "diet": "肉食",
    "breedingNote": "卵生。キブル(通常)の素材。",
    "drops": "生肉、皮",
@@ -6502,12 +6746,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "karkinos",
   "name": "Karkinos",
+  "nameJa": "カルキノス",
   "origin": "ase",
   "entityId": "Crab_Character_BP_C",
   "group": "Invertebrates",
@@ -6577,6 +6823,7 @@
   },
   "ja": {
    "wildMaps": "Aberration, Genesis: Part 1,Astraeos, Ragnarok, Valguero",
+   "temperament": "攻撃的",
    "breedingNote": "胎生",
    "drops": "キチン、有機ポリマー、生肉",
    "tamingMethod": "共に可能、テイムは通常の手法、騎乗にはサドルが必要",
@@ -6585,12 +6832,14 @@
   "sources": {
    "breeding": "ja(gestationSec,maturationSec)",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "kentrosaurus",
   "name": "Kentrosaurus",
+  "nameJa": "ケントロサウルス",
   "origin": "ase",
   "entityId": "Kentro_Character_BP_C",
   "group": "Dinosaurs",
@@ -6688,12 +6937,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "lamprey",
   "name": "Lamprey",
+  "nameJa": "ヤツメウナギ",
   "origin": "ase",
   "entityId": "Lamprey_Character_C",
   "group": "Fish",
@@ -6751,12 +7002,14 @@
   "sources": {
    "breeding": null,
    "taming": "dv",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "leech",
   "name": "Leech",
+  "nameJa": "ヒル",
   "origin": "ase",
   "entityId": "Leech_Character_C",
   "group": "Invertebrates",
@@ -6806,6 +7059,7 @@
   },
   "ja": {
    "wildMaps": "The Island, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
+   "temperament": "攻撃的",
    "drops": "キチン、生肉、ヒルの血液、原油、真珠",
    "tamingMethod": "特殊テイム",
    "foodPriority": "-",
@@ -6815,12 +7069,14 @@
   "sources": {
    "breeding": null,
    "taming": "dv",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "leedsichthys",
   "name": "Leedsichthys",
+  "nameJa": "リードシクティス",
   "origin": "ase",
   "entityId": "Leedsichthys_Character_BP_C",
   "group": "Fish",
@@ -6855,6 +7111,7 @@
   },
   "ja": {
    "wildMaps": "The Island, Genesis: Part 1, The Center, Valguero",
+   "temperament": "受動的",
    "drops": "皮、大トロ、魚肉",
    "tamingMethod": "不可",
    "foodPriority": "-",
@@ -6864,12 +7121,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "liopleurodon",
   "name": "Liopleurodon",
+  "nameJa": "リオプレウロドン",
   "origin": "ase",
   "entityId": "Liopleurodon_Character_BP_C",
   "group": "Reptiles",
@@ -6936,12 +7195,14 @@
   "sources": {
    "breeding": null,
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "lostking",
   "name": "Lost King",
+  "nameJa": null,
   "origin": "asa",
   "entityId": "BossBat_Character_BP_LostKing_C",
   "group": "Bosses",
@@ -6960,12 +7221,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": null
+   "ja": null,
+   "nameJa": null
   }
  },
  {
   "key": "lostqueen",
   "name": "Lost Queen",
+  "nameJa": null,
   "origin": "asa",
   "entityId": "LostQueen_Character_BP_C",
   "group": "Bosses",
@@ -6984,12 +7247,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": null
+   "ja": null,
+   "nameJa": null
   }
  },
  {
   "key": "lumina",
   "name": "Lumina",
+  "nameJa": "ルミナ",
   "origin": "asa",
   "entityId": "Lumina_Character_BP_C",
   "group": "Reptiles",
@@ -7029,12 +7294,14 @@
   "sources": {
    "breeding": "ja(gestationSec,maturationSec)",
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "manual"
   }
  },
  {
   "key": "lymantria",
   "name": "Lymantria",
+  "nameJa": "リマントリア",
   "origin": "ase",
   "entityId": "Moth_Character_BP_C",
   "group": "Invertebrates",
@@ -7106,6 +7373,7 @@
   },
   "ja": {
    "wildMaps": "Scorched Earth, Extinction, Genesis: Part 1, Astraeos, Ragnarok, Valguero",
+   "temperament": "臆病",
    "drops": "絹、キチン、生肉",
    "tamingMethod": "昏睡テイム",
    "foodPriority": "ベリー類<メジョベリー<野菜<キブル(通常）",
@@ -7115,12 +7383,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "lystrosaurus",
   "name": "Lystrosaurus",
+  "nameJa": "リストロサウルス",
   "origin": "ase",
   "entityId": "Lystro_Character_BP_C",
   "group": "Synapsids",
@@ -7200,6 +7470,7 @@
   },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Astraeos, Valguero",
+   "temperament": "臆病",
    "drops": "皮、生肉",
    "tamingMethod": "手渡しテイム",
    "foodPriority": "各種ベリー<メジョベリー<レアフラワー",
@@ -7208,12 +7479,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "macrophage",
   "name": "Macrophage",
+  "nameJa": "マクロファージ",
   "origin": "ase",
   "entityId": "Macrophage_Swarm_Character_C",
   "group": null,
@@ -7248,12 +7521,14 @@
   "sources": {
    "breeding": null,
    "taming": "dv",
-   "ja": null
+   "ja": null,
+   "nameJa": "arkja"
   }
  },
  {
   "key": "maeguana",
   "name": "Maeguana",
+  "nameJa": "メイグアナ",
   "origin": "asa",
   "entityId": "Maelizard_Character_BP_C",
   "group": "Reptiles",
@@ -7288,6 +7563,7 @@
   },
   "ja": {
    "wildMaps": "Astraeos",
+   "temperament": "臆病",
    "breedingNote": "可。ただし性別不明",
    "drops": "生肉、皮、ケラチン、毛皮",
    "tamingMethod": "昏睡テイム。",
@@ -7298,12 +7574,14 @@
   "sources": {
    "breeding": "ja(incubationSec,maturationSec)",
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "manual"
   }
  },
  {
   "key": "maewing",
   "name": "Maewing",
+  "nameJa": "メイウィング",
   "origin": "ase",
   "entityId": "MilkGlider_Character_BP_C",
   "group": "Mammals",
@@ -7358,12 +7636,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv",
-   "ja": null
+   "ja": null,
+   "nameJa": "arkja"
   }
  },
  {
   "key": "magmasaur",
   "name": "Magmasaur",
+  "nameJa": "マグマサウルス",
   "origin": "ase",
   "entityId": "Cherufe_Character_BP_C",
   "group": "Reptiles",
@@ -7402,6 +7682,7 @@
   },
   "ja": {
    "wildMaps": "Genesis: Part 1",
+   "temperament": "攻撃的",
    "breedingNote": "可能",
    "drops": "生肉 , 霜降り肉 , 皮 , 硫黄",
    "tamingMethod": "特殊テイム",
@@ -7411,12 +7692,14 @@
   "sources": {
    "breeding": "dv",
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "malwyn",
   "name": "Malwyn",
+  "nameJa": "マルウィン",
   "origin": "asa",
   "entityId": "DevilFox_Character_BP_C",
   "group": "Mammals",
@@ -7453,12 +7736,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "wikiwiki"
   }
  },
  {
   "key": "managarmr",
   "name": "Managarmr",
+  "nameJa": "マナガルム",
   "origin": "ase",
   "entityId": "IceJumper_Character_BP_C",
   "group": "Mammals",
@@ -7523,6 +7808,7 @@
   },
   "ja": {
    "wildMaps": "Extinction, Lost Colony, Astraeos",
+   "temperament": "攻撃的",
    "breedingNote": "可",
    "drops": "生肉 , 霜降り肉 , 皮",
    "tamingMethod": "昏睡テイム",
@@ -7533,12 +7819,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "manta",
   "name": "Manta",
+  "nameJa": "マンタ",
   "origin": "ase",
   "entityId": "Manta_Character_BP_C",
   "group": "Fish",
@@ -7605,6 +7893,7 @@
   },
   "ja": {
    "wildMaps": "原種：The Island, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Astraeos",
+   "temperament": "攻撃的",
    "tamingMethod": "手渡しテイム",
    "foodPriority": "アンコウのジェル",
    "rideable": "可能",
@@ -7613,12 +7902,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "manticore",
   "name": "Manticore",
+  "nameJa": "マンティコア",
   "origin": "ase",
   "entityId": "Manticore_Character_BP_C",
   "group": "Bosses",
@@ -7637,12 +7928,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": null
+   "ja": null,
+   "nameJa": "arkja"
   }
  },
  {
   "key": "mantis",
   "name": "Mantis",
+  "nameJa": "カマキリ",
   "origin": "ase",
   "entityId": "Mantis_Character_BP_C",
   "group": "Invertebrates",
@@ -7726,12 +8019,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "megachelon",
   "name": "Megachelon",
+  "nameJa": "メガケロン",
   "origin": "ase",
   "entityId": "GiantTurtle_Character_BP_C",
   "group": "Reptiles",
@@ -7784,6 +8079,7 @@
   },
   "ja": {
    "wildMaps": "Genesis: Part 1",
+   "temperament": "中立",
    "drops": "生肉、霜降り肉、皮、シェルフラッグメント",
    "tamingMethod": "特殊テイム",
    "foodPriority": "パラキートの魚群",
@@ -7793,12 +8089,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "megalania",
   "name": "Megalania",
+  "nameJa": "メガラニア",
   "origin": "ase",
   "entityId": "Megalania_Character_BP_C",
   "group": "Reptiles",
@@ -7885,12 +8183,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "megaloceros",
   "name": "Megaloceros",
+  "nameJa": "メガロケロス",
   "origin": "ase",
   "entityId": "Stag_Character_BP_C",
   "group": "Mammals",
@@ -7965,6 +8265,7 @@
   },
   "ja": {
    "wildMaps": "The Island, Extinction, Lost Colony, Genesis: Part 1, The Center, Astraeos, Ragnarok, Valguero",
+   "temperament": "臆病",
    "drops": "生肉 , 皮 , ケラチン , 毛皮",
    "tamingMethod": "昏睡テイム",
    "foodPriority": "メジョベリー < 野菜 < キブル(基本)",
@@ -7974,12 +8275,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "megalodon",
   "name": "Megalodon",
+  "nameJa": "メガロドン",
   "origin": "ase",
   "entityId": "Megalodon_Character_BP_C",
   "group": "Fish",
@@ -8050,6 +8353,7 @@
   },
   "ja": {
    "wildMaps": "The Island, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
+   "temperament": "攻撃的",
    "drops": "魚肉、大トロ、メガロドンの歯",
    "tamingMethod": "昏睡テイム",
    "foodPriority": "こんがり魚 < こんがり大トロ < 魚肉 < こんがり肉 < 生肉 < 大トロ < こんがり霜降り肉 < ラムチョップ < 霜降り肉 < 羊肉 < キブル（優）",
@@ -8059,12 +8363,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "megalosaurus",
   "name": "Megalosaurus",
+  "nameJa": "メガロサウルス",
   "origin": "ase",
   "entityId": "Megalosaurus_Character_BP_C",
   "group": "Dinosaurs",
@@ -8140,6 +8446,7 @@
   },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1, The Center, Astraeos, Ragnarok, Valguero変種:Aberration, Astraeos, Valguero",
+   "temperament": "攻撃的",
    "drops": "生肉 , 皮 , 霜降り肉 , ケラチン",
    "tamingMethod": "昏睡テイム",
    "foodPriority": "こんがり魚 < こんがり大トロ < 魚肉 < こんがり肉 < 生肉 < 大トロ < 霜降りこんがり肉 < ラムチョップ < 霜降り肉 < 羊肉 < キブル(優)",
@@ -8149,12 +8456,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "meganeura",
   "name": "Meganeura",
+  "nameJa": "メガネウラ",
   "origin": "ase",
   "entityId": "Dragonfly_Character_BP_C",
   "group": "Invertebrates",
@@ -8194,12 +8503,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": null
+   "ja": null,
+   "nameJa": "arkja"
   }
  },
  {
   "key": "megapithecus",
   "name": "Megapithecus",
+  "nameJa": "メガピテクス",
   "origin": "ase",
   "entityId": "Gorilla_Character_BP_C",
   "group": "Bosses",
@@ -8218,12 +8529,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": null
+   "ja": null,
+   "nameJa": "arkja"
   }
  },
  {
   "key": "megaraptor",
   "name": "Megaraptor",
+  "nameJa": "メガラプトル",
   "origin": "asa",
   "entityId": "ValMegaraptor_Character_BP_C",
   "group": "Dinosaurs",
@@ -8269,12 +8582,14 @@
   "sources": {
    "breeding": "ja(incubationSec,maturationSec)",
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "wikiwiki"
   }
  },
  {
   "key": "megatherium",
   "name": "Megatherium",
+  "nameJa": "メガテリウム",
   "origin": "ase",
   "entityId": "Megatherium_Character_BP_C",
   "group": "Mammals",
@@ -8355,6 +8670,7 @@
   },
   "ja": {
    "wildMaps": "The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1, The Center, Astraeos, Ragnarok, Valguero",
+   "temperament": "中立、虫類に対しては攻撃的、バグキラー発動中は攻撃的",
    "tamingMethod": "昏睡テイム",
    "foodPriority": "メジョベリー＜生肉＜霜降り肉＜巨大ハチのハチミツ＜羊肉＜キブル(優)",
    "rideable": "可能",
@@ -8363,12 +8679,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "mek",
   "name": "Mek",
+  "nameJa": null,
   "origin": "ase",
   "entityId": "Mek_Character_BP_C",
   "group": null,
@@ -8410,12 +8728,14 @@
   "sources": {
    "breeding": null,
    "taming": "dv",
-   "ja": null
+   "ja": null,
+   "nameJa": null
   }
  },
  {
   "key": "mesopithecus",
   "name": "Mesopithecus",
+  "nameJa": "メソピテクス",
   "origin": "ase",
   "entityId": "Monkey_Character_BP_C",
   "group": "Mammals",
@@ -8490,6 +8810,7 @@
   },
   "ja": {
    "wildMaps": "The Island, Extinction, Lost Colony, Genesis: Part 1, The Center, Astraeos, Ragnarok, Valguero",
+   "temperament": "逃走",
    "drops": "生肉 , 皮",
    "tamingMethod": "手渡しテイム",
    "foodPriority": "メジョベリー < キブル（基本）",
@@ -8499,12 +8820,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "microraptor",
   "name": "Microraptor",
+  "nameJa": "ミクロラプトル",
   "origin": "ase",
   "entityId": "Microraptor_Character_BP_C",
   "group": "Dinosaurs",
@@ -8627,6 +8950,7 @@
   },
   "ja": {
    "wildMaps": "The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1, The Center, Astraeos, Ragnarok, Valguero",
+   "temperament": "攻撃的",
    "drops": "生肉 , 皮",
    "tamingMethod": "昏睡テイム",
    "foodPriority": "生肉 < こんがり霜降り肉< 霜降り肉 < 羊肉 <レアマッシュルーム<レアフラワー",
@@ -8636,12 +8960,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "minotarchos",
   "name": "Minotarchos",
+  "nameJa": "ミノタルコス",
   "origin": "asa",
   "entityId": "MinotaurTempleBoss_Character_BP_C",
   "group": "Bosses",
@@ -8660,12 +8986,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": null
+   "ja": null,
+   "nameJa": "manual"
   }
  },
  {
   "key": "minotaur",
   "name": "Minotaur",
+  "nameJa": null,
   "origin": "asa",
   "entityId": "CaveMinotaur_Character_BP_New_C",
   "group": "Mammals",
@@ -8693,12 +9021,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": null
+   "ja": null,
+   "nameJa": null
   }
  },
  {
   "key": "moedermasteroftheocean",
   "name": "Moeder, Master of the Ocean",
+  "nameJa": "深海の女王・ムーダー",
   "origin": "ase",
   "entityId": "EelBoss_Character_BP_C",
   "group": "Bosses",
@@ -8717,12 +9047,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": null
+   "ja": null,
+   "nameJa": "arkja"
   }
  },
  {
   "key": "morellatops",
   "name": "Morellatops",
+  "nameJa": "モレラトプス",
   "origin": "ase",
   "entityId": "camelsaurus_Character_BP_C",
   "group": "Dinosaurs",
@@ -8802,12 +9134,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "mosasaurus",
   "name": "Mosasaurus",
+  "nameJa": "モササウルス",
   "origin": "ase",
   "entityId": "Mosa_Character_BP_C",
   "group": "Reptiles",
@@ -8883,6 +9217,7 @@
   },
   "ja": {
    "wildMaps": "原種：The Island, Genesis: Part 1,The Center, Astraeos, Ragnarok, ValgueroX種：Genesis: Part 1",
+   "temperament": "攻撃的",
    "drops": "Hide, Raw Prime Meat , Fireworks Flaregun Skin",
    "tamingMethod": "昏睡テイム",
    "foodPriority": "Raw Meat < Cooked Prime Meat<Raw Prime Meat < Exceptional Kibble",
@@ -8892,12 +9227,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "moschops",
   "name": "Moschops",
+  "nameJa": "モスコプス",
   "origin": "ase",
   "entityId": "Moschops_Character_BP_C",
   "group": "Synapsids",
@@ -9010,6 +9347,7 @@
   },
   "ja": {
    "wildMaps": "通常種:The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1, The Center, Astraeos, Ragnarok, Valguero変種:Aberration, Astraeos, Valguero",
+   "temperament": "臆病",
    "drops": "Raw Meat , Hide",
    "tamingMethod": "手渡しテイム",
    "foodPriority": "ラムチョップ・ティントベリー・メジョベリー・レアフラワー・レアマッシュルーム・蜂蜜・焼いた霜降り肉・霜降り干し肉・大トロ・焼いた大トロの中からランダム",
@@ -9019,12 +9357,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "nameless",
   "name": "Nameless",
+  "nameJa": "ネームレス",
   "origin": "ase",
   "entityId": "ChupaCabra_Character_BP_C",
   "group": "Mammals",
@@ -9062,12 +9402,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "natrix",
   "name": "Natrix",
+  "nameJa": "ヤマカガシ",
   "origin": "asa",
   "entityId": "Boss_Gorgon_Character_BP_Base_C",
   "group": "Bosses",
@@ -9086,12 +9428,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": null
+   "ja": null,
+   "nameJa": "manual"
   }
  },
  {
   "key": "neophyte",
   "name": "Neophyte",
+  "nameJa": "ネオファイト",
   "origin": "asa",
   "entityId": "Neophyte_Character_BP_C",
   "group": "Mammals",
@@ -9124,12 +9468,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "manual"
   }
  },
  {
   "key": "noglin",
   "name": "Noglin",
+  "nameJa": "ノグリン",
   "origin": "ase",
   "entityId": "BrainSlug_Character_BP_C",
   "group": "Synapsids",
@@ -9173,12 +9519,14 @@
   "sources": {
    "breeding": null,
    "taming": "dv",
-   "ja": null
+   "ja": null,
+   "nameJa": "arkja"
   }
  },
  {
   "key": "oasisaur",
   "name": "Oasisaur",
+  "nameJa": "オアシサウルス",
   "origin": "asa",
   "entityId": "Oasisaur_Character_BP_C",
   "group": "Invertebrates",
@@ -9215,12 +9563,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "manual"
   }
  },
  {
   "key": "ossidon",
   "name": "Ossidon",
+  "nameJa": "オシドン",
   "origin": "asa",
   "entityId": "SnowMonster_Character_BP_C",
   "group": "Mammals",
@@ -9266,12 +9616,14 @@
   "sources": {
    "breeding": "ja(gestationSec,maturationSec)",
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "manual"
   }
  },
  {
   "key": "otter",
   "name": "Otter",
+  "nameJa": "カワウソ",
   "origin": "ase",
   "entityId": "Otter_Character_BP_C",
   "group": "Mammals",
@@ -9332,6 +9684,7 @@
   },
   "ja": {
    "wildMaps": "原種The Island, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Astraeos",
+   "temperament": "受動的",
    "diet": "魚食",
    "breedingNote": "胎生",
    "drops": "生肉、皮、毛皮",
@@ -9342,12 +9695,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "overseer",
   "name": "Overseer",
+  "nameJa": "監督者",
   "origin": "ase",
   "entityId": "EndBoss_Character_C",
   "group": "Bosses",
@@ -9366,12 +9721,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": null
+   "ja": null,
+   "nameJa": "arkja"
   }
  },
  {
   "key": "oviraptor",
   "name": "Oviraptor",
+  "nameJa": "オヴィラプトル",
   "origin": "ase",
   "entityId": "Oviraptor_Character_BP_C",
   "group": "Dinosaurs",
@@ -9507,6 +9864,7 @@
   },
   "ja": {
    "wildMaps": "原種：The Island, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Astraeos, Valguero",
+   "temperament": "逃走",
    "diet": "肉食",
    "breedingNote": "卵生。キブル(簡易)の素材。",
    "drops": "生肉、皮",
@@ -9518,12 +9876,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "ovis",
   "name": "Ovis",
+  "nameJa": "ヒツジ",
   "origin": "ase",
   "entityId": "Sheep_Character_BP_C",
   "group": "Mammals",
@@ -9592,6 +9952,7 @@
   },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Astraeos, Valguero",
+   "temperament": "臆病",
    "diet": "草食",
    "breedingNote": "胎生",
    "drops": "羊肉?、皮?、毛皮?",
@@ -9602,12 +9963,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "pachyrhinosaurus",
   "name": "Pachyrhinosaurus",
+  "nameJa": "パキリノサウルス",
   "origin": "ase",
   "entityId": "Pachyrhino_Character_BP_C",
   "group": "Dinosaurs",
@@ -9686,6 +10049,7 @@
   },
   "ja": {
    "wildMaps": "The Island, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
+   "temperament": "中立",
    "diet": "草食",
    "breedingNote": "卵生。キブル(通常)の素材。",
    "drops": "生肉、皮、ケラチン",
@@ -9697,12 +10061,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "palaeoctopus",
   "name": "Palaeoctopus",
+  "nameJa": "パレオクトパス",
   "origin": "asa",
   "entityId": "Palaeoctopus_Character_BP_C",
   "group": "Invertebrates",
@@ -9740,12 +10106,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "manual"
   }
  },
  {
   "key": "paraceratherium",
   "name": "Paraceratherium",
+  "nameJa": "パラケラテリウム",
   "origin": "ase",
   "entityId": "Paracer_Character_BP_C",
   "group": "Mammals",
@@ -9824,12 +10192,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": null
+   "ja": null,
+   "nameJa": "arkja"
   }
  },
  {
   "key": "parakeetfishschool",
   "name": "Parakeet Fish School",
+  "nameJa": "パラキートの魚群",
   "origin": "ase",
   "entityId": "MicrobeSwarmChar_BP_C",
   "group": "Fish",
@@ -9862,12 +10232,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": null
+   "ja": null,
+   "nameJa": "arkja"
   }
  },
  {
   "key": "parrot",
   "name": "Parrot",
+  "nameJa": "オウム",
   "origin": "asa",
   "entityId": "Parrot_Character_BP_C",
   "group": "Birds",
@@ -9901,12 +10273,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "manual"
   }
  },
  {
   "key": "pegomastax",
   "name": "Pegomastax",
+  "nameJa": "ペゴマスタクス",
   "origin": "ase",
   "entityId": "Pegomastax_Character_BP_C",
   "group": "Dinosaurs",
@@ -9980,6 +10354,7 @@
   },
   "ja": {
    "wildMaps": "The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
+   "temperament": "攻撃的",
    "drops": "生肉、皮",
    "tamingMethod": "特殊方式（備考参照）",
    "foodPriority": "<メジョベリー"
@@ -9987,12 +10362,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "pelagornis",
   "name": "Pelagornis",
+  "nameJa": "ペラゴルニス",
   "origin": "ase",
   "entityId": "Pela_Character_BP_C",
   "group": "Birds",
@@ -10056,6 +10433,7 @@
   },
   "ja": {
    "wildMaps": "The Island, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
+   "temperament": "中立",
    "drops": "Raw Meat , Hide",
    "tamingMethod": "昏睡テイム",
    "foodPriority": "Raw Fish Meat < Cooked Prime Fish Meat< Raw Prime Fish Meat < Regular Kibble(旧 キブル（ペゴマスタクスの卵))",
@@ -10065,12 +10443,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "phiomia",
   "name": "Phiomia",
+  "nameJa": "フィオミア",
   "origin": "ase",
   "entityId": "Phiomia_Character_BP_C",
   "group": "Mammals",
@@ -10145,6 +10525,7 @@
   },
   "ja": {
    "wildMaps": "The Island, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
+   "temperament": "臆病",
    "diet": "草食",
    "breedingNote": "胎生",
    "drops": "生肉、皮",
@@ -10156,12 +10537,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "phoenix",
   "name": "Phoenix",
+  "nameJa": "フェニックス",
   "origin": "ase",
   "entityId": "Phoenix_Character_BP_C",
   "group": "Birds",
@@ -10221,12 +10604,14 @@
   "sources": {
    "breeding": "ja(incubationSec,maturationSec)",
    "taming": "dv",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "pirate",
   "name": "Pirate",
+  "nameJa": null,
   "origin": "asa",
   "entityId": "Pirate_Character_BP_Base_C",
   "group": "Mammals",
@@ -10245,12 +10630,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": null
+   "ja": null,
+   "nameJa": null
   }
  },
  {
   "key": "plesiosaur",
   "name": "Plesiosaur",
+  "nameJa": "プレシオサウルス",
   "origin": "ase",
   "entityId": "Plesiosaur_Character_BP_C",
   "group": "Reptiles",
@@ -10321,6 +10708,7 @@
   },
   "ja": {
    "wildMaps": "The Island, Genesis: Part 1, The Center, Astraeos, Ragnarok",
+   "temperament": "攻撃的",
    "diet": "肉食",
    "breedingNote": "胎生",
    "drops": "霜降り肉、皮、打ち上げ花火用照明銃スキン",
@@ -10332,12 +10720,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "procoptodon",
   "name": "Procoptodon",
+  "nameJa": "プロコプトドン",
   "origin": "ase",
   "entityId": "Procoptodon_Character_BP_C",
   "group": "Mammals",
@@ -10410,6 +10800,7 @@
   },
   "ja": {
    "wildMaps": "The Island, Scorched Earth, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
+   "temperament": "臆病",
    "diet": "草食、プラントXの種?、レアマッシュルーム?",
    "breedingNote": "胎生",
    "drops": "生肉?、皮?、毛皮?",
@@ -10421,12 +10812,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "pteranodon",
   "name": "Pteranodon",
+  "nameJa": "プテラノドン",
   "origin": "ase",
   "entityId": "Ptero_Character_BP_C",
   "group": "Reptiles",
@@ -10498,6 +10891,7 @@
   },
   "ja": {
    "wildMaps": "The Island, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
+   "temperament": "臆病",
    "diet": "肉食",
    "breedingNote": "卵生。キブル(簡易)の素材。",
    "drops": "生肉、皮",
@@ -10509,12 +10903,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "pulmonoscorpius",
   "name": "Pulmonoscorpius",
+  "nameJa": "プルモノスコルピウス",
   "origin": "ase",
   "entityId": "Scorpion_Character_BP_C",
   "group": "Invertebrates",
@@ -10590,6 +10986,7 @@
   },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Valguero",
+   "temperament": "攻撃的",
    "diet": "腐肉食。生肉も食べるが回復量が少ない。",
    "breedingNote": "卵生。無精卵を産まない。キブル作成不可。",
    "drops": "生肉、キチン",
@@ -10601,12 +10998,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "purlovia",
   "name": "Purlovia",
+  "nameJa": "プルロヴィア",
   "origin": "ase",
   "entityId": "Purlovia_Character_BP_C",
   "group": "Synapsids",
@@ -10685,6 +11084,7 @@
   },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration",
+   "temperament": "攻撃的",
    "diet": "肉食",
    "breedingNote": "胎生",
    "drops": "生肉、霜降り肉、皮",
@@ -10695,12 +11095,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "pyromane",
   "name": "Pyromane",
+  "nameJa": "パイロメイン",
   "origin": "asa",
   "entityId": "FireLion_Character_BP_C",
   "group": "Mammals",
@@ -10747,12 +11149,14 @@
   "sources": {
    "breeding": "ja(gestationSec,maturationSec)",
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "manual"
   }
  },
  {
   "key": "raptor",
   "name": "Raptor",
+  "nameJa": "ユタラプトル",
   "origin": "ase",
   "entityId": "Raptor_Character_BP_C",
   "group": "Dinosaurs",
@@ -10826,6 +11230,7 @@
   },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Astraeos, ValgueroTEK種：Extinction, Genesis: Part 1, AstraeosX種：Genesis: Part 1",
+   "temperament": "攻撃的",
    "drops": "通常:生肉, 皮 TEK:原油,電子基盤,くず鉄,エレメントダスト",
    "tamingMethod": "昏睡テイム",
    "foodPriority": "生肉?<こんがり霜降り肉?<霜降り肉?<キブル(基本)?",
@@ -10835,12 +11240,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "ravager",
   "name": "Ravager",
+  "nameJa": "ラベジャー",
   "origin": "ase",
   "entityId": "CaveWolf_Character_BP_C",
   "group": "Mammals",
@@ -10928,12 +11335,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "reaper",
   "name": "Reaper",
+  "nameJa": "リーパー",
   "origin": "ase",
   "entityId": "Xenomorph_Character_BP_Male_C",
   "group": null,
@@ -10984,12 +11393,14 @@
   "sources": {
    "breeding": "dv",
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "rex",
   "name": "Rex",
+  "nameJa": "ティラノサウルス",
   "origin": "ase",
   "entityId": "Rex_Character_BP_C",
   "group": "Dinosaurs",
@@ -11062,6 +11473,7 @@
   },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, ValgueroTEK種：Extinction, Genesis: Part 1, AstraeosX種：Genesis: Part 1",
+   "temperament": "攻撃的",
    "diet": "肉食",
    "breedingNote": "卵生。キブル(超級)の素材",
    "drops": "生肉、霜降り肉、皮、ティラノサウルスの腕(2個確定)",
@@ -11073,12 +11485,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "rockdrake",
   "name": "Rock Drake",
+  "nameJa": "ロックドレイク",
   "origin": "ase",
   "entityId": "RockDrake_Character_BP_C",
   "group": "Reptiles",
@@ -11141,12 +11555,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "rockelemental",
   "name": "Rock Elemental",
+  "nameJa": "ロックエレメンタル",
   "origin": "ase",
   "entityId": "RockGolem_Character_BP_C",
   "group": null,
@@ -11218,6 +11634,7 @@
   },
   "ja": {
    "wildMaps": "原種：Scorched Earth, Astraeos, Ragnarok, ExtinctionX種：Genesis: Part 1チョークエレメンタル：Valgueroアイスエレメンタル：Valguero, Genesis: Part 1スクラップエレメンタル：Club ARKミッション「Mad Mark」アルファ報酬（確率で入手）",
+   "temperament": "テリトリー型",
    "drops": "金属鉱石,石,水晶,黒曜石,原油,硫黄",
    "tamingMethod": "特殊テイム",
    "foodPriority": "石 < 粘土 < 硫黄 < キブル(特級)",
@@ -11227,12 +11644,14 @@
   "sources": {
    "breeding": null,
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "rockwell",
   "name": "Rockwell",
+  "nameJa": "ロックウェル",
   "origin": "ase",
   "entityId": "Rockwell_Character_BP_C",
   "group": "Bosses",
@@ -11251,12 +11670,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": null
+   "ja": null,
+   "nameJa": "arkja"
   }
  },
  {
   "key": "rockwellprime",
   "name": "Rockwell Prime",
+  "nameJa": "ロックウェル・プライム",
   "origin": "ase",
   "entityId": "RockwellNode_Character_BP_FinalFight_C",
   "group": "Bosses",
@@ -11275,12 +11696,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": null
+   "ja": null,
+   "nameJa": "arkja"
   }
  },
  {
   "key": "rollrat",
   "name": "Roll Rat",
+  "nameJa": "ロールラット",
   "origin": "ase",
   "entityId": "MoleRat_Character_BP_C",
   "group": "Mammals",
@@ -11357,12 +11780,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "royalgriffin",
   "name": "Royal Griffin",
+  "nameJa": null,
   "origin": "ase",
   "entityId": null,
   "group": "Birds",
@@ -11404,12 +11829,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv",
-   "ja": null
+   "ja": null,
+   "nameJa": null
   }
  },
  {
   "key": "sabertooth",
   "name": "Sabertooth",
+  "nameJa": "サーベルタイガー",
   "origin": "ase",
   "entityId": "Saber_Character_BP_C",
   "group": "Mammals",
@@ -11482,6 +11909,7 @@
   },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, ValgueroX種：Genesis: Part 1",
+   "temperament": "攻撃的",
    "diet": "肉食",
    "breedingNote": "胎生",
    "drops": "生肉、皮、ケラチン",
@@ -11493,12 +11921,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "sabertoothsalmon",
   "name": "Sabertooth Salmon",
+  "nameJa": "セイバートゥース・サーモン",
   "origin": "ase",
   "entityId": "Salmon_Character_BP_C",
   "group": "Fish",
@@ -11550,6 +11980,7 @@
   },
   "ja": {
    "wildMaps": "原種：変種：X種：",
+   "temperament": "中立",
    "diet": "肉食",
    "breedingNote": "不可",
    "drops": "魚肉、大トロ",
@@ -11559,12 +11990,14 @@
   "sources": {
    "breeding": null,
    "taming": "dv",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "scout",
   "name": "Scout",
+  "nameJa": "スカウト",
   "origin": "ase",
   "entityId": "Scout_Character_BP_C",
   "group": "Mechanical Creatures",
@@ -11595,12 +12028,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": null
+   "ja": null,
+   "nameJa": "arkja"
   }
  },
  {
   "key": "seeker",
   "name": "Seeker",
+  "nameJa": "シーカー",
   "origin": "ase",
   "entityId": "Pteroteuthis_Char_BP_C",
   "group": "Invertebrates",
@@ -11633,6 +12068,7 @@
    "speed": 100
   },
   "ja": {
+   "temperament": "攻撃的",
    "drops": "生肉 , 皮",
    "tamingMethod": "不可",
    "foodPriority": "-",
@@ -11641,12 +12077,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "shadowmane",
   "name": "Shadowmane",
+  "nameJa": "シャドウメイン",
   "origin": "ase",
   "entityId": "LionfishLion_Character_BP_C",
   "group": "Fish",
@@ -11700,12 +12138,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv",
-   "ja": null
+   "ja": null,
+   "nameJa": "arkja"
   }
  },
  {
   "key": "shallocistentacle",
   "name": "Shallocis Tentacle",
+  "nameJa": null,
   "origin": "asa",
   "entityId": "KrakenTentacle_Character_BP_AboveWater_C",
   "group": null,
@@ -11724,12 +12164,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": null
+   "ja": null,
+   "nameJa": null
   }
  },
  {
   "key": "shastasaurus",
   "name": "Shastasaurus",
+  "nameJa": "シャスタサウルス",
   "origin": "asa",
   "entityId": "Shastasaurus_Character_BP_C",
   "group": "Reptiles",
@@ -11766,12 +12208,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "shinehorn",
   "name": "Shinehorn",
+  "nameJa": "シャインホーン",
   "origin": "ase",
   "entityId": "LanternGoat_Character_BP_C",
   "group": "Mammals",
@@ -11867,12 +12311,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "sir5rm8",
   "name": "Sir-5rM8",
+  "nameJa": null,
   "origin": "asa",
   "entityId": "HelperBot_Character_B_C",
   "group": "Mechanical Creatures",
@@ -11900,12 +12346,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": null
+   "ja": null,
+   "nameJa": null
   }
  },
  {
   "key": "snowowl",
   "name": "Snow Owl",
+  "nameJa": "雪フクロウ",
   "origin": "ase",
   "entityId": "Owl_Character_BP_C",
   "group": "Birds",
@@ -11971,6 +12419,7 @@
   },
   "ja": {
    "wildMaps": "Extinction",
+   "temperament": "攻撃的",
    "breedingNote": "可",
    "drops": "Raw Meat , Hide",
    "tamingMethod": "共に可能、テイムは通常の手法、騎乗にはサドルが必要",
@@ -11980,12 +12429,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "solwyn",
   "name": "Solwyn",
+  "nameJa": "ソルウィン",
   "origin": "asa",
   "entityId": "AngelFox_Character_BP_C",
   "group": "Mammals",
@@ -12021,12 +12472,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "wikiwiki"
   }
  },
  {
   "key": "stegosaurus",
   "name": "Stegosaurus",
+  "nameJa": "ステゴサウルス",
   "origin": "ase",
   "entityId": "Stego_Character_BP_C",
   "group": "Dinosaurs",
@@ -12102,6 +12555,7 @@
   },
   "ja": {
    "wildMaps": "The Island, The Center",
+   "temperament": "中立",
    "diet": "草食",
    "breedingNote": "卵生。キブル(通常)の素材。",
    "drops": "生肉、霜降り肉、皮、ケラチン",
@@ -12112,12 +12566,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "summoner",
   "name": "Summoner",
+  "nameJa": "サモナー",
   "origin": "ase",
   "entityId": "Summoner_Character_BP_C",
   "group": null,
@@ -12147,12 +12603,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": null
+   "ja": null,
+   "nameJa": "arkja"
   }
  },
  {
   "key": "tapejara",
   "name": "Tapejara",
+  "nameJa": "タペヤラ",
   "origin": "ase",
   "entityId": "Tapejara_Character_BP_C",
   "group": "Reptiles",
@@ -12225,6 +12683,7 @@
   },
   "ja": {
    "wildMaps": "The Island, The Center, Scorched Earth",
+   "temperament": "逃走",
    "diet": "肉食",
    "breedingNote": "卵生。キブル(優)の材料。",
    "drops": "生肉、皮",
@@ -12235,12 +12694,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "tekstryder",
   "name": "Tek Stryder",
+  "nameJa": "TEKストライダー",
   "origin": "ase",
   "entityId": "TekStrider_Character_BP_C",
   "group": "Mechanical Creatures",
@@ -12284,12 +12745,14 @@
   "sources": {
    "breeding": null,
    "taming": "dv",
-   "ja": null
+   "ja": null,
+   "nameJa": "arkja"
   }
  },
  {
   "key": "terrorbird",
   "name": "Terror Bird",
+  "nameJa": "テラーバード",
   "origin": "ase",
   "entityId": "TerrorBird_Character_BP_C",
   "group": "Birds",
@@ -12361,6 +12824,7 @@
    "speed": 100
   },
   "ja": {
+   "temperament": "攻撃的",
    "diet": "肉食",
    "breedingNote": "卵生。キブル(通常)の素材。",
    "drops": "生肉、皮",
@@ -12371,12 +12835,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "thodes",
   "name": "Thodes",
+  "nameJa": "ソデス",
   "origin": "asa",
   "entityId": "Boss_Cyclops_Character_BP_Base_C",
   "group": "Bosses",
@@ -12395,12 +12861,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": null
+   "ja": null,
+   "nameJa": "manual"
   }
  },
  {
   "key": "thornydragon",
   "name": "Thorny Dragon",
+  "nameJa": "モロクトカゲ",
   "origin": "ase",
   "entityId": "SpineyLizard_Character_BP_C",
   "group": "Reptiles",
@@ -12511,6 +12979,7 @@
   },
   "ja": {
    "wildMaps": "スコーチドアース、エクスティンクション、アストレオス",
+   "temperament": "攻撃的",
    "drops": "Raw Meat,Hide,Keratin",
    "tamingMethod": "テイム可、騎乗可、テイムは通常の方法",
    "foodPriority": "ラムチョップ<霜降り<羊肉<通常キブル(青",
@@ -12519,12 +12988,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "thrall",
   "name": "Thrall",
+  "nameJa": "スロール",
   "origin": "asa",
   "entityId": "Thrall_Character_BP_Base_C",
   "group": "Mammals",
@@ -12561,12 +13032,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "manual"
   }
  },
  {
   "key": "thylacoleo",
   "name": "Thylacoleo",
+  "nameJa": "ティラコレオ",
   "origin": "ase",
   "entityId": "Thylacoleo_Character_BP_C",
   "group": "Mammals",
@@ -12682,6 +13155,7 @@
    "speed": 100
   },
   "ja": {
+   "temperament": "攻撃的",
    "diet": "肉食",
    "breedingNote": "胎生",
    "drops": "生肉、皮、ケラチン、ティラコレオの鉤爪?(2個確定)",
@@ -12692,12 +13166,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "tidepup",
   "name": "Tidepup",
+  "nameJa": "タイドパップ",
   "origin": "asa",
   "entityId": "Axolotl_Character_BP_C",
   "group": "Amphibians",
@@ -12732,12 +13208,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "manual"
   }
  },
  {
   "key": "titanoboa",
   "name": "Titanoboa",
+  "nameJa": "ティタノボア",
   "origin": "ase",
   "entityId": "BoaFrill_Character_BP_C",
   "group": "Reptiles",
@@ -12840,6 +13318,7 @@
    "speed": 100
   },
   "ja": {
+   "temperament": "攻撃的",
    "diet": "卵のみ。有精卵、無精卵を問わない。",
    "breedingNote": "不可。卵生。キブル(優)の素材。",
    "drops": "生肉、霜降り肉、皮、ティタノボアの毒液?(2個を30%でドロップ)",
@@ -12850,12 +13329,14 @@
   "sources": {
    "breeding": null,
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "titanosaur",
   "name": "Titanosaur",
+  "nameJa": "ティタノサウルス",
   "origin": "ase",
   "entityId": "Titanosaur_Character_BP_C",
   "group": "Dinosaurs",
@@ -12914,12 +13395,14 @@
   "sources": {
    "breeding": null,
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "triceratops",
   "name": "Triceratops",
+  "nameJa": "トリケラトプス",
   "origin": "ase",
   "entityId": "Trike_Character_BP_C",
   "group": "Dinosaurs",
@@ -12995,6 +13478,7 @@
   },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony,The Center, Astraeos, Ragnarok, Valguero変種：Aberration",
+   "temperament": "中立",
    "diet": "草食",
    "breedingNote": "卵生。キブル(簡易)の素材。",
    "drops": "生肉?、皮?、ケラチン?",
@@ -13006,12 +13490,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "trilobite",
   "name": "Trilobite",
+  "nameJa": "三葉虫",
   "origin": "ase",
   "entityId": "Trilobite_Character_C",
   "group": "Invertebrates",
@@ -13061,6 +13547,7 @@
    "speed": 100
   },
   "ja": {
+   "temperament": "臆病",
    "diet": "草食",
    "breedingNote": "不可",
    "drops": "生肉、キチン、原油、シリカ真珠、黒真珠ピッケルだとシリカ真珠が、斧だとキチンと原油が多く取れる。黒真珠は0～1個程度。",
@@ -13070,12 +13557,14 @@
   "sources": {
    "breeding": null,
    "taming": "dv",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "troodon",
   "name": "Troodon",
+  "nameJa": "トロオドン",
   "origin": "ase",
   "entityId": "Troodon_Character_BP_C",
   "group": "Dinosaurs",
@@ -13134,6 +13623,7 @@
    "speed": 100
   },
   "ja": {
+   "temperament": "攻撃的",
    "diet": "肉食",
    "breedingNote": "卵生。キブル(通常)の素材。",
    "drops": "生肉、皮",
@@ -13144,12 +13634,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "tropeognathus",
   "name": "Tropeognathus",
+  "nameJa": "トロペオグナトゥス",
   "origin": "ase",
   "entityId": "Tropeognathus_Character_BP_C",
   "group": "Reptiles",
@@ -13203,12 +13695,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv",
-   "ja": null
+   "ja": null,
+   "nameJa": "arkja"
   }
  },
  {
   "key": "tusoteuthis",
   "name": "Tusoteuthis",
+  "nameJa": "トゥソテウティス",
   "origin": "ase",
   "entityId": "Tusoteuthis_Character_BP_C",
   "group": "Invertebrates",
@@ -13348,6 +13842,7 @@
    "speed": 100
   },
   "ja": {
+   "temperament": "攻撃的",
    "diet": "肉食、黒真珠",
    "breedingNote": "卵生。水中ブリーディング。",
    "drops": "魚肉、大トロ、ケラチン戦利品として吸収性基材?、原油(腐敗期限あり)、トゥソテウティスの触腕8個、黒真珠をドロップ。アルファ・トゥソテウティスは戦利品として高品質の釣り竿を確定ドロップする。",
@@ -13358,12 +13853,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "umbra",
   "name": "Umbra",
+  "nameJa": "アンブラ",
   "origin": "asa",
   "entityId": "Umbra_Character_BP_C",
   "group": "Reptiles",
@@ -13406,12 +13903,14 @@
   "sources": {
    "breeding": "ja(gestationSec,maturationSec)",
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "manual"
   }
  },
  {
   "key": "veilwyn",
   "name": "Veilwyn",
+  "nameJa": "ベールウィン",
   "origin": "asa",
   "entityId": "YoungIceFox_DinoCompanion_Character_BP_C",
   "group": "Mammals",
@@ -13457,12 +13956,14 @@
   "sources": {
    "breeding": "ja(gestationSec,maturationSec)",
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "wikiwiki"
   }
  },
  {
   "key": "velonasaur",
   "name": "Velonasaur",
+  "nameJa": "ベロナサウルス",
   "origin": "ase",
   "entityId": "Spindles_Character_BP_C",
   "group": "Dinosaurs",
@@ -13526,6 +14027,7 @@
    "speed": 100
   },
   "ja": {
+   "temperament": "攻撃的",
    "drops": "生肉 , 皮",
    "tamingMethod": "共に可能、テイムは通常の手法、騎乗にはサドルが必要",
    "foodPriority": "生肉 < 霜降りこんがり肉 < 霜降り肉 < キブル(通常)",
@@ -13534,12 +14036,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "voidwyrm",
   "name": "Voidwyrm",
+  "nameJa": "ヴォイドワーム",
   "origin": "ase",
   "entityId": "TekWyvern_Character_BP_C",
   "group": "Mechanical Creatures",
@@ -13592,12 +14096,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv",
-   "ja": null
+   "ja": null,
+   "nameJa": "arkja"
   }
  },
  {
   "key": "vulture",
   "name": "Vulture",
+  "nameJa": "ハゲワシ",
   "origin": "ase",
   "entityId": "Vulture_Character_BP_C",
   "group": "Birds",
@@ -13665,6 +14171,7 @@
    "speed": 100
   },
   "ja": {
+   "temperament": "受動的（死体が近くにあると攻撃的になる）",
    "drops": "Spoiled Meat, Hide",
    "tamingMethod": "テイム可能、手渡しテイム。騎乗は不可",
    "foodPriority": "Raw fish Meat<Raw Meat<Spoiled Meat"
@@ -13672,12 +14179,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "wyvern",
   "name": "Wyvern",
+  "nameJa": "ワイバーン",
   "origin": "ase",
   "entityId": "Wyvern_Character_BP_Base_C",
   "group": "Reptiles",
@@ -13733,6 +14242,7 @@
   },
   "ja": {
    "wildMaps": "Scorched Earth, Astraeos, Ragnarok, Valguero",
+   "temperament": "攻撃的",
    "diet": "肉食（ブリーディング中のみワイバーンミルク、バイソンミルク）",
    "breedingNote": "卵生",
    "drops": "霜降り肉, 皮, 硫黄, ファイア/ライトニング/ポイズンワイバーンの鉤爪（アイスワイバーンはなし）",
@@ -13744,12 +14254,14 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "xiphactinus",
   "name": "Xiphactinus",
+  "nameJa": "シファクティヌス",
   "origin": "asa",
   "entityId": "Xiphactinus_Character_BP_ASA_C",
   "group": "Fish",
@@ -13785,12 +14297,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "yiling",
   "name": "Yi Ling",
+  "nameJa": "イーリン",
   "origin": "asa",
   "entityId": "YiLing_Character_BP_C",
   "group": "Dinosaurs",
@@ -13826,12 +14340,14 @@
   "sources": {
    "breeding": null,
    "taming": null,
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  },
  {
   "key": "yutyrannus",
   "name": "Yutyrannus",
+  "nameJa": "ユウティラヌス",
   "origin": "ase",
   "entityId": "Yutyrannus_Character_BP_C",
   "group": "Dinosaurs",
@@ -13909,6 +14425,7 @@
   },
   "ja": {
    "wildMaps": "The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
+   "temperament": "攻撃的",
    "drops": "生肉、霜降り肉、皮、ケラチン、毛皮",
    "tamingMethod": "昏睡テイム",
    "foodPriority": "こんがり魚<魚肉<こんがり肉＜霜降り肉<ラムチョップ＜羊肉＜特級キブル(水色)",
@@ -13918,7 +14435,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
-   "ja": "wikiwiki"
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
   }
  }
 ]
