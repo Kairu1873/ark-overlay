@@ -66,6 +66,72 @@ function readDossierName(html) {
   return null;
 }
 
+// 「基礎値と成長率」表の行見出し → creatures.json のステータスキー
+// 誤記（Stamina が「Stamin」など）があるので前方一致で見る
+const STAT_ROW_KEYS = [
+  [/^Health/i, 'health'],
+  [/^Stamin/i, 'stamina'],
+  [/^Oxyg/i, 'oxygen'],
+  [/^Food/i, 'food'],
+  [/^Weight/i, 'weight'],
+  [/^Melee/i, 'damage'],
+  [/^Movement/i, 'speed'],
+  [/^Torpor/i, 'torpor'],
+];
+
+/**
+ * 「+5.4%」「62[*]」「44/96」「N/A」「-」→ 数値。読めなければ null。
+ *
+ * ページによる表記の揺れが多い。形態で値が変わる生物は「44/96」と併記されるので先頭を採り、
+ * 小数点にカンマを使っているページ（「+2,75」）もあるので、3桁区切りと区別して直す。
+ */
+function statNumber(cell) {
+  const first = String(cell ?? '')
+    .replace(/\[[^\]]*\]/g, '') // 注記の [*] を落とす
+    .split('/')[0];
+  const normalized = first
+    .replace(/(\d),(\d{3})(?!\d)/g, '$1$2') // 3桁区切りのカンマは落とす
+    .replace(/(\d),(\d{1,2})(?!\d)/g, '$1.$2'); // それ以外のカンマは小数点とみなす
+  const m = /-?\d+(?:\.\d+)?/.exec(normalized);
+  return m ? Number(m[0]) : null;
+}
+
+/**
+ * 「基礎値と成長率」表を読む。
+ * 列の並びはページによって違うので、見出し行から位置を引く。
+ * 変種（X種など）の表が後ろに続くことがあるため、最初に埋まった値だけを採る。
+ */
+function readStats(html) {
+  const base = {};
+  const wild = {};
+  const tamed = {};
+  for (const table of html.match(/<table[\s\S]*?<\/table>/g) ?? []) {
+    const rows = table.match(/<tr[\s\S]*?<\/tr>/g) ?? [];
+    const head = (rows[0]?.match(/<t[hd][\s\S]*?<\/t[hd]>/g) ?? []).map(text);
+    const col = (re) => head.findIndex((h) => re.test(h));
+    const iBase = col(/^基礎値/);
+    if (iBase < 0) continue;
+    const iWild = col(/^成長率.*野生/);
+    const iTamed = col(/^成長率.*テイム後/);
+
+    for (const row of rows.slice(1)) {
+      const cells = (row.match(/<t[hd][\s\S]*?<\/t[hd]>/g) ?? []).map(text);
+      const hit = STAT_ROW_KEYS.find(([re]) => re.test(cells[0] ?? ''));
+      if (!hit) continue;
+      const key = hit[1];
+      const put = (target, index) => {
+        if (index < 0 || target[key] !== undefined) return;
+        const v = statNumber(cells[index]);
+        if (v !== null) target[key] = v;
+      };
+      put(base, iBase);
+      put(wild, iWild);
+      put(tamed, iTamed);
+    }
+  }
+  return Object.keys(base).length ? { base, wildGrowth: wild, tamedGrowth: tamed } : null;
+}
+
 /** ページ本文を行に分ける（タグを落としただけの素朴なもの） */
 function bodyLines(html) {
   return html
@@ -114,7 +180,8 @@ export async function fetchPageNames() {
 
 /**
  * 1ページ分を読む。
- * @returns {{info:object|null, times:object, nameJa:string|null}} info=定性情報 / times=繁殖時間（秒）
+ * @returns {{info:object|null, times:object, nameJa:string|null, stats:object|null}}
+ *   info=定性情報 / times=繁殖時間（秒） / stats=基礎値と成長率
  */
 export async function fetchCreaturePage(name) {
   const html = await fetchText(`${BASE}/${encodeURIComponent(name)}`);
@@ -131,6 +198,7 @@ export async function fetchCreaturePage(name) {
     info: Object.keys(info).length ? info : null,
     times: readBreedingTimes(html),
     nameJa: readDossierName(html),
+    stats: readStats(html),
   };
 }
 
@@ -145,17 +213,26 @@ export async function fetchCreatures(names, onProgress) {
   const info = {};
   const times = {};
   const jaNames = {};
+  const statsByName = {};
   for (const [i, name] of targets.entries()) {
     try {
       const page = await fetchCreaturePage(name);
       if (page.info) info[name] = page.info;
       if (Object.keys(page.times).length) times[name] = page.times;
       if (page.nameJa) jaNames[name] = page.nameJa;
+      if (page.stats) statsByName[name] = page.stats;
     } catch (e) {
       // 1ページ落ちても全体は止めない
       console.warn(`  ! ${name} の取得に失敗: ${e.message}`);
     }
     onProgress?.(i + 1, targets.length);
   }
-  return { data: info, times, names: jaNames, attempted: targets.length, available: pages.size };
+  return {
+    data: info,
+    times,
+    names: jaNames,
+    stats: statsByName,
+    attempted: targets.length,
+    available: pages.size,
+  };
 }
