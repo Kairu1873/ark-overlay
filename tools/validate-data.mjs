@@ -30,6 +30,9 @@ const FLOOR = {
   // Smart Breeding の値。向こうのファイル名や構造が変わると全滅するので下限を置く
   withStatsRaw: 165,
   withMatingCooldown: 130,
+  // アイテムの日本語名も ark.wiki.gg 日本語版から引いている。
+  // スキン・チビペット・モバイル専用品などは向こうにページが無く、全体の6割ほどが埋まる
+  itemsWithNameJa: 1400,
 };
 
 const problems = [];
@@ -106,6 +109,14 @@ async function main() {
     if (c.nameJa && !/[ぁ-んァ-ヶ一-龥]/.test(c.nameJa)) {
       fail(`creature[${c.name}].nameJa に日本語が含まれていません: ${c.nameJa}`);
     }
+  }
+
+  const itemsWithNameJa = items.filter((i) => i.nameJa).length;
+  if (itemsWithNameJa < FLOOR.itemsWithNameJa) {
+    fail(
+      `日本語名を持つアイテムが少なすぎます: ${itemsWithNameJa} < ${FLOOR.itemsWithNameJa}` +
+        '（ark.wiki.gg 日本語版の構成が変わった可能性がある）',
+    );
   }
 
   const withStatsRaw = creatures.filter((c) => c.statsRaw).length;
@@ -214,7 +225,7 @@ async function main() {
     const ja = meta.conflicts.filter((c) => c.adopted === 'ja').length;
     console.log(`  繁殖時間が両Wikiで食い違い ${meta.conflicts.length}件（日本語を採用 ${ja} / 英語を採用 ${meta.conflicts.length - ja}）`);
   }
-  console.log(`アイテム ${items.length}件 / テイム用の餌 ${Object.keys(tamingFood).length}品目`);
+  console.log(`アイテム ${items.length}件（日本語名あり ${itemsWithNameJa}）/ テイム用の餌 ${Object.keys(tamingFood).length}品目`);
   console.log(`生成日時 ${meta.generatedAt}`);
 
   if (problems.length) {
