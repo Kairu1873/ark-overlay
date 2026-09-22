@@ -24,12 +24,20 @@ const eq = (label, actual, expected) => {
 
 const of = (name) => creatures.find((c) => c.name === name);
 /** 1行を「個数・秒・麻酔（ベリー/麻酔薬/バイオトキシン）」に畳む */
-function line(creatureName, foodName, { level, rates } = {}) {
-  const plan = tamingPlan(of(creatureName), food, { level, rates: normalizeRates(rates ?? {}) });
-  const row = plan.rows.find((r) => r.food === foodName);
+function line(creatureName, foodName, opt = {}) {
+  const row = rowOf(creatureName, foodName, opt);
   if (!row) return null;
   const n = row.narcotics;
   return n ? [row.pieces, row.seconds, n.berry, n.narcotic, n.bioToxin] : [row.pieces, row.seconds];
+}
+
+function rowOf(creatureName, foodName, { level, rates, sanguineElixir } = {}) {
+  const plan = tamingPlan(of(creatureName), food, {
+    level,
+    rates: normalizeRates(rates ?? {}),
+    sanguineElixir,
+  });
+  return plan.rows.find((r) => r.food === foodName) ?? null;
 }
 
 console.log('Rex（気絶テイム）— 英語Wikiのテイム表と同じ値になること');
@@ -69,6 +77,35 @@ console.log('\nサーバー倍率');
   eq('テイム速度2倍で個数が減る', line('Rex', 'Kibble', { level: 150, rates: { tamingSpeed: 2 } }), [9, 1151, 0, 0, 0]);
   eq('食料の減りが2倍で時間が縮む', line('Rex', 'Kibble', { level: 150, rates: { foodDrain: 2 } }), [17, 1087, 0, 0, 0]);
   eq('倍率0は1として扱う', line('Rex', 'Kibble', { level: 150, rates: { tamingSpeed: 0 } }), [17, 2174, 0, 0, 0]);
+}
+
+console.log('\nテイム効率とボーナスレベル — ARK Smart Breeding の式');
+{
+  // te = 1 / (1 + ineffectiveness × 個数 ÷ 餌1個のaffinity)
+  const kibble = rowOf('Rex', 'Kibble', { level: 150 });
+  eq('Lv150 キブルの効率', Math.round(kibble.effectiveness * 10000) / 10000, 0.9869);
+  eq('Lv150 キブルのボーナスレベル', kibble.bonusLevel, 74);
+  const mutton = rowOf('Rex', 'Raw Mutton', { level: 150 });
+  eq('羊肉は効率が落ちる', Math.round(mutton.effectiveness * 10000) / 10000, 0.9449);
+  eq('羊肉のボーナスレベル', mutton.bonusLevel, 70);
+}
+
+console.log('\n麻酔キノコと Sanguine Elixir');
+{
+  const chop = rowOf('Rex', 'Cooked Lamb Chop', { level: 150 });
+  eq('麻酔キノコ（25 torpor / 3秒）', chop.narcotics.ascerbic, 126);
+  // 必要 affinity が 0.7 倍になる → 個数と時間が減り、効率は上がる
+  const elixir = rowOf('Rex', 'Kibble', { level: 150, sanguineElixir: true });
+  eq('エリクサーありの個数と時間', [elixir.pieces, elixir.seconds], [12, 1535]);
+  eq('エリクサーありの効率', Math.round(elixir.effectiveness * 10000) / 10000, 0.9907);
+}
+
+console.log('\n野生生物向けのサーバー倍率');
+{
+  eq('野生の食料の減りが2倍で時間が縮む',
+    line('Rex', 'Kibble', { level: 150, rates: { wildFoodDrain: 2 } }), [17, 1087, 0, 0, 0]);
+  const chop = rowOf('Rex', 'Cooked Lamb Chop', { level: 150, rates: { wildTorporDrain: 2 } });
+  eq('野生の気絶値の減りが2倍で麻酔が増える', [chop.narcotics.narcotic, chop.narcotics.bioToxin], [295, 148]);
 }
 
 console.log('\nデータが無い生物');

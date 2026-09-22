@@ -16,6 +16,8 @@ export const RATE_DEFS = [
   // 下の2つはタイマーではなくテイム計算で使う（src/data/taming.js）
   { key: 'tamingSpeed', label: 'テイムの速度', setting: 'TamingSpeedMultiplier', kind: 'taming' },
   { key: 'foodDrain', label: '食料の減る速さ', setting: 'DinoCharacterFoodDrainMultiplier', kind: 'taming' },
+  { key: 'wildFoodDrain', label: '野生の食料の減る速さ', setting: 'WildDinoCharacterFoodDrainMultiplier', kind: 'taming' },
+  { key: 'wildTorporDrain', label: '野生の気絶値の減る速さ', setting: 'WildDinoTorporDrainMultiplier', kind: 'taming' },
 ];
 
 export const DEFAULT_RATES = Object.fromEntries(RATE_DEFS.map((d) => [d.key, 1]));
