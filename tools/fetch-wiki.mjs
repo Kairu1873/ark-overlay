@@ -76,6 +76,7 @@ async function main() {
   let ja = {};
   let jaTimes = {};
   let jaDossierNames = {};
+  let jaStats = {};
   if (skipJa) {
     log('  （--skip-ja: 取得を飛ばしました）');
   } else {
@@ -85,7 +86,9 @@ async function main() {
     ja = res.data;
     jaTimes = res.times;
     jaDossierNames = res.names;
-    log(`  ページ総数 ${res.available} / 対象と一致 ${res.attempted} / 定性情報 ${Object.keys(ja).length} / 繁殖時間 ${Object.keys(jaTimes).length}`);
+    jaStats = res.stats;
+    log(`  ページ総数 ${res.available} / 対象と一致 ${res.attempted} / 定性情報 ${Object.keys(ja).length}`
+      + ` / 繁殖時間 ${Object.keys(jaTimes).length} / ステータス ${Object.keys(jaStats).length}`);
   }
 
   // 日本語名は日本語版の ark.wiki.gg から引く。英名のページがリダイレクトになっており、数リクエストで済む
@@ -97,7 +100,7 @@ async function main() {
   log('\n[5/5] マージ');
   const merged = mergeCreatures({
     creatures, creatureStats, dv, tamingCreatures, ja, jaTimes,
-    jaNames, jaDossierNames, nameOverrides,
+    jaNames, jaDossierNames, jaStats, nameOverrides,
   });
   const mergedItems = mergeItems({ items, craftables, consumables, resources });
   report(merged);
@@ -118,8 +121,11 @@ async function main() {
       },
     },
     counts: { creatures: merged.creatures.length, items: mergedItems.items.length },
-    // 両Wikiで値が食い違った箇所。英語側を採用しているが、後から追えるよう残す
+    // 両Wikiで値が食い違った箇所。どちらを採ったかも含めて残す
     conflicts: merged.stats.conflicts,
+    statConflicts: merged.stats.statConflicts,
+    // 2種の値が入れ替わっているとみられる組。この組では日本語Wikiを採らない
+    suspectSwaps: merged.stats.swaps,
   };
 
   if (dryRun) {
@@ -174,12 +180,29 @@ function report({ creatures, stats }) {
   const n = stats.nameJa;
   log(`  日本語名 ${n.arkja + n.wikiwiki + n.manual}/${stats.asa}`
     + `（ark.wiki.gg/ja ${n.arkja} / ドシエ訳 ${n.wikiwiki} / 手書き ${n.manual} / なし ${n.none}）`);
+  const st = stats.statsSource;
+  log(`  ステータス ${st.ja + st.cargo + st.both}/${stats.asa}`
+    + `（日本語のみ ${st.ja} / 両方 ${st.both} / 英語のみ ${st.cargo} / なし ${st.none}）`);
+  log(`  成長率 ${stats.growth} / 出現マップを日本語で補った生物 ${stats.mapsFromJa}`);
   line('ASA対象全体', creatures);
   line('ASE由来', creatures.filter((c) => c.origin === 'ase'));
   line('ASA新規', creatures.filter((c) => c.origin === 'asa'));
+  if (stats.swaps?.length) {
+    log(`  2種の値が入れ替わっている疑い ${stats.swaps.length}組（この組は英語側を採用）:`);
+    for (const p of stats.swaps) log(`    ${p.a} ⇔ ${p.b}（${p.fields.join(', ')}）`);
+  }
   if (stats.conflicts?.length) {
-    log(`  両Wikiで値が食い違った箇所 ${stats.conflicts.length}件（英語側を採用）:`);
-    for (const c of stats.conflicts) log(`    ${c.name} ${c.field}: 英 ${c.en}秒 / 日 ${c.ja}秒`);
+    log(`  繁殖時間が食い違った箇所 ${stats.conflicts.length}件:`);
+    for (const c of stats.conflicts) {
+      log(`    ${c.name} ${c.field}: 英 ${c.en}秒 / 日 ${c.ja}秒 → ${c.adopted === 'ja' ? '日本語' : '英語'}を採用`);
+    }
+  }
+  if (stats.statConflicts?.length) {
+    log(`  ステータスが食い違った箇所 ${stats.statConflicts.length}件（日本語を採用）:`);
+    for (const c of stats.statConflicts.slice(0, 15)) {
+      log(`    ${c.name} ${c.field}: 英 ${c.en} / 日 ${c.ja}`);
+    }
+    if (stats.statConflicts.length > 15) log(`    …ほか ${stats.statConflicts.length - 15}件`);
   }
 }
 
