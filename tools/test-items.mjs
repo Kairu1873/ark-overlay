@@ -61,11 +61,30 @@ console.log('\n大文字小文字は問わない');
 
 console.log('\n実データ');
 {
+  // 共通文字列は英名から作る（ゲーム内の英語表記に貼るため）
   const real = commonStrings(['Raw Meat', 'Raw Prime Meat', 'Raw Mutton'], allNames, { limit: 1 });
   eq('Raw 3種の先頭候補', [real[0].text, real[0].hits], ['Raw ', 9]);
   eq('Kibble を含むアイテム', countMatches(allNames, 'Kibble'), 48);
+  eq('日本語名から英名を引ける', searchItems(items, '生肉', { limit: 1 })[0].name, 'Raw Meat');
+  eq('キブルも日本語で引ける', searchItems(items, 'キブル(超級)', { limit: 1 })[0].name, 'Exceptional Kibble');
   const kibble = commonStrings(['Basic Kibble', 'Superior Kibble', 'Exceptional Kibble'], allNames, { limit: 1 });
   eq('キブル3種の先頭候補', [kibble[0].text, kibble[0].hits], [' Kibble', 7]);
+}
+
+console.log('\n日本語名でも引ける');
+{
+  const ja = [
+    { key: 'rawmeat', name: 'Raw Meat', nameJa: '生肉', category: 'Meat' },
+    { key: 'cookedmeat', name: 'Cooked Meat', nameJa: 'こんがり肉', category: 'Meat' },
+    { key: 'narcotic', name: 'Narcotic', nameJa: '麻酔薬', category: 'Consumables' },
+    { key: 'stone', name: 'Stone', nameJa: '石', category: 'Resources' },
+  ];
+  const names = (q) => searchItems(ja, q, { limit: 4 }).map((i) => i.name);
+  eq('日本語名の完全一致', names('生肉'), ['Raw Meat']);
+  eq('日本語名の部分一致', names('肉'), ['Cooked Meat', 'Raw Meat']);
+  eq('平仮名でも当たる', names('こんがり'), ['Cooked Meat']);
+  eq('英名でも変わらず引ける', names('narcotic'), ['Narcotic']);
+  eq('日本語名が無くても落ちない', searchItems([{ key: 'x', name: 'Wood' }], 'wood').length, 1);
 }
 
 console.log('\n検索');

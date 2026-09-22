@@ -4,41 +4,42 @@
 // Raw Meat / Raw Prime Meat / Raw Mutton をまとめて絞り込みたいなら「Raw 」と打てばよい。
 // 空白の有無で引っかかる件数が変わるので、候補は一致件数つきで並べる。
 
-const fold = (s) => String(s ?? '').toLowerCase();
+import { fold, matchScore, NO_MATCH } from './text.js';
 
 /**
- * アイテムを英名で探す。完全一致 → 前方一致 → 部分一致の順。
+ * アイテムを名前で探す。英名でも日本語名でも引ける。
+ * 完全一致 → 前方一致 → 部分一致 → カテゴリ一致の順。
  * @param {object[]} items data/items.json
  * @param {string} query
  * @param {{limit?: number}} opt
  */
 export function searchItems(items, query, { limit = 80 } = {}) {
   const list = Array.isArray(items) ? items : [];
-  const q = fold(query).trim();
+  const q = fold(query);
   if (!q) return list.slice(0, limit);
 
   const scored = [];
   for (const item of list) {
-    const name = fold(item?.name);
-    if (!name) continue;
-    let score;
-    if (name === q) score = 0;
-    else if (name.startsWith(q)) score = 1;
-    else if (name.includes(q)) score = 2;
-    else if (fold(item.category).includes(q)) score = 3;
-    else continue;
+    if (!item?.name) continue;
+    // 英名と日本語名は同じ重みで見て、良い方を採る
+    let score = Math.min(matchScore(fold(item.name), q), matchScore(fold(item.nameJa), q));
+    if (score === NO_MATCH && fold(item.category).includes(q)) score = 3;
+    if (score === NO_MATCH) continue;
     scored.push([score, item]);
   }
   scored.sort((a, b) => a[0] - b[0] || a[1].name.localeCompare(b[1].name));
   return scored.slice(0, limit).map(([, item]) => item);
 }
 
-/** text を名前に含むアイテムの数 */
+/** 英名の照合だけに使う、単純な小文字化 */
+const lower = (s) => String(s ?? '').toLowerCase();
+
+/** text を英名に含むアイテムの数 */
 export function countMatches(allNames, text) {
-  const needle = fold(text);
+  const needle = lower(text);
   if (!needle) return 0;
   let n = 0;
-  for (const name of allNames) if (fold(name).includes(needle)) n++;
+  for (const name of allNames) if (lower(name).includes(needle)) n++;
   return n;
 }
 
@@ -59,14 +60,14 @@ export function commonStrings(selectedNames, allNames, { min = 2, limit = 8 } = 
 
   // 一番短い名前の部分文字列だけ調べれば足りる
   const shortest = names.reduce((a, b) => (a.length <= b.length ? a : b));
-  const others = names.filter((n) => n !== shortest).map(fold);
+  const others = names.filter((n) => n !== shortest).map(lower);
 
   const seen = new Set();
   const candidates = [];
   for (let start = 0; start < shortest.length; start++) {
     for (let end = shortest.length; end - start >= min; end--) {
       const text = shortest.slice(start, end);
-      const key = fold(text);
+      const key = lower(text);
       if (seen.has(key)) continue;
       seen.add(key);
       if (!others.every((n) => n.includes(key))) continue;
@@ -80,7 +81,7 @@ export function commonStrings(selectedNames, allNames, { min = 2, limit = 8 } = 
   for (const text of candidates) {
     const hits = countMatches(allNames ?? [], text);
     // より長い候補と同じ件数しか拾えないなら、短いほうは出さない
-    if (kept.some((k) => k.hits === hits && fold(k.text).includes(fold(text)))) continue;
+    if (kept.some((k) => k.hits === hits && lower(k.text).includes(lower(text)))) continue;
     kept.push({ text, hits });
   }
   // 一番絞り込めるものから並べる。件数が同じなら打つのが楽な短いほうを先に

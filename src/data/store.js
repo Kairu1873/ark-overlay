@@ -1,6 +1,8 @@
 // 生物・アイテムデータの保持。
 // 取得はメインプロセス側（electron/data.js）が行い、ここは受け取って検索するだけ。
 
+import { fold, matchScore, NO_MATCH } from './text.js';
+
 const desktop = typeof window !== 'undefined' ? window.arkOverlayDesktop : undefined;
 
 let data = { creatures: [], items: [], tamingFood: {}, meta: null, source: 'none' };
@@ -33,27 +35,6 @@ export async function loadData() {
   return data;
 }
 
-/**
- * 検索用に表記を均す。
- * NFKC で全角英数と半角カナを直し、平仮名を片仮名に寄せ、長音・中黒・空白を落とす。
- * 「てぃらの」「ﾃｨﾗﾉ」「ティラノ」がどれも「ティラノサウルス」に当たるようにするため。
- */
-const fold = (s) =>
-  String(s ?? '')
-    .normalize('NFKC')
-    .toLowerCase()
-    .replace(/[\u3041-\u3096]/g, (c) => String.fromCharCode(c.charCodeAt(0) + 0x60))
-    .replace(/[ー・\s_-]/g, '');
-
-const NO_MATCH = 99;
-
-/** 完全一致 0 / 前方一致 1 / 部分一致 2 / 一致しない */
-function matchScore(folded, q) {
-  if (!folded) return NO_MATCH;
-  if (folded === q) return 0;
-  if (folded.startsWith(q)) return 1;
-  return folded.includes(q) ? 2 : NO_MATCH;
-}
 
 /**
  * 読み込み済みの生物を名前で探す。英名でも日本語名でも引ける。
