@@ -9,6 +9,7 @@ import { cargoQuery, fetchRightsInfo } from './sources/cargo.mjs';
 import { fetchAllModules, MODULES } from './sources/modules.mjs';
 import { fetchCreatures as fetchJaCreatures } from './sources/wikiwiki.mjs';
 import { fetchJaNames } from './sources/arkja.mjs';
+import { fetchAsbValues } from './sources/asb.mjs';
 import { mergeCreatures, mergeItems, norm, resolveInherits, isAsaTarget } from './merge.mjs';
 
 const DATA_DIR = path.join(import.meta.dirname, '..', 'data');
@@ -46,7 +47,7 @@ async function main() {
   log('ARK Wiki からデータを取得します');
   if (dryRun) log('  （--dry-run: ファイルは書き込みません）');
 
-  log('\n[1/5] Cargo テーブル');
+  log('\n[1/6] Cargo テーブル');
   const creatures = await cargoQuery('Creatures', CREATURE_FIELDS);
   log(`  Creatures       ${creatures.length}`);
   const creatureStats = await cargoQuery('CreatureStats', STAT_FIELDS);
@@ -60,14 +61,14 @@ async function main() {
   const resources = await cargoQuery('Resources', RESOURCE_FIELDS);
   log(`  Resources       ${resources.length}`);
 
-  log('\n[2/5] Lua モジュール');
+  log('\n[2/6] Lua モジュール');
   const { dv, tamingCreatures, tamingFood, revisions } = await fetchAllModules();
   log(`  ${MODULES.dv}              ${Object.keys(dv).length} エントリ`);
   log(`  ${MODULES.tamingCreatures}  ${Object.keys(tamingCreatures).length} エントリ`);
   log(`  ${MODULES.tamingFood}       ${Object.keys(tamingFood).length} 品目`);
 
   // 日本語Wikiは対象生物だけ引く（736ページ全部は取らない）
-  log('\n[3/5] 日本語Wiki（wikiwiki.jp/arksa）');
+  log('\n[3/6] 日本語Wiki（wikiwiki.jp/arksa）');
   const dvResolved = resolveInherits(dv);
   const dvByKey = new Map(Object.entries(dvResolved).map(([k, v]) => [norm(k), v]));
   const targetNames = creatures
@@ -91,16 +92,23 @@ async function main() {
       + ` / 繁殖時間 ${Object.keys(jaTimes).length} / ステータス ${Object.keys(jaStats).length}`);
   }
 
+  // Smart Breeding はゲームファイルから抽出された値で、版番号が付いている。数値の第一ソース
+  log('\n[4/6] Smart Breeding（ARKStatsExtractor）');
+  const asbValues = await fetchAsbValues();
+  log(`  ASA ${asbValues.versions.asa} / ASE ${asbValues.versions.ase} / 餌 ${asbValues.versions.food}`);
+  log(`  種の定義 ${asbValues.counts.merged}（ASA ${asbValues.counts.asa} / ASE ${asbValues.counts.ase}）`);
+
   // 日本語名は日本語版の ark.wiki.gg から引く。英名のページがリダイレクトになっており、数リクエストで済む
-  log('\n[4/5] 日本語名（ark.wiki.gg/ja）');
+  log('\n[5/6] 日本語名（ark.wiki.gg/ja）');
   const jaNames = await fetchJaNames(targetNames);
   const nameOverrides = await loadNameOverrides();
   log(`  日本語版と一致 ${Object.keys(jaNames).length}/${targetNames.length} / 手書きの補完 ${Object.keys(nameOverrides).length}`);
 
-  log('\n[5/5] マージ');
+  log('\n[6/6] マージ');
   const merged = mergeCreatures({
     creatures, creatureStats, dv, tamingCreatures, ja, jaTimes,
     jaNames, jaDossierNames, jaStats, nameOverrides,
+    asb: asbValues.byEntityId,
   });
   const mergedItems = mergeItems({ items, craftables, consumables, resources });
   report(merged);
@@ -113,6 +121,13 @@ async function main() {
     sources: {
       'ark.wiki.gg': { cargo: { creatures: creatures.length, items: items.length }, modules: revisions },
       'ark.wiki.gg/ja': { names: Object.keys(jaNames).length },
+      'ARKStatsExtractor': {
+        versions: asbValues.versions,
+        matched: merged.stats.asb.matched,
+        breeding: merged.stats.asb.breeding,
+        taming: merged.stats.asb.taming,
+        stats: merged.stats.asb.stats,
+      },
       'wikiwiki.jp/arksa': {
         creatures: Object.keys(ja).length,
         breedingTimes: Object.keys(jaTimes).length,
@@ -126,6 +141,8 @@ async function main() {
     statConflicts: merged.stats.statConflicts,
     // 2種の値が入れ替わっているとみられる組。この組では日本語Wikiを採らない
     suspectSwaps: merged.stats.swaps,
+    // Wiki と Smart Breeding で食い違った数値（Smart Breeding を採用している）
+    asbConflicts: merged.stats.asb.conflicts,
   };
 
   if (dryRun) {
@@ -180,25 +197,37 @@ function report({ creatures, stats }) {
   const n = stats.nameJa;
   log(`  日本語名 ${n.arkja + n.wikiwiki + n.manual}/${stats.asa}`
     + `（ark.wiki.gg/ja ${n.arkja} / ドシエ訳 ${n.wikiwiki} / 手書き ${n.manual} / なし ${n.none}）`);
+  const a = stats.asb;
+  log(`  Smart Breeding と一致 ${a.matched}/${stats.asa}`
+    + `（繁殖を更新 ${a.breeding} / テイムを更新 ${a.taming} / ステータスを更新 ${a.stats}`
+    + ` / 食い違い ${a.conflicts.length}件）`);
   const st = stats.statsSource;
-  log(`  ステータス ${st.ja + st.cargo + st.both}/${stats.asa}`
-    + `（日本語のみ ${st.ja} / 両方 ${st.both} / 英語のみ ${st.cargo} / なし ${st.none}）`);
+  log(`  ステータス ${stats.asa - st.none}/${stats.asa}`
+    + `（Smart Breeding ${st.asb} / 日本語Wiki ${st.ja} / 英語Wiki ${st.cargo} / なし ${st.none}）`);
   log(`  成長率 ${stats.growth} / 出現マップを日本語で補った生物 ${stats.mapsFromJa}`);
   line('ASA対象全体', creatures);
   line('ASE由来', creatures.filter((c) => c.origin === 'ase'));
   line('ASA新規', creatures.filter((c) => c.origin === 'asa'));
+  if (a.conflicts.length) {
+    log(`  Wiki と Smart Breeding の食い違い ${a.conflicts.length}件（Smart Breeding を採用）のうち差の大きいもの:`);
+    const worst = [...a.conflicts]
+      .filter((c) => Number.isFinite(c.wiki) && Number.isFinite(c.asb) && c.wiki > 0)
+      .sort((x, y) => Math.abs(y.asb - y.wiki) / y.wiki - Math.abs(x.asb - x.wiki) / x.wiki)
+      .slice(0, 10);
+    for (const c of worst) log(`    ${c.name} ${c.field}: Wiki ${c.wiki} → ASB ${c.asb}`);
+  }
   if (stats.swaps?.length) {
     log(`  2種の値が入れ替わっている疑い ${stats.swaps.length}組（この組は英語側を採用）:`);
     for (const p of stats.swaps) log(`    ${p.a} ⇔ ${p.b}（${p.fields.join(', ')}）`);
   }
   if (stats.conflicts?.length) {
-    log(`  繁殖時間が食い違った箇所 ${stats.conflicts.length}件:`);
+    log(`  Wiki 同士で繁殖時間が食い違った箇所 ${stats.conflicts.length}件（この後 Smart Breeding で上書きされる場合がある）:`);
     for (const c of stats.conflicts) {
       log(`    ${c.name} ${c.field}: 英 ${c.en}秒 / 日 ${c.ja}秒 → ${c.adopted === 'ja' ? '日本語' : '英語'}を採用`);
     }
   }
   if (stats.statConflicts?.length) {
-    log(`  ステータスが食い違った箇所 ${stats.statConflicts.length}件（日本語を採用）:`);
+    log(`  Wiki 同士でステータスが食い違った箇所 ${stats.statConflicts.length}件（日本語を採用。この後 Smart Breeding で上書きされる場合がある）:`);
     for (const c of stats.statConflicts.slice(0, 15)) {
       log(`    ${c.name} ${c.field}: 英 ${c.en} / 日 ${c.ja}`);
     }
