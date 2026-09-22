@@ -32,7 +32,7 @@ npm run dist:win   # dist/ARKOverlay-Setup-<version>.exe ができる
 
 ## 2. Windowsに入れる
 
-1. `ARKOverlay-Setup-1.0.0.exe` を実行する
+1. `ARKOverlay-Setup-<version>.exe` を実行する
    - 「WindowsによってPCが保護されました」と出たら **詳細情報 → 実行**（個人用アプリで署名していないため）
 2. 起動すればすぐ使える。**×で閉じてもタスクトレイ（右下）に常駐**し、時間になると通知が出る
 3. トレイアイコンを右クリックすると次の項目がある
@@ -56,6 +56,24 @@ npm run dist:win   # dist/ARKOverlay-Setup-<version>.exe ができる
 
 ゲームを**フルスクリーン（排他）**で動かしていると、Windows の仕様でどのオーバーレイも前に出ない。
 **ボーダーレスウィンドウ**（ウィンドウ（フルスクリーン））で遊ぶこと。
+
+## 更新
+
+**アプリは自分で新しい版を取りに行く。** 起動したときに GitHub Releases を見て、新しい版が
+あれば裏でダウンロードする。落とし終えると画面の上部とトレイに「更新して再起動」が出る。
+
+- 押さなければ、**次にアプリを終了したときに静かに入る**（タイマー中に勝手に再起動しない）
+- 生物・アイテムのデータは別扱いで、アプリの更新を待たずに起動のたびに取り込む
+
+### 新しい版を出す手順
+
+```bash
+npm version minor        # package.json の version を上げてコミットとタグを作る
+git push && git push --tags
+```
+
+`v*` のタグが push されると Actions がビルドし、Releases に `.exe` と `latest.yml` を置く。
+`latest.yml` が自動更新の入り口なので、手でリリースを作る場合もこれを一緒に上げること。
 
 ## 使い方
 

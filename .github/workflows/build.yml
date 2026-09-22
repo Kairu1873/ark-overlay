@@ -21,7 +21,11 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: ARKOverlay-Windows
-          path: dist/*.exe
+          # latest.yml と blockmap は自動更新（electron-updater）が見るので一緒に上げる
+          path: |
+            dist/*.exe
+            dist/*.blockmap
+            dist/latest.yml
           if-no-files-found: error
 
   release:
