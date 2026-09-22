@@ -8,4 +8,13 @@ contextBridge.exposeInMainWorld('arkOverlayDesktop', {
   getData: () => ipcRenderer.invoke('data:get'),
   // 起動後にデータが更新されたとき呼ばれる
   onDataUpdated: (cb) => ipcRenderer.on('data:updated', (_e, data) => cb(data)),
+
+  // 枠なしウィンドウの操作
+  window: {
+    minimize: () => ipcRenderer.send('window:minimize'),
+    hide: () => ipcRenderer.send('window:hide'),
+    setAlwaysOnTop: (on) => ipcRenderer.send('window:always-on-top', on),
+    getState: () => ipcRenderer.invoke('window:state'),
+    onStateChanged: (cb) => ipcRenderer.on('window:state', (_e, state) => cb(state)),
+  },
 });

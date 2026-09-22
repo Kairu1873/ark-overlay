@@ -304,8 +304,27 @@ function bind() {
   document.addEventListener('visibilitychange', () => document.visibilityState === 'visible' && tick());
 }
 
+/** 枠なしウィンドウの操作ボタン。Electron のときだけ出す */
+function bindWindowControls() {
+  const desktop = window.arkOverlayDesktop?.window;
+  const ctl = $('#winCtl');
+  if (!desktop || !ctl) return;
+  ctl.hidden = false;
+  $('#winMin').addEventListener('click', () => desktop.minimize());
+  $('#winHide').addEventListener('click', () => desktop.hide());
+  $('#winPin').addEventListener('click', () => {
+    const next = !$('#winPin').classList.contains('on');
+    desktop.setAlwaysOnTop(next);
+    $('#winPin').classList.toggle('on', next);
+  });
+  // トレイ側から切り替えられたときも表示を合わせる
+  desktop.onStateChanged?.(({ alwaysOnTop }) => $('#winPin').classList.toggle('on', alwaysOnTop));
+  desktop.getState?.().then(({ alwaysOnTop }) => $('#winPin').classList.toggle('on', alwaysOnTop));
+}
+
 document.documentElement.dataset.platform = platform;
 bind();
+bindWindowControls();
 setTab(state.tab === 'dex' ? 'dex' : 'timer');
 tick();
 commit();

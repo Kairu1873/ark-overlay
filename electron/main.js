@@ -29,12 +29,17 @@ function init() {
 }
 
 function createWindow() {
+  // ゲームに重ねて使うため、枠なし・背景透過のウィンドウにする。
+  // 背景の濃さは www/style.css の --bg（既定で黒30%）が決める。
   win = new BrowserWindow({
     width: 440,
     height: 760,
     minWidth: 340,
     minHeight: 480,
-    backgroundColor: '#0d121b',
+    frame: false,
+    transparent: true,
+    backgroundColor: '#00000000',
+    hasShadow: false,
     title: 'ARK Overlay',
     icon: path.join(__dirname, 'icon.png'),
     show: !process.argv.includes('--hidden'),
@@ -46,6 +51,8 @@ function createWindow() {
     },
   });
   win.loadFile(path.join(__dirname, '..', 'www', 'index.html'));
+  // ゲーム（ボーダーレスウィンドウ）の上に出すため、通常より高い階層で前面に置く
+  setAlwaysOnTop(true);
   win.on('close', (e) => {
     if (quitting) return;
     e.preventDefault();
@@ -59,6 +66,15 @@ function createWindow() {
       }).show();
     }
   });
+}
+
+let alwaysOnTop = true;
+
+function setAlwaysOnTop(on) {
+  alwaysOnTop = on;
+  if (win && !win.isDestroyed()) win.setAlwaysOnTop(on, 'screen-saver');
+  if (tray) refreshTrayMenu();
+  if (win && !win.isDestroyed()) win.webContents.send('window:state', { alwaysOnTop });
 }
 
 function showWindow() {
@@ -80,6 +96,12 @@ function refreshTrayMenu() {
   tray.setContextMenu(
     Menu.buildFromTemplate([
       { label: '開く', click: showWindow },
+      {
+        label: '常に手前に表示',
+        type: 'checkbox',
+        checked: alwaysOnTop,
+        click: (item) => setAlwaysOnTop(item.checked),
+      },
       {
         label: 'Windows起動時に自動で起動',
         type: 'checkbox',
@@ -109,6 +131,12 @@ const fmt = (ms) => {
 };
 
 ipcMain.handle('data:get', () => wikiData.get());
+
+// 枠が無いぶん、最小化・トレイへ隠す・前面固定は画面側のボタンから呼ぶ
+ipcMain.on('window:minimize', () => win?.minimize());
+ipcMain.on('window:hide', () => win?.close()); // close は握って hide になる
+ipcMain.on('window:always-on-top', (_e, on) => setAlwaysOnTop(Boolean(on)));
+ipcMain.handle('window:state', () => ({ alwaysOnTop }));
 
 ipcMain.on('schedules:sync', (_e, list) => {
   // 画面側が「完了」にした直後の同期で消えてしまわないよう、先に期限切れ分を通知する
