@@ -59,7 +59,9 @@ function initUpdater() {
 function installUpdate() {
   if (!update) return;
   quitting = true;
-  autoUpdater.quitAndInstall();
+  // 第1引数は「無人で当てるか」、第2引数は「当てたあと起動し直すか」。
+  // 既定（false, false）だとインストーラの画面が出たうえに、終わってもアプリが起動しない
+  autoUpdater.quitAndInstall(true, true);
 }
 
 function createWindow() {
