@@ -5,17 +5,17 @@ const STORE_KEY = 'arkOverlay.v1';
 const DEFAULT_PRESETS = [{ id: 'p1', name: 'ルミナ孵化', seconds: 90 * 60 }];
 
 // ---------- 状態 ----------
-// rates（サーバー倍率）と overrides（生物ごとの手入力値）は後から足した任意キー。
+// rates（サーバー倍率）・overrides（生物ごとの手入力値）・tab（開いていたタブ）は後から足した任意キー。
 // 既存の保存内容を壊さないよう、STORE_KEY は据え置きで既定値を埋める。
 let state = load();
 function load() {
   try {
     const s = JSON.parse(localStorage.getItem(STORE_KEY));
     if (s && Array.isArray(s.presets) && Array.isArray(s.timers)) {
-      return { rates: undefined, overrides: {}, ...s };
+      return { rates: undefined, overrides: {}, tab: 'timer', ...s };
     }
   } catch (_) {}
-  return { presets: DEFAULT_PRESETS, timers: [], rates: undefined, overrides: {} };
+  return { presets: DEFAULT_PRESETS, timers: [], rates: undefined, overrides: {}, tab: 'timer' };
 }
 function save() {
   try {
@@ -131,6 +131,20 @@ function beep() {
 const $ = (sel) => document.querySelector(sel);
 let editPresets = false;
 
+/** 「タイマー」「図鑑」の切り替え。開いていたタブは次回の起動に持ち越す */
+function setTab(tab) {
+  state.tab = tab;
+  save();
+  for (const b of document.querySelectorAll('[data-tab]')) b.classList.toggle('on', b.dataset.tab === tab);
+  for (const p of document.querySelectorAll('[data-panel]')) p.hidden = p.dataset.panel !== tab;
+}
+
+/** 生物データが無い環境（ブラウザ）では図鑑そのものを出さない */
+function setDexAvailable(ok) {
+  $('#tabDex').hidden = !ok;
+  if (!ok && state.tab === 'dex') setTab('timer');
+}
+
 function render() {
   // プリセット
   const pl = $('#presets');
@@ -239,6 +253,11 @@ function validate({ name, seconds }) {
 function bind() {
   document.addEventListener('pointerdown', unlockAudio, { passive: true });
 
+  $('#tabs').addEventListener('click', (e) => {
+    const b = e.target.closest('[data-tab]');
+    if (b) setTab(b.dataset.tab);
+  });
+
   $('#form').addEventListener('submit', (e) => {
     e.preventDefault();
     const f = readForm();
@@ -287,6 +306,7 @@ function bind() {
 
 document.documentElement.dataset.platform = platform;
 bind();
+setTab(state.tab === 'dex' ? 'dex' : 'timer');
 tick();
 commit();
 setInterval(tick, 250);
@@ -297,5 +317,7 @@ initCreatures({
     startTimer(name, seconds);
     requestPermission();
   },
+  showTimers: () => setTab('timer'),
+  setDexAvailable,
 });
 if (state.timers.length === 0) requestPermission();

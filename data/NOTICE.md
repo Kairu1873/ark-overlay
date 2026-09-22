@@ -7,8 +7,12 @@
 
 | ファイル | 出典 | ライセンス |
 |---|---|---|
-| `creatures.json`（数値・英名） | [ARK Official Community Wiki](https://ark.wiki.gg/) | CC BY-NC-SA 4.0 |
+| `creatures.json`（英名・テイム係数・交配クールダウン・アイテム関連） | [ARK Official Community Wiki](https://ark.wiki.gg/) | CC BY-NC-SA 4.0 |
+| `creatures.json` の `stats` `growth` `wildMaps`、および `sources` が `ja` の数値 | [ARK: Survival Ascended 攻略Wiki](https://wikiwiki.jp/arksa/) | 各Wikiの規定に従う |
 | `creatures.json` の `ja` フィールド、および `sources.breeding` が `ja(...)` の繁殖時間 | [ARK: Survival Ascended 攻略Wiki](https://wikiwiki.jp/arksa/) | 各Wikiの規定に従う |
+| `creatures.json` の `nameJa`（`sources.nameJa` が `arkja`） | [ARKコミュニティ公式Wiki 日本語版](https://ark.wiki.gg/ja/) | CC BY-NC-SA 4.0 |
+| `creatures.json` の `nameJa`（`sources.nameJa` が `wikiwiki`） | [ARK: Survival Ascended 攻略Wiki](https://wikiwiki.jp/arksa/) | 各Wikiの規定に従う |
+| `ja-names.json` | どちらのWikiにも日本語名が無い生物の手書き補完（日本語Wikiの本文表記に合わせた） | — |
 | `items.json` | [ARK Official Community Wiki](https://ark.wiki.gg/) | CC BY-NC-SA 4.0 |
 | `taming-food.json` | [ARK Official Community Wiki](https://ark.wiki.gg/) `Module:TamingTable/food` | CC BY-NC-SA 4.0 |
 
@@ -30,13 +34,41 @@ API の `meta=siteinfo&siprop=rightsinfo` で取得した内容を `meta.json` �
 
 ## 値の優先順位
 
-繁殖時間は次の順で採用し、`sources.breeding` にどれを使ったか記録している。
+**同じ項目が両方のWikiにある場合は日本語Wikiを採る。** ARK: Survival Ascended では英語Wikiの
+更新が追いついておらず、「英語Wikiに無いが日本語Wikiにはある」が頻発するためである。
+英語Wikiは、日本語Wikiに無いものを補う側として使う（日本語Wikiにページが無い生物が26種あり、
+テイム係数とアイテム・レシピは英語Wikiにしか無い）。
 
-1. `Module:Dv/data`（英語Wiki・ゲームファイル由来） → `dv`
-2. Cargo の `Creatures` テーブル（英語Wiki） → `cargo` / `cargo(BabyTime x10)`
-3. 日本語Wikiの「ブリーディング」節 → `ja(...)`。**上の2つが空のときだけ使う**
+項目ごとの採用順と、`sources.*` に記録する値は次のとおり。
 
-両方に値があって食い違う場合は英語側を採用し、食い違いの一覧を `meta.json` の `conflicts` に残す。
+| 項目 | 採用順 | `sources` の値 |
+|---|---|---|
+| 繁殖時間 | 日本語Wikiの「ブリーディング」節 → `Module:Dv/data` → Cargo | `ja(...)` / `dv` / `cargo` / `cargo(BabyTime x10)` |
+| ステータス | 日本語Wikiの「基礎値と成長率」表 → Cargo の `CreatureStats` | `ja` / `cargo` / `ja+cargo` |
+| 成長率 | 日本語Wikiのみ（英語Wikiからは取っていない） | — |
+| 出現マップ | 両方の**和集合** | `cargo` / `ja` / `cargo+ja` |
+| テイム係数・交配クールダウン | 英語Wikiのみ（日本語Wikiに数値が無い） | `dv+tamingTable` など |
+
+数値が同じなら（1%以内なら同じとみなす）、小数を持っている英語側の値を残す。日本語Wikiは
+秒数を1秒単位に丸めているためで、タイマーの表示には影響しない。
+
+食い違った場合はどちらを採ったかも含めて `meta.json` に残す（繁殖時間は `conflicts`、
+ステータスは `statConflicts`）。
+
+### 取り違えの検出
+
+**「生物Aの日本語の値＝生物Bの英語の値」かつ「生物Bの日本語の値＝生物Aの英語の値」**が
+同じ項目で成り立つ場合、どちらかのWikiが2種を取り違えているとみなし、**その組では日本語Wikiを
+採らない**。検出結果は `meta.json` の `suspectSwaps` に残る。実際に Baryonyx と Basilisk が
+この形で入れ替わっている。
+
+日本語名は次の順で採用し、`sources.nameJa` にどれを使ったか記録している。
+
+1. `data/ja-names.json`（手書きの補完） → `manual`。Wiki 側が誤っていたときに直せるよう最優先にしてある
+2. 英語Wikiの日本語版に置かれた英名のリダイレクト（`Rex` → `ティラノサウルス`） → `arkja`
+3. 日本語Wikiのドシエ訳の「名称：」 → `wikiwiki`
+
+どれにも無い場合は `null` とし、アプリでは英名だけで表示・検索する。
 
 ## データの欠損について
 

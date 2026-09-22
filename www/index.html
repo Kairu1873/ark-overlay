@@ -9,57 +9,65 @@
 </head>
 <body>
   <header class="top">
-    <h1>ARK<span>タイマー</span></h1>
+    <h1>ARK<span>Overlay</span></h1>
+    <nav id="tabs" class="tabs">
+      <button type="button" class="tab on" data-tab="timer">タイマー</button>
+      <button type="button" class="tab" data-tab="dex" id="tabDex" hidden>図鑑</button>
+    </nav>
   </header>
 
   <main>
-    <form id="form" class="card" autocomplete="off">
-      <label class="field">
-        <span>名前</span>
-        <input id="name" type="text" placeholder="例：ルミナ孵化" maxlength="40" enterkeyhint="done" />
-      </label>
-      <div class="time">
-        <label><input id="h" type="number" inputmode="numeric" min="0" max="999" placeholder="0" /><span>時間</span></label>
-        <label><input id="m" type="number" inputmode="numeric" min="0" max="59" placeholder="0" /><span>分</span></label>
-        <label><input id="s" type="number" inputmode="numeric" min="0" max="59" placeholder="0" /><span>秒</span></label>
-      </div>
-      <p id="formError" class="error" hidden></p>
-      <div class="actions">
-        <button type="button" id="savePreset">プリセット保存</button>
-        <button type="submit" class="primary">開始</button>
-      </div>
-    </form>
-
-    <section id="creatureSection" hidden>
-      <div class="section-head">
-        <h2>生物から作る</h2>
-        <button id="editRates" class="link" type="button">サーバー倍率</button>
-      </div>
-      <div id="rates" class="card" hidden></div>
-      <div class="card">
+    <div data-panel="timer">
+      <form id="form" class="card" autocomplete="off">
         <label class="field">
-          <span>生物を探す（英名）</span>
-          <input id="creatureQuery" type="text" placeholder="例：Rex" maxlength="40" autocomplete="off" />
+          <span>名前</span>
+          <input id="name" type="text" placeholder="例：ルミナ孵化" maxlength="40" enterkeyhint="done" />
         </label>
-        <div id="creatureResults" class="chips"></div>
-      </div>
-      <div id="creatureDetail"></div>
-    </section>
+        <div class="time">
+          <label><input id="h" type="number" inputmode="numeric" min="0" max="999" placeholder="0" /><span>時間</span></label>
+          <label><input id="m" type="number" inputmode="numeric" min="0" max="59" placeholder="0" /><span>分</span></label>
+          <label><input id="s" type="number" inputmode="numeric" min="0" max="59" placeholder="0" /><span>秒</span></label>
+        </div>
+        <p id="formError" class="error" hidden></p>
+        <div class="actions">
+          <button type="button" id="savePreset">プリセット保存</button>
+          <button type="submit" class="primary">開始</button>
+        </div>
+      </form>
 
-    <section>
-      <div class="section-head">
-        <h2>プリセット</h2>
-        <button id="editPresets" class="link" type="button">編集</button>
-      </div>
-      <div id="presets" class="chips"></div>
-    </section>
+      <section>
+        <div class="section-head">
+          <h2>プリセット</h2>
+          <button id="editPresets" class="link" type="button">編集</button>
+        </div>
+        <div id="presets" class="chips"></div>
+      </section>
 
-    <section>
-      <div class="section-head">
-        <h2>タイマー <span id="timerCount" class="count"></span></h2>
-      </div>
-      <div id="timers" class="timers"></div>
-    </section>
+      <section>
+        <div class="section-head">
+          <h2>タイマー <span id="timerCount" class="count"></span></h2>
+        </div>
+        <div id="timers" class="timers"></div>
+      </section>
+    </div>
+
+    <div data-panel="dex" hidden>
+      <section class="dex">
+        <div class="section-head">
+          <h2>図鑑 <span id="dexCount" class="count"></span></h2>
+          <button id="editRates" class="link" type="button">サーバー倍率</button>
+        </div>
+        <div id="rates" class="card" hidden></div>
+        <div class="card">
+          <label class="field">
+            <span>生物を探す</span>
+            <input id="creatureQuery" type="text" placeholder="例：ティラノサウルス / Rex" maxlength="40" autocomplete="off" />
+          </label>
+        </div>
+        <div id="creatureResults" class="dex-list"></div>
+        <div id="creatureDetail"></div>
+      </section>
+    </div>
   </main>
 
   <script src="app.js"></script>

@@ -21,7 +21,10 @@ body {
 }
 input { -webkit-user-select: text; user-select: text; }
 main { max-width: 640px; margin: 0 auto; padding: 0 16px 32px; }
-.top { max-width: 640px; margin: 0 auto; padding: 16px 16px 8px; }
+.top {
+  max-width: 640px; margin: 0 auto; padding: 16px 16px 8px;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+}
 h1 { margin: 0; font-size: 22px; letter-spacing: .04em; color: var(--accent-text); }
 h1 span { color: var(--text); margin-left: 6px; font-weight: 600; }
 h2 { font-size: 14px; margin: 0; color: var(--muted); font-weight: 600; letter-spacing: .06em; }
@@ -86,7 +89,7 @@ section { margin-top: 22px; }
 @keyframes pulse { 50% { box-shadow: 0 0 0 4px rgba(111, 208, 140, .18); } }
 input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; }
 
-/* ---------- 生物から作る ---------- */
+/* ---------- 生物の詳細 ---------- */
 .hint { font-size: 12px; color: var(--muted); margin: 0 0 10px; }
 .chip.on { border-color: var(--accent); background: var(--card-2); }
 .chip-warn {
@@ -115,9 +118,55 @@ input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; }
 .crow .editor { flex-basis: 100%; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-top: 8px; }
 .crow .editor input { flex: 1; min-width: 120px; }
 .crow .editor .hint { flex-basis: 100%; margin: 0; }
-.ja { border-top: 1px solid var(--line); margin-top: 10px; padding-top: 10px; }
+.ja { margin-top: 0; }
 .ja p { margin: 0 0 6px; font-size: 13px; color: var(--text); line-height: 1.5; }
 .ja b {
   display: inline-block; min-width: 3.5em; margin-right: 8px;
   color: var(--muted); font-size: 12px; font-weight: 600;
+}
+
+/* ---------- タブ ---------- */
+.tabs { display: flex; gap: 6px; }
+.tab { padding: 7px 14px; font-size: 14px; background: none; border-color: transparent; color: var(--muted); }
+.tab.on { background: var(--card-2); border-color: var(--line); color: var(--text); font-weight: 700; }
+
+/* ---------- 図鑑 ---------- */
+.dex-list { display: grid; gap: 6px; margin-top: 12px; }
+.dex-list[hidden] { display: none; }
+.dex-row {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 2px;
+  padding: 9px 12px; text-align: left; width: 100%;
+}
+.dex-name { font-weight: 700; }
+.dex-sub { font-size: 12px; color: var(--muted); }
+.dex-head { margin-bottom: 10px; }
+.dex-head h3 { margin: 6px 0 2px; font-size: 19px; }
+.dex-head .sub { display: block; margin: 0; }
+.dex-head .tag { margin-left: 8px; vertical-align: middle; }
+.dex-block { border-top: 1px solid var(--line); margin-top: 12px; padding-top: 10px; }
+.dex-block h4 { margin: 0 0 8px; font-size: 12px; color: var(--muted); font-weight: 600; letter-spacing: .06em; }
+.dex-block h4 em { margin-left: 8px; font-style: normal; font-weight: 400; opacity: .75; }
+.stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(92px, 1fr)); gap: 8px; }
+.stat { display: flex; flex-direction: column; gap: 2px; padding: 8px 10px; border-radius: 10px; background: var(--card-2); }
+.stat span { font-size: 11px; color: var(--muted); }
+.stat b { font-size: 16px; font-variant-numeric: tabular-nums; }
+.stat i { font-style: normal; font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.tame-list { display: grid; gap: 8px; }
+.tame { background: var(--card-2); border: 1px solid transparent; border-radius: 10px; padding: 9px 11px; }
+.tame.fav { border-color: var(--accent); }
+.tame-head { display: flex; align-items: center; gap: 8px; }
+.tame-food { flex: 1; font-weight: 700; font-size: 14px; }
+.tame-count { font-size: 18px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.tame-count em { font-style: normal; font-size: 12px; font-weight: 400; color: var(--muted); margin-left: 2px; }
+.tame-head button { padding: 6px 12px; font-size: 13px; }
+.tame-meta { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-top: 6px; font-size: 12px; color: var(--muted); }
+.tame-meta b { color: var(--text); font-weight: 600; font-variant-numeric: tabular-nums; }
+.dex-block h4 .lv { float: right; display: flex; align-items: center; gap: 4px; margin-top: -4px; }
+.dex-block h4 .lv input { width: 76px; padding: 4px 8px; font-size: 14px; text-align: right; }
+
+.kv { margin: 0 0 6px; font-size: 13px; line-height: 1.5; }
+.kv b { display: inline-block; min-width: 5.5em; margin-right: 8px; color: var(--muted); font-size: 12px; font-weight: 600; }
+.tag {
+  padding: 1px 6px; border-radius: 8px;
+  background: var(--card-2); color: var(--accent-text); font-size: 11px;
 }

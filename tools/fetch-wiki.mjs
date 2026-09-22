@@ -3,11 +3,12 @@
 //   node tools/fetch-wiki.mjs [--dry-run] [--skip-ja] [--no-cache]
 //
 // アプリの実行時にWikiを叩くことはない。取得はこのスクリプト（= 週1のCI）だけが行う。
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { cargoQuery, fetchRightsInfo } from './sources/cargo.mjs';
 import { fetchAllModules, MODULES } from './sources/modules.mjs';
 import { fetchCreatures as fetchJaCreatures } from './sources/wikiwiki.mjs';
+import { fetchJaNames } from './sources/arkja.mjs';
 import { mergeCreatures, mergeItems, norm, resolveInherits, isAsaTarget } from './merge.mjs';
 
 const DATA_DIR = path.join(import.meta.dirname, '..', 'data');
@@ -45,7 +46,7 @@ async function main() {
   log('ARK Wiki からデータを取得します');
   if (dryRun) log('  （--dry-run: ファイルは書き込みません）');
 
-  log('\n[1/4] Cargo テーブル');
+  log('\n[1/5] Cargo テーブル');
   const creatures = await cargoQuery('Creatures', CREATURE_FIELDS);
   log(`  Creatures       ${creatures.length}`);
   const creatureStats = await cargoQuery('CreatureStats', STAT_FIELDS);
@@ -59,14 +60,14 @@ async function main() {
   const resources = await cargoQuery('Resources', RESOURCE_FIELDS);
   log(`  Resources       ${resources.length}`);
 
-  log('\n[2/4] Lua モジュール');
+  log('\n[2/5] Lua モジュール');
   const { dv, tamingCreatures, tamingFood, revisions } = await fetchAllModules();
   log(`  ${MODULES.dv}              ${Object.keys(dv).length} エントリ`);
   log(`  ${MODULES.tamingCreatures}  ${Object.keys(tamingCreatures).length} エントリ`);
   log(`  ${MODULES.tamingFood}       ${Object.keys(tamingFood).length} 品目`);
 
   // 日本語Wikiは対象生物だけ引く（736ページ全部は取らない）
-  log('\n[3/4] 日本語Wiki（wikiwiki.jp/arksa）');
+  log('\n[3/5] 日本語Wiki（wikiwiki.jp/arksa）');
   const dvResolved = resolveInherits(dv);
   const dvByKey = new Map(Object.entries(dvResolved).map(([k, v]) => [norm(k), v]));
   const targetNames = creatures
@@ -74,6 +75,8 @@ async function main() {
     .map((r) => r.Name);
   let ja = {};
   let jaTimes = {};
+  let jaDossierNames = {};
+  let jaStats = {};
   if (skipJa) {
     log('  （--skip-ja: 取得を飛ばしました）');
   } else {
@@ -82,11 +85,23 @@ async function main() {
     });
     ja = res.data;
     jaTimes = res.times;
-    log(`  ページ総数 ${res.available} / 対象と一致 ${res.attempted} / 定性情報 ${Object.keys(ja).length} / 繁殖時間 ${Object.keys(jaTimes).length}`);
+    jaDossierNames = res.names;
+    jaStats = res.stats;
+    log(`  ページ総数 ${res.available} / 対象と一致 ${res.attempted} / 定性情報 ${Object.keys(ja).length}`
+      + ` / 繁殖時間 ${Object.keys(jaTimes).length} / ステータス ${Object.keys(jaStats).length}`);
   }
 
-  log('\n[4/4] マージ');
-  const merged = mergeCreatures({ creatures, creatureStats, dv, tamingCreatures, ja, jaTimes });
+  // 日本語名は日本語版の ark.wiki.gg から引く。英名のページがリダイレクトになっており、数リクエストで済む
+  log('\n[4/5] 日本語名（ark.wiki.gg/ja）');
+  const jaNames = await fetchJaNames(targetNames);
+  const nameOverrides = await loadNameOverrides();
+  log(`  日本語版と一致 ${Object.keys(jaNames).length}/${targetNames.length} / 手書きの補完 ${Object.keys(nameOverrides).length}`);
+
+  log('\n[5/5] マージ');
+  const merged = mergeCreatures({
+    creatures, creatureStats, dv, tamingCreatures, ja, jaTimes,
+    jaNames, jaDossierNames, jaStats, nameOverrides,
+  });
   const mergedItems = mergeItems({ items, craftables, consumables, resources });
   report(merged);
   log(`  アイテム        ${mergedItems.stats.total}`);
@@ -97,6 +112,7 @@ async function main() {
     license: { name: rights.text, url: rights.url },
     sources: {
       'ark.wiki.gg': { cargo: { creatures: creatures.length, items: items.length }, modules: revisions },
+      'ark.wiki.gg/ja': { names: Object.keys(jaNames).length },
       'wikiwiki.jp/arksa': {
         creatures: Object.keys(ja).length,
         breedingTimes: Object.keys(jaTimes).length,
@@ -105,8 +121,11 @@ async function main() {
       },
     },
     counts: { creatures: merged.creatures.length, items: mergedItems.items.length },
-    // 両Wikiで値が食い違った箇所。英語側を採用しているが、後から追えるよう残す
+    // 両Wikiで値が食い違った箇所。どちらを採ったかも含めて残す
     conflicts: merged.stats.conflicts,
+    statConflicts: merged.stats.statConflicts,
+    // 2種の値が入れ替わっているとみられる組。この組では日本語Wikiを採らない
+    suspectSwaps: merged.stats.swaps,
   };
 
   if (dryRun) {
@@ -119,6 +138,22 @@ async function main() {
   await write('taming-food.json', tamingFood);
   await write('meta.json', meta);
   log('\n完了');
+}
+
+/**
+ * 手書きの日本語名（data/ja-names.json）を読む。
+ * どちらの Wiki にも日本語名が無い生物を補うためのもので、ファイルが無くてもよい。
+ */
+async function loadNameOverrides() {
+  try {
+    const table = JSON.parse(await readFile(path.join(DATA_DIR, 'ja-names.json'), 'utf8'));
+    return Object.fromEntries(
+      Object.entries(table).filter(([, v]) => typeof v === 'string' && v.trim()),
+    );
+  } catch (e) {
+    if (e.code !== 'ENOENT') log(`  ! data/ja-names.json を読めませんでした: ${e.message}`);
+    return {};
+  }
 }
 
 async function write(name, value) {
@@ -142,12 +177,32 @@ function report({ creatures, stats }) {
   };
   log(`  Creatures ${stats.total} → ASA対象 ${stats.asa}（ASE由来 ${stats.ase} / ASA新規 ${stats.asaNew}）`);
   log(`  Dv/data と一致 ${stats.dvMatched} / 日本語Wikiと一致 ${stats.jaMatched} / 日本語で穴埋め ${stats.jaFilled}`);
+  const n = stats.nameJa;
+  log(`  日本語名 ${n.arkja + n.wikiwiki + n.manual}/${stats.asa}`
+    + `（ark.wiki.gg/ja ${n.arkja} / ドシエ訳 ${n.wikiwiki} / 手書き ${n.manual} / なし ${n.none}）`);
+  const st = stats.statsSource;
+  log(`  ステータス ${st.ja + st.cargo + st.both}/${stats.asa}`
+    + `（日本語のみ ${st.ja} / 両方 ${st.both} / 英語のみ ${st.cargo} / なし ${st.none}）`);
+  log(`  成長率 ${stats.growth} / 出現マップを日本語で補った生物 ${stats.mapsFromJa}`);
   line('ASA対象全体', creatures);
   line('ASE由来', creatures.filter((c) => c.origin === 'ase'));
   line('ASA新規', creatures.filter((c) => c.origin === 'asa'));
+  if (stats.swaps?.length) {
+    log(`  2種の値が入れ替わっている疑い ${stats.swaps.length}組（この組は英語側を採用）:`);
+    for (const p of stats.swaps) log(`    ${p.a} ⇔ ${p.b}（${p.fields.join(', ')}）`);
+  }
   if (stats.conflicts?.length) {
-    log(`  両Wikiで値が食い違った箇所 ${stats.conflicts.length}件（英語側を採用）:`);
-    for (const c of stats.conflicts) log(`    ${c.name} ${c.field}: 英 ${c.en}秒 / 日 ${c.ja}秒`);
+    log(`  繁殖時間が食い違った箇所 ${stats.conflicts.length}件:`);
+    for (const c of stats.conflicts) {
+      log(`    ${c.name} ${c.field}: 英 ${c.en}秒 / 日 ${c.ja}秒 → ${c.adopted === 'ja' ? '日本語' : '英語'}を採用`);
+    }
+  }
+  if (stats.statConflicts?.length) {
+    log(`  ステータスが食い違った箇所 ${stats.statConflicts.length}件（日本語を採用）:`);
+    for (const c of stats.statConflicts.slice(0, 15)) {
+      log(`    ${c.name} ${c.field}: 英 ${c.en} / 日 ${c.ja}`);
+    }
+    if (stats.statConflicts.length > 15) log(`    …ほか ${stats.statConflicts.length - 15}件`);
   }
 }
 

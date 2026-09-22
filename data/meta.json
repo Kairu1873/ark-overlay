@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-22T00:32:46.568Z",
+ "generatedAt": "2026-09-22T10:32:43.723Z",
  "license": {
   "name": "Creative Commons Attribution-Non-Commercial-ShareAlike 4.0 License",
   "url": "https://creativecommons.org/licenses/by-nc-sa/4.0"
@@ -25,10 +25,13 @@
     }
    }
   },
+  "ark.wiki.gg/ja": {
+   "names": 157
+  },
   "wikiwiki.jp/arksa": {
    "creatures": 162,
    "breedingTimes": 114,
-   "filledGaps": 31,
+   "filledGaps": 33,
    "skipped": false
   }
  },
@@ -41,43 +44,212 @@
    "name": "Baryonyx",
    "field": "incubationSec",
    "en": 7199,
-   "ja": 22498
+   "ja": 22498,
+   "adopted": "en"
   },
   {
    "name": "Baryonyx",
    "field": "maturationSec",
    "en": 166667,
-   "ja": 666667
+   "ja": 666667,
+   "adopted": "en"
   },
   {
    "name": "Basilisk",
    "field": "incubationSec",
    "en": 22498,
-   "ja": 7199
+   "ja": 7199,
+   "adopted": "en"
   },
   {
    "name": "Basilisk",
    "field": "maturationSec",
    "en": 666667,
-   "ja": 166667
+   "ja": 166667,
+   "adopted": "en"
   },
   {
    "name": "Deinosuchus",
    "field": "incubationSec",
    "en": 8999,
-   "ja": 10799
+   "ja": 10799,
+   "adopted": "ja"
   },
   {
    "name": "Managarmr",
    "field": "gestationSec",
    "en": 14286,
-   "ja": 21978
+   "ja": 21978,
+   "adopted": "ja"
   },
   {
    "name": "Managarmr",
    "field": "maturationSec",
    "en": 333333,
-   "ja": 256410
+   "ja": 256410,
+   "adopted": "ja"
+  }
+ ],
+ "statConflicts": [
+  {
+   "name": "Astrocetus",
+   "field": "damage",
+   "en": 30,
+   "ja": 29
+  },
+  {
+   "name": "Aureliax",
+   "field": "damage",
+   "en": 100,
+   "ja": 35
+  },
+  {
+   "name": "Baryonyx",
+   "field": "damage",
+   "en": 35,
+   "ja": 31.5
+  },
+  {
+   "name": "Boaratos",
+   "field": "food",
+   "en": 5000,
+   "ja": 5750
+  },
+  {
+   "name": "Deinonychus",
+   "field": "damage",
+   "en": 30,
+   "ja": 21
+  },
+  {
+   "name": "Dreadmare",
+   "field": "damage",
+   "en": 23,
+   "ja": 24
+  },
+  {
+   "name": "Dreadnoughtus",
+   "field": "damage",
+   "en": 1080,
+   "ja": 3240
+  },
+  {
+   "name": "Electrophorus",
+   "field": "damage",
+   "en": 3,
+   "ja": 32
+  },
+  {
+   "name": "Ferox",
+   "field": "weight",
+   "en": 120,
+   "ja": 55
+  },
+  {
+   "name": "Gigadesmodus",
+   "field": "damage",
+   "en": 100,
+   "ja": 150
+  },
+  {
+   "name": "Giganotosaurus",
+   "field": "damage",
+   "en": 1000,
+   "ja": 500
+  },
+  {
+   "name": "Helicoprion",
+   "field": "food",
+   "en": 2000,
+   "ja": 2300
+  },
+  {
+   "name": "Lymantria",
+   "field": "stamina",
+   "en": 150,
+   "ja": 180
+  },
+  {
+   "name": "Managarmr",
+   "field": "speed",
+   "en": 150,
+   "ja": 100
+  },
+  {
+   "name": "Mesopithecus",
+   "field": "damage",
+   "en": 12,
+   "ja": 10
+  },
+  {
+   "name": "Neophyte",
+   "field": "damage",
+   "en": 100,
+   "ja": 28
+  },
+  {
+   "name": "Parrot",
+   "field": "torpor",
+   "en": 100,
+   "ja": 500
+  },
+  {
+   "name": "Shastasaurus",
+   "field": "weight",
+   "en": 3000,
+   "ja": 1300
+  },
+  {
+   "name": "Shastasaurus",
+   "field": "damage",
+   "en": 70,
+   "ja": 75
+  },
+  {
+   "name": "Titanoboa",
+   "field": "torpor",
+   "en": 175,
+   "ja": 170
+  },
+  {
+   "name": "Titanosaur",
+   "field": "damage",
+   "en": 1000,
+   "ja": 1550
+  },
+  {
+   "name": "Trilobite",
+   "field": "damage",
+   "en": 0,
+   "ja": 8
+  },
+  {
+   "name": "Troodon",
+   "field": "food",
+   "en": 200,
+   "ja": 100
+  },
+  {
+   "name": "Veilwyn",
+   "field": "damage",
+   "en": 11,
+   "ja": 7
+  },
+  {
+   "name": "Yi Ling",
+   "field": "damage",
+   "en": 23,
+   "ja": 20
+  }
+ ],
+ "suspectSwaps": [
+  {
+   "a": "Baryonyx",
+   "b": "Basilisk",
+   "fields": [
+    "incubationSec",
+    "maturationSec"
+   ]
   }
  ]
 }

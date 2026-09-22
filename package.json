@@ -12,7 +12,7 @@
     "dist:win": "npm run build:web && electron-builder --win nsis --publish never",
     "data:fetch": "node tools/fetch-wiki.mjs",
     "data:validate": "node tools/validate-data.mjs",
-    "test": "node tools/test-timers.mjs"
+    "test": "node tools/test-timers.mjs && node tools/test-search.mjs && node tools/test-taming.mjs"
   },
   "devDependencies": {
     "electron": "^44.4.3",
