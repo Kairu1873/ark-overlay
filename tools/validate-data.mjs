@@ -14,7 +14,7 @@ const FLOOR = {
   creatures: 180,
   items: 2000,
   withMaturation: 115,
-  withTaming: 90,
+  withTaming: 175,
   tamingFood: 20,
   // ASA新規生物の数値は日本語Wikiだけが供給源。
   // wikiwiki.jp の書式が変わるとここが静かにゼロになるので、下限を置いて検知する
@@ -27,6 +27,9 @@ const FLOOR = {
   withStats: 170,
   withGrowth: 140,
   withMaps: 160,
+  // Smart Breeding の値。向こうのファイル名や構造が変わると全滅するので下限を置く
+  withStatsRaw: 165,
+  withMatingCooldown: 130,
 };
 
 const problems = [];
@@ -105,6 +108,18 @@ async function main() {
     }
   }
 
+  const withStatsRaw = creatures.filter((c) => c.statsRaw).length;
+  const withMatingCooldown = creatures.filter((c) => c.breeding?.matingCooldownMinSec).length;
+  if (withStatsRaw < FLOOR.withStatsRaw) {
+    fail(
+      `Smart Breeding のステータスを持つ生物が少なすぎます: ${withStatsRaw} < ${FLOOR.withStatsRaw}` +
+        '（ARKStatsExtractor の値ファイルの構造が変わった可能性がある）',
+    );
+  }
+  if (withMatingCooldown < FLOOR.withMatingCooldown) {
+    fail(`交配クールダウンを持つ生物が少なすぎます: ${withMatingCooldown} < ${FLOOR.withMatingCooldown}`);
+  }
+
   const withStats = creatures.filter((c) => c.stats).length;
   const withGrowth = creatures.filter((c) => c.growth).length;
   const withMaps = creatures.filter((c) => c.wildMaps?.length).length;
@@ -160,7 +175,9 @@ async function main() {
     }
     // ステータスは日本語Wikiの表から採っている。列を取り違えると成長率を拾ってしまうため、
     // 両Wikiで一致している Rex の値で固定する
-    for (const [field, expected] of [['health', 1100], ['weight', 500], ['torpor', 1550], ['speed', 100]]) {
+    for (const [field, expected] of [
+      ['health', 1100], ['weight', 500], ['torpor', 1550], ['speed', 100], ['damage', 100],
+    ]) {
       if (rex.stats?.[field] !== expected) {
         fail(`Rex の${field}が想定外です: ${rex.stats?.[field]}（期待 ${expected}）`);
       }
@@ -176,6 +193,14 @@ async function main() {
   console.log(`生物 ${creatures.length}件（ASE由来 ${creatures.length - asaNew} / ASA新規 ${asaNew}）`);
   console.log(`  成体までの時間あり ${withMaturation} / テイム係数あり ${withTaming} / 日本語Wikiで穴埋め ${jaFilled}`);
   console.log(`  日本語名あり ${withNameJa} / ステータスあり ${withStats} / 成長率あり ${withGrowth} / 出現マップあり ${withMaps}`);
+  console.log(`  交配CDあり ${withMatingCooldown} / Smart Breeding の値あり ${withStatsRaw}`);
+  const asb = meta.sources?.ARKStatsExtractor;
+  if (asb) {
+    console.log(`  Smart Breeding ASA ${asb.versions?.asa} / ASE ${asb.versions?.ase}（${asb.matched}種と一致）`);
+  }
+  if (meta.asbConflicts?.length) {
+    console.log(`  Wiki と Smart Breeding で食い違い ${meta.asbConflicts.length}件（Smart Breeding を採用）`);
+  }
   if (oddGrowth.length) {
     console.log(`  成長率が基礎値を超えている箇所 ${oddGrowth.length}件: ${oddGrowth.slice(0, 5).join(' / ')}`);
   }

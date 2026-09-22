@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-22T10:32:43.723Z",
+ "generatedAt": "2026-09-22T11:09:30.615Z",
  "license": {
   "name": "Creative Commons Attribution-Non-Commercial-ShareAlike 4.0 License",
   "url": "https://creativecommons.org/licenses/by-nc-sa/4.0"
@@ -27,6 +27,17 @@
   },
   "ark.wiki.gg/ja": {
    "names": 157
+  },
+  "ARKStatsExtractor": {
+   "versions": {
+    "asa": "92.43.1",
+    "ase": "358.17.12291776",
+    "food": "285.106.3"
+   },
+   "matched": 182,
+   "breeding": 51,
+   "taming": 98,
+   "stats": 180
   },
   "wikiwiki.jp/arksa": {
    "creatures": 162,
@@ -250,6 +261,1412 @@
     "incubationSec",
     "maturationSec"
    ]
+  }
+ ],
+ "asbConflicts": [
+  {
+   "name": "Acrocanthosaurus",
+   "field": "damage",
+   "wiki": 58,
+   "asb": 100
+  },
+  {
+   "name": "Allosaurus",
+   "field": "damage",
+   "wiki": 35,
+   "asb": 100
+  },
+  {
+   "name": "Ammonite",
+   "field": "damage",
+   "wiki": 0,
+   "asb": 100
+  },
+  {
+   "name": "Ankylosaurus",
+   "field": "damage",
+   "wiki": 50,
+   "asb": 100
+  },
+  {
+   "name": "Archaeopteryx",
+   "field": "damage",
+   "wiki": 5,
+   "asb": 100
+  },
+  {
+   "name": "Archelon",
+   "field": "damage",
+   "wiki": 28,
+   "asb": 100
+  },
+  {
+   "name": "Argentavis",
+   "field": "damage",
+   "wiki": 25,
+   "asb": 100
+  },
+  {
+   "name": "Armadoggo",
+   "field": "damage",
+   "wiki": 15,
+   "asb": 100
+  },
+  {
+   "name": "Arthropluera",
+   "field": "oxygen",
+   "wiki": 1550,
+   "asb": 150
+  },
+  {
+   "name": "Arthropluera",
+   "field": "damage",
+   "wiki": 18,
+   "asb": 100
+  },
+  {
+   "name": "Astrocetus",
+   "field": "ineffectiveness",
+   "wiki": 2000,
+   "asb": 2
+  },
+  {
+   "name": "Astrocetus",
+   "field": "torporIncrease",
+   "wiki": 0.02,
+   "asb": 84
+  },
+  {
+   "name": "Astrocetus",
+   "field": "damage",
+   "wiki": 29,
+   "asb": 100
+  },
+  {
+   "name": "Astrodelphis",
+   "field": "damage",
+   "wiki": 24,
+   "asb": 100
+  },
+  {
+   "name": "Aureliax",
+   "field": "damage",
+   "wiki": 35,
+   "asb": 100
+  },
+  {
+   "name": "Baryonyx",
+   "field": "damage",
+   "wiki": 31.5,
+   "asb": 100
+  },
+  {
+   "name": "Basilisk",
+   "field": "torporIncrease",
+   "wiki": 0.06,
+   "asb": 10.5
+  },
+  {
+   "name": "Basilisk",
+   "field": "damage",
+   "wiki": 44,
+   "asb": 100
+  },
+  {
+   "name": "Basilosaurus",
+   "field": "damage",
+   "wiki": 47,
+   "asb": 100
+  },
+  {
+   "name": "Beelzebufo",
+   "field": "eggTempMax",
+   "wiki": 50,
+   "asb": 75
+  },
+  {
+   "name": "Beelzebufo",
+   "field": "damage",
+   "wiki": 12,
+   "asb": 100
+  },
+  {
+   "name": "Bison",
+   "field": "damage",
+   "wiki": 30,
+   "asb": 100
+  },
+  {
+   "name": "Bloodstalker",
+   "field": "damage",
+   "wiki": 26,
+   "asb": 100
+  },
+  {
+   "name": "Brontosaurus",
+   "field": "health",
+   "wiki": 2070,
+   "asb": 2277
+  },
+  {
+   "name": "Brontosaurus",
+   "field": "damage",
+   "wiki": 60,
+   "asb": 100
+  },
+  {
+   "name": "Bulbdog",
+   "field": "damage",
+   "wiki": 12,
+   "asb": 100
+  },
+  {
+   "name": "Burrowbuck",
+   "field": "damage",
+   "wiki": 19,
+   "asb": 100
+  },
+  {
+   "name": "Carbonemys",
+   "field": "damage",
+   "wiki": 13,
+   "asb": 100
+  },
+  {
+   "name": "Carnotaurus",
+   "field": "damage",
+   "wiki": 35,
+   "asb": 100
+  },
+  {
+   "name": "Castoroides",
+   "field": "damage",
+   "wiki": 28,
+   "asb": 100
+  },
+  {
+   "name": "Cat",
+   "field": "torpor",
+   "wiki": 100,
+   "asb": 75
+  },
+  {
+   "name": "Cat",
+   "field": "damage",
+   "wiki": 10,
+   "asb": 100
+  },
+  {
+   "name": "Ceratosaurus",
+   "field": "damage",
+   "wiki": 25,
+   "asb": 100
+  },
+  {
+   "name": "Chalicotherium",
+   "field": "damage",
+   "wiki": 36,
+   "asb": 100
+  },
+  {
+   "name": "Cnidaria",
+   "field": "damage",
+   "wiki": 30,
+   "asb": 100
+  },
+  {
+   "name": "Coelacanth",
+   "field": "damage",
+   "wiki": 5,
+   "asb": 100
+  },
+  {
+   "name": "Cosmo",
+   "field": "damage",
+   "wiki": 5,
+   "asb": 100
+  },
+  {
+   "name": "Cryolophosaurus",
+   "field": "damage",
+   "wiki": 27,
+   "asb": 100
+  },
+  {
+   "name": "Daeodon",
+   "field": "damage",
+   "wiki": 29,
+   "asb": 100
+  },
+  {
+   "name": "Deathworm",
+   "field": "damage",
+   "wiki": 225,
+   "asb": 100
+  },
+  {
+   "name": "Defense Unit",
+   "field": "health",
+   "wiki": 1848.0001,
+   "asb": 924.000061
+  },
+  {
+   "name": "Defense Unit",
+   "field": "damage",
+   "wiki": 35,
+   "asb": 100
+  },
+  {
+   "name": "Deinonychus",
+   "field": "incubationSec",
+   "wiki": 17999,
+   "asb": 7199
+  },
+  {
+   "name": "Deinonychus",
+   "field": "eggTempMin",
+   "wiki": 80,
+   "asb": 40
+  },
+  {
+   "name": "Deinonychus",
+   "field": "eggTempMax",
+   "wiki": 90,
+   "asb": 45
+  },
+  {
+   "name": "Deinonychus",
+   "field": "damage",
+   "wiki": 21,
+   "asb": 100
+  },
+  {
+   "name": "Deinosuchus",
+   "field": "incubationSec",
+   "wiki": 10799,
+   "asb": 8999
+  },
+  {
+   "name": "Deinosuchus",
+   "field": "damage",
+   "wiki": 55,
+   "asb": 100
+  },
+  {
+   "name": "Deinotherium",
+   "field": "damage",
+   "wiki": 30,
+   "asb": 100
+  },
+  {
+   "name": "Desert Titan",
+   "field": "health",
+   "wiki": 4000,
+   "asb": 250000
+  },
+  {
+   "name": "Desert Titan",
+   "field": "stamina",
+   "wiki": 10000,
+   "asb": 5000
+  },
+  {
+   "name": "Desert Titan",
+   "field": "food",
+   "wiki": 100,
+   "asb": 864
+  },
+  {
+   "name": "Desert Titan",
+   "field": "weight",
+   "wiki": 100,
+   "asb": 9000
+  },
+  {
+   "name": "Desert Titan",
+   "field": "damage",
+   "wiki": 15,
+   "asb": 100
+  },
+  {
+   "name": "Dimetrodon",
+   "field": "torporDepletionPS0",
+   "wiki": 25,
+   "asb": 5
+  },
+  {
+   "name": "Dimetrodon",
+   "field": "foodConsumptionMult",
+   "wiki": 160.010239,
+   "asb": 199.984
+  },
+  {
+   "name": "Dimetrodon",
+   "field": "damage",
+   "wiki": 20,
+   "asb": 100
+  },
+  {
+   "name": "Dimorphodon",
+   "field": "damage",
+   "wiki": 23,
+   "asb": 100
+  },
+  {
+   "name": "Diplocaulus",
+   "field": "eggTempMax",
+   "wiki": 50,
+   "asb": 75
+  },
+  {
+   "name": "Diplocaulus",
+   "field": "damage",
+   "wiki": 10,
+   "asb": 100
+  },
+  {
+   "name": "Diplodocus",
+   "field": "damage",
+   "wiki": 0,
+   "asb": 100
+  },
+  {
+   "name": "Dire Bear",
+   "field": "damage",
+   "wiki": 50,
+   "asb": 100
+  },
+  {
+   "name": "Direwolf",
+   "field": "damage",
+   "wiki": 33,
+   "asb": 100
+  },
+  {
+   "name": "Dodo",
+   "field": "damage",
+   "wiki": 5,
+   "asb": 100
+  },
+  {
+   "name": "Doedicurus",
+   "field": "damage",
+   "wiki": 32,
+   "asb": 100
+  },
+  {
+   "name": "Dreadmare",
+   "field": "damage",
+   "wiki": 24,
+   "asb": 100
+  },
+  {
+   "name": "Dreadnoughtus",
+   "field": "damage",
+   "wiki": 3240,
+   "asb": 100
+  },
+  {
+   "name": "Dung Beetle",
+   "field": "damage",
+   "wiki": 5,
+   "asb": 100
+  },
+  {
+   "name": "Dunkleosteus",
+   "field": "damage",
+   "wiki": 60,
+   "asb": 100
+  },
+  {
+   "name": "Elderclaw",
+   "field": "damage",
+   "wiki": 35,
+   "asb": 100
+  },
+  {
+   "name": "Electrophorus",
+   "field": "eggTempMax",
+   "wiki": 50,
+   "asb": 75
+  },
+  {
+   "name": "Electrophorus",
+   "field": "torpor1",
+   "wiki": 0.002929,
+   "asb": 175
+  },
+  {
+   "name": "Electrophorus",
+   "field": "torporIncrease",
+   "wiki": 420,
+   "asb": 10.5
+  },
+  {
+   "name": "Electrophorus",
+   "field": "damage",
+   "wiki": 32,
+   "asb": 100
+  },
+  {
+   "name": "Enforcer",
+   "field": "damage",
+   "wiki": 34,
+   "asb": 100
+  },
+  {
+   "name": "Equus",
+   "field": "damage",
+   "wiki": 9,
+   "asb": 100
+  },
+  {
+   "name": "Eurypterid",
+   "field": "damage",
+   "wiki": 7,
+   "asb": 100
+  },
+  {
+   "name": "Fasolasuchus",
+   "field": "incubationSec",
+   "wiki": 6000,
+   "asb": 17999
+  },
+  {
+   "name": "Fasolasuchus",
+   "field": "maturationSec",
+   "wiki": 333333,
+   "asb": 666667
+  },
+  {
+   "name": "Fasolasuchus",
+   "field": "damage",
+   "wiki": 66,
+   "asb": 100
+  },
+  {
+   "name": "Featherlight",
+   "field": "damage",
+   "wiki": 3,
+   "asb": 100
+  },
+  {
+   "name": "Ferox",
+   "field": "affinityBase",
+   "wiki": 1200,
+   "asb": 1
+  },
+  {
+   "name": "Ferox",
+   "field": "ineffectiveness",
+   "wiki": 3.125,
+   "asb": 1.333333
+  },
+  {
+   "name": "Ferox",
+   "field": "foodConsumptionBase",
+   "wiki": 0.001543,
+   "asb": 0.000868
+  },
+  {
+   "name": "Ferox",
+   "field": "foodConsumptionMult",
+   "wiki": 648.0881,
+   "asb": 2880.184
+  },
+  {
+   "name": "Ferox",
+   "field": "damage",
+   "wiki": 5,
+   "asb": 100
+  },
+  {
+   "name": "Forest Titan",
+   "field": "torpor",
+   "wiki": 1818800,
+   "asb": 20000
+  },
+  {
+   "name": "Forest Titan",
+   "field": "damage",
+   "wiki": 0,
+   "asb": 100
+  },
+  {
+   "name": "Gacha",
+   "field": "damage",
+   "wiki": 32,
+   "asb": 100
+  },
+  {
+   "name": "Gallimimus",
+   "field": "damage",
+   "wiki": 8,
+   "asb": 100
+  },
+  {
+   "name": "Gasbags",
+   "field": "damage",
+   "wiki": 5,
+   "asb": 100
+  },
+  {
+   "name": "Giant Bee",
+   "field": "damage",
+   "wiki": 8,
+   "asb": 100
+  },
+  {
+   "name": "Gigadesmodus",
+   "field": "incubationSec",
+   "wiki": 59995,
+   "asb": 17999
+  },
+  {
+   "name": "Gigadesmodus",
+   "field": "damage",
+   "wiki": 150,
+   "asb": 100
+  },
+  {
+   "name": "Giganotosaurus",
+   "field": "damage",
+   "wiki": 500,
+   "asb": 100
+  },
+  {
+   "name": "Gigantopithecus",
+   "field": "damage",
+   "wiki": 40,
+   "asb": 100
+  },
+  {
+   "name": "Gigantoraptor",
+   "field": "damage",
+   "wiki": 20,
+   "asb": 100
+  },
+  {
+   "name": "Gloon",
+   "field": "damage",
+   "wiki": 5,
+   "asb": 100
+  },
+  {
+   "name": "Glowbug",
+   "field": "damage",
+   "wiki": 18,
+   "asb": 100
+  },
+  {
+   "name": "Glowbug",
+   "field": "speed",
+   "wiki": 100,
+   "asb": 300
+  },
+  {
+   "name": "Glowtail",
+   "field": "torporIncrease",
+   "wiki": 0.06,
+   "asb": 3.5999999999999996
+  },
+  {
+   "name": "Glowtail",
+   "field": "damage",
+   "wiki": 12,
+   "asb": 100
+  },
+  {
+   "name": "Grand Tortugar",
+   "field": "damage",
+   "wiki": 20,
+   "asb": 100
+  },
+  {
+   "name": "Griffin",
+   "field": "damage",
+   "wiki": 27,
+   "asb": 100
+  },
+  {
+   "name": "Helicoprion",
+   "field": "food",
+   "wiki": 2300,
+   "asb": 2000
+  },
+  {
+   "name": "Helicoprion",
+   "field": "damage",
+   "wiki": 50,
+   "asb": 100
+  },
+  {
+   "name": "Hesperornis",
+   "field": "damage",
+   "wiki": 1,
+   "asb": 100
+  },
+  {
+   "name": "Hyaenodon",
+   "field": "damage",
+   "wiki": 15,
+   "asb": 100
+  },
+  {
+   "name": "Ice Titan",
+   "field": "torpor",
+   "wiki": 1218800,
+   "asb": 20000
+  },
+  {
+   "name": "Ice Titan",
+   "field": "damage",
+   "wiki": 2500,
+   "asb": 100
+  },
+  {
+   "name": "Ichthyornis",
+   "field": "damage",
+   "wiki": 1,
+   "asb": 100
+  },
+  {
+   "name": "Ichthyosaurus",
+   "field": "damage",
+   "wiki": 15,
+   "asb": 100
+  },
+  {
+   "name": "Iguanodon",
+   "field": "damage",
+   "wiki": 25,
+   "asb": 100
+  },
+  {
+   "name": "Insect Swarm",
+   "field": "damage",
+   "wiki": 23,
+   "asb": 100
+  },
+  {
+   "name": "Jerboa",
+   "field": "damage",
+   "wiki": 3,
+   "asb": 100
+  },
+  {
+   "name": "Kairuku",
+   "field": "affinityBase",
+   "wiki": 900,
+   "asb": 1200
+  },
+  {
+   "name": "Kairuku",
+   "field": "damage",
+   "wiki": 8,
+   "asb": 100
+  },
+  {
+   "name": "Kaprosuchus",
+   "field": "damage",
+   "wiki": 25,
+   "asb": 100
+  },
+  {
+   "name": "Karkinos",
+   "field": "damage",
+   "wiki": 32,
+   "asb": 100
+  },
+  {
+   "name": "Kentrosaurus",
+   "field": "damage",
+   "wiki": 10,
+   "asb": 100
+  },
+  {
+   "name": "Lamprey",
+   "field": "damage",
+   "wiki": 7,
+   "asb": 100
+  },
+  {
+   "name": "Leech",
+   "field": "damage",
+   "wiki": 7,
+   "asb": 100
+  },
+  {
+   "name": "Leedsichthys",
+   "field": "damage",
+   "wiki": 115,
+   "asb": 100
+  },
+  {
+   "name": "Liopleurodon",
+   "field": "damage",
+   "wiki": 40,
+   "asb": 100
+  },
+  {
+   "name": "Lumina",
+   "field": "maturationSec",
+   "wiki": 256410,
+   "asb": 333333
+  },
+  {
+   "name": "Lumina",
+   "field": "damage",
+   "wiki": 35,
+   "asb": 100
+  },
+  {
+   "name": "Lymantria",
+   "field": "stamina",
+   "wiki": 180,
+   "asb": 150
+  },
+  {
+   "name": "Lymantria",
+   "field": "damage",
+   "wiki": 18,
+   "asb": 100
+  },
+  {
+   "name": "Lystrosaurus",
+   "field": "damage",
+   "wiki": 6,
+   "asb": 100
+  },
+  {
+   "name": "Maeguana",
+   "field": "damage",
+   "wiki": 20,
+   "asb": 100
+  },
+  {
+   "name": "Maewing",
+   "field": "damage",
+   "wiki": 20,
+   "asb": 100
+  },
+  {
+   "name": "Magmasaur",
+   "field": "damage",
+   "wiki": 120,
+   "asb": 100
+  },
+  {
+   "name": "Malwyn",
+   "field": "torpor",
+   "wiki": 1100,
+   "asb": 2450
+  },
+  {
+   "name": "Malwyn",
+   "field": "damage",
+   "wiki": 60,
+   "asb": 100
+  },
+  {
+   "name": "Managarmr",
+   "field": "gestationSec",
+   "wiki": 21978,
+   "asb": 14286
+  },
+  {
+   "name": "Managarmr",
+   "field": "maturationSec",
+   "wiki": 256410,
+   "asb": 333333
+  },
+  {
+   "name": "Managarmr",
+   "field": "damage",
+   "wiki": 35,
+   "asb": 100
+  },
+  {
+   "name": "Managarmr",
+   "field": "speed",
+   "wiki": 100,
+   "asb": 150
+  },
+  {
+   "name": "Manta",
+   "field": "damage",
+   "wiki": 28,
+   "asb": 100
+  },
+  {
+   "name": "Mantis",
+   "field": "damage",
+   "wiki": 34,
+   "asb": 100
+  },
+  {
+   "name": "Megachelon",
+   "field": "damage",
+   "wiki": 125,
+   "asb": 100
+  },
+  {
+   "name": "Megalania",
+   "field": "torporDepletionPS0",
+   "wiki": 18,
+   "asb": 3.6
+  },
+  {
+   "name": "Megalania",
+   "field": "foodConsumptionMult",
+   "wiki": 160.010239,
+   "asb": 199.984
+  },
+  {
+   "name": "Megalania",
+   "field": "damage",
+   "wiki": 10,
+   "asb": 100
+  },
+  {
+   "name": "Megaloceros",
+   "field": "damage",
+   "wiki": 30,
+   "asb": 100
+  },
+  {
+   "name": "Megalodon",
+   "field": "damage",
+   "wiki": 40,
+   "asb": 100
+  },
+  {
+   "name": "Megalosaurus",
+   "field": "damage",
+   "wiki": 75,
+   "asb": 100
+  },
+  {
+   "name": "Meganeura",
+   "field": "damage",
+   "wiki": 10,
+   "asb": 100
+  },
+  {
+   "name": "Megaraptor",
+   "field": "damage",
+   "wiki": 25,
+   "asb": 100
+  },
+  {
+   "name": "Megatherium",
+   "field": "damage",
+   "wiki": 32,
+   "asb": 100
+  },
+  {
+   "name": "Mek",
+   "field": "damage",
+   "wiki": 300,
+   "asb": 100
+  },
+  {
+   "name": "Mesopithecus",
+   "field": "damage",
+   "wiki": 10,
+   "asb": 100
+  },
+  {
+   "name": "Microraptor",
+   "field": "damage",
+   "wiki": 8,
+   "asb": 100
+  },
+  {
+   "name": "Minotarchos",
+   "field": "damage",
+   "wiki": 1008,
+   "asb": 100
+  },
+  {
+   "name": "Morellatops",
+   "field": "damage",
+   "wiki": 32,
+   "asb": 100
+  },
+  {
+   "name": "Moschops",
+   "field": "affinityBase",
+   "wiki": 3000,
+   "asb": 6000
+  },
+  {
+   "name": "Moschops",
+   "field": "damage",
+   "wiki": 32,
+   "asb": 100
+  },
+  {
+   "name": "Nameless",
+   "field": "damage",
+   "wiki": 10,
+   "asb": 100
+  },
+  {
+   "name": "Neophyte",
+   "field": "damage",
+   "wiki": 28,
+   "asb": 100
+  },
+  {
+   "name": "Noglin",
+   "field": "damage",
+   "wiki": 4,
+   "asb": 100
+  },
+  {
+   "name": "Oasisaur",
+   "field": "speed",
+   "wiki": 0,
+   "asb": 100
+  },
+  {
+   "name": "Ossidon",
+   "field": "damage",
+   "wiki": 95,
+   "asb": 100
+  },
+  {
+   "name": "Otter",
+   "field": "damage",
+   "wiki": 10,
+   "asb": 100
+  },
+  {
+   "name": "Oviraptor",
+   "field": "damage",
+   "wiki": 12,
+   "asb": 100
+  },
+  {
+   "name": "Ovis",
+   "field": "damage",
+   "wiki": 5,
+   "asb": 100
+  },
+  {
+   "name": "Pachyrhinosaurus",
+   "field": "damage",
+   "wiki": 28,
+   "asb": 100
+  },
+  {
+   "name": "Palaeoctopus",
+   "field": "damage",
+   "wiki": 60,
+   "asb": 100
+  },
+  {
+   "name": "Paraceratherium",
+   "field": "damage",
+   "wiki": 45,
+   "asb": 100
+  },
+  {
+   "name": "Parakeet Fish School",
+   "field": "damage",
+   "wiki": 23,
+   "asb": 100
+  },
+  {
+   "name": "Parrot",
+   "field": "torpor",
+   "wiki": 500,
+   "asb": 100
+  },
+  {
+   "name": "Parrot",
+   "field": "damage",
+   "wiki": 15,
+   "asb": 100
+  },
+  {
+   "name": "Pegomastax",
+   "field": "affinityBase",
+   "wiki": 1350,
+   "asb": 1900
+  },
+  {
+   "name": "Pegomastax",
+   "field": "affinityPerLevel",
+   "wiki": 22.5,
+   "asb": 35
+  },
+  {
+   "name": "Pegomastax",
+   "field": "damage",
+   "wiki": 10,
+   "asb": 100
+  },
+  {
+   "name": "Pelagornis",
+   "field": "damage",
+   "wiki": 16,
+   "asb": 100
+  },
+  {
+   "name": "Phiomia",
+   "field": "damage",
+   "wiki": 10,
+   "asb": 100
+  },
+  {
+   "name": "Phoenix",
+   "field": "damage",
+   "wiki": 14,
+   "asb": 100
+  },
+  {
+   "name": "Plesiosaur",
+   "field": "damage",
+   "wiki": 75,
+   "asb": 100
+  },
+  {
+   "name": "Procoptodon",
+   "field": "damage",
+   "wiki": 20,
+   "asb": 100
+  },
+  {
+   "name": "Pteranodon",
+   "field": "damage",
+   "wiki": 18,
+   "asb": 100
+  },
+  {
+   "name": "Pulmonoscorpius",
+   "field": "damage",
+   "wiki": 15,
+   "asb": 100
+  },
+  {
+   "name": "Purlovia",
+   "field": "damage",
+   "wiki": 32,
+   "asb": 100
+  },
+  {
+   "name": "Pyromane",
+   "field": "weight",
+   "wiki": 280,
+   "asb": 300
+  },
+  {
+   "name": "Pyromane",
+   "field": "damage",
+   "wiki": 35,
+   "asb": 100
+  },
+  {
+   "name": "Raptor",
+   "field": "damage",
+   "wiki": 15,
+   "asb": 100
+  },
+  {
+   "name": "Ravager",
+   "field": "damage",
+   "wiki": 25,
+   "asb": 100
+  },
+  {
+   "name": "Rex",
+   "field": "damage",
+   "wiki": 62,
+   "asb": 100
+  },
+  {
+   "name": "Rock Drake",
+   "field": "damage",
+   "wiki": 60,
+   "asb": 100
+  },
+  {
+   "name": "Rock Elemental",
+   "field": "damage",
+   "wiki": 120,
+   "asb": 100
+  },
+  {
+   "name": "Roll Rat",
+   "field": "damage",
+   "wiki": 42,
+   "asb": 100
+  },
+  {
+   "name": "Sabertooth",
+   "field": "damage",
+   "wiki": 29,
+   "asb": 100
+  },
+  {
+   "name": "Sabertooth Salmon",
+   "field": "damage",
+   "wiki": 4,
+   "asb": 100
+  },
+  {
+   "name": "Scout",
+   "field": "damage",
+   "wiki": 0,
+   "asb": 100
+  },
+  {
+   "name": "Scout",
+   "field": "speed",
+   "wiki": 0.5,
+   "asb": 150
+  },
+  {
+   "name": "Seeker",
+   "field": "damage",
+   "wiki": 10,
+   "asb": 100
+  },
+  {
+   "name": "Shadowmane",
+   "field": "foodConsumptionBase",
+   "wiki": 0.01,
+   "asb": 0.001157
+  },
+  {
+   "name": "Shadowmane",
+   "field": "damage",
+   "wiki": 35,
+   "asb": 100
+  },
+  {
+   "name": "Shastasaurus",
+   "field": "weight",
+   "wiki": 1300,
+   "asb": 3000
+  },
+  {
+   "name": "Shastasaurus",
+   "field": "damage",
+   "wiki": 75,
+   "asb": 100
+  },
+  {
+   "name": "Shinehorn",
+   "field": "damage",
+   "wiki": 12,
+   "asb": 100
+  },
+  {
+   "name": "Snow Owl",
+   "field": "damage",
+   "wiki": 25,
+   "asb": 100
+  },
+  {
+   "name": "Solwyn",
+   "field": "damage",
+   "wiki": 32,
+   "asb": 100
+  },
+  {
+   "name": "Stegosaurus",
+   "field": "damage",
+   "wiki": 42,
+   "asb": 100
+  },
+  {
+   "name": "Summoner",
+   "field": "damage",
+   "wiki": 0,
+   "asb": 100
+  },
+  {
+   "name": "Tapejara",
+   "field": "damage",
+   "wiki": 18,
+   "asb": 100
+  },
+  {
+   "name": "Tek Stryder",
+   "field": "damage",
+   "wiki": 68,
+   "asb": 100
+  },
+  {
+   "name": "Terror Bird",
+   "field": "damage",
+   "wiki": 18,
+   "asb": 100
+  },
+  {
+   "name": "Thorny Dragon",
+   "field": "damage",
+   "wiki": 40,
+   "asb": 100
+  },
+  {
+   "name": "Thylacoleo",
+   "field": "damage",
+   "wiki": 40,
+   "asb": 100
+  },
+  {
+   "name": "Titanoboa",
+   "field": "foodConsumptionMult",
+   "wiki": 2592.35254,
+   "asb": 648.0881
+  },
+  {
+   "name": "Titanoboa",
+   "field": "torpor",
+   "wiki": 170,
+   "asb": 175
+  },
+  {
+   "name": "Titanoboa",
+   "field": "damage",
+   "wiki": 30,
+   "asb": 100
+  },
+  {
+   "name": "Titanosaur",
+   "field": "damage",
+   "wiki": 1550,
+   "asb": 100
+  },
+  {
+   "name": "Triceratops",
+   "field": "damage",
+   "wiki": 32,
+   "asb": 100
+  },
+  {
+   "name": "Trilobite",
+   "field": "damage",
+   "wiki": 8,
+   "asb": 100
+  },
+  {
+   "name": "Troodon",
+   "field": "affinityBase",
+   "wiki": 250,
+   "asb": 480
+  },
+  {
+   "name": "Troodon",
+   "field": "affinityPerLevel",
+   "wiki": 20,
+   "asb": 45
+  },
+  {
+   "name": "Troodon",
+   "field": "food",
+   "wiki": 100,
+   "asb": 200
+  },
+  {
+   "name": "Troodon",
+   "field": "damage",
+   "wiki": 7,
+   "asb": 100
+  },
+  {
+   "name": "Tropeognathus",
+   "field": "damage",
+   "wiki": 18,
+   "asb": 100
+  },
+  {
+   "name": "Tusoteuthis",
+   "field": "eggTempMax",
+   "wiki": 50,
+   "asb": 75
+  },
+  {
+   "name": "Tusoteuthis",
+   "field": "damage",
+   "wiki": 65,
+   "asb": 100
+  },
+  {
+   "name": "Umbra",
+   "field": "maturationSec",
+   "wiki": 256410,
+   "asb": 333333
+  },
+  {
+   "name": "Umbra",
+   "field": "damage",
+   "wiki": 35,
+   "asb": 100
+  },
+  {
+   "name": "Veilwyn",
+   "field": "damage",
+   "wiki": 7,
+   "asb": 100
+  },
+  {
+   "name": "Velonasaur",
+   "field": "damage",
+   "wiki": 32,
+   "asb": 100
+  },
+  {
+   "name": "Voidwyrm",
+   "field": "ineffectiveness",
+   "wiki": 0.4,
+   "asb": 2
+  },
+  {
+   "name": "Voidwyrm",
+   "field": "health",
+   "wiki": 1295,
+   "asb": 1575
+  },
+  {
+   "name": "Voidwyrm",
+   "field": "stamina",
+   "wiki": 315,
+   "asb": 415
+  },
+  {
+   "name": "Voidwyrm",
+   "field": "damage",
+   "wiki": 80,
+   "asb": 100
+  },
+  {
+   "name": "Vulture",
+   "field": "damage",
+   "wiki": 23,
+   "asb": 100
+  },
+  {
+   "name": "Xiphactinus",
+   "field": "damage",
+   "wiki": 23,
+   "asb": 100
+  },
+  {
+   "name": "Yi Ling",
+   "field": "damage",
+   "wiki": 20,
+   "asb": 100
+  },
+  {
+   "name": "Yutyrannus",
+   "field": "damage",
+   "wiki": 55,
+   "asb": 100
   }
  ]
 }
