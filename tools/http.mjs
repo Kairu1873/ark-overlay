@@ -7,7 +7,7 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
 
-export const UA = 'ark-timer-data/1.0 (+https://github.com/Kairu1873/ark-timer)';
+export const UA = 'ark-overlay-data/1.0 (+https://github.com/Kairu1873/ark-overlay)';
 
 const CACHE_DIR = path.join(import.meta.dirname, '.cache');
 const DEFAULT_TTL_MS = 12 * 60 * 60 * 1000; // 12時間

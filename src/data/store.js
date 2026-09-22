@@ -1,7 +1,7 @@
 // 生物・アイテムデータの保持。
 // 取得はメインプロセス側（electron/data.js）が行い、ここは受け取って検索するだけ。
 
-const desktop = typeof window !== 'undefined' ? window.arkTimerDesktop : undefined;
+const desktop = typeof window !== 'undefined' ? window.arkOverlayDesktop : undefined;
 
 let data = { creatures: [], items: [], tamingFood: {}, meta: null, source: 'none' };
 const listeners = new Set();

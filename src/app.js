@@ -1,7 +1,7 @@
 import { platform, requestPermission, syncSchedules, notifyNow } from './notifier.js';
 import { initCreatures } from './ui/creatures.js';
 
-const STORE_KEY = 'arkTimer.v1';
+const STORE_KEY = 'arkOverlay.v1';
 const DEFAULT_PRESETS = [{ id: 'p1', name: 'ルミナ孵化', seconds: 90 * 60 }];
 
 // ---------- 状態 ----------

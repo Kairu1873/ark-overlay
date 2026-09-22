@@ -11,7 +11,7 @@ const { app } = require('electron');
 const path = require('path');
 const fs = require('fs/promises');
 
-const RAW_BASE = 'https://raw.githubusercontent.com/Kairu1873/ark-timer/main/data';
+const RAW_BASE = 'https://raw.githubusercontent.com/Kairu1873/ark-overlay/main/data';
 const FILES = ['creatures.json', 'items.json', 'taming-food.json', 'meta.json'];
 const BUNDLED_DIR = path.join(__dirname, '..', 'data');
 // userData は app.setName の影響を受けるので、ready 前に確定させない

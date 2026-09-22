@@ -1,4 +1,4 @@
-# ARKタイマー
+# ARK Overlay
 
 「ルミナ孵化 1時間30分」のように名前と時間を決めてスタートすると、時間になったとき **「ルミナ孵化」** という通知が届くタイマー。
 複数のタイマーを同時に動かせ、よく使う設定はプリセットとして保存できる。
@@ -19,27 +19,27 @@ Windows専用（Electron / トレイ常駐）。**×ボタンで閉じてもト�
 | `v*` タグの push（例：`git tag v1.0.0 && git push origin v1.0.0`） | ビルドに加えて Releases ページに成果物を置く |
 
 1. リポジトリの **Actions** タブ → 一番上の実行を開く（数分で完了）
-2. 完了した実行ページ下部の **Artifacts** から `ARKTimer-Windows` をダウンロードする（zipの中に .exe）
+2. 完了した実行ページ下部の **Artifacts** から `ARKOverlay-Windows` をダウンロードする（zipの中に .exe）
 
 ### 手元でビルドする
 
 ```bash
 npm install
-npm run dist:win   # dist/ARKTimer-Setup-<version>.exe ができる
+npm run dist:win   # dist/ARKOverlay-Setup-<version>.exe ができる
 ```
 
 ---
 
 ## 2. Windowsに入れる
 
-1. `ARKTimer-Setup-1.0.0.exe` を実行する
+1. `ARKOverlay-Setup-1.0.0.exe` を実行する
    - 「WindowsによってPCが保護されました」と出たら **詳細情報 → 実行**（個人用アプリで署名していないため）
 2. 起動すればすぐ使える。**×で閉じてもタスクトレイ（右下）に常駐**し、時間になると通知が出る
 3. トレイアイコンを右クリックすると次の項目がある
    - **Windows起動時に自動で起動** … チェックするとPC起動時にトレイで待機する
    - **終了（通知も止まります）** … 完全に終了する（この間は通知されない）
 
-> 通知が出ないとき：Windowsの設定 → システム → 通知 で「ARKタイマー」がオンか、「応答不可（集中モード）」になっていないかを確認する。
+> 通知が出ないとき：Windowsの設定 → システム → 通知 で「ARK Overlay」がオンか、「応答不可（集中モード）」になっていないかを確認する。
 
 ---
 
@@ -92,7 +92,7 @@ data/       収集済みの生物・アイテムデータ（JSON）
 - PCで試す：`npm install` → `npm start`
   - **インストール版がトレイで動いていると `npm start` は無言で即終了する**（単一インスタンスロックのため）。
     トレイの常駐を止めたくないときは、userData を分けて起動する：
-    `npx electron . --user-data-dir=%TEMP%\ark-timer-dev`
+    `npx electron . --user-data-dir=%TEMP%\ark-overlay-dev`
     こうすると本番のプリセットや実行中タイマーにも触らずに試せる
 - データを手元で更新する：`npm run data:fetch` → `npm run data:validate`
   - `--skip-ja` で日本語Wikiの取得を飛ばせる。wikiwiki.jp はレート制限が厳しく

@@ -2,7 +2,7 @@ const { app, BrowserWindow, Tray, Menu, Notification, ipcMain, nativeImage } = r
 const path = require('path');
 const wikiData = require('./data');
 
-const APP_ID = 'com.kairu.arktimer'; // package.json の build.appId と同じにする（Windows通知に必要）
+const APP_ID = 'com.kairu.arkoverlay'; // package.json の build.appId と同じにする（Windows通知に必要）
 let win = null;
 let tray = null;
 let quitting = false;
@@ -35,7 +35,7 @@ function createWindow() {
     minWidth: 340,
     minHeight: 480,
     backgroundColor: '#0d121b',
-    title: 'ARKタイマー',
+    title: 'ARK Overlay',
     icon: path.join(__dirname, 'icon.png'),
     show: !process.argv.includes('--hidden'),
     webPreferences: {
@@ -53,7 +53,7 @@ function createWindow() {
     if (!app.__toldTray && Notification.isSupported()) {
       app.__toldTray = true;
       new Notification({
-        title: 'ARKタイマーはトレイで動作中',
+        title: 'ARK Overlay はトレイで動作中',
         body: 'タイマーは続いています。終了するにはトレイアイコンを右クリック →「終了」',
         silent: true,
       }).show();
@@ -70,7 +70,7 @@ function showWindow() {
 
 function createTray() {
   tray = new Tray(nativeImage.createFromPath(path.join(__dirname, 'tray.png')));
-  tray.setToolTip('ARKタイマー');
+  tray.setToolTip('ARK Overlay');
   tray.on('click', showWindow);
   refreshTrayMenu();
 }
@@ -100,7 +100,7 @@ function refreshTrayMenu() {
     ]),
   );
   const next = schedules.slice().sort((a, b) => a.at - b.at)[0];
-  tray.setToolTip(next ? `ARKタイマー\n次：${next.title}（${fmt(next.at)}）` : 'ARKタイマー');
+  tray.setToolTip(next ? `ARK Overlay\n次：${next.title}（${fmt(next.at)}）` : 'ARK Overlay');
 }
 
 const fmt = (ms) => {

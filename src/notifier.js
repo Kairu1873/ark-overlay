@@ -1,7 +1,7 @@
 // 通知の送り先を実行環境ごとに切り替える
 // - Windows (Electron): メインプロセスが予約を保持 → ウィンドウを閉じてもトレイ常駐で鳴る
 // - ブラウザ          : 開いている間だけ Notification API で通知
-const electron = typeof window !== 'undefined' ? window.arkTimerDesktop : undefined;
+const electron = typeof window !== 'undefined' ? window.arkOverlayDesktop : undefined;
 
 export const platform = electron ? 'windows' : 'web';
 
