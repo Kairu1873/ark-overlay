@@ -329,9 +329,26 @@ function bindWindowControls() {
   desktop.getState?.().then(({ alwaysOnTop }) => $('#winPin').classList.toggle('on', alwaysOnTop));
 }
 
+/** 更新が落とし終わったら、上部に「更新して再起動」を出す */
+function bindUpdate() {
+  const desktop = window.arkOverlayDesktop?.update;
+  const btn = $('#updateReady');
+  if (!desktop || !btn) return;
+  const show = (state) => {
+    if (!state) return;
+    btn.hidden = false;
+    btn.textContent = `更新 ${state.version ?? ''}`.trim();
+    btn.title = '更新して再起動する（押さなければ次に終了したときに入る）';
+  };
+  btn.addEventListener('click', () => desktop.install());
+  desktop.onReady?.(show);
+  desktop.getState?.().then(show);
+}
+
 document.documentElement.dataset.platform = platform;
 bind();
 bindWindowControls();
+bindUpdate();
 setTab(['dex', 'items'].includes(state.tab) ? state.tab : 'timer');
 tick();
 commit();

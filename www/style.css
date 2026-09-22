@@ -39,6 +39,11 @@ main { max-width: 640px; margin: 0 auto; padding: 0 16px 32px; }
 .top button, .top input { -webkit-app-region: no-drag; }
 
 /* 枠なしウィンドウの操作ボタン（Electron のときだけ出す） */
+.update-btn {
+  flex-shrink: 0; padding: 5px 10px; font-size: 12px; font-weight: 700;
+  background: var(--accent); border-color: var(--accent); color: var(--accent-ink);
+  -webkit-app-region: no-drag;
+}
 .win-ctl { display: flex; gap: 4px; flex-shrink: 0; }
 .win-ctl button {
   min-width: 28px; padding: 5px 7px; font-size: 12px; line-height: 1;
