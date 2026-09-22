@@ -3,7 +3,6 @@ import { initCreatures } from './ui/creatures.js';
 import { initItems } from './ui/items.js';
 
 const STORE_KEY = 'arkOverlay.v1';
-const DEFAULT_PRESETS = [{ id: 'p1', name: 'ルミナ孵化', seconds: 90 * 60 }];
 
 // ---------- 状態 ----------
 // rates（サーバー倍率）・overrides（生物ごとの手入力値）・tab（開いていたタブ）は後から足した任意キー。
@@ -16,7 +15,8 @@ function load() {
       return { rates: undefined, overrides: {}, tab: 'timer', ...s };
     }
   } catch (_) {}
-  return { presets: DEFAULT_PRESETS, timers: [], rates: undefined, overrides: {}, tab: 'timer' };
+  // プリセットは空から始める。何を使うかは人によるので、こちらで用意はしない
+  return { presets: [], timers: [], rates: undefined, overrides: {}, tab: 'timer' };
 }
 function save() {
   try {
