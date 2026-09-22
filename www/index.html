@@ -86,6 +86,11 @@
             <span>アイテムを探す</span>
             <input id="itemQuery" type="text" placeholder="例：生肉 / キブル / Raw" maxlength="40" autocomplete="off" />
           </label>
+          <div id="itemMode" class="mode">
+            <span>選んだものの扱い</span>
+            <button type="button" class="on" data-mode="pick">対象</button>
+            <button type="button" data-mode="exclude">非対象</button>
+          </div>
         </div>
         <div id="itemPicked"></div>
         <div id="itemResults" class="dex-list"></div>

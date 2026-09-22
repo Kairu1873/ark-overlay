@@ -71,6 +71,37 @@ console.log('\n実データ');
   eq('キブル3種の先頭候補', [kibble[0].text, kibble[0].hits], [' Kibble', 7]);
 }
 
+console.log('\n除外したものに当たる候補は出さない');
+{
+  const ex = (sel, exclude, n = 3) =>
+    commonStrings(sel, FIXTURE, { limit: n, exclude }).map((c) => c.text);
+  // 腐肉は拾いたいが生肉は拾いたくない、という使い方
+  const meats = ['Spoiled Meat', 'Raw Meat', 'Raw Prime Meat', 'Raw Mutton', 'Cooked Meat'];
+  eq('除外なしだと " Meat" が出る', commonStrings(['Spoiled Meat'], meats, { limit: 20 }).map((c) => c.text).includes(' Meat'), true);
+  eq('生肉を除外すると " Meat" は消える',
+    commonStrings(['Spoiled Meat'], meats, { limit: 20, exclude: ['Raw Meat'] }).map((c) => c.text).includes(' Meat'), false);
+  eq('残る候補は生肉に当たらない',
+    commonStrings(['Spoiled Meat'], meats, { limit: 20, exclude: ['Raw Meat'] })
+      .every((c) => !'raw meat'.includes(c.text.toLowerCase())), true);
+  // 分けようがない組み合わせでは空になる
+  eq('分けられないときは空', ex(['Raw Meat', 'Raw Prime Meat'], ['Raw Mutton', 'Raw Fish Meat']), []);
+  eq('除外が空なら今までどおり', ex(['Raw Meat', 'Raw Prime Meat'], [], 1), ['Raw ']);
+  eq('除外が未指定でも落ちない', commonStrings(['Raw Meat'], FIXTURE, { limit: 1 }).length, 1);
+}
+
+console.log('\n短い順（画面はこれを1件だけ出す）');
+{
+  // 実データで見る（固定の数件だと、短い候補が「同じ件数の重複」として間引かれてしまう）
+  const shortest = (sel, exclude) =>
+    commonStrings(sel, allNames, { limit: 1, order: 'length', exclude })[0]?.text ?? null;
+  eq('短いものが先に来る', shortest(['Raw Meat', 'Raw Prime Meat']), 'aw');
+  // 非対象を指定すると、そこに当たる短い候補は消え、残った中で一番短いものになる
+  eq('非対象を避けた一番短いもの', shortest(['Raw Prime Meat'], ['Raw Meat', 'Raw Mutton']), 'Pr');
+  eq('分けられないときは null', shortest(['Raw Meat', 'Raw Prime Meat'], ['Raw Mutton', 'Raw Fish Meat']), null);
+  // 既定の並び（一致件数の少ない順）は変わっていない
+  eq('既定は絞り込める順のまま', commonStrings(['Raw Meat', 'Raw Prime Meat'], FIXTURE, { limit: 1 })[0].text, 'Raw ');
+}
+
 console.log('\n日本語名でも引ける');
 {
   const ja = [

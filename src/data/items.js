@@ -49,12 +49,23 @@ export function countMatches(allNames, text) {
  * より長い候補と一致件数が同じで、かつその中に含まれている候補は捨てる。
  * 「Raw 」で9件に絞れるなら、同じ9件しか拾わない短い候補を出しても選ぶ意味がないため。
  *
+ * 除外したい名前を渡すと、それに当たってしまう候補を落とす。
+ * 「腐肉は拾いたいが生肉は拾いたくない」のように、似た名前を外したいときに使う。
+ *
  * @param {string[]} selectedNames 選択したアイテムの英名
  * @param {string[]} allNames 全アイテムの英名（一致件数を数えるのに使う）
- * @param {{min?: number, limit?: number}} opt
- * @returns {{text: string, hits: number}[]} 絞り込める順（一致件数の少ない順）
+ * 並べ方は2つ。'hits' は一致件数の少ない順（よく絞り込める順）、'length' は短い順
+ * （打つのが楽な順）。非対象を指定してあれば、残った候補はどれも非対象に当たらないので、
+ * 短いものを選んでも取りこぼさない。
+ *
+ * @param {{min?: number, limit?: number, exclude?: string[], order?: 'hits'|'length'}} opt
+ * @returns {{text: string, hits: number}[]}
  */
-export function commonStrings(selectedNames, allNames, { min = 2, limit = 8 } = {}) {
+export function commonStrings(
+  selectedNames,
+  allNames,
+  { min = 2, limit = 8, exclude = [], order = 'hits' } = {},
+) {
   const names = (selectedNames ?? []).filter((n) => typeof n === 'string' && n.length);
   if (!names.length) return [];
 
@@ -77,14 +88,23 @@ export function commonStrings(selectedNames, allNames, { min = 2, limit = 8 } = 
 
   candidates.sort((a, b) => b.length - a.length || a.localeCompare(b));
 
+  const excluded = (exclude ?? []).filter((n) => typeof n === 'string' && n.length).map(lower);
+
   const kept = [];
   for (const text of candidates) {
+    // 除外したい名前に当たってしまう候補は、そもそも使えないので落とす
+    if (excluded.some((n) => n.includes(lower(text)))) continue;
     const hits = countMatches(allNames ?? [], text);
     // より長い候補と同じ件数しか拾えないなら、短いほうは出さない
     if (kept.some((k) => k.hits === hits && lower(k.text).includes(lower(text)))) continue;
     kept.push({ text, hits });
   }
-  // 一番絞り込めるものから並べる。件数が同じなら打つのが楽な短いほうを先に
-  kept.sort((a, b) => a.hits - b.hits || a.text.length - b.text.length || a.text.localeCompare(b.text));
+  if (order === 'length') {
+    // 短いものから。同じ長さなら絞り込めるほうを先に
+    kept.sort((a, b) => a.text.length - b.text.length || a.hits - b.hits || a.text.localeCompare(b.text));
+  } else {
+    // 一番絞り込めるものから。件数が同じなら打つのが楽な短いほうを先に
+    kept.sort((a, b) => a.hits - b.hits || a.text.length - b.text.length || a.text.localeCompare(b.text));
+  }
   return kept.slice(0, limit);
 }
