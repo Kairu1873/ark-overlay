@@ -9,6 +9,9 @@
 |---|---|---|
 | `creatures.json`（数値・英名） | [ARK Official Community Wiki](https://ark.wiki.gg/) | CC BY-NC-SA 4.0 |
 | `creatures.json` の `ja` フィールド、および `sources.breeding` が `ja(...)` の繁殖時間 | [ARK: Survival Ascended 攻略Wiki](https://wikiwiki.jp/arksa/) | 各Wikiの規定に従う |
+| `creatures.json` の `nameJa`（`sources.nameJa` が `arkja`） | [ARKコミュニティ公式Wiki 日本語版](https://ark.wiki.gg/ja/) | CC BY-NC-SA 4.0 |
+| `creatures.json` の `nameJa`（`sources.nameJa` が `wikiwiki`） | [ARK: Survival Ascended 攻略Wiki](https://wikiwiki.jp/arksa/) | 各Wikiの規定に従う |
+| `ja-names.json` | どちらのWikiにも日本語名が無い生物の手書き補完（日本語Wikiの本文表記に合わせた） | — |
 | `items.json` | [ARK Official Community Wiki](https://ark.wiki.gg/) | CC BY-NC-SA 4.0 |
 | `taming-food.json` | [ARK Official Community Wiki](https://ark.wiki.gg/) `Module:TamingTable/food` | CC BY-NC-SA 4.0 |
 
@@ -37,6 +40,14 @@ API の `meta=siteinfo&siprop=rightsinfo` で取得した内容を `meta.json` �
 3. 日本語Wikiの「ブリーディング」節 → `ja(...)`。**上の2つが空のときだけ使う**
 
 両方に値があって食い違う場合は英語側を採用し、食い違いの一覧を `meta.json` の `conflicts` に残す。
+
+日本語名は次の順で採用し、`sources.nameJa` にどれを使ったか記録している。
+
+1. `data/ja-names.json`（手書きの補完） → `manual`。Wiki 側が誤っていたときに直せるよう最優先にしてある
+2. 英語Wikiの日本語版に置かれた英名のリダイレクト（`Rex` → `ティラノサウルス`） → `arkja`
+3. 日本語Wikiのドシエ訳の「名称：」 → `wikiwiki`
+
+どれにも無い場合は `null` とし、アプリでは英名だけで表示・検索する。
 
 ## データの欠損について
 

@@ -175,7 +175,10 @@ function buildStats(statsRow) {
  * 生物データをまとめる。
  * @returns {{creatures: object[], stats: object}}
  */
-export function mergeCreatures({ creatures, creatureStats, dv, tamingCreatures, ja, jaTimes = {} }) {
+export function mergeCreatures({
+  creatures, creatureStats, dv, tamingCreatures, ja,
+  jaTimes = {}, jaNames = {}, jaDossierNames = {}, nameOverrides = {},
+}) {
   const dvResolved = resolveInherits(dv);
   const dvByKey = new Map(Object.entries(dvResolved).map(([k, v]) => [norm(k), v]));
   const ttByKey = new Map(Object.entries(tamingCreatures).map(([k, v]) => [norm(k), v]));
@@ -191,6 +194,7 @@ export function mergeCreatures({ creatures, creatureStats, dv, tamingCreatures, 
   const stats = {
     total: creatures.length, asa: 0, ase: 0, asaNew: 0,
     dvMatched: 0, jaMatched: 0, jaFilled: 0, conflicts,
+    nameJa: { arkja: 0, wikiwiki: 0, manual: 0, none: 0 },
   };
 
   for (const row of creatures) {
@@ -223,6 +227,10 @@ export function mergeCreatures({ creatures, creatureStats, dv, tamingCreatures, 
       }
     }
 
+    // 日本語名。手書きの補完を最優先にし、wiki 側が誤っていたときに直せるようにする
+    const nameJa = pickJaName(name, nameOverrides, jaNames, jaDossierNames);
+    stats.nameJa[nameJa.source ?? 'none']++;
+
     stats.asa++;
     if (isNew) stats.asaNew++;
     else stats.ase++;
@@ -232,6 +240,7 @@ export function mergeCreatures({ creatures, creatureStats, dv, tamingCreatures, 
     out.push({
       key,
       name,
+      nameJa: nameJa.value,
       origin: isNew ? 'asa' : 'ase',
       entityId: str(row.EntityId),
       group: str(row.TaxonomicGroup),
@@ -247,12 +256,29 @@ export function mergeCreatures({ creatures, creatureStats, dv, tamingCreatures, 
       taming: taming.value,
       stats: buildStats(statsByPage.get(name)),
       ja: jaRow,
-      sources: { breeding: breeding.source, taming: taming.source, ja: jaRow ? 'wikiwiki' : null },
+      sources: {
+        breeding: breeding.source,
+        taming: taming.source,
+        ja: jaRow ? 'wikiwiki' : null,
+        nameJa: nameJa.source,
+      },
     });
   }
 
   out.sort((a, b) => a.name.localeCompare(b.name));
   return { creatures: out, stats };
+}
+
+/**
+ * 日本語名を出所の優先順で選ぶ。
+ * 手書きの補完 → ark.wiki.gg 日本語版 → 日本語Wikiのドシエ訳、の順に見る。
+ */
+function pickJaName(name, overrides, arkja, dossier) {
+  for (const [source, table] of [['manual', overrides], ['arkja', arkja], ['wikiwiki', dossier]]) {
+    const value = str(table?.[name]);
+    if (value) return { value, source };
+  }
+  return { value: null, source: null };
 }
 
 /** アイテムとレシピをまとめる */

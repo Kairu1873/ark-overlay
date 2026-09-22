@@ -13,7 +13,7 @@ const ROW_KEYS = [
   [/^テイム時の餌$/, 'foodPriority'],
   [/^テイム(・騎乗)?$/, 'tamingMethod'],
   [/^繁殖$/, 'breedingNote'],
-  [/^気性$/, 'temperament'],
+  [/^気(性|質)$/, 'temperament'], // ページによって見出しが「気性」「気質」で揺れる
   [/^食性$/, 'diet'],
   [/^騎乗$/, 'rideable'],
   [/^サドル(制作|作成)に必要なレベル$/, 'saddleLevel'],
@@ -52,6 +52,18 @@ export function parseJaDuration(s) {
   const [d, h, mi, se] = m.slice(1).map((x) => Number(x || 0));
   const total = d * 86400 + h * 3600 + mi * 60 + se;
   return total > 0 ? total : null;
+}
+
+/** ドシエ訳の「名称：アロサウルス」から日本語名を拾う。空欄のページも多い */
+function readDossierName(html) {
+  for (const line of bodyLines(html)) {
+    const m = /^名称\s*[:：]\s*(.+)$/.exec(line);
+    if (!m) continue;
+    const name = m[1].trim();
+    // 書式が崩れたページで本文を丸ごと拾わないよう、長すぎるものは捨てる
+    if (name.length <= 30 && /[ぁ-んァ-ヶ一-龥]/.test(name)) return name;
+  }
+  return null;
 }
 
 /** ページ本文を行に分ける（タグを落としただけの素朴なもの） */
@@ -102,7 +114,7 @@ export async function fetchPageNames() {
 
 /**
  * 1ページ分を読む。
- * @returns {{info:object|null, times:object}} info=定性情報 / times=繁殖時間（秒）
+ * @returns {{info:object|null, times:object, nameJa:string|null}} info=定性情報 / times=繁殖時間（秒）
  */
 export async function fetchCreaturePage(name) {
   const html = await fetchText(`${BASE}/${encodeURIComponent(name)}`);
@@ -118,6 +130,7 @@ export async function fetchCreaturePage(name) {
   return {
     info: Object.keys(info).length ? info : null,
     times: readBreedingTimes(html),
+    nameJa: readDossierName(html),
   };
 }
 
@@ -131,16 +144,18 @@ export async function fetchCreatures(names, onProgress) {
   const targets = names.filter((n) => pages.has(n));
   const info = {};
   const times = {};
+  const jaNames = {};
   for (const [i, name] of targets.entries()) {
     try {
       const page = await fetchCreaturePage(name);
       if (page.info) info[name] = page.info;
       if (Object.keys(page.times).length) times[name] = page.times;
+      if (page.nameJa) jaNames[name] = page.nameJa;
     } catch (e) {
       // 1ページ落ちても全体は止めない
       console.warn(`  ! ${name} の取得に失敗: ${e.message}`);
     }
     onProgress?.(i + 1, targets.length);
   }
-  return { data: info, times, attempted: targets.length, available: pages.size };
+  return { data: info, times, names: jaNames, attempted: targets.length, available: pages.size };
 }
