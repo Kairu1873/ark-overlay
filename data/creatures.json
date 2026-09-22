@@ -17,10 +17,13 @@
   "breeding": null,
   "taming": null,
   "stats": null,
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": null,
+   "wildMaps": null,
    "ja": null,
    "nameJa": null
   }
@@ -39,7 +42,17 @@
   "rideable": true,
   "saddle": "Acro Saddle",
   "saddleLevel": 77,
-  "wildMaps": null,
+  "wildMaps": [
+   "The Island",
+   "Scorched Earth",
+   "Extinction",
+   "Genesis: Part 1",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Astraeos",
+   "Lost Colony"
+  ],
   "breeding": {
    "incubationSec": 17998.5603,
    "gestationSec": null,
@@ -61,6 +74,26 @@
    "damage": 58,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 260,
+    "stamina": 40,
+    "oxygen": 15,
+    "food": 300,
+    "weight": 12,
+    "damage": 2.9,
+    "torpor": 48
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, ValgueroX種；Genesis: Part 1",
    "temperament": "攻撃的",
@@ -74,6 +107,8 @@
   "sources": {
    "breeding": "cargo(BabyTime x10)",
    "taming": null,
+   "stats": "ja",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "manual"
   }
@@ -94,15 +129,17 @@
   "saddleLevel": 67,
   "wildMaps": [
    "The Island",
-   "The Center",
-   "Ragnarok",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": 5999.520508,
@@ -151,6 +188,26 @@
    "damage": 35,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 126,
+    "stamina": 25,
+    "oxygen": 15,
+    "food": 300,
+    "weight": 7.6,
+    "damage": 1.75,
+    "torpor": 60
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "原種：The Island, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, ValgueroX種：Genesis: Part 1",
    "temperament": "攻撃的",
@@ -165,6 +222,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -185,12 +244,12 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
+   "Genesis: Part 1",
+   "Genesis: Part 2",
    "Ragnarok",
    "Valguero",
-   "Genesis: Part 1",
+   "The Center",
    "Crystal Isles",
-   "Genesis: Part 2",
    "Lost Island",
    "Fjordur"
   ],
@@ -206,6 +265,16 @@
    "damage": 0,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 33,
+    "stamina": 10,
+    "food": 45,
+    "weight": 3,
+    "torpor": 3
+   },
+   "tamed": null
+  },
   "ja": {
    "wildMaps": "The Island, Genesis: Part 1, The Center, Ragnarok",
    "temperament": "受動的",
@@ -218,6 +287,8 @@
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": "ja+cargo",
+   "wildMaps": "cargo",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -238,17 +309,19 @@
   "saddleLevel": 36,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
    "Aberration",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": 9472.926758,
@@ -300,6 +373,26 @@
    "damage": 50,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 140,
+    "stamina": 17.5,
+    "oxygen": 15,
+    "food": 300,
+    "weight": 5,
+    "damage": 2.5,
+    "torpor": 25.2
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 2
+   }
+  },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：AberrationX種：Genesis: Part 1",
    "temperament": "中立",
@@ -314,6 +407,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -334,15 +429,16 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
    "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos"
   ],
   "breeding": {
    "incubationSec": 9472.926758,
@@ -391,6 +487,25 @@
    "damage": 5,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 25,
+    "stamina": 15,
+    "oxygen": 15,
+    "food": 90,
+    "weight": 0.6,
+    "damage": 0.25,
+    "torpor": 6
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7
+   }
+  },
   "ja": {
    "wildMaps": "The Island, Scorched Earth, Extinction, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
    "temperament": "逃走",
@@ -404,6 +519,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja+cargo",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -422,7 +539,14 @@
   "rideable": true,
   "saddle": "Archelon Saddle",
   "saddleLevel": 45,
-  "wildMaps": null,
+  "wildMaps": [
+   "The Island",
+   "Genesis: Part 1",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Astraeos"
+  ],
   "breeding": {
    "incubationSec": 17998.5603,
    "gestationSec": null,
@@ -444,6 +568,23 @@
    "damage": 28,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 280,
+    "stamina": 77.5,
+    "food": 350,
+    "weight": 20,
+    "damage": 1.4,
+    "torpor": 120
+   },
+   "tamed": {
+    "health": 2.515,
+    "stamina": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7
+   }
+  },
   "ja": {
    "wildMaps": "原種：The Island, The Center, Astraeos, Ragnarok, ValgueroX種：Genesis: Part 1",
    "temperament": "中立",
@@ -457,6 +598,8 @@
   "sources": {
    "breeding": "cargo(BabyTime x10)",
    "taming": null,
+   "stats": "ja+cargo",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "manual"
   }
@@ -477,16 +620,18 @@
   "saddleLevel": 62,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": 10587.388672,
@@ -535,6 +680,25 @@
    "damage": 25,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 73,
+    "stamina": 20,
+    "oxygen": 15,
+    "food": 200,
+    "weight": 8,
+    "damage": 1.25,
+    "torpor": 36
+   },
+   "tamed": {
+    "health": 6.076,
+    "stamina": 7.5,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 5.5,
+    "damage": 2.55
+   }
+  },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, ValgueroX種：Genesis: Part 1",
    "temperament": "攻撃的",
@@ -549,6 +713,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -567,7 +733,11 @@
   "rideable": false,
   "saddle": null,
   "saddleLevel": null,
-  "wildMaps": null,
+  "wildMaps": [
+   "Extinction",
+   "Genesis: Part 1",
+   "Astraeos"
+  ],
   "breeding": {
    "incubationSec": null,
    "gestationSec": 28571,
@@ -589,6 +759,25 @@
    "damage": 15,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 40,
+    "stamina": 26,
+    "oxygen": 15,
+    "food": 120,
+    "weight": 4,
+    "damage": 0.75,
+    "torpor": 27
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7
+   }
+  },
   "ja": {
    "wildMaps": "Extinction, Genesis: Part 1, Astraeos",
    "temperament": "中立（特定条件で攻撃的）",
@@ -603,6 +792,8 @@
   "sources": {
    "breeding": "ja(gestationSec,maturationSec)",
    "taming": null,
+   "stats": "ja+cargo",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "wikiwiki"
   }
@@ -623,17 +814,19 @@
   "saddleLevel": 54,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
    "Aberration",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": 8999.28006,
@@ -681,12 +874,32 @@
   "stats": {
    "health": 500,
    "stamina": 200,
-   "oxygen": null,
+   "oxygen": 1550,
    "food": 1200,
    "weight": 100,
    "torpor": 175,
    "damage": 18,
    "speed": 100
+  },
+  "growth": {
+   "wild": {
+    "health": 100,
+    "stamina": 20,
+    "oxygen": 15,
+    "food": 120,
+    "weight": 2,
+    "damage": 0.9,
+    "torpor": 10.5
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
   },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Astraeos",
@@ -702,6 +915,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -747,8 +962,26 @@
    "food": 6000,
    "weight": 2000,
    "torpor": 4200,
-   "damage": 30,
+   "damage": 29,
    "speed": 100
+  },
+  "growth": {
+   "wild": {
+    "health": 392,
+    "stamina": 30,
+    "food": 600,
+    "weight": 40,
+    "damage": 1.16,
+    "torpor": 84
+   },
+   "tamed": {
+    "health": 2.16,
+    "stamina": 5,
+    "food": 10,
+    "weight": 5,
+    "damage": 1.7,
+    "speed": 1
+   }
   },
   "ja": {
    "wildMaps": "Genesis: Part 1",
@@ -762,6 +995,8 @@
   "sources": {
    "breeding": null,
    "taming": "dv",
+   "stats": "ja",
+   "wildMaps": "cargo",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -818,10 +1053,13 @@
    "damage": 24,
    "speed": 100
   },
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": "dv",
    "taming": "dv",
+   "stats": "cargo",
+   "wildMaps": "cargo",
    "ja": null,
    "nameJa": "arkja"
   }
@@ -844,10 +1082,13 @@
   "breeding": null,
   "taming": null,
   "stats": null,
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": null,
+   "wildMaps": null,
    "ja": null,
    "nameJa": "arkja"
   }
@@ -866,7 +1107,9 @@
   "rideable": true,
   "saddle": "Aureliax Saddle",
   "saddleLevel": 85,
-  "wildMaps": null,
+  "wildMaps": [
+   "Lost Colony"
+  ],
   "breeding": {
    "incubationSec": 17999,
    "gestationSec": null,
@@ -885,8 +1128,14 @@
    "food": 2000,
    "weight": 1100,
    "torpor": 1500,
-   "damage": 100,
+   "damage": 35,
    "speed": 100
+  },
+  "growth": {
+   "wild": {
+    "damage": 5
+   },
+   "tamed": null
   },
   "ja": {
    "wildMaps": "Lost Colony",
@@ -900,6 +1149,8 @@
   "sources": {
    "breeding": "ja(incubationSec,maturationSec)",
    "taming": null,
+   "stats": "ja+cargo",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "wikiwiki"
   }
@@ -920,16 +1171,18 @@
   "saddleLevel": 49,
   "wildMaps": [
    "The Island",
-   "The Center",
-   "Ragnarok",
    "Aberration",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": 7199.423828,
@@ -969,8 +1222,25 @@
    "food": 2250,
    "weight": 325,
    "torpor": 400,
-   "damage": 35,
+   "damage": 31.5,
    "speed": 100
+  },
+  "growth": {
+   "wild": {
+    "health": 88,
+    "stamina": 32.5,
+    "food": 225,
+    "weight": 6.5,
+    "damage": 1.575,
+    "torpor": 24
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7
+   }
   },
   "ja": {
    "wildMaps": "原種：The Island, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Valguero",
@@ -986,6 +1256,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja+cargo",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -1007,8 +1279,9 @@
   "wildMaps": [
    "Aberration",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Valguero",
+   "Crystal Isles",
    "Lost Island",
    "Fjordur"
   ],
@@ -1069,6 +1342,24 @@
    "damage": 44,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 550,
+    "stamina": 65,
+    "food": 250,
+    "weight": 16,
+    "damage": 2.75,
+    "torpor": 10.5
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "Aberration, Genesis: Part 1, Valguero",
    "temperament": "攻撃的",
@@ -1082,6 +1373,8 @@
   "sources": {
    "breeding": "cargo(BabyTime x10)",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -1102,14 +1395,15 @@
   "saddleLevel": 60,
   "wildMaps": [
    "The Island",
-   "The Center",
+   "Genesis: Part 1",
+   "Genesis: Part 2",
    "Ragnarok",
    "Valguero",
-   "Genesis: Part 1",
+   "The Center",
    "Crystal Isles",
-   "Genesis: Part 2",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos"
   ],
   "breeding": {
    "incubationSec": null,
@@ -1163,6 +1457,23 @@
    "damage": 47,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 480,
+    "stamina": 30,
+    "food": 800,
+    "weight": 14,
+    "damage": 2.35,
+    "torpor": 120
+   },
+   "tamed": {
+    "health": 4.86,
+    "stamina": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7
+   }
+  },
   "ja": {
    "wildMaps": "原種：The Island, The Center, Astraeos, Ragnarok, ValgueroX種：Genesis: Part 1",
    "temperament": "友好的",
@@ -1177,6 +1488,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja+cargo",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -1197,16 +1510,18 @@
   "saddleLevel": 40,
   "wildMaps": [
    "The Island",
-   "The Center",
-   "Ragnarok",
    "Aberration",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": 17998.560547,
@@ -1255,6 +1570,23 @@
    "damage": 12,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 44,
+    "stamina": 19,
+    "food": 150,
+    "weight": 3.2,
+    "damage": 0.6,
+    "torpor": 12
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7
+   }
+  },
   "ja": {
    "wildMaps": "原種：The Island, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Valguero",
    "temperament": "受動的",
@@ -1269,6 +1601,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja+cargo",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -1287,7 +1621,13 @@
   "rideable": true,
   "saddle": "Bison Saddle",
   "saddleLevel": 50,
-  "wildMaps": null,
+  "wildMaps": [
+   "Genesis: Part 1",
+   "Ragnarok",
+   "Valguero",
+   "Astraeos",
+   "Lost Colony"
+  ],
   "breeding": {
    "incubationSec": null,
    "gestationSec": 12987,
@@ -1309,6 +1649,26 @@
    "damage": 30,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 160,
+    "stamina": 50,
+    "oxygen": 15,
+    "food": 325,
+    "weight": 13,
+    "damage": 1.5,
+    "torpor": 30
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "Lost Colony, Genesis: Part 1, Astraeos, Ragnarok, Valguero",
    "temperament": "テリトリー型",
@@ -1323,6 +1683,8 @@
   "sources": {
    "breeding": "ja(gestationSec,maturationSec)",
    "taming": null,
+   "stats": "ja",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "wikiwiki"
   }
@@ -1380,6 +1742,26 @@
    "damage": 26,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 90,
+    "stamina": 60,
+    "oxygen": 15,
+    "food": 120,
+    "weight": 7,
+    "damage": 1.3,
+    "torpor": 18
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1.5
+   }
+  },
   "ja": {
    "wildMaps": "Genesis: Part 1",
    "temperament": "攻撃的",
@@ -1393,6 +1775,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv",
+   "stats": "ja",
+   "wildMaps": "cargo",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -1411,18 +1795,39 @@
   "rideable": true,
   "saddle": "Boaratos Saddle",
   "saddleLevel": null,
-  "wildMaps": null,
+  "wildMaps": [
+   "Astraeos"
+  ],
   "breeding": null,
   "taming": null,
   "stats": {
    "health": 1050,
    "stamina": 400,
    "oxygen": 150,
-   "food": 5000,
+   "food": 5750,
    "weight": 500,
    "torpor": 5000,
    "damage": 60,
    "speed": 100
+  },
+  "growth": {
+   "wild": {
+    "health": 210,
+    "stamina": 40,
+    "oxygen": 15,
+    "food": 575,
+    "weight": 10,
+    "damage": 5,
+    "torpor": 300
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7
+   }
   },
   "ja": {
    "wildMaps": "Astraeos",
@@ -1437,6 +1842,8 @@
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": "ja+cargo",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "manual"
   }
@@ -1457,13 +1864,13 @@
   "saddleLevel": 63,
   "wildMaps": [
    "The Island",
-   "The Center",
-   "Ragnarok",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
    "Fjordur"
   ],
@@ -1517,10 +1924,13 @@
    "damage": 60,
    "speed": 100
   },
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "cargo",
+   "wildMaps": "cargo",
    "ja": null,
    "nameJa": "arkja"
   }
@@ -1552,10 +1962,13 @@
    "damage": 400,
    "speed": 100
   },
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": "cargo",
+   "wildMaps": null,
    "ja": null,
    "nameJa": "arkja"
   }
@@ -1576,10 +1989,11 @@
   "saddleLevel": null,
   "wildMaps": [
    "Aberration",
-   "Valguero",
    "Genesis: Part 1",
    "Genesis: Part 2",
-   "Fjordur"
+   "Valguero",
+   "Fjordur",
+   "Astraeos"
   ],
   "breeding": {
    "incubationSec": null,
@@ -1698,6 +2112,21 @@
    "damage": 12,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 29,
+    "food": 45,
+    "weight": 2.4,
+    "speed": 1,
+    "torpor": 3.6
+   },
+   "tamed": {
+    "health": 5.4,
+    "food": 10,
+    "weight": 4,
+    "speed": 130
+   }
+  },
   "ja": {
    "wildMaps": "Aberration, Genesis: Part 1, Astraeos, Valguero",
    "temperament": "逃走",
@@ -1711,6 +2140,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja+cargo",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -1729,7 +2160,16 @@
   "rideable": true,
   "saddle": "Burrowbuck Saddle",
   "saddleLevel": 33,
-  "wildMaps": null,
+  "wildMaps": [
+   "Scorched Earth",
+   "Aberration",
+   "Extinction",
+   "Genesis: Part 1",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Astraeos"
+  ],
   "breeding": {
    "incubationSec": null,
    "gestationSec": 21978,
@@ -1751,6 +2191,26 @@
    "damage": 19,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 110,
+    "stamina": 50,
+    "oxygen": 15,
+    "food": 200,
+    "weight": 7,
+    "damage": 0.95,
+    "torpor": 39
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "Scorched Earth, Aberration, Extinction, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
    "temperament": "逃走",
@@ -1762,6 +2222,8 @@
   "sources": {
    "breeding": "ja(gestationSec,maturationSec)",
    "taming": null,
+   "stats": "ja",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "wikiwiki"
   }
@@ -1782,16 +2244,18 @@
   "saddleLevel": 10,
   "wildMaps": [
    "The Island",
-   "The Center",
-   "Ragnarok",
    "Aberration",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": 4499.640137,
@@ -1843,6 +2307,24 @@
    "damage": 13,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 140,
+    "stamina": 20,
+    "food": 300,
+    "weight": 5.4,
+    "damage": 0.65,
+    "torpor": 16.5
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "原種：The Island, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Astraeos, Valguero",
    "temperament": "受動的",
@@ -1857,6 +2339,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja+cargo",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -1877,17 +2361,19 @@
   "saddleLevel": 46,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
    "Aberration",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": 5999.520508,
@@ -1936,6 +2422,26 @@
    "damage": 35,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 84,
+    "stamina": 30,
+    "oxygen": 15,
+    "food": 200,
+    "weight": 6,
+    "damage": 1.75,
+    "torpor": 21
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1.25
+   }
+  },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Astraeos",
    "temperament": "攻撃的",
@@ -1950,6 +2456,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -1970,15 +2478,17 @@
   "saddleLevel": 61,
   "wildMaps": [
    "The Island",
-   "The Center",
-   "Ragnarok",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": null,
@@ -2030,6 +2540,26 @@
    "damage": 28,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 90,
+    "stamina": 18,
+    "oxygen": 75,
+    "food": 200,
+    "weight": 6,
+    "damage": 1.12,
+    "torpor": 21
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "The Island, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
    "temperament": "中立。ダムにアクセスすると攻撃的になる。",
@@ -2044,6 +2574,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -2062,7 +2594,13 @@
   "rideable": false,
   "saddle": null,
   "saddleLevel": null,
-  "wildMaps": null,
+  "wildMaps": [
+   "The Island",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Astraeos"
+  ],
   "breeding": {
    "incubationSec": null,
    "gestationSec": 9524,
@@ -2084,6 +2622,7 @@
    "damage": 10,
    "speed": 100
   },
+  "growth": null,
   "ja": {
    "wildMaps": "The Island, The Center, Astraeos, Ragnarok, Valguero",
    "temperament": "友好的テリトリー型攻撃的頭上のアイコンによって気質が違う",
@@ -2096,6 +2635,8 @@
   "sources": {
    "breeding": "ja(gestationSec,maturationSec)",
    "taming": null,
+   "stats": "cargo",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "manual"
   }
@@ -2114,7 +2655,17 @@
   "rideable": true,
   "saddle": "Ceratosaurus Saddle",
   "saddleLevel": 60,
-  "wildMaps": null,
+  "wildMaps": [
+   "The Island",
+   "Scorched Earth",
+   "Extinction",
+   "Genesis: Part 1",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Astraeos",
+   "Lost Colony"
+  ],
   "breeding": {
    "incubationSec": 17999,
    "gestationSec": null,
@@ -2136,6 +2687,26 @@
    "damage": 25,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 110,
+    "stamina": 40,
+    "oxygen": 15,
+    "food": 300,
+    "weight": 7,
+    "damage": 1.25,
+    "torpor": 30
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "The Island, Scorched Earth, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
    "temperament": "攻撃的",
@@ -2149,6 +2720,8 @@
   "sources": {
    "breeding": "ja(incubationSec,maturationSec)",
    "taming": null,
+   "stats": "ja",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "manual"
   }
@@ -2169,15 +2742,17 @@
   "saddleLevel": 42,
   "wildMaps": [
    "The Island",
-   "The Center",
-   "Ragnarok",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": 28571,
@@ -2226,6 +2801,26 @@
    "damage": 36,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 120,
+    "stamina": 30,
+    "oxygen": 15,
+    "food": 400,
+    "weight": 8,
+    "damage": 1.8,
+    "torpor": 30
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "The Island, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
    "temperament": "テリトリー型",
@@ -2240,6 +2835,8 @@
   "sources": {
    "breeding": "dv+ja(incubationSec)",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -2260,15 +2857,16 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
-   "Ragnarok",
    "Aberration",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos"
   ],
   "breeding": null,
   "taming": null,
@@ -2282,6 +2880,17 @@
    "damage": 30,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 36,
+    "stamina": 12,
+    "food": 120,
+    "weight": 0.5,
+    "damage": 1.5,
+    "torpor": 15
+   },
+   "tamed": null
+  },
   "ja": {
    "wildMaps": "原種：The Island, Genesis: Part 1, The Center, Astraeos, Ragnarok, Valguero変種：Aberration",
    "temperament": "攻撃的",
@@ -2293,6 +2902,8 @@
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -2313,17 +2924,19 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
    "Aberration",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": null,
   "taming": {
@@ -2351,6 +2964,17 @@
    "damage": 5,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 6,
+    "stamina": 10,
+    "food": 10,
+    "weight": 0.16,
+    "damage": 0.25,
+    "torpor": 0.9
+   },
+   "tamed": null
+  },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration",
    "temperament": "臆病",
@@ -2363,6 +2987,8 @@
   "sources": {
    "breeding": null,
    "taming": "dv",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -2384,11 +3010,23 @@
   "wildMaps": null,
   "breeding": null,
   "taming": null,
-  "stats": null,
+  "stats": {
+   "health": 200000,
+   "stamina": 1320,
+   "oxygen": null,
+   "food": 5000,
+   "weight": 600,
+   "torpor": null,
+   "damage": 3125,
+   "speed": 100
+  },
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": "ja",
+   "wildMaps": null,
    "ja": null,
    "nameJa": "manual"
   }
@@ -2407,7 +3045,14 @@
   "rideable": true,
   "saddle": "Conca Saddle",
   "saddleLevel": 67,
-  "wildMaps": null,
+  "wildMaps": [
+   "Scorched Earth",
+   "Aberration",
+   "Extinction",
+   "Genesis: Part 1",
+   "Ragnarok",
+   "Astraeos"
+  ],
   "breeding": null,
   "taming": null,
   "stats": {
@@ -2420,6 +3065,7 @@
    "damage": 27,
    "speed": 100
   },
+  "growth": null,
   "ja": {
    "wildMaps": "原種：Scorched Earth, Extinction, Astraeos, Ragnarok変種：AberrationX種：Genesis: Part 1",
    "rideable": "可能",
@@ -2428,6 +3074,8 @@
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": "cargo",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "manual"
   }
@@ -2450,10 +3098,13 @@
   "breeding": null,
   "taming": null,
   "stats": null,
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": null,
+   "wildMaps": null,
    "ja": null,
    "nameJa": "arkja"
   }
@@ -2472,7 +3123,12 @@
   "rideable": false,
   "saddle": null,
   "saddleLevel": null,
-  "wildMaps": null,
+  "wildMaps": [
+   "Aberration",
+   "Genesis: Part 1",
+   "Valguero",
+   "Astraeos"
+  ],
   "breeding": {
    "incubationSec": 5142,
    "gestationSec": null,
@@ -2494,6 +3150,25 @@
    "damage": 5,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 23,
+    "stamina": 10,
+    "oxygen": 20,
+    "food": 45,
+    "weight": 1.4,
+    "damage": 0.25,
+    "torpor": 3.6
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 12.5,
+    "oxygen": 11.5,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.89
+   }
+  },
   "ja": {
    "wildMaps": "Aberration, Genesis: Part 1, Astraeos, Valguero",
    "temperament": "中立",
@@ -2506,6 +3181,8 @@
   "sources": {
    "breeding": "ja(incubationSec,maturationSec)",
    "taming": null,
+   "stats": "ja+cargo",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "manual"
   }
@@ -2524,7 +3201,10 @@
   "rideable": true,
   "saddle": "Cryolophosaurus Saddle",
   "saddleLevel": 60,
-  "wildMaps": null,
+  "wildMaps": [
+   "Genesis: Part 1",
+   "Lost Colony"
+  ],
   "breeding": {
    "incubationSec": 17999,
    "gestationSec": null,
@@ -2546,6 +3226,24 @@
    "damage": 27,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 100,
+    "stamina": 35,
+    "oxygen": 25,
+    "food": 120,
+    "weight": 10,
+    "damage": 4
+   },
+   "tamed": {
+    "health": 6.75,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7
+   }
+  },
   "ja": {
    "wildMaps": "原種：Lost ColonyX種：Genesis: Part 1",
    "temperament": "攻撃的",
@@ -2559,6 +3257,8 @@
   "sources": {
    "breeding": "ja(incubationSec,maturationSec)",
    "taming": null,
+   "stats": "ja+cargo",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "wikiwiki"
   }
@@ -2579,16 +3279,18 @@
   "saddleLevel": 59,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": null,
@@ -2678,6 +3380,26 @@
    "damage": 29,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 180,
+    "stamina": 25,
+    "oxygen": 15,
+    "food": 250,
+    "weight": 8,
+    "damage": 1.45,
+    "torpor": 48
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
    "temperament": "攻撃的",
@@ -2692,6 +3414,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -2727,10 +3451,13 @@
    "damage": 225,
    "speed": 100
   },
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": "cargo",
+   "wildMaps": "cargo",
    "ja": null,
    "nameJa": "arkja"
   }
@@ -2749,10 +3476,33 @@
   "rideable": false,
   "saddle": null,
   "saddleLevel": null,
-  "wildMaps": null,
+  "wildMaps": [
+   "The Island"
+  ],
   "breeding": null,
   "taming": null,
-  "stats": null,
+  "stats": {
+   "health": 1848.0001,
+   "stamina": 2000,
+   "oxygen": 150,
+   "food": 3000,
+   "weight": 1500,
+   "torpor": 420,
+   "damage": 35,
+   "speed": 100
+  },
+  "growth": {
+   "wild": {
+    "health": 369.60002,
+    "stamina": 200,
+    "oxygen": 15,
+    "food": 300,
+    "weight": 30,
+    "damage": 1.75,
+    "torpor": 25.2
+   },
+   "tamed": null
+  },
   "ja": {
    "wildMaps": "アイランド（???）",
    "temperament": "攻撃的",
@@ -2762,6 +3512,8 @@
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": "ja",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -2816,8 +3568,28 @@
    "food": 1200,
    "weight": 140,
    "torpor": 180,
-   "damage": 30,
+   "damage": 21,
    "speed": 100
+  },
+  "growth": {
+   "wild": {
+    "health": 40,
+    "stamina": 15,
+    "oxygen": 15,
+    "food": 120,
+    "weight": 2.8,
+    "damage": 1.5,
+    "torpor": 10.8
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 9,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1.5
+   }
   },
   "ja": {
    "wildMaps": "Valguero",
@@ -2830,6 +3602,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv",
+   "stats": "ja",
+   "wildMaps": "cargo",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -2848,9 +3622,18 @@
   "rideable": true,
   "saddle": "Deinosuchus Saddle",
   "saddleLevel": 74,
-  "wildMaps": null,
+  "wildMaps": [
+   "The Island",
+   "Scorched Earth",
+   "Extinction",
+   "Genesis: Part 1",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Astraeos"
+  ],
   "breeding": {
-   "incubationSec": 8999.2800575954,
+   "incubationSec": 10799,
    "gestationSec": null,
    "maturationSec": 333334,
    "matingCooldownMinSec": null,
@@ -2870,6 +3653,23 @@
    "damage": 55,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 200,
+    "stamina": 30,
+    "food": 300,
+    "weight": 12,
+    "damage": 2.75,
+    "torpor": 81
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7
+   }
+  },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction,The Center, Astraeos, Ragnarok, ValgueroX種：Genesis: Part 1",
    "temperament": "攻撃的",
@@ -2881,8 +3681,10 @@
    "saddleLevel": "74"
   },
   "sources": {
-   "breeding": "cargo(BabyTime x10)",
+   "breeding": "cargo(BabyTime x10)+ja(incubationSec)",
    "taming": null,
+   "stats": "ja+cargo",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "manual"
   }
@@ -2901,7 +3703,17 @@
   "rideable": true,
   "saddle": "Deinotherium Saddle",
   "saddleLevel": 85,
-  "wildMaps": null,
+  "wildMaps": [
+   "The Island",
+   "Scorched Earth",
+   "Extinction",
+   "Genesis: Part 1",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Astraeos",
+   "Lost Colony"
+  ],
   "breeding": {
    "incubationSec": null,
    "gestationSec": 28571,
@@ -2923,6 +3735,25 @@
    "damage": 30,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 350,
+    "stamina": 45,
+    "oxygen": 15,
+    "food": 800,
+    "weight": 16,
+    "damage": 1.75,
+    "torpor": 150
+   },
+   "tamed": {
+    "health": 4.05,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7
+   }
+  },
   "ja": {
    "wildMaps": "The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
    "temperament": "テリトリー型",
@@ -2936,6 +3767,8 @@
   "sources": {
    "breeding": "ja(gestationSec,maturationSec)",
    "taming": null,
+   "stats": "ja+cargo",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "manual"
   }
@@ -2967,10 +3800,31 @@
    "damage": 15,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 800,
+    "stamina": 1000,
+    "oxygen": 15,
+    "food": 10,
+    "weight": 2,
+    "damage": 0.75,
+    "torpor": 6
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": "ja",
+   "wildMaps": null,
    "ja": null,
    "nameJa": "arkja"
   }
@@ -2991,16 +3845,18 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
-   "Ragnarok",
    "Aberration",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": 8999.280273,
@@ -3049,6 +3905,24 @@
    "damage": 20,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 70,
+    "stamina": 30,
+    "food": 150,
+    "weight": 5,
+    "damage": 0.4,
+    "torpor": 45
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 0.68,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "原種：The Island, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Valguero",
    "temperament": "中立",
@@ -3063,6 +3937,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja+cargo",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -3083,16 +3959,18 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
-   "Ragnarok",
    "Aberration",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": 4864.475586,
@@ -3140,6 +4018,26 @@
    "damage": 23,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 25,
+    "stamina": 15,
+    "oxygen": 15,
+    "food": 90,
+    "weight": 1,
+    "damage": 1.15,
+    "torpor": 6
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "原種：The Island, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Astraeos, Valguero",
    "temperament": "中立",
@@ -3154,6 +4052,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -3174,16 +4074,17 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
-   "Ragnarok",
    "Aberration",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos"
   ],
   "breeding": {
    "incubationSec": 17998.560547,
@@ -3232,6 +4133,26 @@
    "damage": 10,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 50,
+    "stamina": 16.5,
+    "oxygen": 105,
+    "food": 150,
+    "weight": 3,
+    "damage": 0.5,
+    "torpor": 13.2
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "原種：The Island, Extinction, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Valguero",
    "temperament": "逃走",
@@ -3245,6 +4166,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -3265,15 +4188,18 @@
   "saddleLevel": 32,
   "wildMaps": [
    "The Island",
-   "The Center",
-   "Ragnarok",
    "Aberration",
    "Extinction",
-   "Valguero",
-   "Crystal Isles",
+   "Genesis: Part 1",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": 17998.560547,
@@ -3329,6 +4255,26 @@
    "damage": 0,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 340,
+    "stamina": 55,
+    "oxygen": 30,
+    "food": 1000,
+    "weight": 16,
+    "damage": 0,
+    "torpor": 180
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 0,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "原種：The Island, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration",
    "temperament": "テリトリー型",
@@ -3342,6 +4288,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -3362,16 +4310,18 @@
   "saddleLevel": 45,
   "wildMaps": [
    "The Island",
-   "The Center",
-   "Ragnarok",
    "Aberration",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": null,
@@ -3428,6 +4378,26 @@
    "damage": 50,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 80,
+    "stamina": 50,
+    "oxygen": 27,
+    "food": 300,
+    "weight": 13,
+    "damage": 2.5,
+    "torpor": 60
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "原種：The Island, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Astraeos, Valguero",
    "temperament": "テリトリー型",
@@ -3442,6 +4412,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -3462,16 +4434,18 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": null,
@@ -3520,6 +4494,26 @@
    "damage": 33,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 66,
+    "stamina": 26,
+    "oxygen": 15,
+    "food": 120,
+    "weight": 3.4,
+    "damage": 1.65,
+    "torpor": 27
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
    "temperament": "攻撃的",
@@ -3533,6 +4527,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -3553,16 +4549,18 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
-   "Ragnarok",
    "Aberration",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": 2999.760254,
@@ -3614,6 +4612,26 @@
    "damage": 5,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 8,
+    "stamina": 10,
+    "oxygen": 15,
+    "food": 45,
+    "weight": 1,
+    "damage": 0.25,
+    "torpor": 1.8
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "原種：The Island, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Astraeos, Ragnarok, Valguero",
    "temperament": "逃走",
@@ -3627,6 +4645,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -3647,17 +4667,19 @@
   "saddleLevel": 34,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
    "Aberration",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": 17857,
@@ -3709,6 +4731,26 @@
    "damage": 32,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 170,
+    "stamina": 30,
+    "oxygen": 15,
+    "food": 300,
+    "weight": 5,
+    "damage": 1.6,
+    "torpor": 48
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 2
+   }
+  },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Astraeos, Ragnarok",
    "temperament": "中立",
@@ -3723,6 +4765,8 @@
   "sources": {
    "breeding": "dv+ja(incubationSec)",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -3745,10 +4789,13 @@
   "breeding": null,
   "taming": null,
   "stats": null,
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": null,
+   "wildMaps": null,
    "ja": null,
    "nameJa": "arkja"
   }
@@ -3767,7 +4814,15 @@
   "rideable": false,
   "saddle": null,
   "saddleLevel": null,
-  "wildMaps": null,
+  "wildMaps": [
+   "Scorched Earth",
+   "Extinction",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Astraeos",
+   "Lost Colony"
+  ],
   "breeding": {
    "incubationSec": 4500,
    "gestationSec": null,
@@ -3789,6 +4844,25 @@
    "damage": 10,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 30,
+    "stamina": 15,
+    "oxygen": 15,
+    "food": 100,
+    "weight": 1.3,
+    "damage": 0.5,
+    "torpor": 6
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7
+   }
+  },
   "ja": {
    "wildMaps": "Scorched Earth, Extinction, Lost ColonyThe Center, Astraeos, Ragnarok, Valguero",
    "temperament": "中立",
@@ -3799,6 +4873,8 @@
   "sources": {
    "breeding": "ja(incubationSec,maturationSec)",
    "taming": null,
+   "stats": "ja+cargo",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "manual"
   }
@@ -3817,7 +4893,15 @@
   "rideable": true,
   "saddle": null,
   "saddleLevel": null,
-  "wildMaps": null,
+  "wildMaps": [
+   "Scorched Earth",
+   "Extinction",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Astraeos",
+   "Lost Colony"
+  ],
   "breeding": {
    "incubationSec": null,
    "gestationSec": 28571,
@@ -3836,8 +4920,26 @@
    "food": 1750,
    "weight": 450,
    "torpor": 600,
-   "damage": 23,
+   "damage": 24,
    "speed": 100
+  },
+  "growth": {
+   "wild": {
+    "health": 200,
+    "stamina": 60,
+    "oxygen": 15,
+    "food": 175,
+    "weight": 9,
+    "damage": 5
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7
+   }
   },
   "ja": {
    "wildMaps": "Scorched Earth, Extinction, Lost ColonyThe Center, Astraeos, Ragnarok, Valguero",
@@ -3851,6 +4953,8 @@
   "sources": {
    "breeding": "ja(gestationSec,maturationSec)",
    "taming": null,
+   "stats": "ja+cargo",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "wikiwiki"
   }
@@ -3869,7 +4973,10 @@
   "rideable": true,
   "saddle": null,
   "saddleLevel": null,
-  "wildMaps": null,
+  "wildMaps": [
+   "Extinction",
+   "Astraeos"
+  ],
   "breeding": {
    "incubationSec": 17999,
    "gestationSec": null,
@@ -3888,8 +4995,26 @@
    "food": 13500,
    "weight": 3000,
    "torpor": 3250,
-   "damage": 1080,
+   "damage": 3240,
    "speed": 100
+  },
+  "growth": {
+   "wild": {
+    "health": 3200,
+    "stamina": 30,
+    "oxygen": 15,
+    "food": 1350,
+    "weight": 60,
+    "damage": 36
+   },
+   "tamed": {
+    "health": 0.2535,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.16
+   }
   },
   "ja": {
    "wildMaps": "Extinction, Astraeos",
@@ -3904,6 +5029,8 @@
   "sources": {
    "breeding": "ja(incubationSec,maturationSec)",
    "taming": null,
+   "stats": "ja+cargo",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -3924,17 +5051,19 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
    "Aberration",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": null,
   "taming": {
@@ -3995,6 +5124,25 @@
    "damage": 5,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 40,
+    "stamina": 10,
+    "oxygen": 15,
+    "food": 90,
+    "weight": 0.1,
+    "damage": 0.25,
+    "torpor": 12
+   },
+   "tamed": {
+    "health": 2.7,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 0.5,
+    "damage": 2
+   }
+  },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration",
    "temperament": "中立",
@@ -4008,6 +5156,8 @@
   "sources": {
    "breeding": null,
    "taming": "dv+tamingTable",
+   "stats": "ja+cargo",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -4028,14 +5178,15 @@
   "saddleLevel": 44,
   "wildMaps": [
    "The Island",
-   "The Center",
+   "Genesis: Part 1",
+   "Genesis: Part 2",
    "Ragnarok",
    "Valguero",
-   "Genesis: Part 1",
+   "The Center",
    "Crystal Isles",
-   "Genesis: Part 2",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos"
   ],
   "breeding": {
    "incubationSec": null,
@@ -4089,6 +5240,24 @@
    "damage": 60,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 142,
+    "stamina": 20,
+    "food": 200,
+    "weight": 18.2,
+    "damage": 3,
+    "torpor": 69
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "原種：The Island, Genesis: Part 1,The Center, Astraeos, Ragnarok, ValgueroX種：Genesis: Part 1",
    "temperament": "攻撃的。索敵範囲は狭い。",
@@ -4103,6 +5272,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja+cargo",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -4121,7 +5292,16 @@
   "rideable": true,
   "saddle": null,
   "saddleLevel": null,
-  "wildMaps": null,
+  "wildMaps": [
+   "Aberration",
+   "Extinction",
+   "Genesis: Part 1",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Astraeos",
+   "Lost Colony"
+  ],
   "breeding": {
    "incubationSec": null,
    "gestationSec": null,
@@ -4143,6 +5323,26 @@
    "damage": 35,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 160,
+    "stamina": 35,
+    "oxygen": 25,
+    "food": 280,
+    "weight": 13,
+    "damage": 1.75,
+    "torpor": 60
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "Aberration, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
    "temperament": "テリトリー型",
@@ -4157,6 +5357,8 @@
   "sources": {
    "breeding": "ja(maturationSec)",
    "taming": null,
+   "stats": "ja",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "wikiwiki"
   }
@@ -4177,15 +5379,18 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
-   "Ragnarok",
+   "Scorched Earth",
    "Aberration",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": 17998.560547,
@@ -4236,8 +5441,26 @@
    "food": 1500,
    "weight": 150,
    "torpor": 175,
-   "damage": 3,
+   "damage": 32,
    "speed": 100
+  },
+  "growth": {
+   "wild": {
+    "health": 36,
+    "stamina": 16.5,
+    "food": 150,
+    "weight": 3,
+    "damage": 0.15,
+    "torpor": 10.5
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 2.5
+   }
   },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Valguero",
@@ -4252,6 +5475,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja+cargo",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -4300,6 +5525,24 @@
    "damage": 34,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 75,
+    "stamina": 45,
+    "oxygen": 15,
+    "weight": 16,
+    "damage": 1.7,
+    "torpor": 300
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "Extinction",
    "temperament": "サバイバー以外テリトリー型 サバイバーには中立（市街の建造物（電灯やイスや机等）を採取するのも反応する。",
@@ -4311,6 +5554,8 @@
   "sources": {
    "breeding": null,
    "taming": "dv",
+   "stats": "ja+cargo",
+   "wildMaps": "cargo",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -4331,17 +5576,19 @@
   "saddleLevel": 20,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
    "Aberration",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": null,
@@ -4435,6 +5682,26 @@
    "damage": 9,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 48,
+    "stamina": 56,
+    "oxygen": 15,
+    "food": 150,
+    "weight": 7,
+    "damage": 0.45,
+    "torpor": 25.2
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1.75
+   }
+  },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero 変種：Aberration, Astraeos, Valguero",
    "temperament": "逃走",
@@ -4449,6 +5716,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -4469,14 +5738,15 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
+   "Genesis: Part 1",
+   "Genesis: Part 2",
    "Ragnarok",
    "Valguero",
-   "Genesis: Part 1",
+   "The Center",
    "Crystal Isles",
-   "Genesis: Part 2",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos"
   ],
   "breeding": null,
   "taming": null,
@@ -4490,6 +5760,17 @@
    "damage": 7,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 36,
+    "stamina": 10,
+    "food": 45,
+    "weight": 3,
+    "damage": 0.35,
+    "torpor": 3
+   },
+   "tamed": null
+  },
   "ja": {
    "wildMaps": "The Island, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
    "temperament": "攻撃的",
@@ -4502,6 +5783,8 @@
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -4547,10 +5830,13 @@
    "damage": 180,
    "speed": null
   },
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": "dv",
+   "stats": "cargo",
+   "wildMaps": null,
    "ja": null,
    "nameJa": "arkja"
   }
@@ -4569,7 +5855,12 @@
   "rideable": true,
   "saddle": "Fasolasuchus Saddle",
   "saddleLevel": 70,
-  "wildMaps": null,
+  "wildMaps": [
+   "Scorched Earth",
+   "Aberration",
+   "Ragnarok",
+   "Astraeos"
+  ],
   "breeding": {
    "incubationSec": 6000,
    "gestationSec": null,
@@ -4591,6 +5882,25 @@
    "damage": 66,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 190,
+    "stamina": 35,
+    "oxygen": 15,
+    "food": 275,
+    "weight": 9,
+    "damage": 5
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "原種：Scorched Earth, Astraeos, Ragnarok変種：Aberration",
    "temperament": "攻撃的",
@@ -4605,6 +5915,8 @@
   "sources": {
    "breeding": "ja(incubationSec,maturationSec)",
    "taming": null,
+   "stats": "ja+cargo",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -4625,10 +5937,11 @@
   "saddleLevel": null,
   "wildMaps": [
    "Aberration",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "Crystal Isles",
    "Fjordur"
   ],
   "breeding": {
@@ -4693,6 +6006,21 @@
    "damage": 3,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 23,
+    "food": 45,
+    "weight": 1.4,
+    "speed": 1,
+    "torpor": 3.6
+   },
+   "tamed": {
+    "health": 5.4,
+    "food": 10,
+    "weight": 4,
+    "speed": 130
+   }
+  },
   "ja": {
    "wildMaps": "Aberration, Genesis: Part 1, Ragnarok, Valguero",
    "temperament": "逃走",
@@ -4706,6 +6034,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja+cargo",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -4760,10 +6090,30 @@
    "stamina": 100,
    "oxygen": 150,
    "food": 450,
-   "weight": 120,
+   "weight": 55,
    "torpor": 30,
    "damage": 5,
    "speed": 100
+  },
+  "growth": {
+   "wild": {
+    "health": 11,
+    "stamina": 10,
+    "oxygen": 15,
+    "food": 45,
+    "weight": 1.1,
+    "damage": 0.25,
+    "torpor": 1.8
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1.5
+   }
   },
   "ja": {
    "wildMaps": "Genesis: Part 1",
@@ -4777,6 +6127,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv",
+   "stats": "ja",
+   "wildMaps": "cargo",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -4808,10 +6160,13 @@
    "damage": 0,
    "speed": 100
   },
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": "cargo",
+   "wildMaps": null,
    "ja": null,
    "nameJa": "arkja"
   }
@@ -4833,7 +6188,8 @@
   "wildMaps": [
    "Extinction",
    "Genesis: Part 2",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos"
   ],
   "breeding": {
    "incubationSec": null,
@@ -4907,6 +6263,26 @@
    "damage": 32,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 150,
+    "stamina": 32.5,
+    "oxygen": 15,
+    "food": 300,
+    "weight": 22,
+    "damage": 1.6,
+    "torpor": 36
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "Extinction, Astraeos",
    "temperament": "臆病",
@@ -4920,6 +6296,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -4940,16 +6318,18 @@
   "saddleLevel": 29,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": 5142.445801,
@@ -5001,6 +6381,26 @@
    "damage": 8,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 30,
+    "stamina": 30,
+    "oxygen": 15,
+    "food": 100,
+    "weight": 5.4,
+    "damage": 0.4,
+    "torpor": 25.2
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 3.4,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
    "temperament": "逃走",
@@ -5015,6 +6415,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -5037,7 +6439,8 @@
    "Extinction",
    "Genesis: Part 1",
    "Genesis: Part 2",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos"
   ],
   "breeding": {
    "incubationSec": null,
@@ -5093,6 +6496,26 @@
    "damage": 5,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 130,
+    "stamina": 60,
+    "oxygen": 90,
+    "food": 350,
+    "weight": 60,
+    "damage": 0.25,
+    "torpor": 27
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 9,
+    "food": 10,
+    "weight": 1.25,
+    "damage": 1.7,
+    "speed": 1.5
+   }
+  },
   "ja": {
    "wildMaps": "Extinction, Genesis: Part 1, Astraeos",
    "temperament": "受動的",
@@ -5106,6 +6529,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -5126,17 +6551,19 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
    "Aberration",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": null,
   "taming": {
@@ -5164,6 +6591,25 @@
    "damage": 8,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 16,
+    "stamina": 20,
+    "oxygen": 15,
+    "food": 45,
+    "weight": 3,
+    "damage": 0.4,
+    "torpor": 24
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7
+   }
+  },
   "ja": {
    "wildMaps": "The Island, Scorched Earth, Aberration, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
    "temperament": "巨大女王バチ：テリトリー型巨大ハチ：攻撃的",
@@ -5177,6 +6623,8 @@
   "sources": {
    "breeding": null,
    "taming": "dv+tamingTable",
+   "stats": "ja+cargo",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -5195,7 +6643,9 @@
   "rideable": true,
   "saddle": "Gigadesmodus Saddle",
   "saddleLevel": null,
-  "wildMaps": null,
+  "wildMaps": [
+   "Lost Colony"
+  ],
   "breeding": {
    "incubationSec": 59995,
    "gestationSec": null,
@@ -5214,8 +6664,26 @@
    "food": 1500,
    "weight": 600,
    "torpor": 2000,
-   "damage": 100,
+   "damage": 150,
    "speed": 100
+  },
+  "growth": {
+   "wild": {
+    "health": 217.5,
+    "stamina": 37.5,
+    "oxygen": 15,
+    "food": 150,
+    "weight": 12,
+    "damage": 5
+   },
+   "tamed": {
+    "health": 3.24,
+    "stamina": 5,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7
+   }
   },
   "ja": {
    "wildMaps": "Lost Colony",
@@ -5230,6 +6698,8 @@
   "sources": {
    "breeding": "ja(incubationSec,maturationSec)",
    "taming": null,
+   "stats": "ja+cargo",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "wikiwiki"
   }
@@ -5250,14 +6720,15 @@
   "saddleLevel": 96,
   "wildMaps": [
    "The Island",
-   "The Center",
-   "Ragnarok",
    "Extinction",
-   "Valguero",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos"
   ],
   "breeding": {
    "incubationSec": 179985.609375,
@@ -5303,8 +6774,28 @@
    "food": 4000,
    "weight": 700,
    "torpor": 10000,
-   "damage": 1000,
+   "damage": 500,
    "speed": 100
+  },
+  "growth": {
+   "wild": {
+    "health": 40,
+    "stamina": 0.2,
+    "oxygen": 0.375,
+    "food": 10,
+    "weight": 7,
+    "damage": 25,
+    "torpor": 600
+   },
+   "tamed": {
+    "health": 0.04,
+    "stamina": 1,
+    "oxygen": 2.5,
+    "food": 2.5,
+    "weight": 1,
+    "damage": 0.85,
+    "speed": 0.31
+   }
   },
   "ja": {
    "wildMaps": "The Island, Extinction, The Center, Astraeos, Ragnarok, Valguero",
@@ -5320,6 +6811,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -5340,14 +6833,17 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
-   "Ragnarok",
    "Aberration",
-   "Valguero",
+   "Extinction",
    "Genesis: Part 1",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
    "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": null,
@@ -5403,6 +6899,26 @@
    "damage": 40,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 64,
+    "stamina": 30,
+    "oxygen": 15,
+    "food": 150,
+    "weight": 4.4,
+    "damage": 1.6,
+    "torpor": 66
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "原種：The Island, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration",
    "temperament": "テリトリー型",
@@ -5416,6 +6932,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -5434,7 +6952,17 @@
   "rideable": true,
   "saddle": "Gigantoraptor Saddle",
   "saddleLevel": 69,
-  "wildMaps": null,
+  "wildMaps": [
+   "The Island",
+   "Aberration",
+   "Extinction",
+   "Genesis: Part 1",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Astraeos",
+   "Lost Colony"
+  ],
   "breeding": {
    "incubationSec": 6000,
    "gestationSec": null,
@@ -5456,6 +6984,25 @@
    "damage": 20,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 154,
+    "stamina": 35,
+    "oxygen": 15,
+    "food": 300,
+    "weight": 6.4,
+    "damage": 1,
+    "torpor": 57
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7
+   }
+  },
   "ja": {
    "wildMaps": "通常種:The Island, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok ,Valguero変種:Aberration, Astraeos",
    "temperament": "テリトリー型",
@@ -5469,6 +7016,8 @@
   "sources": {
    "breeding": "ja(incubationSec,maturationSec)",
    "taming": null,
+   "stats": "ja+cargo",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -5487,7 +7036,9 @@
   "rideable": false,
   "saddle": null,
   "saddleLevel": null,
-  "wildMaps": null,
+  "wildMaps": [
+   "Lost Colony"
+  ],
   "breeding": {
    "incubationSec": null,
    "gestationSec": 5142,
@@ -5509,6 +7060,20 @@
    "damage": 5,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 30,
+    "food": 60,
+    "weight": 2,
+    "torpor": 6
+   },
+   "tamed": {
+    "health": 5.4,
+    "food": 10,
+    "weight": 4,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "Lost Colony",
    "temperament": "攻撃的",
@@ -5522,6 +7087,8 @@
   "sources": {
    "breeding": "ja(gestationSec,maturationSec)",
    "taming": null,
+   "stats": "ja+cargo",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "wikiwiki"
   }
@@ -5542,10 +7109,10 @@
   "saddleLevel": null,
   "wildMaps": [
    "Aberration",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Valguero",
+   "Crystal Isles",
    "Fjordur"
   ],
   "breeding": null,
@@ -5560,10 +7127,13 @@
    "damage": 18,
    "speed": 100
   },
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": "cargo",
+   "wildMaps": "cargo",
    "ja": null,
    "nameJa": "arkja"
   }
@@ -5584,9 +7154,10 @@
   "saddleLevel": null,
   "wildMaps": [
    "Aberration",
+   "Genesis: Part 1",
+   "Genesis: Part 2",
    "Valguero",
    "Crystal Isles",
-   "Genesis: Part 2",
    "Lost Island",
    "Fjordur"
   ],
@@ -5652,6 +7223,21 @@
    "damage": 12,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 23,
+    "food": 45,
+    "weight": 1.4,
+    "speed": 1,
+    "torpor": 3.6
+   },
+   "tamed": {
+    "health": 5.4,
+    "food": 10,
+    "weight": 4,
+    "speed": 130
+   }
+  },
   "ja": {
    "wildMaps": "Aberration, Valguero, Genesis: Part1",
    "temperament": "逃走",
@@ -5665,6 +7251,8 @@
   "sources": {
    "breeding": "dv+ja(gestationSec)",
    "taming": "dv+tamingTable",
+   "stats": "ja+cargo",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -5683,7 +7271,9 @@
   "rideable": true,
   "saddle": "Grand Tortugar Saddle",
   "saddleLevel": 43,
-  "wildMaps": null,
+  "wildMaps": [
+   "Astraeos"
+  ],
   "breeding": {
    "incubationSec": 12600,
    "gestationSec": null,
@@ -5705,6 +7295,21 @@
    "damage": 20,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 210,
+    "stamina": 26,
+    "food": 350,
+    "damage": 1,
+    "torpor": 60
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "food": 10,
+    "damage": 1.7
+   }
+  },
   "ja": {
    "wildMaps": "Astraeos",
    "temperament": "攻撃的",
@@ -5717,6 +7322,8 @@
   "sources": {
    "breeding": "ja(incubationSec,maturationSec)",
    "taming": null,
+   "stats": "ja+cargo",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "manual"
   }
@@ -5792,6 +7399,25 @@
    "damage": 27,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 142.5,
+    "stamina": 11.25,
+    "oxygen": 15,
+    "food": 160,
+    "weight": 5.6,
+    "damage": 1.35,
+    "torpor": 90
+   },
+   "tamed": {
+    "health": 4.32,
+    "stamina": 6,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7
+   }
+  },
   "ja": {
    "wildMaps": "Ragnarok",
    "temperament": "攻撃的",
@@ -5803,6 +7429,8 @@
   "sources": {
    "breeding": null,
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -5821,7 +7449,13 @@
   "rideable": true,
   "saddle": "Helicoprion Saddle",
   "saddleLevel": 76,
-  "wildMaps": null,
+  "wildMaps": [
+   "The Island",
+   "Genesis: Part 1",
+   "Ragnarok",
+   "The Center",
+   "Astraeos"
+  ],
   "breeding": {
    "incubationSec": 17999,
    "gestationSec": null,
@@ -5837,11 +7471,27 @@
    "health": 1300,
    "stamina": 500,
    "oxygen": 150,
-   "food": 2000,
+   "food": 2300,
    "weight": 500,
    "torpor": 800,
    "damage": 50,
    "speed": 100
+  },
+  "growth": {
+   "wild": {
+    "health": 260,
+    "stamina": 50,
+    "food": 230,
+    "weight": 12.5,
+    "damage": 5
+   },
+   "tamed": {
+    "health": 6.075,
+    "stamina": 10,
+    "food": 10,
+    "weight": 5.5,
+    "damage": 1.7
+   }
   },
   "ja": {
    "wildMaps": "原種：The Island, The Center, Astraeos, RagnarokX種：Genesis: Part 1",
@@ -5857,6 +7507,8 @@
   "sources": {
    "breeding": "ja(incubationSec,maturationSec)",
    "taming": null,
+   "stats": "ja+cargo",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "wikiwiki"
   }
@@ -5877,15 +7529,16 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
-   "Ragnarok",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos"
   ],
   "breeding": {
    "incubationSec": 5454.108887,
@@ -5922,6 +7575,24 @@
    "damage": 1,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 19,
+    "stamina": 20,
+    "food": 90,
+    "weight": 1.4,
+    "damage": 0.05,
+    "torpor": 18
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 2.5
+   }
+  },
   "ja": {
    "wildMaps": "The Island, Extinction, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
    "temperament": "テリトリー型",
@@ -5933,6 +7604,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -5968,7 +7641,17 @@
    "eats": null,
    "specialFoodValues": null
   },
-  "stats": null,
+  "stats": {
+   "health": 100,
+   "stamina": 100,
+   "oxygen": 100,
+   "food": 100,
+   "weight": 100,
+   "torpor": null,
+   "damage": 8,
+   "speed": 100
+  },
+  "growth": null,
   "ja": {
    "temperament": "様々",
    "drops": "Raw Meat、検体インプラント 戦利品(pvpのみ) スキン"
@@ -5976,6 +7659,8 @@
   "sources": {
    "breeding": null,
    "taming": "dv",
+   "stats": "ja",
+   "wildMaps": null,
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -5996,15 +7681,18 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
    "Extinction",
-   "Valguero",
-   "Crystal Isles",
+   "Genesis: Part 1",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": null,
@@ -6041,6 +7729,26 @@
    "damage": 15,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 35,
+    "stamina": 26,
+    "oxygen": 15,
+    "food": 120,
+    "weight": 3.4,
+    "damage": 0.75,
+    "torpor": 27
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 2.5
+   }
+  },
   "ja": {
    "wildMaps": "The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
    "temperament": "臆病。3体以上群れると攻撃的。昏睡中、体力低下した個体にも攻撃的になる。",
@@ -6054,6 +7762,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -6076,10 +7786,13 @@
   "breeding": null,
   "taming": null,
   "stats": null,
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": null,
+   "wildMaps": null,
    "ja": null,
    "nameJa": null
   }
@@ -6111,10 +7824,13 @@
    "damage": 2500,
    "speed": 100
   },
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": "cargo",
+   "wildMaps": null,
    "ja": null,
    "nameJa": "arkja"
   }
@@ -6135,15 +7851,16 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
-   "Ragnarok",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos"
   ],
   "breeding": {
    "incubationSec": 5999.520508,
@@ -6186,6 +7903,26 @@
    "damage": 1,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 10,
+    "stamina": 15,
+    "oxygen": 15,
+    "food": 100,
+    "weight": 1.1,
+    "damage": 0.05,
+    "torpor": 7.2
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "The Island, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
    "temperament": "攻撃的",
@@ -6199,6 +7936,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -6219,14 +7958,15 @@
   "saddleLevel": 13,
   "wildMaps": [
    "The Island",
-   "The Center",
+   "Genesis: Part 1",
+   "Genesis: Part 2",
    "Ragnarok",
    "Valguero",
-   "Genesis: Part 1",
+   "The Center",
    "Crystal Isles",
-   "Genesis: Part 2",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos"
   ],
   "breeding": {
    "incubationSec": null,
@@ -6275,6 +8015,23 @@
    "damage": 15,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 13.75,
+    "stamina": 60,
+    "food": 100,
+    "weight": 5,
+    "damage": 0.75,
+    "torpor": 18
+   },
+   "tamed": {
+    "health": 1.35,
+    "stamina": 20,
+    "food": 10,
+    "weight": 4,
+    "damage": 0.85
+   }
+  },
   "ja": {
    "wildMaps": "原種：The Island, Genesis: Part 1,The Center, Astraeos, Ragnarok, ValgueroX種：Genesis: Part 1",
    "temperament": "友好的(サバイバーに積極的に接近する。攻撃を受けると逃走)",
@@ -6289,6 +8046,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja+cargo",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -6309,17 +8068,19 @@
   "saddleLevel": 30,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
    "Aberration",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": 5142.445801,
@@ -6371,6 +8132,26 @@
    "damage": 25,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 50,
+    "stamina": 20,
+    "oxygen": 15,
+    "food": 180,
+    "weight": 7.5,
+    "damage": 1.25,
+    "torpor": 12.6
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 2
+   }
+  },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Astraeos, Valguero",
    "temperament": "中立",
@@ -6385,6 +8166,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -6420,10 +8203,13 @@
    "damage": 23,
    "speed": 100
   },
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": "cargo",
+   "wildMaps": "cargo",
    "ja": null,
    "nameJa": "arkja"
   }
@@ -6444,10 +8230,11 @@
   "saddleLevel": null,
   "wildMaps": [
    "Scorched Earth",
+   "Genesis: Part 1",
+   "Genesis: Part 2",
    "Ragnarok",
    "Valguero",
    "Crystal Isles",
-   "Genesis: Part 2",
    "Lost Island"
   ],
   "breeding": {
@@ -6504,6 +8291,26 @@
    "damage": 3,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 11,
+    "stamina": 10,
+    "oxygen": 15,
+    "food": 45,
+    "weight": 2.4,
+    "damage": 0.15,
+    "torpor": 1.8
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "Scorched Earth, Genesis: Part 1, Ragnarok, Valguero",
    "temperament": "受動的",
@@ -6515,6 +8322,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -6535,12 +8344,13 @@
   "saddleLevel": null,
   "wildMaps": [
    "Scorched Earth",
-   "Ragnarok",
    "Extinction",
    "Genesis: Part 1",
    "Genesis: Part 2",
+   "Ragnarok",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos"
   ],
   "breeding": null,
   "taming": null,
@@ -6554,6 +8364,25 @@
    "damage": 18,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 15,
+    "stamina": 10,
+    "oxygen": 15,
+    "food": 45,
+    "weight": 1,
+    "damage": 0.9
+   },
+   "tamed": {
+    "health": 0,
+    "stamina": 0,
+    "oxygen": 0,
+    "food": 0,
+    "weight": 0,
+    "damage": 0,
+    "speed": 0
+   }
+  },
   "ja": {
    "wildMaps": "Scorched Earth, Extinction, Astraeos, Ragnarok",
    "temperament": "受動的",
@@ -6564,6 +8393,8 @@
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": "ja+cargo",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -6584,14 +8415,17 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
-   "Ragnarok",
+   "Scorched Earth",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
    "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": 5454.108887,
@@ -6640,6 +8474,24 @@
    "damage": 8,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 19,
+    "stamina": 20,
+    "food": 90,
+    "weight": 1.4,
+    "damage": 0.4,
+    "torpor": 18
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
    "temperament": "臆病",
@@ -6654,6 +8506,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -6674,16 +8528,18 @@
   "saddleLevel": 39,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": 7199.423828,
@@ -6725,12 +8581,32 @@
   "stats": {
    "health": 200,
    "stamina": 350,
-   "oxygen": null,
+   "oxygen": 150,
    "food": 1200,
    "weight": 140,
    "torpor": 200,
    "damage": 25,
    "speed": 100
+  },
+  "growth": {
+   "wild": {
+    "health": 40,
+    "stamina": 35,
+    "oxygen": 15,
+    "food": 120,
+    "weight": 2.8,
+    "damage": 1.25,
+    "torpor": 12
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
   },
   "ja": {
    "wildMaps": "The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
@@ -6746,6 +8622,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -6766,11 +8644,13 @@
   "saddleLevel": 65,
   "wildMaps": [
    "Aberration",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
-   "Fjordur"
+   "Ragnarok",
+   "Valguero",
+   "Crystal Isles",
+   "Fjordur",
+   "Astraeos"
   ],
   "breeding": {
    "incubationSec": null,
@@ -6821,6 +8701,24 @@
    "damage": 32,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 240,
+    "stamina": 60,
+    "food": 500,
+    "weight": 16,
+    "damage": 1.6,
+    "torpor": 40
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "Aberration, Genesis: Part 1,Astraeos, Ragnarok, Valguero",
    "temperament": "攻撃的",
@@ -6832,6 +8730,8 @@
   "sources": {
    "breeding": "ja(gestationSec,maturationSec)",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -6852,16 +8752,18 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": 9999.200195,
@@ -6926,6 +8828,26 @@
    "damage": 10,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 130,
+    "stamina": 30,
+    "oxygen": 15,
+    "food": 600,
+    "weight": 10,
+    "damage": 0.5,
+    "torpor": 30
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
    "temperament": "テリトリー型",
@@ -6937,6 +8859,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -6957,11 +8881,12 @@
   "saddleLevel": null,
   "wildMaps": [
    "Aberration",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
-   "Fjordur"
+   "Valguero",
+   "Crystal Isles",
+   "Fjordur",
+   "Lost Colony"
   ],
   "breeding": null,
   "taming": {
@@ -6989,6 +8914,17 @@
    "damage": 7,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 8,
+    "stamina": 10,
+    "food": 45,
+    "weight": 0.2,
+    "damage": 0.35,
+    "torpor": 3
+   },
+   "tamed": null
+  },
   "ja": {
    "wildMaps": "Aberration, Lost Colony, Genesis: Part 1, Valguero",
    "temperament": "攻撃的",
@@ -7002,6 +8938,8 @@
   "sources": {
    "breeding": null,
    "taming": "dv",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -7022,14 +8960,16 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
+   "Genesis: Part 1",
+   "Genesis: Part 2",
    "Ragnarok",
    "Valguero",
-   "Genesis: Part 1",
+   "The Center",
    "Crystal Isles",
-   "Genesis: Part 2",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": null,
   "taming": {
@@ -7057,6 +8997,17 @@
    "damage": 7,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 8,
+    "stamina": 10,
+    "food": 45,
+    "weight": 0.2,
+    "damage": 0.35,
+    "torpor": 3
+   },
+   "tamed": null
+  },
   "ja": {
    "wildMaps": "The Island, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
    "temperament": "攻撃的",
@@ -7069,6 +9020,8 @@
   "sources": {
    "breeding": null,
    "taming": "dv",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -7089,11 +9042,11 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
    "Fjordur"
   ],
@@ -7109,6 +9062,17 @@
    "damage": 115,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 528,
+    "stamina": 50,
+    "food": 800,
+    "weight": 36,
+    "damage": 0,
+    "torpor": 270
+   },
+   "tamed": null
+  },
   "ja": {
    "wildMaps": "The Island, Genesis: Part 1, The Center, Valguero",
    "temperament": "受動的",
@@ -7121,6 +9085,8 @@
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": "ja",
+   "wildMaps": "cargo",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -7141,13 +9107,14 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
+   "Genesis: Part 2",
    "Ragnarok",
    "Valguero",
+   "The Center",
    "Crystal Isles",
-   "Genesis: Part 2",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos"
   ],
   "breeding": null,
   "taming": {
@@ -7182,6 +9149,24 @@
    "damage": 40,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 640,
+    "stamina": 80,
+    "food": 200,
+    "weight": 20,
+    "damage": 2,
+    "torpor": 48
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "The Island, The Center, Astraeos, Ragnarok, Valguero",
    "temperament": "中立。生物騎乗時は攻撃的",
@@ -7195,6 +9180,8 @@
   "sources": {
    "breeding": null,
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -7217,10 +9204,13 @@
   "breeding": null,
   "taming": null,
   "stats": null,
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": null,
+   "wildMaps": null,
    "ja": null,
    "nameJa": null
   }
@@ -7243,10 +9233,13 @@
   "breeding": null,
   "taming": null,
   "stats": null,
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": null,
+   "wildMaps": null,
    "ja": null,
    "nameJa": null
   }
@@ -7265,7 +9258,16 @@
   "rideable": true,
   "saddle": "Lumina Saddle",
   "saddleLevel": 65,
-  "wildMaps": null,
+  "wildMaps": [
+   "Scorched Earth",
+   "Extinction",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Astraeos",
+   "Lost Colony",
+   "Dragontopia"
+  ],
   "breeding": {
    "incubationSec": null,
    "gestationSec": 21978,
@@ -7287,6 +9289,22 @@
    "damage": 35,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 160,
+    "stamina": 32.5,
+    "oxygen": 15,
+    "food": 165,
+    "weight": 7,
+    "damage": 1.75,
+    "torpor": 45
+   },
+   "tamed": {
+    "health": 2.6,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "Dragontopia (Scorched Earth, Extinction, Lost Colony, The Center, Astraeos, Ragnarok, Valguero)",
    "saddleLevel": "-"
@@ -7294,6 +9312,8 @@
   "sources": {
    "breeding": "ja(gestationSec,maturationSec)",
    "taming": null,
+   "stats": "ja",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "manual"
   }
@@ -7314,12 +9334,14 @@
   "saddleLevel": 36,
   "wildMaps": [
    "Scorched Earth",
-   "Ragnarok",
    "Extinction",
+   "Genesis: Part 1",
+   "Genesis: Part 2",
+   "Ragnarok",
    "Valguero",
    "Crystal Isles",
-   "Genesis: Part 2",
-   "Lost Island"
+   "Lost Island",
+   "Astraeos"
   ],
   "breeding": {
    "incubationSec": 5454.10913,
@@ -7363,13 +9385,32 @@
   },
   "stats": {
    "health": 260,
-   "stamina": 150,
+   "stamina": 180,
    "oxygen": 150,
    "food": 2000,
    "weight": 175,
    "torpor": 550,
    "damage": 18,
    "speed": 100
+  },
+  "growth": {
+   "wild": {
+    "health": 52,
+    "stamina": 7.5,
+    "oxygen": 15,
+    "food": 200,
+    "weight": 3.5,
+    "damage": 0.9,
+    "torpor": 33
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 6,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7
+   }
   },
   "ja": {
    "wildMaps": "Scorched Earth, Extinction, Genesis: Part 1, Astraeos, Ragnarok, Valguero",
@@ -7383,6 +9424,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -7403,17 +9446,19 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
    "Aberration",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": 2999.760254,
@@ -7468,6 +9513,26 @@
    "damage": 6,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 18,
+    "stamina": 10,
+    "oxygen": 21.5,
+    "food": 50,
+    "weight": 1.8,
+    "damage": 0.3,
+    "torpor": 6
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Astraeos, Valguero",
    "temperament": "臆病",
@@ -7479,6 +9544,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -7517,10 +9584,13 @@
    "specialFoodValues": null
   },
   "stats": null,
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": "dv",
+   "stats": null,
+   "wildMaps": "cargo",
    "ja": null,
    "nameJa": "arkja"
   }
@@ -7539,7 +9609,9 @@
   "rideable": true,
   "saddle": "Maeguana Saddle",
   "saddleLevel": 19,
-  "wildMaps": null,
+  "wildMaps": [
+   "Astraeos"
+  ],
   "breeding": {
    "incubationSec": 5142,
    "gestationSec": null,
@@ -7561,6 +9633,25 @@
    "damage": 20,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 59.5,
+    "stamina": 22.5,
+    "oxygen": 15,
+    "food": 200,
+    "weight": 8,
+    "damage": 1,
+    "torpor": 6
+   },
+   "tamed": {
+    "health": 4.05,
+    "stamina": 5,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7
+   }
+  },
   "ja": {
    "wildMaps": "Astraeos",
    "temperament": "臆病",
@@ -7574,6 +9665,8 @@
   "sources": {
    "breeding": "ja(incubationSec,maturationSec)",
    "taming": null,
+   "stats": "ja+cargo",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "manual"
   }
@@ -7632,10 +9725,13 @@
    "damage": 20,
    "speed": 100
   },
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": "dv",
    "taming": "dv",
+   "stats": "cargo",
+   "wildMaps": "cargo",
    "ja": null,
    "nameJa": "arkja"
   }
@@ -7680,6 +9776,26 @@
    "damage": 120,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 150,
+    "stamina": 25,
+    "oxygen": 20,
+    "food": 200,
+    "weight": 11,
+    "damage": 3.6,
+    "torpor": 43.5
+   },
+   "tamed": {
+    "health": 2.7,
+    "stamina": 5,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 0.51,
+    "speed": 0.5
+   }
+  },
   "ja": {
    "wildMaps": "Genesis: Part 1",
    "temperament": "攻撃的",
@@ -7692,6 +9808,8 @@
   "sources": {
    "breeding": "dv",
    "taming": null,
+   "stats": "ja",
+   "wildMaps": "cargo",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -7710,7 +9828,9 @@
   "rideable": true,
   "saddle": "Malwyn Saddle",
   "saddleLevel": 65,
-  "wildMaps": null,
+  "wildMaps": [
+   "Lost Colony"
+  ],
   "breeding": null,
   "taming": null,
   "stats": {
@@ -7722,6 +9842,24 @@
    "torpor": 1100,
    "damage": 60,
    "speed": 100
+  },
+  "growth": {
+   "wild": {
+    "health": 170,
+    "stamina": 35,
+    "oxygen": 15,
+    "food": 120,
+    "weight": 8.5,
+    "damage": 5
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7
+   }
   },
   "ja": {
    "wildMaps": "Lost Colony",
@@ -7736,6 +9874,8 @@
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": "ja+cargo",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "wikiwiki"
   }
@@ -7757,12 +9897,14 @@
   "wildMaps": [
    "Extinction",
    "Genesis: Part 2",
-   "Lost Island"
+   "Lost Island",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": null,
-   "gestationSec": 14285.713867,
-   "maturationSec": 333333.3125,
+   "gestationSec": 21978,
+   "maturationSec": 256410,
    "matingCooldownMinSec": 64800,
    "matingCooldownMaxSec": 172800,
    "egg": null,
@@ -7804,7 +9946,27 @@
    "weight": 300,
    "torpor": 800,
    "damage": 35,
-   "speed": 150
+   "speed": 100
+  },
+  "growth": {
+   "wild": {
+    "health": 165,
+    "stamina": 30,
+    "oxygen": 15,
+    "food": 200,
+    "weight": 6,
+    "damage": 1.75,
+    "torpor": 48
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 6,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 0.35
+   }
   },
   "ja": {
    "wildMaps": "Extinction, Lost Colony, Astraeos",
@@ -7817,8 +9979,10 @@
    "saddleLevel": "66"
   },
   "sources": {
-   "breeding": "dv",
+   "breeding": "dv+ja(gestationSec,maturationSec)",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -7839,15 +10003,16 @@
   "saddleLevel": 28,
   "wildMaps": [
    "The Island",
-   "The Center",
-   "Ragnarok",
    "Aberration",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos"
   ],
   "breeding": {
    "incubationSec": null,
@@ -7891,6 +10056,24 @@
    "damage": 28,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 16,
+    "stamina": 54,
+    "food": 100,
+    "weight": 4,
+    "damage": 1.4,
+    "torpor": 42
+   },
+   "tamed": {
+    "health": 1.35,
+    "stamina": 20,
+    "food": 10,
+    "weight": 4,
+    "damage": 0.85,
+    "speed": 1.25
+   }
+  },
   "ja": {
    "wildMaps": "原種：The Island, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Astraeos",
    "temperament": "攻撃的",
@@ -7902,6 +10085,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -7924,10 +10109,13 @@
   "breeding": null,
   "taming": null,
   "stats": null,
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": null,
+   "wildMaps": null,
    "ja": null,
    "nameJa": "arkja"
   }
@@ -7948,13 +10136,14 @@
   "saddleLevel": 45,
   "wildMaps": [
    "Scorched Earth",
-   "Ragnarok",
    "Extinction",
+   "Genesis: Part 2",
+   "Ragnarok",
    "Valguero",
    "Crystal Isles",
-   "Genesis: Part 2",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos"
   ],
   "breeding": {
    "incubationSec": 9999.20006,
@@ -8006,6 +10195,26 @@
    "damage": 34,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 55,
+    "stamina": 15,
+    "oxygen": 15,
+    "food": 90,
+    "weight": 4.4,
+    "damage": 0.85,
+    "torpor": 21
+   },
+   "tamed": {
+    "health": 2.7,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 8,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "Scorched Earth, Extinction, Astraeos, Ragnarok, Valguero",
    "temperament": "攻撃的",
@@ -8019,6 +10228,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -8077,6 +10288,24 @@
    "damage": 125,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 384,
+    "stamina": 10,
+    "food": 880,
+    "weight": 50,
+    "damage": 6.25,
+    "torpor": 600
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "Genesis: Part 1",
    "temperament": "中立",
@@ -8089,6 +10318,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv",
+   "stats": "ja+cargo",
+   "wildMaps": "cargo",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -8109,14 +10340,18 @@
   "saddleLevel": 73,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
+   "Aberration",
    "Extinction",
    "Genesis: Part 1",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
    "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": 7199.423828,
@@ -8170,6 +10405,26 @@
    "damage": 10,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 96,
+    "stamina": 40,
+    "oxygen": 20,
+    "food": 150,
+    "weight": 8,
+    "damage": 0.5,
+    "torpor": 42
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "原種:The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1, The Center, Astraeos, Ragnarok, Valguero変種:Aberration, Astraeos, Valguero",
    "temperament": "攻撃的",
@@ -8183,6 +10438,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -8203,15 +10460,17 @@
   "saddleLevel": 30,
   "wildMaps": [
    "The Island",
-   "The Center",
-   "Ragnarok",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": null,
@@ -8263,6 +10522,26 @@
    "damage": 30,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 60,
+    "stamina": 28,
+    "oxygen": 15,
+    "food": 120,
+    "weight": 4.4,
+    "damage": 1.5,
+    "torpor": 10.5
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "The Island, Extinction, Lost Colony, Genesis: Part 1, The Center, Astraeos, Ragnarok, Valguero",
    "temperament": "臆病",
@@ -8275,6 +10554,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -8295,14 +10576,15 @@
   "saddleLevel": 47,
   "wildMaps": [
    "The Island",
-   "The Center",
+   "Genesis: Part 1",
+   "Genesis: Part 2",
    "Ragnarok",
    "Valguero",
-   "Genesis: Part 1",
+   "The Center",
    "Crystal Isles",
-   "Genesis: Part 2",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos"
   ],
   "breeding": {
    "incubationSec": null,
@@ -8351,6 +10633,24 @@
    "damage": 40,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 120,
+    "stamina": 32,
+    "food": 200,
+    "weight": 5,
+    "damage": 2,
+    "torpor": 48
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "The Island, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
    "temperament": "攻撃的",
@@ -8363,6 +10663,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja+cargo",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -8383,14 +10685,18 @@
   "saddleLevel": 57,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
    "Aberration",
    "Extinction",
+   "Genesis: Part 1",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
    "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": 5999.520508,
@@ -8444,6 +10750,26 @@
    "damage": 75,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 205,
+    "stamina": 30,
+    "oxygen": 15,
+    "food": 200,
+    "weight": 6,
+    "damage": 3.75,
+    "torpor": 46.5
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1, The Center, Astraeos, Ragnarok, Valguero変種:Aberration, Astraeos, Valguero",
    "temperament": "攻撃的",
@@ -8456,6 +10782,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -8476,14 +10804,14 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
-   "Ragnarok",
    "Aberration",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
    "Fjordur"
   ],
@@ -8499,10 +10827,24 @@
    "damage": 10,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 9,
+    "stamina": 10,
+    "oxygen": 15,
+    "food": 45,
+    "weight": 1,
+    "damage": 0.5,
+    "torpor": 6
+   },
+   "tamed": null
+  },
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": "ja+cargo",
+   "wildMaps": "cargo",
    "ja": null,
    "nameJa": "arkja"
   }
@@ -8525,10 +10867,13 @@
   "breeding": null,
   "taming": null,
   "stats": null,
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": null,
+   "wildMaps": null,
    "ja": null,
    "nameJa": "arkja"
   }
@@ -8547,7 +10892,12 @@
   "rideable": true,
   "saddle": "Megaraptor Saddle",
   "saddleLevel": 60,
-  "wildMaps": null,
+  "wildMaps": [
+   "Genesis: Part 1",
+   "Valguero",
+   "Astraeos",
+   "Lost Colony"
+  ],
   "breeding": {
    "incubationSec": 6000,
    "gestationSec": null,
@@ -8569,6 +10919,26 @@
    "damage": 25,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 70,
+    "stamina": 35,
+    "oxygen": 15,
+    "food": 225,
+    "weight": 6.5,
+    "damage": 1.25,
+    "torpor": 24
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "Valguero, Lost Colony, Genesis: Part 1, Astraeos",
    "temperament": "攻撃的",
@@ -8582,6 +10952,8 @@
   "sources": {
    "breeding": "ja(incubationSec,maturationSec)",
    "taming": null,
+   "stats": "ja",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "wikiwiki"
   }
@@ -8602,16 +10974,18 @@
   "saddleLevel": 52,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": null,
@@ -8668,6 +11042,26 @@
    "damage": 32,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 148,
+    "stamina": 40,
+    "oxygen": 27,
+    "food": 300,
+    "weight": 14.5,
+    "damage": 1.6,
+    "torpor": 60
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4.5,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1, The Center, Astraeos, Ragnarok, Valguero",
    "temperament": "中立、虫類に対しては攻撃的、バグキラー発動中は攻撃的",
@@ -8679,6 +11073,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -8724,10 +11120,13 @@
    "damage": 300,
    "speed": 100
   },
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": "dv",
+   "stats": "cargo",
+   "wildMaps": null,
    "ja": null,
    "nameJa": null
   }
@@ -8748,15 +11147,17 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
-   "Ragnarok",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": null,
@@ -8805,8 +11206,27 @@
    "food": 450,
    "weight": 70,
    "torpor": 60,
-   "damage": 12,
+   "damage": 10,
    "speed": 100
+  },
+  "growth": {
+   "wild": {
+    "health": 23,
+    "stamina": 10,
+    "oxygen": 15,
+    "food": 45,
+    "weight": 1.4,
+    "damage": 0.5,
+    "torpor": 3.6
+   },
+   "tamed": {
+    "health": 27,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 10
+   }
   },
   "ja": {
    "wildMaps": "The Island, Extinction, Lost Colony, Genesis: Part 1, The Center, Astraeos, Ragnarok, Valguero",
@@ -8820,6 +11240,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja+cargo",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -8840,16 +11262,18 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": 5142.445801,
@@ -8948,6 +11372,26 @@
    "damage": 8,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 26,
+    "stamina": 10,
+    "oxygen": 15,
+    "food": 45,
+    "weight": 0.9,
+    "damage": 0.4,
+    "torpor": 4.5
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1, The Center, Astraeos, Ragnarok, Valguero",
    "temperament": "攻撃的",
@@ -8960,6 +11404,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -8981,11 +11427,23 @@
   "wildMaps": null,
   "breeding": null,
   "taming": null,
-  "stats": null,
+  "stats": {
+   "health": 200000,
+   "stamina": 1320,
+   "oxygen": null,
+   "food": 5000,
+   "weight": 600,
+   "torpor": null,
+   "damage": 1008,
+   "speed": 100
+  },
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": "ja",
+   "wildMaps": null,
    "ja": null,
    "nameJa": "manual"
   }
@@ -9017,10 +11475,13 @@
    "damage": 100,
    "speed": null
   },
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": "cargo",
+   "wildMaps": null,
    "ja": null,
    "nameJa": null
   }
@@ -9043,10 +11504,13 @@
   "breeding": null,
   "taming": null,
   "stats": null,
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": null,
+   "wildMaps": null,
    "ja": null,
    "nameJa": "arkja"
   }
@@ -9067,10 +11531,12 @@
   "saddleLevel": 11,
   "wildMaps": [
    "Scorched Earth",
-   "Ragnarok",
    "Extinction",
+   "Genesis: Part 1",
+   "Ragnarok",
    "Crystal Isles",
-   "Lost Island"
+   "Lost Island",
+   "Astraeos"
   ],
   "breeding": {
    "incubationSec": 8999.280273,
@@ -9122,6 +11588,26 @@
    "damage": 32,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 80,
+    "stamina": 22,
+    "oxygen": 15,
+    "food": 600,
+    "weight": 8.8,
+    "damage": 1.6,
+    "torpor": 18.9
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "Scorched Earth, Extinction, Genesis: Part 1, Astraeos, Ragnarok",
    "temperament": "受動的（特定条件下で中立）",
@@ -9134,6 +11620,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -9154,14 +11642,15 @@
   "saddleLevel": 78,
   "wildMaps": [
    "The Island",
-   "The Center",
+   "Genesis: Part 1",
+   "Genesis: Part 2",
    "Ragnarok",
    "Valguero",
-   "Genesis: Part 1",
+   "The Center",
    "Crystal Isles",
-   "Genesis: Part 2",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos"
   ],
   "breeding": {
    "incubationSec": null,
@@ -9215,6 +11704,24 @@
    "damage": 100,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 432,
+    "stamina": 40,
+    "food": 800,
+    "weight": 26,
+    "damage": 5,
+    "torpor": 180
+   },
+   "tamed": {
+    "health": 4.2,
+    "stamina": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "原種：The Island, Genesis: Part 1,The Center, Astraeos, Ragnarok, ValgueroX種：Genesis: Part 1",
    "temperament": "攻撃的",
@@ -9227,6 +11734,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja+cargo",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -9247,17 +11756,19 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
    "Aberration",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": 9472.926758,
@@ -9345,6 +11856,26 @@
    "damage": 32,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 75,
+    "stamina": 30,
+    "oxygen": 15,
+    "food": 30,
+    "weight": 4,
+    "damage": 1.25,
+    "torpor": 18
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "通常種:The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1, The Center, Astraeos, Ragnarok, Valguero変種:Aberration, Astraeos, Valguero",
    "temperament": "臆病",
@@ -9357,6 +11888,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -9390,6 +11923,18 @@
    "damage": 10,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 44,
+    "stamina": 15,
+    "oxygen": 15,
+    "food": 150,
+    "weight": 3.6,
+    "damage": 0.5,
+    "torpor": 13.2
+   },
+   "tamed": null
+  },
   "ja": {
    "wildMaps": "Aberration",
    "temperament": "攻撃的",
@@ -9402,6 +11947,8 @@
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": "ja",
+   "wildMaps": "cargo",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -9424,10 +11971,13 @@
   "breeding": null,
   "taming": null,
   "stats": null,
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": null,
+   "wildMaps": null,
    "ja": null,
    "nameJa": "manual"
   }
@@ -9446,7 +11996,9 @@
   "rideable": false,
   "saddle": null,
   "saddleLevel": null,
-  "wildMaps": null,
+  "wildMaps": [
+   "Lost Colony"
+  ],
   "breeding": null,
   "taming": null,
   "stats": {
@@ -9456,8 +12008,19 @@
    "food": 1600,
    "weight": 280,
    "torpor": 1500,
-   "damage": 100,
+   "damage": 28,
    "speed": null
+  },
+  "growth": {
+   "wild": {
+    "health": 2700,
+    "stamina": 11.25,
+    "oxygen": 15,
+    "food": 160,
+    "weight": 5.6,
+    "damage": 5
+   },
+   "tamed": null
   },
   "ja": {
    "wildMaps": "Lost Colony",
@@ -9468,6 +12031,8 @@
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": "ja+cargo",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "manual"
   }
@@ -9515,10 +12080,13 @@
    "damage": 4,
    "speed": 100
   },
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": "dv",
+   "stats": "cargo",
+   "wildMaps": "cargo",
    "ja": null,
    "nameJa": "arkja"
   }
@@ -9537,7 +12105,10 @@
   "rideable": true,
   "saddle": null,
   "saddleLevel": null,
-  "wildMaps": null,
+  "wildMaps": [
+   "Scorched Earth",
+   "Astraeos"
+  ],
   "breeding": null,
   "taming": null,
   "stats": {
@@ -9549,6 +12120,23 @@
    "torpor": 10000,
    "damage": null,
    "speed": 0
+  },
+  "growth": {
+   "wild": {
+    "health": 4000,
+    "stamina": 10,
+    "oxygen": 15,
+    "food": 800,
+    "weight": 50,
+    "torpor": 1000
+   },
+   "tamed": {
+    "health": 3.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4
+   }
   },
   "ja": {
    "wildMaps": "Scorched Earth, Astraeos",
@@ -9563,6 +12151,8 @@
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": "ja+cargo",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "manual"
   }
@@ -9581,7 +12171,9 @@
   "rideable": true,
   "saddle": "Ossidon Saddle",
   "saddleLevel": 76,
-  "wildMaps": null,
+  "wildMaps": [
+   "Lost Colony"
+  ],
   "breeding": {
    "incubationSec": null,
    "gestationSec": 28571,
@@ -9603,6 +12195,26 @@
    "damage": 95,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 286,
+    "stamina": 42,
+    "oxygen": 15,
+    "food": 300,
+    "weight": 10,
+    "damage": 5,
+    "torpor": 93
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "Lost Colony",
    "temperament": "攻撃的",
@@ -9616,6 +12228,8 @@
   "sources": {
    "breeding": "ja(gestationSec,maturationSec)",
    "taming": null,
+   "stats": "ja",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "manual"
   }
@@ -9636,16 +12250,18 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
-   "Ragnarok",
    "Aberration",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": null,
@@ -9682,6 +12298,26 @@
    "damage": 10,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 8,
+    "stamina": 18,
+    "oxygen": 60,
+    "food": 40,
+    "weight": 0.6,
+    "damage": 0.4,
+    "torpor": 21
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "原種The Island, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Astraeos",
    "temperament": "受動的",
@@ -9695,6 +12331,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -9717,10 +12355,13 @@
   "breeding": null,
   "taming": null,
   "stats": null,
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": null,
+   "wildMaps": null,
    "ja": null,
    "nameJa": "arkja"
   }
@@ -9741,15 +12382,18 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
-   "Ragnarok",
+   "Aberration",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": 4090.581787,
@@ -9862,6 +12506,26 @@
    "damage": 12,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 28,
+    "stamina": 12,
+    "oxygen": 15,
+    "food": 90,
+    "weight": 2,
+    "damage": 0.6,
+    "torpor": 7.5
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "原種：The Island, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Astraeos, Valguero",
    "temperament": "逃走",
@@ -9876,6 +12540,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -9896,17 +12562,19 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
    "Aberration",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": null,
@@ -9950,6 +12618,26 @@
    "damage": 5,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 20,
+    "stamina": 10,
+    "oxygen": 15,
+    "food": 120,
+    "weight": 1.8,
+    "damage": 0.25,
+    "torpor": 5.1
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Astraeos, Valguero",
    "temperament": "臆病",
@@ -9963,6 +12651,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -9983,15 +12673,17 @@
   "saddleLevel": 27,
   "wildMaps": [
    "The Island",
-   "The Center",
-   "Ragnarok",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": 8999.280273,
@@ -10047,6 +12739,26 @@
    "damage": 28,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 75,
+    "stamina": 15,
+    "oxygen": 15,
+    "food": 300,
+    "weight": 7.4,
+    "damage": 1.4,
+    "torpor": 15
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 2.5
+   }
+  },
   "ja": {
    "wildMaps": "The Island, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
    "temperament": "中立",
@@ -10061,6 +12773,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -10079,7 +12793,10 @@
   "rideable": true,
   "saddle": "Palaeoctopus Saddle",
   "saddleLevel": 65,
-  "wildMaps": null,
+  "wildMaps": [
+   "Genesis: Part 1",
+   "Astraeos"
+  ],
   "breeding": null,
   "taming": null,
   "stats": {
@@ -10092,6 +12809,7 @@
    "damage": 60,
    "speed": 100
   },
+  "growth": null,
   "ja": {
    "wildMaps": "Genesis: Part 1, Astraeos",
    "temperament": "擬態中：テリトリー型回遊中：臆病",
@@ -10106,6 +12824,8 @@
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": "cargo",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "manual"
   }
@@ -10126,15 +12846,15 @@
   "saddleLevel": 41,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
    "Aberration",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
    "Fjordur"
   ],
@@ -10188,10 +12908,13 @@
    "damage": 45,
    "speed": 100
   },
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "cargo",
+   "wildMaps": "cargo",
    "ja": null,
    "nameJa": "arkja"
   }
@@ -10228,10 +12951,13 @@
    "damage": 23,
    "speed": 100
   },
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": "cargo",
+   "wildMaps": "cargo",
    "ja": null,
    "nameJa": "arkja"
   }
@@ -10250,7 +12976,9 @@
   "rideable": false,
   "saddle": null,
   "saddleLevel": null,
-  "wildMaps": null,
+  "wildMaps": [
+   "Genesis: Part 1"
+  ],
   "breeding": null,
   "taming": null,
   "stats": {
@@ -10259,9 +12987,27 @@
    "oxygen": 150,
    "food": 1000,
    "weight": 65,
-   "torpor": 100,
+   "torpor": 500,
    "damage": 15,
    "speed": 100
+  },
+  "growth": {
+   "wild": {
+    "health": 30,
+    "stamina": 15,
+    "oxygen": 15,
+    "food": 100,
+    "weight": 1.3,
+    "torpor": 30
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7
+   }
   },
   "ja": {
    "wildMaps": "Genesis: Part 1",
@@ -10273,6 +13019,8 @@
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": "ja+cargo",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "manual"
   }
@@ -10293,15 +13041,18 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
+   "Extinction",
+   "Genesis: Part 1",
+   "Genesis: Part 2",
    "Ragnarok",
    "Valguero",
-   "Genesis: Part 1",
+   "The Center",
    "Crystal Isles",
-   "Genesis: Part 2",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": 4090.581787,
@@ -10352,6 +13103,26 @@
    "damage": 10,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 24,
+    "stamina": 10,
+    "oxygen": 15,
+    "food": 45,
+    "weight": 1.1,
+    "damage": 0.5,
+    "torpor": 1.8
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
    "temperament": "攻撃的",
@@ -10362,6 +13133,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -10382,13 +13155,14 @@
   "saddleLevel": 43,
   "wildMaps": [
    "The Island",
-   "The Center",
+   "Genesis: Part 1",
    "Ragnarok",
    "Valguero",
-   "Genesis: Part 1",
+   "The Center",
    "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos"
   ],
   "breeding": {
    "incubationSec": 5999.520508,
@@ -10431,6 +13205,25 @@
    "damage": 16,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 48,
+    "stamina": 9,
+    "oxygen": 15,
+    "food": 120,
+    "weight": 3,
+    "damage": 0.8,
+    "torpor": 7.2
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 4,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 3,
+    "damage": 1.275
+   }
+  },
   "ja": {
    "wildMaps": "The Island, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
    "temperament": "中立",
@@ -10443,6 +13236,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -10463,15 +13258,17 @@
   "saddleLevel": 5,
   "wildMaps": [
    "The Island",
-   "The Center",
-   "Ragnarok",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": null,
@@ -10523,6 +13320,26 @@
    "damage": 10,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 60,
+    "stamina": 30,
+    "oxygen": 15,
+    "food": 300,
+    "weight": 4,
+    "damage": 0.5,
+    "torpor": 14.4
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "The Island, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
    "temperament": "臆病",
@@ -10537,6 +13354,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -10556,7 +13375,8 @@
   "saddle": "None",
   "saddleLevel": null,
   "wildMaps": [
-   "Scorched Earth"
+   "Scorched Earth",
+   "Astraeos"
   ],
   "breeding": {
    "incubationSec": 33,
@@ -10593,6 +13413,26 @@
    "damage": 14,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 128,
+    "stamina": 35.2,
+    "oxygen": 15,
+    "food": 150,
+    "weight": 6.48,
+    "damage": 0.7,
+    "torpor": 12
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 0
+   }
+  },
   "ja": {
    "wildMaps": "Scorched Earth, Astraeos",
    "temperament": "中立",
@@ -10604,6 +13444,8 @@
   "sources": {
    "breeding": "ja(incubationSec,maturationSec)",
    "taming": "dv",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -10626,10 +13468,13 @@
   "breeding": null,
   "taming": null,
   "stats": null,
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": null,
+   "wildMaps": null,
    "ja": null,
    "nameJa": null
   }
@@ -10650,14 +13495,15 @@
   "saddleLevel": 64,
   "wildMaps": [
    "The Island",
-   "The Center",
+   "Genesis: Part 1",
+   "Genesis: Part 2",
    "Ragnarok",
    "Valguero",
-   "Genesis: Part 1",
+   "The Center",
    "Crystal Isles",
-   "Genesis: Part 2",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos"
   ],
   "breeding": {
    "incubationSec": null,
@@ -10706,6 +13552,23 @@
    "damage": 75,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 288,
+    "stamina": 80,
+    "food": 500,
+    "weight": 16,
+    "damage": 3.75,
+    "torpor": 96
+   },
+   "tamed": {
+    "health": 3.24,
+    "stamina": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7
+   }
+  },
   "ja": {
    "wildMaps": "The Island, Genesis: Part 1, The Center, Astraeos, Ragnarok",
    "temperament": "攻撃的",
@@ -10720,6 +13583,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja+cargo",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -10740,16 +13605,17 @@
   "saddleLevel": 23,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos"
   ],
   "breeding": {
    "incubationSec": null,
@@ -10798,6 +13664,26 @@
    "damage": 20,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 80,
+    "stamina": 35,
+    "oxygen": 15,
+    "food": 150,
+    "weight": 11,
+    "damage": 1,
+    "torpor": 21
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "The Island, Scorched Earth, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
    "temperament": "臆病",
@@ -10812,6 +13698,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -10832,15 +13720,17 @@
   "saddleLevel": 38,
   "wildMaps": [
    "The Island",
-   "The Center",
-   "Ragnarok",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": 5999.520508,
@@ -10889,6 +13779,25 @@
    "damage": 18,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 42,
+    "stamina": 7.5,
+    "oxygen": 15,
+    "food": 120,
+    "weight": 2.4,
+    "damage": 0.9,
+    "torpor": 7.2
+   },
+   "tamed": {
+    "health": 3,
+    "stamina": 4,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 3,
+    "damage": 1.275
+   }
+  },
   "ja": {
    "wildMaps": "The Island, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
    "temperament": "臆病",
@@ -10903,6 +13812,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -10923,17 +13834,19 @@
   "saddleLevel": 22,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
    "Aberration",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": 7199.42405,
@@ -10984,6 +13897,26 @@
    "damage": 15,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 56,
+    "stamina": 20,
+    "oxygen": 15,
+    "food": 150,
+    "weight": 4,
+    "damage": 0.75,
+    "torpor": 9
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Valguero",
    "temperament": "攻撃的",
@@ -10998,6 +13931,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -11018,17 +13953,19 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
    "Aberration",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": null,
@@ -11082,6 +14019,26 @@
    "damage": 32,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 55,
+    "stamina": 30,
+    "oxygen": 15,
+    "food": 400,
+    "weight": 8,
+    "damage": 1.6,
+    "torpor": 30
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration",
    "temperament": "攻撃的",
@@ -11095,6 +14052,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -11113,7 +14072,15 @@
   "rideable": true,
   "saddle": null,
   "saddleLevel": null,
-  "wildMaps": null,
+  "wildMaps": [
+   "Scorched Earth",
+   "Aberration",
+   "Genesis: Part 1",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Astraeos"
+  ],
   "breeding": {
    "incubationSec": null,
    "gestationSec": 8628,
@@ -11135,6 +14102,25 @@
    "damage": 35,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 120,
+    "stamina": 35,
+    "oxygen": 15,
+    "food": 100,
+    "weight": 5.6,
+    "damage": 1.75,
+    "torpor": 30
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7
+   }
+  },
   "ja": {
    "wildMaps": "Scorched Earth, Aberration, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
    "temperament": "攻撃的",
@@ -11149,6 +14135,8 @@
   "sources": {
    "breeding": "ja(gestationSec,maturationSec)",
    "taming": null,
+   "stats": "ja+cargo",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "manual"
   }
@@ -11169,17 +14157,19 @@
   "saddleLevel": 18,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
    "Aberration",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": 7199.423828,
@@ -11228,6 +14218,26 @@
    "damage": 15,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 40,
+    "stamina": 15,
+    "oxygen": 15,
+    "food": 120,
+    "weight": 2.8,
+    "damage": 0.75,
+    "torpor": 10.8
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1.5
+   }
+  },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Astraeos, ValgueroTEK種：Extinction, Genesis: Part 1, AstraeosX種：Genesis: Part 1",
    "temperament": "攻撃的",
@@ -11240,6 +14250,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -11260,12 +14272,13 @@
   "saddleLevel": 47,
   "wildMaps": [
    "Aberration",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Valguero",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos"
   ],
   "breeding": {
    "incubationSec": null,
@@ -11322,6 +14335,26 @@
    "damage": 25,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 80,
+    "stamina": 35,
+    "oxygen": 15,
+    "food": 120,
+    "weight": 10,
+    "damage": 1,
+    "torpor": 30
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.36,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "Aberration, Genesis: Part 1,Astraeos, Valguero",
    "temperament": "攻撃的",
@@ -11335,6 +14368,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -11357,7 +14392,9 @@
    "Aberration",
    "Extinction",
    "Genesis: Part 1",
-   "Genesis: Part 2"
+   "Genesis: Part 2",
+   "Valguero",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": null,
@@ -11380,6 +14417,26 @@
    "damage": 75,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 234,
+    "stamina": 48,
+    "oxygen": 15,
+    "food": 300,
+    "weight": 8.3,
+    "damage": 3.75,
+    "torpor": 55.5
+   },
+   "tamed": {
+    "health": 2.7,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "原種：Aberration,Valguero,Lost Colonyサーフェス種（テイム不可）：Aberration, Genesis: Part 1プリンス（テイム不可）：Genesis: Part 1（ミッション）",
    "temperament": "攻撃的",
@@ -11393,6 +14450,8 @@
   "sources": {
    "breeding": "dv",
    "taming": null,
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -11413,16 +14472,18 @@
   "saddleLevel": 74,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": 17998.560547,
@@ -11471,6 +14532,26 @@
    "damage": 62,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 220,
+    "stamina": 42,
+    "oxygen": 15,
+    "food": 300,
+    "weight": 10,
+    "damage": 3.1,
+    "torpor": 93
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, ValgueroTEK種：Extinction, Genesis: Part 1, AstraeosX種：Genesis: Part 1",
    "temperament": "攻撃的",
@@ -11485,6 +14566,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -11506,7 +14589,9 @@
   "wildMaps": [
    "Aberration",
    "Extinction",
-   "Fjordur"
+   "Valguero",
+   "Fjordur",
+   "Astraeos"
   ],
   "breeding": {
    "incubationSec": 22498.201172,
@@ -11543,6 +14628,25 @@
    "damage": 60,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 165.75,
+    "stamina": 22.5,
+    "oxygen": 15,
+    "food": 200,
+    "weight": 8,
+    "damage": 3,
+    "torpor": 43.5
+   },
+   "tamed": {
+    "health": 4.05,
+    "stamina": 5,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7
+   }
+  },
   "ja": {
    "wildMaps": "Aberration, Valguero, Astraeos",
    "temperament": "攻撃的",
@@ -11555,6 +14659,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -11575,14 +14681,15 @@
   "saddleLevel": 70,
   "wildMaps": [
    "Scorched Earth",
-   "Ragnarok",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos"
   ],
   "breeding": null,
   "taming": {
@@ -11632,6 +14739,24 @@
    "damage": 120,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 312.5,
+    "stamina": 30,
+    "food": 600,
+    "weight": 13.2,
+    "damage": 6,
+    "torpor": 100
+   },
+   "tamed": {
+    "health": 2.7,
+    "stamina": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "原種：Scorched Earth, Astraeos, Ragnarok, ExtinctionX種：Genesis: Part 1チョークエレメンタル：Valgueroアイスエレメンタル：Valguero, Genesis: Part 1スクラップエレメンタル：Club ARKミッション「Mad Mark」アルファ報酬（確率で入手）",
    "temperament": "テリトリー型",
@@ -11644,6 +14769,8 @@
   "sources": {
    "breeding": null,
    "taming": "dv+tamingTable",
+   "stats": "ja+cargo",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -11666,10 +14793,13 @@
   "breeding": null,
   "taming": null,
   "stats": null,
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": null,
+   "wildMaps": null,
    "ja": null,
    "nameJa": "arkja"
   }
@@ -11692,10 +14822,13 @@
   "breeding": null,
   "taming": null,
   "stats": null,
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": null,
+   "wildMaps": null,
    "ja": null,
    "nameJa": "arkja"
   }
@@ -11716,10 +14849,11 @@
   "saddleLevel": 58,
   "wildMaps": [
    "Aberration",
-   "Valguero",
    "Genesis: Part 1",
    "Genesis: Part 2",
-   "Fjordur"
+   "Valguero",
+   "Fjordur",
+   "Astraeos"
   ],
   "breeding": {
    "incubationSec": null,
@@ -11767,6 +14901,26 @@
    "damage": 42,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 170,
+    "stamina": 30,
+    "oxygen": 15,
+    "food": 300,
+    "weight": 8,
+    "damage": 2.1,
+    "torpor": 48
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 2
+   }
+  },
   "ja": {
    "wildMaps": "Aberration, Genesis: Part 1, Astraeos, Valguero",
    "temperament": "中立",
@@ -11780,6 +14934,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -11825,10 +14981,13 @@
    "specialFoodValues": null
   },
   "stats": null,
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": "dv",
    "taming": "dv",
+   "stats": null,
+   "wildMaps": null,
    "ja": null,
    "nameJa": null
   }
@@ -11849,16 +15008,18 @@
   "saddleLevel": 37,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": null,
@@ -11907,6 +15068,26 @@
    "damage": 29,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 50,
+    "stamina": 20,
+    "oxygen": 15,
+    "food": 120,
+    "weight": 4,
+    "damage": 1.45,
+    "torpor": 30
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, ValgueroX種：Genesis: Part 1",
    "temperament": "攻撃的",
@@ -11921,6 +15102,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -11941,14 +15124,14 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
-   "Ragnarok",
    "Aberration",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
    "Fjordur"
   ],
@@ -11978,6 +15161,17 @@
    "damage": 4,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 13,
+    "stamina": 10,
+    "food": 10,
+    "weight": 0.36,
+    "damage": 0.2,
+    "torpor": 0.9
+   },
+   "tamed": null
+  },
   "ja": {
    "wildMaps": "原種：変種：X種：",
    "temperament": "中立",
@@ -11990,6 +15184,8 @@
   "sources": {
    "breeding": null,
    "taming": "dv",
+   "stats": "ja+cargo",
+   "wildMaps": "cargo",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -12024,10 +15220,21 @@
    "damage": 0,
    "speed": 0.5
   },
+  "growth": {
+   "wild": {
+    "health": 0.225,
+    "stamina": 180,
+    "food": 3.5,
+    "torpor": 0
+   },
+   "tamed": null
+  },
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": "ja",
+   "wildMaps": "cargo",
    "ja": null,
    "nameJa": "arkja"
   }
@@ -12048,10 +15255,10 @@
   "saddleLevel": null,
   "wildMaps": [
    "Aberration",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Valguero",
+   "Crystal Isles",
    "Lost Island",
    "Fjordur"
   ],
@@ -12067,6 +15274,18 @@
    "damage": 10,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 50,
+    "stamina": 10,
+    "oxygen": 15,
+    "food": 150,
+    "weight": 1,
+    "damage": 0.5,
+    "torpor": 12
+   },
+   "tamed": null
+  },
   "ja": {
    "temperament": "攻撃的",
    "drops": "生肉 , 皮",
@@ -12077,6 +15296,8 @@
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": "ja",
+   "wildMaps": "cargo",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -12134,10 +15355,13 @@
    "damage": 35,
    "speed": 100
   },
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": "dv",
    "taming": "dv",
+   "stats": "cargo",
+   "wildMaps": "cargo",
    "ja": null,
    "nameJa": "arkja"
   }
@@ -12160,10 +15384,13 @@
   "breeding": null,
   "taming": null,
   "stats": null,
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": null,
+   "wildMaps": null,
    "ja": null,
    "nameJa": null
   }
@@ -12182,7 +15409,9 @@
   "rideable": true,
   "saddle": "Shastasaurus Submarine Saddle",
   "saddleLevel": 100,
-  "wildMaps": null,
+  "wildMaps": [
+   "The Center"
+  ],
   "breeding": null,
   "taming": null,
   "stats": {
@@ -12190,10 +15419,24 @@
    "stamina": 300,
    "oxygen": null,
    "food": 8000,
-   "weight": 3000,
+   "weight": 1300,
    "torpor": 3000,
-   "damage": 70,
+   "damage": 75,
    "speed": 100
+  },
+  "growth": {
+   "wild": {
+    "health": 432,
+    "stamina": 30,
+    "food": 800,
+    "weight": 26,
+    "damage": 3.75
+   },
+   "tamed": {
+    "stamina": 10,
+    "food": 10,
+    "weight": 4
+   }
   },
   "ja": {
    "wildMaps": "The Center",
@@ -12208,6 +15451,8 @@
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": "ja+cargo",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -12299,6 +15544,21 @@
    "damage": 12,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 23,
+    "food": 45,
+    "weight": 2,
+    "speed": 1,
+    "torpor": 3.6
+   },
+   "tamed": {
+    "health": 5.4,
+    "food": 10,
+    "weight": 4,
+    "speed": 130
+   }
+  },
   "ja": {
    "wildMaps": "Aberration",
    "temperament": "逃走",
@@ -12311,6 +15571,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja+cargo",
+   "wildMaps": "cargo",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -12342,10 +15604,13 @@
    "damage": 100,
    "speed": 100
   },
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": "cargo",
+   "wildMaps": null,
    "ja": null,
    "nameJa": null
   }
@@ -12417,6 +15682,25 @@
    "damage": 25,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 65,
+    "stamina": 35,
+    "oxygen": 15,
+    "food": 200,
+    "weight": 7.5,
+    "damage": 1.25,
+    "torpor": 36
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7
+   }
+  },
   "ja": {
    "wildMaps": "Extinction",
    "temperament": "攻撃的",
@@ -12429,6 +15713,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -12447,7 +15733,9 @@
   "rideable": true,
   "saddle": "Solwyn Saddle",
   "saddleLevel": 58,
-  "wildMaps": null,
+  "wildMaps": [
+   "Lost Colony"
+  ],
   "breeding": null,
   "taming": null,
   "stats": {
@@ -12459,6 +15747,26 @@
    "torpor": 450,
    "damage": 32,
    "speed": 100
+  },
+  "growth": {
+   "wild": {
+    "health": 130,
+    "stamina": 40,
+    "oxygen": 15,
+    "food": 120,
+    "weight": 7.5,
+    "damage": 1.6,
+    "torpor": 27
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
   },
   "ja": {
    "wildMaps": "Lost Colony",
@@ -12472,6 +15780,8 @@
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": "ja",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "wikiwiki"
   }
@@ -12492,14 +15802,14 @@
   "saddleLevel": 26,
   "wildMaps": [
    "The Island",
-   "The Center",
-   "Ragnarok",
    "Aberration",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
    "Fjordur"
   ],
@@ -12553,6 +15863,25 @@
    "damage": 42,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 130,
+    "stamina": 30,
+    "oxygen": 15,
+    "food": 600,
+    "weight": 10,
+    "damage": 2.1,
+    "torpor": 30
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7
+   }
+  },
   "ja": {
    "wildMaps": "The Island, The Center",
    "temperament": "中立",
@@ -12566,6 +15895,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja+cargo",
+   "wildMaps": "cargo",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -12599,10 +15930,13 @@
    "damage": 0,
    "speed": 100
   },
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": "cargo",
+   "wildMaps": "cargo",
    "ja": null,
    "nameJa": "arkja"
   }
@@ -12623,14 +15957,14 @@
   "saddleLevel": 55,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
    "Fjordur"
   ],
@@ -12681,6 +16015,25 @@
    "damage": 18,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 55.25,
+    "stamina": 12.5,
+    "oxygen": 15,
+    "food": 160,
+    "weight": 5.6,
+    "damage": 0.9,
+    "torpor": 27
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 6,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7
+   }
+  },
   "ja": {
    "wildMaps": "The Island, The Center, Scorched Earth",
    "temperament": "逃走",
@@ -12694,6 +16047,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -12741,10 +16096,13 @@
    "damage": 68,
    "speed": 100
   },
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": "dv",
+   "stats": "cargo",
+   "wildMaps": "cargo",
    "ja": null,
    "nameJa": "arkja"
   }
@@ -12765,14 +16123,14 @@
   "saddleLevel": 33,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
    "Fjordur"
   ],
@@ -12823,6 +16181,26 @@
    "damage": 18,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 54,
+    "stamina": 16,
+    "oxygen": 15,
+    "food": 150,
+    "weight": 2.4,
+    "damage": 0.9,
+    "torpor": 18
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "temperament": "攻撃的",
    "diet": "肉食",
@@ -12835,6 +16213,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -12857,10 +16237,13 @@
   "breeding": null,
   "taming": null,
   "stats": null,
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": null,
+   "wildMaps": null,
    "ja": null,
    "nameJa": "manual"
   }
@@ -12881,13 +16264,14 @@
   "saddleLevel": 40,
   "wildMaps": [
    "Scorched Earth",
-   "Ragnarok",
    "Extinction",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos"
   ],
   "breeding": {
    "incubationSec": 8999.280273,
@@ -12977,6 +16361,26 @@
    "damage": 40,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 52,
+    "stamina": 35,
+    "oxygen": 15,
+    "food": 120,
+    "weight": 6,
+    "damage": 2,
+    "torpor": 27
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "スコーチドアース、エクスティンクション、アストレオス",
    "temperament": "攻撃的",
@@ -12988,6 +16392,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -13006,7 +16412,9 @@
   "rideable": false,
   "saddle": null,
   "saddleLevel": null,
-  "wildMaps": null,
+  "wildMaps": [
+   "Lost Colony"
+  ],
   "breeding": null,
   "taming": null,
   "stats": {
@@ -13018,6 +16426,24 @@
    "torpor": 180,
    "damage": 100,
    "speed": 100
+  },
+  "growth": {
+   "wild": {
+    "health": 40,
+    "stamina": 15,
+    "oxygen": 15,
+    "food": 120,
+    "weight": 2.8,
+    "damage": 5
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7
+   }
   },
   "ja": {
    "wildMaps": "Lost Colony",
@@ -13032,6 +16458,8 @@
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": "ja+cargo",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "manual"
   }
@@ -13052,13 +16480,13 @@
   "saddleLevel": 51,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
    "Extinction",
-   "Valguero",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
    "Fjordur"
   ],
@@ -13154,6 +16582,26 @@
    "damage": 40,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 140,
+    "stamina": 40,
+    "oxygen": 20,
+    "food": 150,
+    "weight": 8,
+    "damage": 2,
+    "torpor": 42
+   },
+   "tamed": {
+    "health": 3.78,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "temperament": "攻撃的",
    "diet": "肉食",
@@ -13166,6 +16614,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -13184,7 +16634,10 @@
   "rideable": true,
   "saddle": "Tidepup Saddle",
   "saddleLevel": 36,
-  "wildMaps": null,
+  "wildMaps": [
+   "Genesis: Part 1",
+   "Astraeos"
+  ],
   "breeding": null,
   "taming": null,
   "stats": {
@@ -13197,6 +16650,24 @@
    "damage": 6,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 20,
+    "stamina": 10,
+    "food": 90,
+    "weight": 3,
+    "damage": 0.3,
+    "torpor": 12
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "Genesis: Part 1, Astraeos",
    "diet": "肉食",
@@ -13208,6 +16679,8 @@
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": "ja",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "manual"
   }
@@ -13228,15 +16701,15 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
    "Aberration",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
    "Fjordur"
   ],
@@ -13313,9 +16786,27 @@
    "oxygen": null,
    "food": 1200,
    "weight": 150,
-   "torpor": 175,
+   "torpor": 170,
    "damage": 30,
    "speed": 100
+  },
+  "growth": {
+   "wild": {
+    "health": 34,
+    "stamina": 15,
+    "food": 120,
+    "weight": 3,
+    "damage": 1.5,
+    "torpor": 10.5
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
   },
   "ja": {
    "temperament": "攻撃的",
@@ -13329,6 +16820,8 @@
   "sources": {
    "breeding": null,
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -13349,9 +16842,9 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
    "Ragnarok",
+   "The Center",
    "Crystal Isles",
    "Lost Island",
    "Fjordur"
@@ -13379,8 +16872,28 @@
    "food": 8640,
    "weight": 50000,
    "torpor": 25000,
-   "damage": 1000,
+   "damage": 1550,
    "speed": 100
+  },
+  "growth": {
+   "wild": {
+    "health": 0,
+    "stamina": 0,
+    "oxygen": 0,
+    "food": 0,
+    "weight": 0,
+    "damage": 0,
+    "torpor": 1500
+   },
+   "tamed": {
+    "health": 0,
+    "stamina": 0,
+    "oxygen": 0,
+    "food": 0,
+    "weight": 0,
+    "damage": 0,
+    "speed": 0
+   }
   },
   "ja": {
    "wildMaps": "The Island, Scorched Earth, The Center, Ragnarok",
@@ -13395,6 +16908,8 @@
   "sources": {
    "breeding": null,
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -13415,16 +16930,19 @@
   "saddleLevel": 16,
   "wildMaps": [
    "The Island",
-   "The Center",
-   "Ragnarok",
+   "Scorched Earth",
    "Aberration",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": 8999.280273,
@@ -13476,6 +16994,26 @@
    "damage": 32,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 75,
+    "stamina": 15,
+    "oxygen": 15,
+    "food": 300,
+    "weight": 7.3,
+    "damage": 1.6,
+    "torpor": 15
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1.5
+   }
+  },
   "ja": {
    "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony,The Center, Astraeos, Ragnarok, Valguero変種：Aberration",
    "temperament": "中立",
@@ -13490,6 +17028,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -13510,13 +17050,13 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
-   "Ragnarok",
    "Aberration",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
    "Fjordur"
   ],
@@ -13543,8 +17083,19 @@
    "food": 450,
    "weight": 150,
    "torpor": 50,
-   "damage": 0,
+   "damage": 8,
    "speed": 100
+  },
+  "growth": {
+   "wild": {
+    "health": 32,
+    "stamina": 10,
+    "food": 45,
+    "weight": 3,
+    "damage": 0.4,
+    "torpor": 3
+   },
+   "tamed": null
   },
   "ja": {
    "temperament": "臆病",
@@ -13557,6 +17108,8 @@
   "sources": {
    "breeding": null,
    "taming": "dv",
+   "stats": "ja+cargo",
+   "wildMaps": "cargo",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -13577,13 +17130,13 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
    "Extinction",
-   "Valguero",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
    "Fjordur"
   ],
@@ -13616,11 +17169,30 @@
    "health": 200,
    "stamina": 150,
    "oxygen": 150,
-   "food": 200,
+   "food": 100,
    "weight": 140,
    "torpor": 180,
    "damage": 7,
    "speed": 100
+  },
+  "growth": {
+   "wild": {
+    "health": 40,
+    "stamina": 15,
+    "oxygen": 15,
+    "food": 10,
+    "weight": 2.8,
+    "damage": 0.5,
+    "torpor": 10.8
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7
+   }
   },
   "ja": {
    "temperament": "攻撃的",
@@ -13634,6 +17206,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv",
+   "stats": "ja+cargo",
+   "wildMaps": "cargo",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -13691,10 +17265,13 @@
    "damage": 18,
    "speed": 100
   },
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": "dv",
    "taming": "dv",
+   "stats": "cargo",
+   "wildMaps": "cargo",
    "ja": null,
    "nameJa": "arkja"
   }
@@ -13715,12 +17292,12 @@
   "saddleLevel": 91,
   "wildMaps": [
    "The Island",
-   "The Center",
+   "Genesis: Part 1",
+   "Genesis: Part 2",
    "Ragnarok",
    "Valguero",
-   "Genesis: Part 1",
+   "The Center",
    "Crystal Isles",
-   "Genesis: Part 2",
    "Lost Island",
    "Fjordur"
   ],
@@ -13841,6 +17418,24 @@
    "damage": 65,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 540,
+    "stamina": 30,
+    "food": 320,
+    "weight": 16,
+    "damage": 3.25,
+    "torpor": 108
+   },
+   "tamed": {
+    "health": 4.05,
+    "stamina": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "temperament": "攻撃的",
    "diet": "肉食、黒真珠",
@@ -13853,6 +17448,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja+cargo",
+   "wildMaps": "cargo",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -13871,7 +17468,16 @@
   "rideable": true,
   "saddle": "Umbra Saddle",
   "saddleLevel": 65,
-  "wildMaps": null,
+  "wildMaps": [
+   "Scorched Earth",
+   "Extinction",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Astraeos",
+   "Lost Colony",
+   "Dragontopia"
+  ],
   "breeding": {
    "incubationSec": null,
    "gestationSec": 21978,
@@ -13893,6 +17499,22 @@
    "damage": 35,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 120,
+    "stamina": 32.5,
+    "oxygen": 15,
+    "food": 165,
+    "weight": 7,
+    "damage": 1.75,
+    "torpor": 45
+   },
+   "tamed": {
+    "health": 2.6,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "Dragontopia (Scorched Earth, Extinction, Lost Colony, The Center, Astraeos, Ragnarok, Valguero)",
    "breedingNote": "可。卵生※スキルツリー進行で繁殖可能になる。アンブラはオス個体しか存在しないため交配はルミナと行う",
@@ -13903,6 +17525,8 @@
   "sources": {
    "breeding": "ja(gestationSec,maturationSec)",
    "taming": null,
+   "stats": "ja",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "manual"
   }
@@ -13921,7 +17545,9 @@
   "rideable": false,
   "saddle": null,
   "saddleLevel": null,
-  "wildMaps": null,
+  "wildMaps": [
+   "Lost Colony"
+  ],
   "breeding": {
    "incubationSec": null,
    "gestationSec": 28571,
@@ -13940,8 +17566,28 @@
    "food": 1200,
    "weight": 200,
    "torpor": 450,
-   "damage": 11,
+   "damage": 7,
    "speed": 100
+  },
+  "growth": {
+   "wild": {
+    "health": 40,
+    "stamina": 26,
+    "oxygen": 15,
+    "food": 120,
+    "weight": 4,
+    "damage": 5,
+    "torpor": 27
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 2.5
+   }
   },
   "ja": {
    "wildMaps": "Lost Colony",
@@ -13956,6 +17602,8 @@
   "sources": {
    "breeding": "ja(gestationSec,maturationSec)",
    "taming": null,
+   "stats": "ja",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "wikiwiki"
   }
@@ -14026,6 +17674,26 @@
    "damage": 32,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 88,
+    "stamina": 32.5,
+    "oxygen": 22.5,
+    "food": 225,
+    "weight": 6.5,
+    "damage": 1.6,
+    "torpor": 24
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "temperament": "攻撃的",
    "drops": "生肉 , 皮",
@@ -14036,6 +17704,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -14092,10 +17762,13 @@
    "damage": 80,
    "speed": 100
   },
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": "dv",
    "taming": "dv",
+   "stats": "cargo",
+   "wildMaps": "cargo",
    "ja": null,
    "nameJa": "arkja"
   }
@@ -14116,9 +17789,9 @@
   "saddleLevel": null,
   "wildMaps": [
    "Scorched Earth",
+   "Genesis: Part 2",
    "Ragnarok",
    "Crystal Isles",
-   "Genesis: Part 2",
    "Lost Island",
    "Fjordur"
   ],
@@ -14170,6 +17843,26 @@
    "damage": 23,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 25,
+    "stamina": 15,
+    "oxygen": 15,
+    "food": 90,
+    "weight": 1,
+    "damage": 1.15,
+    "torpor": 6
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 3
+   }
+  },
   "ja": {
    "temperament": "受動的（死体が近くにあると攻撃的になる）",
    "drops": "Spoiled Meat, Hide",
@@ -14179,6 +17872,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -14199,11 +17894,12 @@
   "saddleLevel": null,
   "wildMaps": [
    "Scorched Earth",
-   "Ragnarok",
    "Extinction",
+   "Ragnarok",
    "Valguero",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos"
   ],
   "breeding": {
    "incubationSec": 17998.560547,
@@ -14240,6 +17936,26 @@
    "damage": 80,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 194.25,
+    "stamina": 15.75,
+    "oxygen": 15,
+    "food": 180,
+    "weight": 8,
+    "damage": 4,
+    "torpor": 43.5
+   },
+   "tamed": {
+    "health": 3.24,
+    "stamina": 5,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 0
+   }
+  },
   "ja": {
    "wildMaps": "Scorched Earth, Astraeos, Ragnarok, Valguero",
    "temperament": "攻撃的",
@@ -14254,6 +17970,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -14272,7 +17990,9 @@
   "rideable": true,
   "saddle": "Xiphactinus Saddle",
   "saddleLevel": 60,
-  "wildMaps": null,
+  "wildMaps": [
+   "The Island"
+  ],
   "breeding": null,
   "taming": null,
   "stats": {
@@ -14284,6 +18004,23 @@
    "torpor": 1100,
    "damage": 23,
    "speed": 100
+  },
+  "growth": {
+   "wild": {
+    "health": 90,
+    "stamina": 42,
+    "food": 200,
+    "weight": 6,
+    "damage": 1.15,
+    "torpor": 66
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7
+   }
   },
   "ja": {
    "wildMaps": "The Island",
@@ -14297,6 +18034,8 @@
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": "ja+cargo",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -14315,7 +18054,9 @@
   "rideable": true,
   "saddle": "Yi Ling Saddle",
   "saddleLevel": 50,
-  "wildMaps": null,
+  "wildMaps": [
+   "Aberration"
+  ],
   "breeding": null,
   "taming": null,
   "stats": {
@@ -14325,8 +18066,27 @@
    "food": 1200,
    "weight": 140,
    "torpor": 180,
-   "damage": 23,
+   "damage": 20,
    "speed": 100
+  },
+  "growth": {
+   "wild": {
+    "health": 65,
+    "stamina": 30,
+    "oxygen": 15,
+    "food": 120,
+    "weight": 2.8,
+    "damage": 1,
+    "torpor": 10.8
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7
+   }
   },
   "ja": {
    "wildMaps": "Aberration",
@@ -14340,6 +18100,8 @@
   "sources": {
    "breeding": null,
    "taming": null,
+   "stats": "ja+cargo",
+   "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -14360,16 +18122,18 @@
   "saddleLevel": 80,
   "wildMaps": [
    "The Island",
-   "The Center",
    "Scorched Earth",
-   "Ragnarok",
    "Extinction",
-   "Valguero",
    "Genesis: Part 1",
-   "Crystal Isles",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": 17998.560547,
@@ -14423,6 +18187,26 @@
    "damage": 55,
    "speed": 100
   },
+  "growth": {
+   "wild": {
+    "health": 220,
+    "stamina": 42,
+    "oxygen": 15,
+    "food": 300,
+    "weight": 10,
+    "damage": 2.75,
+    "torpor": 93
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7,
+    "speed": 1
+   }
+  },
   "ja": {
    "wildMaps": "The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero",
    "temperament": "攻撃的",
@@ -14435,6 +18219,8 @@
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
+   "stats": "ja",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }

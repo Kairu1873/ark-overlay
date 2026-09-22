@@ -22,6 +22,11 @@ const FLOOR = {
   // 日本語名は ark.wiki.gg 日本語版のリダイレクトに頼っている。
   // 向こうの構成が変わると静かに全滅するので、下限を置いて検知する
   withNameJa: 150,
+  // ステータス・成長率・出現マップは日本語Wikiの表の書式に頼っている。
+  // 表が組み替えられると読めなくなるので、同じく下限を置く
+  withStats: 170,
+  withGrowth: 140,
+  withMaps: 160,
 };
 
 const problems = [];
@@ -100,6 +105,34 @@ async function main() {
     }
   }
 
+  const withStats = creatures.filter((c) => c.stats).length;
+  const withGrowth = creatures.filter((c) => c.growth).length;
+  const withMaps = creatures.filter((c) => c.wildMaps?.length).length;
+  if (withStats < FLOOR.withStats) {
+    fail(`ステータスを持つ生物が少なすぎます: ${withStats} < ${FLOOR.withStats}`);
+  }
+  if (withGrowth < FLOOR.withGrowth) {
+    fail(
+      `成長率を持つ生物が少なすぎます: ${withGrowth} < ${FLOOR.withGrowth}` +
+        '（日本語Wikiの「基礎値と成長率」表の書式が変わった可能性がある）',
+    );
+  }
+  if (withMaps < FLOOR.withMaps) {
+    fail(`出現マップを持つ生物が少なすぎます: ${withMaps} < ${FLOOR.withMaps}`);
+  }
+
+  // 成長率が基礎値を超えるのは、表記の揺れを読み違えたとき（「+2,75」を275と読むなど）に起きる。
+  // 落とすほどではないが黙って通すと気づけないので、件数を出す
+  const oddGrowth = [];
+  for (const c of creatures) {
+    for (const [field, per] of Object.entries(c.growth?.wild ?? {})) {
+      const base = c.stats?.[field];
+      if (Number.isFinite(base) && Number.isFinite(per) && base > 0 && per > base) {
+        oddGrowth.push(`${c.name}.${field}（基礎 ${base} / 成長 ${per}）`);
+      }
+    }
+  }
+
   const jaFilled = creatures.filter((c) => (c.sources?.breeding ?? '').includes('ja(')).length;
   if (jaFilled < FLOOR.jaFilled) {
     fail(
@@ -125,6 +158,13 @@ async function main() {
     if (!near(rex.breeding?.matingCooldownMinSec, 64800)) {
       fail(`Rex の交配クールダウンが想定外です: ${rex.breeding?.matingCooldownMinSec}（期待 64800 秒）`);
     }
+    // ステータスは日本語Wikiの表から採っている。列を取り違えると成長率を拾ってしまうため、
+    // 両Wikiで一致している Rex の値で固定する
+    for (const [field, expected] of [['health', 1100], ['weight', 500], ['torpor', 1550], ['speed', 100]]) {
+      if (rex.stats?.[field] !== expected) {
+        fail(`Rex の${field}が想定外です: ${rex.stats?.[field]}（期待 ${expected}）`);
+      }
+    }
   }
 
   // --- メタ情報 ---
@@ -135,9 +175,19 @@ async function main() {
   const asaNew = creatures.filter((c) => c.origin === 'asa').length;
   console.log(`生物 ${creatures.length}件（ASE由来 ${creatures.length - asaNew} / ASA新規 ${asaNew}）`);
   console.log(`  成体までの時間あり ${withMaturation} / テイム係数あり ${withTaming} / 日本語Wikiで穴埋め ${jaFilled}`);
-  console.log(`  日本語名あり ${withNameJa}`);
+  console.log(`  日本語名あり ${withNameJa} / ステータスあり ${withStats} / 成長率あり ${withGrowth} / 出現マップあり ${withMaps}`);
+  if (oddGrowth.length) {
+    console.log(`  成長率が基礎値を超えている箇所 ${oddGrowth.length}件: ${oddGrowth.slice(0, 5).join(' / ')}`);
+  }
+  if (meta.suspectSwaps?.length) {
+    console.log(`  2種の値が入れ替わっている疑い ${meta.suspectSwaps.length}組（英語側を採用）`);
+  }
+  if (meta.statConflicts?.length) {
+    console.log(`  ステータスが両Wikiで食い違い ${meta.statConflicts.length}件（日本語を採用）`);
+  }
   if (meta.conflicts?.length) {
-    console.log(`  両Wikiで食い違い ${meta.conflicts.length}件（英語側を採用）`);
+    const ja = meta.conflicts.filter((c) => c.adopted === 'ja').length;
+    console.log(`  繁殖時間が両Wikiで食い違い ${meta.conflicts.length}件（日本語を採用 ${ja} / 英語を採用 ${meta.conflicts.length - ja}）`);
   }
   console.log(`アイテム ${items.length}件 / テイム用の餌 ${Object.keys(tamingFood).length}品目`);
   console.log(`生成日時 ${meta.generatedAt}`);
