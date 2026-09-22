@@ -5,6 +5,7 @@
 import { loadData, onDataChanged, searchCreatures, findCreature, getData } from '../data/store.js';
 import { RATE_DEFS, normalizeRates } from '../data/rates.js';
 import { timersFor, matingCooldownMax, coverageOf } from '../data/resolve.js';
+import { tamingPlan, NARCOTIC_DEFS, DEFAULT_TAMING_LEVEL } from '../data/taming.js';
 
 const $ = (sel) => document.querySelector(sel);
 const esc = (s) =>
@@ -209,19 +210,57 @@ function kibbleLabel(value) {
   return KIBBLE_TIERS.includes(tier) ? `${tier} のキブル` : raw || null;
 }
 
+const tamingLevel = () => {
+  const v = Number(ctx.state.tamingLevel);
+  return Number.isFinite(v) && v >= 1 ? Math.floor(v) : DEFAULT_TAMING_LEVEL;
+};
+
+/** 餌の表示名。キブルの行だけ等級を添える */
+const foodLabel = (food, creature) =>
+  food === 'Kibble' ? kibbleLabel(creature.taming?.favoriteKibble) ?? 'キブル' : food;
+
+/** テイムに要る餌の数・時間・麻酔。計算は data/taming.js */
+function tamingRowsHtml(c) {
+  const plan = tamingPlan(c, getData().tamingFood, { level: tamingLevel(), rates: rates() });
+  if (!plan.rows.length) {
+    return `<p class="empty">テイムの数値データがない（英語Wikiに未収載）</p>`;
+  }
+  const passive = plan.method === 'passive';
+  return plan.rows
+    .map((row) => {
+      const meta = passive
+        ? [
+            ['給餌間隔', row.feedingInterval === null ? '—' : longDuration(Math.floor(row.feedingInterval))],
+            ['合計', longDuration(row.seconds)],
+          ]
+        : [
+            ['時間', longDuration(row.seconds)],
+            ...(row.narcotics
+              ? NARCOTIC_DEFS.map((d) => [d.label, String(row.narcotics[d.key])])
+              : []),
+          ];
+      return `<div class="tame${row.favorite ? ' fav' : ''}">
+        <div class="tame-head">
+          <span class="tame-food">${esc(foodLabel(row.food, c))}</span>
+          <span class="tame-count">${row.pieces}<em>個</em></span>
+          <button type="button" data-tame="${esc(row.food)}" class="primary">開始</button>
+        </div>
+        <div class="tame-meta">
+          ${meta.map(([k, v]) => `<span>${esc(k)} <b>${esc(v)}</b></span>`).join('')}
+        </div>
+      </div>`;
+    })
+    .join('');
+}
+
 function tamingHtml(c) {
-  const t = c.taming;
   if (!c.tameable) return '';
-  const rows = [
-    ['テイム方法', t?.method ? TAMING_METHOD_JA[t.method] ?? t.method : null],
-    ['好物キブル', t?.favoriteKibble ? kibbleLabel(t.favoriteKibble) : null],
-    ['好物', t?.favoriteFood],
-    ['食べる物', t?.eats?.length ? t.eats.join(' → ') : null],
-  ].filter(([, v]) => v);
-  if (!rows.length) return '';
+  const method = c.taming?.method ? TAMING_METHOD_JA[c.taming.method] ?? c.taming.method : null;
   return `<div class="dex-block">
-    <h4>テイム<em>餌の名前は英語Wikiの表記</em></h4>
-    ${rows.map(([k, v]) => `<p class="kv"><b>${esc(k)}</b>${esc(v)}</p>`).join('')}
+    <h4>テイム<em>${esc(method ?? '')}</em>
+      <label class="lv">Lv<input type="number" id="tamingLevel" min="1" max="999" value="${tamingLevel()}" /></label>
+    </h4>
+    <div id="tamingRows" class="tame-list">${tamingRowsHtml(c)}</div>
   </div>`;
 }
 
@@ -345,6 +384,18 @@ function bindEvents() {
       }
       return;
     }
+    const tame = e.target.closest('[data-tame]');
+    if (tame) {
+      const c = findCreature(selectedKey);
+      const plan = tamingPlan(c, getData().tamingFood, { level: tamingLevel(), rates: rates() });
+      const row = plan.rows.find((r) => r.food === tame.dataset.tame);
+      if (row?.seconds) {
+        ctx.startTimer(`${c.nameJa ?? c.name} テイム`, Math.round(row.seconds));
+        ctx.showTimers();
+      }
+      return;
+    }
+
     const edit = e.target.closest('[data-edit]');
     if (edit) {
       editingField = editingField === edit.dataset.edit ? null : edit.dataset.edit;
@@ -355,6 +406,18 @@ function bindEvents() {
     if (save) return saveOverride(save.dataset.save);
     const clear = e.target.closest('[data-clear]');
     if (clear) return clearOverride(clear.dataset.clear);
+  });
+
+  // レベルを変えたら表だけ描き直す。詳細ごと描き直すと入力欄から focus が外れるため
+  $('#creatureDetail').addEventListener('input', (e) => {
+    if (e.target.id !== 'tamingLevel') return;
+    const v = Number(e.target.value);
+    if (!Number.isFinite(v) || v < 1) return;
+    ctx.state.tamingLevel = Math.floor(v);
+    ctx.save();
+    const c = findCreature(selectedKey);
+    const rows = $('#tamingRows');
+    if (c && rows) rows.innerHTML = tamingRowsHtml(c);
   });
 
   $('#creatureDetail').addEventListener('keydown', (e) => {
