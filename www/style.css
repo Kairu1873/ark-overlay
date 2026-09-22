@@ -1,41 +1,66 @@
+/* ゲームに重ねて使うオーバーレイ。窓そのものが透過しているので、
+   背景は「黒を薄く敷く」だけにして、下のゲーム画面を透かせる。 */
 :root {
-  --bg: #0d121b;
-  --card: #151c28;
-  --card-2: #1c2533;
-  --line: #2a3547;
-  --text: #e6ecf5;
-  --muted: #8c9ab0;
-  --accent: #3f74b8;
-  --accent-text: #86aee0;
-  --accent-ink: #ffffff;
-  --ok: #6fd08c;
-  --danger: #e2685c;
+  --bg: rgba(0, 0, 0, .30);        /* 画面全体。ここが透過の濃さ */
+  --card: rgba(0, 0, 0, .46);      /* 文字を載せる面は少し濃く */
+  --card-2: rgba(0, 0, 0, .62);
+  --line: rgba(168, 255, 62, .30);
+  --text: #eaffd6;
+  --muted: #93a886;
+  --accent: #a8ff3e;
+  --accent-text: #c8ff7a;
+  --accent-ink: #0b1a00;
+  --ok: #7dff5e;
+  --danger: #ff7a5c;
+  --shade: rgba(0, 0, 0, .55);     /* 入力欄やバーの内側 */
   --radius: 14px;
 }
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-html, body { margin: 0; background: var(--bg); color: var(--text); }
+/* html を透明にしておかないと、窓の透過が効かない */
+html { margin: 0; background: transparent; }
 body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif;
   padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom);
   -webkit-user-select: none; user-select: none;
+  /* 明るいゲーム画面の上でも文字が沈まないように */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .85);
 }
 input { -webkit-user-select: text; user-select: text; }
 main { max-width: 640px; margin: 0 auto; padding: 0 16px 32px; }
 .top {
-  max-width: 640px; margin: 0 auto; padding: 16px 16px 8px;
-  display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+  max-width: 640px; margin: 0 auto; padding: 10px 12px 8px;
+  display: flex; align-items: center; gap: 8px; flex-wrap: nowrap;
+  /* 枠が無いので、ここをつかんで窓を動かす */
+  -webkit-app-region: drag;
 }
-h1 { margin: 0; font-size: 22px; letter-spacing: .04em; color: var(--accent-text); }
-h1 span { color: var(--text); margin-left: 6px; font-weight: 600; }
+.top button, .top input { -webkit-app-region: no-drag; }
+
+/* 枠なしウィンドウの操作ボタン（Electron のときだけ出す） */
+.win-ctl { display: flex; gap: 4px; flex-shrink: 0; }
+.win-ctl button {
+  min-width: 28px; padding: 5px 7px; font-size: 12px; line-height: 1;
+  background: var(--shade); color: var(--muted);
+}
+.win-ctl button:hover { color: var(--text); }
+.win-ctl #winPin.on { color: var(--accent-ink); background: var(--accent); border-color: var(--accent); font-weight: 700; }
+h1 {
+  margin: 0; font-size: 17px; letter-spacing: .04em; color: var(--accent);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0;
+}
+h1 span { color: var(--text); margin-left: 5px; font-weight: 600; }
 h2 { font-size: 14px; margin: 0; color: var(--muted); font-weight: 600; letter-spacing: .06em; }
 .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px; }
 .field { display: grid; gap: 6px; }
 .field span, .time span { font-size: 12px; color: var(--muted); }
 input {
   width: 100%; font: inherit; font-size: 17px; color: var(--text);
-  background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 11px 12px;
+  background: var(--shade); border: 1px solid var(--line); border-radius: 10px; padding: 11px 12px;
   outline: none;
 }
+input::placeholder { color: var(--muted); }
 input:focus { border-color: var(--accent); }
 .time { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 10px; }
 .time label { display: flex; align-items: center; gap: 6px; white-space: nowrap; }
@@ -47,6 +72,7 @@ button {
   font: inherit; font-size: 15px; color: var(--text); cursor: pointer;
   background: var(--card-2); border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px;
 }
+button:hover { border-color: var(--accent-text); }
 button:active { transform: scale(.97); }
 button.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); font-weight: 700; }
 button.danger { color: var(--danger); }
@@ -75,7 +101,7 @@ section { margin-top: 22px; }
 .timer h3 { margin: 0; font-size: 16px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .total { font-size: 12px; color: var(--muted); white-space: nowrap; }
 .remain { font-size: 40px; font-weight: 700; font-variant-numeric: tabular-nums; letter-spacing: .02em; margin: 4px 0 6px; }
-.bar { height: 5px; background: var(--bg); border-radius: 3px; overflow: hidden; }
+.bar { height: 5px; background: var(--shade); border-radius: 3px; overflow: hidden; }
 .bar i { display: block; height: 100%; width: 0; background: var(--accent); transition: width .25s linear; }
 .timer-foot { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
 .sub { font-size: 13px; color: var(--muted); }
@@ -86,7 +112,7 @@ section { margin-top: 22px; }
 .timer.done { border-color: var(--ok); animation: pulse 1.6s ease-in-out infinite; }
 .timer.done .remain, .timer.done .sub { color: var(--ok); }
 .timer.done .bar i { background: var(--ok); }
-@keyframes pulse { 50% { box-shadow: 0 0 0 4px rgba(111, 208, 140, .18); } }
+@keyframes pulse { 50% { box-shadow: 0 0 0 4px rgba(125, 255, 94, .22); } }
 input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; }
 
 /* ---------- 生物の詳細 ---------- */
@@ -126,9 +152,9 @@ input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; }
 }
 
 /* ---------- タブ ---------- */
-.tabs { display: flex; gap: 6px; }
-.tab { padding: 7px 14px; font-size: 14px; background: none; border-color: transparent; color: var(--muted); }
-.tab.on { background: var(--card-2); border-color: var(--line); color: var(--text); font-weight: 700; }
+.tabs { display: flex; gap: 5px; margin-left: auto; flex-shrink: 0; }
+.tab { padding: 6px 11px; font-size: 13px; background: var(--shade); border-color: transparent; color: var(--muted); }
+.tab.on { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); font-weight: 700; }
 
 /* ---------- 図鑑 ---------- */
 .dex-list { display: grid; gap: 6px; margin-top: 12px; }
@@ -172,3 +198,9 @@ input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; }
   padding: 1px 6px; border-radius: 8px;
   background: var(--card-2); color: var(--accent-text); font-size: 11px;
 }
+
+/* スクロールバーも半透明に馴染ませる */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: rgba(0, 0, 0, .25); }
+::-webkit-scrollbar-thumb { background: rgba(168, 255, 62, .35); border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(168, 255, 62, .6); }
