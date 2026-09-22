@@ -163,6 +163,8 @@ input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; }
 .tame-meta b { color: var(--text); font-weight: 600; font-variant-numeric: tabular-nums; }
 .dex-block h4 .lv { float: right; display: flex; align-items: center; gap: 4px; margin-top: -4px; }
 .dex-block h4 .lv input { width: 76px; padding: 4px 8px; font-size: 14px; text-align: right; }
+.dex-block h4 .chk { float: right; display: flex; align-items: center; gap: 4px; margin: 0 10px 0 0; font-weight: 400; }
+.dex-block h4 .chk input { width: auto; margin: 0; }
 
 .kv { margin: 0 0 6px; font-size: 13px; line-height: 1.5; }
 .kv b { display: inline-block; min-width: 5.5em; margin-right: 8px; color: var(--muted); font-size: 12px; font-weight: 600; }

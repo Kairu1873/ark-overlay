@@ -6,6 +6,7 @@ import { loadData, onDataChanged, searchCreatures, findCreature, getData } from 
 import { RATE_DEFS, normalizeRates } from '../data/rates.js';
 import { timersFor, matingCooldownMax, coverageOf } from '../data/resolve.js';
 import { tamingPlan, NARCOTIC_DEFS, DEFAULT_TAMING_LEVEL } from '../data/taming.js';
+import { STAT_LABELS, wildStatAt, wildGainPerLevel, roundStat } from '../data/stats.js';
 
 const $ = (sel) => document.querySelector(sel);
 const esc = (s) =>
@@ -35,10 +36,6 @@ const DIET_JA = {
   Coprophagic: '糞食', Ovivore: '卵食', 'Flame Eater': '炎食', Minerals: '鉱物食',
   'Free Will': '不定', Unknown: '不明',
 };
-const STAT_LABELS = [
-  ['health', '体力'], ['stamina', 'スタミナ'], ['oxygen', '酸素'], ['food', '食料'],
-  ['weight', '重量'], ['damage', '近接攻撃'], ['speed', '移動速度'], ['torpor', '気絶値'],
-];
 const TAMING_METHOD_JA = { knockout: '気絶させてテイム', passive: '平和テイム' };
 const KIBBLE_TIERS = ['Basic', 'Simple', 'Regular', 'Superior', 'Exceptional', 'Extraordinary'];
 
@@ -176,26 +173,39 @@ function timerRowsHtml(c) {
     .join('');
 }
 
-/** レベル1の基礎ステータスと、野生1レベルあたりの伸び */
+/** ステータス表の見出しの説明。レベル入力に追従させる */
+const statNote = () => {
+  const lv = statLevel();
+  return lv ? `このステータスに野生レベルを${lv}振ったときの値` : 'レベル1の基礎値';
+};
+
+const statLevel = () => {
+  const v = Number(ctx.state.statLevel);
+  return Number.isFinite(v) && v > 0 ? Math.floor(v) : 0;
+};
+
+/** ステータスの数値だけ。レベル入力を変えたときはここだけ描き直す */
+function statRowsHtml(c) {
+  const lv = statLevel();
+  return STAT_LABELS.map(([key, label]) => {
+    const value = roundStat(wildStatAt(c, key, lv));
+    if (value === null) return '';
+    const per = roundStat(wildGainPerLevel(c, key));
+    const unit = key === 'damage' || key === 'speed' ? '%' : '';
+    const growth = per ? `<i>+${per}${unit} /Lv</i>` : '';
+    return `<div class="stat"><span>${esc(label)}</span><b>${value}${unit}</b>${growth}</div>`;
+  }).join('');
+}
+
+/** 基礎ステータスと、そのステータスにレベルを振ったときの値 */
 function statsHtml(c) {
-  const rows = STAT_LABELS.map(([key, label]) => [key, label, c.stats?.[key]]).filter(
-    ([, , v]) => Number.isFinite(v),
-  );
-  if (!rows.length) return '';
-  const wild = c.growth?.wild ?? null;
+  if (!statRowsHtml(c)) return '';
   return `<div class="dex-block">
-    <h4>ステータス<em>レベル1の基礎値${wild ? '／野生1レベルごとの伸び' : ''}</em></h4>
-    <div class="stat-grid">
-      ${rows
-        .map(([key, label, v]) => {
-          // 移動速度だけは倍率（%）で、他は実数
-          const value = key === 'speed' ? `${v}%` : v;
-          const per = wild?.[key];
-          const growth = Number.isFinite(per) ? `<i>+${per} /Lv</i>` : '';
-          return `<div class="stat"><span>${esc(label)}</span><b>${value}</b>${growth}</div>`;
-        })
-        .join('')}
-    </div>
+    <h4>ステータス<em id="statNote">${esc(statNote())}</em>
+      <label class="lv">野生Lv<input type="number" id="statLevel" min="0" max="254" value="${statLevel()}" /></label>
+    </h4>
+    <div id="statRows" class="stat-grid">${statRowsHtml(c)}</div>
+    <p class="hint">1匹の生物はレベルを各ステータスに散らして振るため、「レベル150の体力」は一意に決まらない。</p>
   </div>`;
 }
 
@@ -220,25 +230,39 @@ const foodLabel = (food, creature) =>
   food === 'Kibble' ? kibbleLabel(creature.taming?.favoriteKibble) ?? 'キブル' : food;
 
 /** テイムに要る餌の数・時間・麻酔。計算は data/taming.js */
+const sanguineElixir = () => Boolean(ctx.state.sanguineElixir);
+
 function tamingRowsHtml(c) {
-  const plan = tamingPlan(c, getData().tamingFood, { level: tamingLevel(), rates: rates() });
+  const plan = tamingPlan(c, getData().tamingFood, {
+    level: tamingLevel(),
+    rates: rates(),
+    sanguineElixir: sanguineElixir(),
+  });
   if (!plan.rows.length) {
     return `<p class="empty">テイムの数値データがない（英語Wikiに未収載）</p>`;
   }
   const passive = plan.method === 'passive';
   return plan.rows
     .map((row) => {
+      // 効率は餌ごとに変わる。テイム後のボーナスレベルがそこから決まる
+      const effect =
+        row.effectiveness === null
+          ? []
+          : [
+              ['効率', `${(row.effectiveness * 100).toFixed(1)}%`],
+              ['ボーナス', `+${row.bonusLevel}Lv`],
+            ];
+      const narcotics =
+        !row.narcotics || row.torporNeeded === 0
+          ? [['麻酔', '不要']]
+          : NARCOTIC_DEFS.map((d) => [d.label, String(row.narcotics[d.key])]);
       const meta = passive
         ? [
             ['給餌間隔', row.feedingInterval === null ? '—' : longDuration(Math.floor(row.feedingInterval))],
             ['合計', longDuration(row.seconds)],
+            ...effect,
           ]
-        : [
-            ['時間', longDuration(row.seconds)],
-            ...(row.narcotics
-              ? NARCOTIC_DEFS.map((d) => [d.label, String(row.narcotics[d.key])])
-              : []),
-          ];
+        : [['時間', longDuration(row.seconds)], ...effect, ...narcotics];
       return `<div class="tame${row.favorite ? ' fav' : ''}">
         <div class="tame-head">
           <span class="tame-food">${esc(foodLabel(row.food, c))}</span>
@@ -259,6 +283,7 @@ function tamingHtml(c) {
   return `<div class="dex-block">
     <h4>テイム<em>${esc(method ?? '')}</em>
       <label class="lv">Lv<input type="number" id="tamingLevel" min="1" max="999" value="${tamingLevel()}" /></label>
+      <label class="chk"><input type="checkbox" id="sanguineElixir"${sanguineElixir() ? ' checked' : ''} />Sanguine Elixir</label>
     </h4>
     <div id="tamingRows" class="tame-list">${tamingRowsHtml(c)}</div>
   </div>`;
@@ -387,7 +412,11 @@ function bindEvents() {
     const tame = e.target.closest('[data-tame]');
     if (tame) {
       const c = findCreature(selectedKey);
-      const plan = tamingPlan(c, getData().tamingFood, { level: tamingLevel(), rates: rates() });
+      const plan = tamingPlan(c, getData().tamingFood, {
+        level: tamingLevel(),
+        rates: rates(),
+        sanguineElixir: sanguineElixir(),
+      });
       const row = plan.rows.find((r) => r.food === tame.dataset.tame);
       if (row?.seconds) {
         ctx.startTimer(`${c.nameJa ?? c.name} テイム`, Math.round(row.seconds));
@@ -410,10 +439,32 @@ function bindEvents() {
 
   // レベルを変えたら表だけ描き直す。詳細ごと描き直すと入力欄から focus が外れるため
   $('#creatureDetail').addEventListener('input', (e) => {
-    if (e.target.id !== 'tamingLevel') return;
+    const c = findCreature(selectedKey);
+    if (!c) return;
     const v = Number(e.target.value);
-    if (!Number.isFinite(v) || v < 1) return;
-    ctx.state.tamingLevel = Math.floor(v);
+
+    if (e.target.id === 'tamingLevel') {
+      if (!Number.isFinite(v) || v < 1) return;
+      ctx.state.tamingLevel = Math.floor(v);
+      ctx.save();
+      const rows = $('#tamingRows');
+      if (rows) rows.innerHTML = tamingRowsHtml(c);
+      return;
+    }
+    if (e.target.id === 'statLevel') {
+      if (!Number.isFinite(v) || v < 0) return;
+      ctx.state.statLevel = Math.floor(v);
+      ctx.save();
+      const rows = $('#statRows');
+      if (rows) rows.innerHTML = statRowsHtml(c);
+      const note = $('#statNote');
+      if (note) note.textContent = statNote();
+    }
+  });
+
+  $('#creatureDetail').addEventListener('change', (e) => {
+    if (e.target.id !== 'sanguineElixir') return;
+    ctx.state.sanguineElixir = e.target.checked;
     ctx.save();
     const c = findCreature(selectedKey);
     const rows = $('#tamingRows');
