@@ -29,8 +29,11 @@ jobs:
 
       - name: 差分があればコミット
         run: |
-          if git diff --quiet -- data/; then
-            echo "更新なし"
+          # meta.json の generatedAt は実行するたび変わるため、そこだけの差分は無視する。
+          # 見ないと Wiki 側に変化がなくても毎週コミットが積まれてしまう。
+          if git diff --quiet -- data/ ':!data/meta.json'; then
+            echo "データに変化なし（meta.json の生成日時のみ）"
+            git checkout -- data/meta.json
             exit 0
           fi
           git config user.name  "github-actions[bot]"
