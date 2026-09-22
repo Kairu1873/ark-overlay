@@ -193,7 +193,8 @@ input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; }
 .dex-block h4 .chk input { width: auto; margin: 0; }
 
 /* アイテムタブ */
-.picked { margin: 0 0 4px; font-size: 13px; line-height: 1.6; color: var(--accent-text); }
+.picked { margin: 0 0 4px; font-size: 13px; line-height: 1.7; color: var(--accent-text); }
+.picked em { font-style: normal; margin-left: 4px; font-size: 11px; color: var(--muted); }
 .common-list { display: grid; gap: 6px; }
 .common { display: flex; align-items: center; gap: 10px; }
 .common code {

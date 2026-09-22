@@ -1,6 +1,6 @@
-// 「アイテム」タブ。英名で探して複数選ぶと、共通する文字列を候補として出す。
+// 「アイテム」タブ。日本語名でも英名でも探せて、複数選ぶと共通する文字列を候補として出す。
 //
-// 使いどころはゲーム内のインベントリ検索欄で、そこに貼れば選んだものをまとめて絞り込める。
+// 探すのは日本語名で構わないが、**出す共通文字列は英名から作る**。
 // 候補は「一致件数の少ない順」＝絞り込める順に並ぶ。計算は src/data/items.js。
 
 import { getData, onDataChanged } from '../data/store.js';
@@ -53,15 +53,17 @@ function renderResults() {
     ? list
         .map(
           (item) => `<button class="dex-row${chosen.has(item.key) ? ' on' : ''}" data-item="${esc(item.key)}">
-            <span class="dex-name">${esc(item.name)}</span>
-            <span class="dex-sub">${esc(item.category ?? '')}</span>
+            <span class="dex-name">${esc(item.nameJa ?? item.name)}</span>
+            <span class="dex-sub">${esc(
+              [item.nameJa ? item.name : null, item.category].filter(Boolean).join(' / '),
+            )}</span>
           </button>`,
         )
         .join('') +
       (list.length >= LIST_LIMIT
         ? `<p class="empty">${LIST_LIMIT}件まで表示している。検索語を足して絞り込む</p>`
         : '')
-    : `<p class="empty">見つかりません（英名で探す。例：Raw / Kibble / Saddle）</p>`;
+    : `<p class="empty">見つかりません（日本語名でも英名でも探せる。例：生肉 / キブル / Raw）</p>`;
 }
 
 function renderPicked() {
@@ -79,9 +81,11 @@ function renderPicked() {
       <h4>選択中 ${chosen.length}件</h4>
       <button type="button" id="clearPicks" class="link">すべて解除</button>
     </div>
-    <p class="picked">${chosen.map((i) => esc(i.name)).join(' ／ ')}</p>
+    <p class="picked">${chosen
+      .map((i) => (i.nameJa ? `${esc(i.nameJa)}<em>${esc(i.name)}</em>` : esc(i.name)))
+      .join(' ／ ')}</p>
     <div class="dex-block">
-      <h4>共通する文字列<em>ゲーム内の検索欄に貼る</em></h4>
+      <h4>共通する文字列<em>英名から作る</em></h4>
       ${
         candidates.length
           ? `<div class="common-list">${candidates
