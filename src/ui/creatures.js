@@ -1,6 +1,6 @@
-// 「生物から作る」セクション。
-// 生物を選ぶと、サーバー倍率を適用した孵化・成体・交配CD・インプリントが並び、
-// そのままタイマーにできる。Wiki にデータが無い生物は実測値を入力して埋められる。
+// 「図鑑」タブ。生物を英名でも日本語名でも探せる一覧と、その詳細。
+// 詳細では、サーバー倍率を適用した孵化・成体・交配CD・インプリントをそのままタイマーにできる。
+// Wiki にデータが無い生物は実測値を入力して埋められる。
 
 import { loadData, onDataChanged, searchCreatures, findCreature, getData } from '../data/store.js';
 import { RATE_DEFS, normalizeRates } from '../data/rates.js';
@@ -21,7 +21,27 @@ const RATE_FOR_FIELD = {
   cuddle: 'cuddleInterval',
 };
 
-let ctx = null; // { state, save, startTimer }
+// Wiki の分類・食性は英語なので、図鑑の表示だけ日本語にする。
+// 気性は自由記述が多いため訳さず、日本語Wikiの記載があればそちらを使う。
+const GROUP_JA = {
+  Dinosaurs: '恐竜', Reptiles: '爬虫類', Mammals: '哺乳類', Birds: '鳥類',
+  Fish: '魚類', Amphibians: '両生類', Invertebrates: '無脊椎動物',
+  Synapsids: '単弓類', 'Mechanical Creatures': '機械', Bosses: 'ボス',
+};
+const DIET_JA = {
+  Carnivore: '肉食', Herbivore: '草食', Omnivore: '雑食', Piscivore: '魚食',
+  'Bottom Feeder': '底生食', 'Carrion feeder': '腐肉食', Sanguinivore: '吸血',
+  Coprophagic: '糞食', Ovivore: '卵食', 'Flame Eater': '炎食', Minerals: '鉱物食',
+  'Free Will': '不定', Unknown: '不明',
+};
+const STAT_LABELS = [
+  ['health', '体力'], ['stamina', 'スタミナ'], ['oxygen', '酸素'], ['food', '食料'],
+  ['weight', '重量'], ['damage', '近接攻撃'], ['speed', '移動速度'], ['torpor', '気絶値'],
+];
+const TAMING_METHOD_JA = { knockout: '気絶させてテイム', passive: '平和テイム' };
+const KIBBLE_TIERS = ['Basic', 'Simple', 'Regular', 'Superior', 'Exceptional', 'Extraordinary'];
+
+let ctx = null; // { state, save, startTimer, showTimers, setDexAvailable }
 let selectedKey = null;
 let showRates = false;
 let editingField = null;
@@ -58,6 +78,9 @@ function parseDuration(text) {
 
 const rates = () => normalizeRates(ctx.state.rates);
 const overrideOf = (key) => ctx.state.overrides?.[key] ?? null;
+const groupJa = (c) => (c.group ? GROUP_JA[c.group] ?? c.group : null);
+const dietJa = (c) => (c.diet ? DIET_JA[c.diet] ?? c.diet : null);
+const temperamentJa = (c) => c.ja?.temperament ?? c.temperament ?? null;
 
 /** 実測値（倍率適用後）を 1x 基準に戻す。倍率を変えても追従させるため */
 function toBaseSeconds(observedSec, field) {
@@ -85,44 +108,40 @@ function renderRates() {
     `<div class="actions"><button type="button" id="resetRates">すべて 1 に戻す</button></div>`;
 }
 
-function renderResults() {
-  const q = $('#creatureQuery').value;
-  const list = searchCreatures(q, { limit: 24 });
+function renderList() {
   const el = $('#creatureResults');
-  if (!getData().creatures.length) {
-    el.innerHTML = `<p class="empty">生物データがありません（Windows版で利用できます）</p>`;
-    return;
-  }
+  const all = getData().creatures;
+  // 詳細を開いている間は一覧を畳む。狭い窓で 200 行の上に詳細が乗ると読めないため
+  el.hidden = Boolean(selectedKey) || !all.length;
+  if (el.hidden) return;
+
+  const list = searchCreatures($('#creatureQuery').value, { limit: Infinity });
+  $('#dexCount').textContent = list.length === all.length ? `${all.length}` : `${list.length}/${all.length}`;
   el.innerHTML = list.length
     ? list
         .map((c) => {
           const cov = coverageOf(c, overrideOf(c.key));
           const badge = cov === 'missing' ? `<span class="chip-warn">データなし</span>` : '';
-          return `<button class="chip ${c.key === selectedKey ? 'on' : ''}" data-creature="${c.key}">
-            <span class="chip-name">${esc(c.name)}${badge}</span>
-            <span class="chip-time">${esc(c.origin === 'asa' ? 'ASA新規' : c.group ?? '')}</span>
+          const sub = [c.nameJa ? c.name : null, groupJa(c), dietJa(c)].filter(Boolean).join(' / ');
+          return `<button class="dex-row" data-creature="${c.key}">
+            <span class="dex-name">${esc(c.nameJa ?? c.name)}${badge}</span>
+            <span class="dex-sub">${esc(sub)}</span>
           </button>`;
         })
         .join('')
-    : `<p class="empty">見つかりません（英名で探す。例：Rex, Argentavis）</p>`;
+    : `<p class="empty">見つかりません（英名・日本語名で探す。例：Rex／ティラノサウルス）</p>`;
 }
 
-function renderDetail() {
-  const el = $('#creatureDetail');
-  const c = selectedKey ? findCreature(selectedKey) : null;
-  if (!c) {
-    el.innerHTML = '';
-    return;
-  }
+/** 繁殖まわりのタイマー行 */
+function timerRowsHtml(c) {
   const r = rates();
   const ov = overrideOf(c.key);
   // 繁殖できない生物に「データなし」を並べても仕方がないので、行ごと出さない
   const rows = c.breedable ? timersFor(c, r, ov) : [];
   const cdMax = matingCooldownMax(c, r, ov);
 
-  const rowHtml = !rows.length
-    ? `<p class="empty">この生物は繁殖できないため、繁殖まわりのタイマーはない</p>`
-    : rows
+  if (!rows.length) return `<p class="empty">この生物は繁殖できないため、繁殖まわりのタイマーはない</p>`;
+  return rows
     .map((row) => {
       const editing = editingField === row.field;
       const value =
@@ -154,24 +173,104 @@ function renderDetail() {
       </div>`;
     })
     .join('');
+}
 
+/** レベル1の基礎ステータス。レベルによる伸びはここでは扱わない */
+function statsHtml(c) {
+  const rows = STAT_LABELS.map(([key, label]) => [key, label, c.stats?.[key]]).filter(
+    ([, , v]) => Number.isFinite(v),
+  );
+  if (!rows.length) return '';
+  return `<div class="dex-block">
+    <h4>ステータス<em>レベル1の基礎値</em></h4>
+    <div class="stat-grid">
+      ${rows
+        .map(
+          // 移動速度だけは倍率（%）で、他は実数
+          ([key, label, v]) =>
+            `<div class="stat"><span>${esc(label)}</span><b>${key === 'speed' ? `${v}%` : v}</b></div>`,
+        )
+        .join('')}
+    </div>
+  </div>`;
+}
+
+/**
+ * 好物キブルの表記を揃える。
+ * Wiki 側が `Superior` `Exceptional Kibble` `Mobile:Kibble (Griffin Egg)` と揺れているので、
+ * 等級だけの表記に「のキブル」を足し、それ以外は Wiki の名前をそのまま出す。
+ */
+function kibbleLabel(value) {
+  const raw = String(value).replace(/^[^:]+:/, '').trim();
+  const tier = raw.replace(/\s*Kibble$/i, '').trim();
+  return KIBBLE_TIERS.includes(tier) ? `${tier} のキブル` : raw || null;
+}
+
+function tamingHtml(c) {
+  const t = c.taming;
+  if (!c.tameable) return '';
+  const rows = [
+    ['テイム方法', t?.method ? TAMING_METHOD_JA[t.method] ?? t.method : null],
+    ['好物キブル', t?.favoriteKibble ? kibbleLabel(t.favoriteKibble) : null],
+    ['好物', t?.favoriteFood],
+    ['食べる物', t?.eats?.length ? t.eats.join(' → ') : null],
+  ].filter(([, v]) => v);
+  if (!rows.length) return '';
+  return `<div class="dex-block">
+    <h4>テイム<em>餌の名前は英語Wikiの表記</em></h4>
+    ${rows.map(([k, v]) => `<p class="kv"><b>${esc(k)}</b>${esc(v)}</p>`).join('')}
+  </div>`;
+}
+
+function habitatHtml(c) {
+  const rows = [
+    ['サドル', c.saddle ? `${c.saddle}${c.saddleLevel ? `（Lv${c.saddleLevel}）` : ''}` : null],
+    ['騎乗', c.rideable ? '可能' : '不可'],
+    ['出現マップ', c.wildMaps?.length ? c.wildMaps.join('、') : null],
+  ].filter(([, v]) => v);
+  if (!rows.length) return '';
+  return `<div class="dex-block">
+    <h4>生息と騎乗</h4>
+    ${rows.map(([k, v]) => `<p class="kv"><b>${esc(k)}</b>${esc(v)}</p>`).join('')}
+  </div>`;
+}
+
+function jaNotesHtml(c) {
   // 日本語Wikiは項目が埋まっていないページもあるので、出す中身があるときだけ枠を作る
-  const jaRows = [
+  const rows = [
     ['テイム', c.ja?.tamingMethod],
     ['餌', c.ja?.foodPriority],
     ['繁殖', c.ja?.breedingNote],
   ].filter(([, v]) => v);
-  const ja = jaRows.length
-    ? `<div class="ja">${jaRows.map(([k, v]) => `<p><b>${k}</b>${esc(v)}</p>`).join('')}</div>`
-    : '';
+  if (!rows.length) return '';
+  return `<div class="dex-block">
+    <h4>日本語Wikiのメモ</h4>
+    <div class="ja">${rows.map(([k, v]) => `<p><b>${esc(k)}</b>${esc(v)}</p>`).join('')}</div>
+  </div>`;
+}
+
+function renderDetail() {
+  const el = $('#creatureDetail');
+  const c = selectedKey ? findCreature(selectedKey) : null;
+  if (!c) {
+    el.innerHTML = '';
+    return;
+  }
+  const sub = [c.nameJa ? c.name : null, groupJa(c), dietJa(c), temperamentJa(c)]
+    .filter(Boolean)
+    .join(' / ');
 
   el.innerHTML = `<div class="card creature">
-    <div class="section-head">
-      <h3>${esc(c.name)}</h3>
-      <span class="sub">${esc([c.group, c.diet, c.saddleLevel ? `サドル Lv${c.saddleLevel}` : null].filter(Boolean).join(' / '))}</span>
+    <div class="dex-head">
+      <button type="button" id="dexBack" class="link">← 一覧へ戻る</button>
+      <h3>${esc(c.nameJa ?? c.name)}${c.origin === 'asa' ? `<span class="tag">ASA新規</span>` : ''}</h3>
+      <p class="sub">${esc(sub)}</p>
     </div>
-    ${rowHtml}
-    ${ja}
+    ${timerRowsHtml(c)}
+    ${statsHtml(c)}
+    ${tamingHtml(c)}
+    ${habitatHtml(c)}
+    ${jaNotesHtml(c)}
   </div>`;
 
   const input = $('#overrideInput');
@@ -181,11 +280,18 @@ function renderDetail() {
 export function renderCreatureSection() {
   if (!ctx) return;
   renderRates();
-  renderResults();
+  renderList();
   renderDetail();
 }
 
 // ---------- 操作 ----------
+
+function select(key) {
+  selectedKey = key;
+  editingField = null;
+  renderCreatureSection();
+  if (key) window.scrollTo({ top: 0 });
+}
 
 function saveOverride(field) {
   const c = findCreature(selectedKey);
@@ -213,24 +319,27 @@ function bindEvents() {
   $('#creatureQuery').addEventListener('input', () => {
     selectedKey = null;
     editingField = null;
-    renderResults();
+    renderList();
     renderDetail();
   });
 
   $('#creatureResults').addEventListener('click', (e) => {
     const b = e.target.closest('[data-creature]');
-    if (!b) return;
-    selectedKey = selectedKey === b.dataset.creature ? null : b.dataset.creature;
-    editingField = null;
-    renderCreatureSection();
+    if (b) select(b.dataset.creature);
   });
 
   $('#creatureDetail').addEventListener('click', (e) => {
+    if (e.target.closest('#dexBack')) return select(null);
+
     const start = e.target.closest('[data-start]');
     if (start) {
       const c = findCreature(selectedKey);
       const row = timersFor(c, rates(), overrideOf(c.key)).find((x) => x.field === start.dataset.start);
-      if (row?.seconds) ctx.startTimer(row.name, Math.round(row.seconds));
+      if (row?.seconds) {
+        ctx.startTimer(row.name, Math.round(row.seconds));
+        // 押した結果が見えないと動いたのか分からないので、タイマー側へ移る
+        ctx.showTimers();
+      }
       return;
     }
     const edit = e.target.closest('[data-edit]');
@@ -275,14 +384,17 @@ function bindEvents() {
   });
 }
 
-/** @param {{state:object, save:()=>void, startTimer:(name:string,sec:number)=>void}} context */
+/**
+ * @param {{state:object, save:()=>void, startTimer:(name:string,sec:number)=>void,
+ *          showTimers:()=>void, setDexAvailable:(ok:boolean)=>void}} context
+ */
 export async function initCreatures(context) {
   ctx = context;
-  const section = $('#creatureSection');
-  if (!section) return;
+  if (!$('#creatureQuery')) return;
   bindEvents();
   const refresh = () => {
-    section.hidden = !getData().creatures.length;
+    // ブラウザで開いたときは生物データが無いので、図鑑そのものを出さない
+    ctx.setDexAvailable(getData().creatures.length > 0);
     renderCreatureSection();
   };
   onDataChanged(refresh); // 起動後に更新が届いたときも出し直す
