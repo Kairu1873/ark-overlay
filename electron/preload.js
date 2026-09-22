@@ -14,6 +14,13 @@ contextBridge.exposeInMainWorld('arkOverlayDesktop', {
     write: (text) => ipcRenderer.send('clipboard:write', text),
   },
 
+  // アプリ本体の更新（落とし終えると state が入る）
+  update: {
+    getState: () => ipcRenderer.invoke('update:state'),
+    onReady: (cb) => ipcRenderer.on('update:ready', (_e, state) => cb(state)),
+    install: () => ipcRenderer.send('update:install'),
+  },
+
   // 枠なしウィンドウの操作
   window: {
     minimize: () => ipcRenderer.send('window:minimize'),

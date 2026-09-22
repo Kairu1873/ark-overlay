@@ -1,12 +1,14 @@
 const { app, BrowserWindow, Tray, Menu, Notification, ipcMain, nativeImage, clipboard } = require('electron');
 const path = require('path');
 const wikiData = require('./data');
+const { autoUpdater } = require('electron-updater');
 
 const APP_ID = 'com.kairu.arkoverlay'; // package.json の build.appId と同じにする（Windows通知に必要）
 let win = null;
 let tray = null;
 let quitting = false;
 let schedules = []; // { id, title, body, at }
+let update = null; // 落とし終えた更新 { version }
 
 if (!app.requestSingleInstanceLock()) {
   app.quit();
@@ -26,6 +28,38 @@ function init() {
   wikiData.checkUpdateInBackground((data) => {
     if (win && !win.isDestroyed()) win.webContents.send('data:updated', data);
   });
+  initUpdater();
+}
+
+/**
+ * アプリ本体の更新。起動時に GitHub Releases を見て、新しければ裏で落とす。
+ *
+ * 当てるのは終了するときで、こちらからは再起動しない。タイマーを動かしたまま使うアプリなので、
+ * 勝手に落とすと通知が飛ぶ。急ぎたい人向けに、トレイと画面から「更新して再起動」を出す。
+ */
+function initUpdater() {
+  // 開発中（パッケージ前）は更新の仕組みが動かないので触らない
+  if (!app.isPackaged) return;
+  autoUpdater.autoDownload = true;
+  autoUpdater.autoInstallOnAppQuit = true;
+
+  autoUpdater.on('update-downloaded', (info) => {
+    update = { version: info?.version ?? null };
+    refreshTrayMenu();
+    if (win && !win.isDestroyed()) win.webContents.send('update:ready', update);
+  });
+  // 更新の失敗でアプリが止まっては困るので、記録するだけにする
+  autoUpdater.on('error', (e) => console.warn('更新を確認できませんでした:', e?.message ?? e));
+
+  // 確認は起動時の1回だけにする。付けっぱなしで使うので、動作中に落とし始めても嬉しくない
+  autoUpdater.checkForUpdates().catch(() => {});
+}
+
+/** 落とし終えた更新を当てて再起動する */
+function installUpdate() {
+  if (!update) return;
+  quitting = true;
+  autoUpdater.quitAndInstall();
 }
 
 function createWindow() {
@@ -96,6 +130,9 @@ function refreshTrayMenu() {
   tray.setContextMenu(
     Menu.buildFromTemplate([
       { label: '開く', click: showWindow },
+      ...(update
+        ? [{ label: `更新して再起動（${update.version ?? '新しい版'}）`, click: installUpdate }]
+        : []),
       {
         label: '常に手前に表示',
         type: 'checkbox',
@@ -137,6 +174,10 @@ ipcMain.on('window:minimize', () => win?.minimize());
 ipcMain.on('window:hide', () => win?.close()); // close は握って hide になる
 ipcMain.on('window:always-on-top', (_e, on) => setAlwaysOnTop(Boolean(on)));
 ipcMain.handle('window:state', () => ({ alwaysOnTop }));
+
+// 更新まわり
+ipcMain.handle('update:state', () => update);
+ipcMain.on('update:install', installUpdate);
 
 // アイテム名の共通文字列をゲームの検索欄に貼るため、画面側からコピーできるようにする
 ipcMain.on('clipboard:write', (_e, text) => clipboard.writeText(String(text ?? '')));

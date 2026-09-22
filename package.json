@@ -1,7 +1,7 @@
 {
   "name": "ark-overlay",
   "productName": "ARK Overlay",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "ARK用オーバーレイ（タイマー・生物データ）",
   "main": "electron/main.js",
   "author": "Kairu",
@@ -22,8 +22,31 @@
   "build": {
     "appId": "com.kairu.arkoverlay",
     "productName": "ARK Overlay",
-    "files": ["electron/**", "www/**", "data/**", "package.json", "!node_modules/**"],
-    "win": { "target": "nsis", "icon": "build/icon.png", "artifactName": "ARKOverlay-Setup-${version}.exe" },
-    "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true, "shortcutName": "ARK Overlay" }
+    "files": [
+      "electron/**",
+      "www/**",
+      "data/**",
+      "package.json"
+    ],
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "Kairu1873",
+        "repo": "ark-overlay"
+      }
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.png",
+      "artifactName": "ARKOverlay-Setup-${version}.exe"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "shortcutName": "ARK Overlay"
+    }
+  },
+  "dependencies": {
+    "electron-updater": "^6.8.9"
   }
 }
