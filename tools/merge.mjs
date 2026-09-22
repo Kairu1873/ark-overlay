@@ -312,6 +312,145 @@ function buildGrowth(jaStat) {
   return wild || tamed ? { wild, tamed } : null;
 }
 
+/** 0 と負数は「持っていない」とみなす（ASB は該当しない項目に 0 を入れている） */
+const posNum = (v) => {
+  const n = num(v);
+  return n !== null && n > 0 ? n : null;
+};
+
+const EMPTY_BREEDING = {
+  incubationSec: null, gestationSec: null, maturationSec: null,
+  matingCooldownMinSec: null, matingCooldownMaxSec: null,
+  egg: null, eggTempMin: null, eggTempMax: null,
+};
+
+/**
+ * 繁殖時間に Smart Breeding（ゲームファイル由来）の値を重ねる。
+ * 卵生か胎生かは ASB 側が確定させているので、孵化・妊娠は ASB があれば両方まとめて置き換える。
+ */
+function applyAsbBreeding(value, asbBreeding, { name, conflicts }) {
+  if (!asbBreeding) return { value, used: [] };
+  const merged = { ...(value ?? EMPTY_BREEDING) };
+  const used = [];
+  const put = (field, asbValue) => {
+    if (asbValue === null) return;
+    const before = merged[field];
+    if (Number.isFinite(before) && !near(before, asbValue)) {
+      conflicts.push({ name, field, wiki: Math.round(before), asb: Math.round(asbValue) });
+    }
+    if (!Number.isFinite(before) || !near(before, asbValue)) used.push(field);
+    merged[field] = asbValue;
+  };
+
+  const incubation = posNum(asbBreeding.incubationTime);
+  const gestation = posNum(asbBreeding.gestationTime);
+  if (incubation !== null || gestation !== null) {
+    put('incubationSec', incubation);
+    put('gestationSec', gestation);
+    // 片方しか無い場合、もう片方は「無い」が正しい
+    if (incubation === null) merged.incubationSec = null;
+    if (gestation === null) merged.gestationSec = null;
+  }
+  put('maturationSec', posNum(asbBreeding.maturationTime));
+  put('matingCooldownMinSec', posNum(asbBreeding.matingCooldownMin));
+  put('matingCooldownMaxSec', posNum(asbBreeding.matingCooldownMax));
+  put('eggTempMin', num(asbBreeding.eggTempMin));
+  put('eggTempMax', num(asbBreeding.eggTempMax));
+  return { value: merged, used };
+}
+
+/**
+ * テイム係数に ASB の値を重ねる。
+ * 餌のリスト（eats / specialFoodValues / 好物）は Wiki 側のものを使い続ける。
+ * 英語Wikiのテイム表と一致することをテストで固定しており、その根拠を崩さないため。
+ */
+function applyAsbTaming(value, asb, { name, conflicts }) {
+  const t = asb?.taming;
+  if (!t) return { value, used: [] };
+  const merged = {
+    method: null, affinityBase: null, affinityPerLevel: null,
+    torpor1: null, torporIncrease: null, torporDepletionPS0: null,
+    ineffectiveness: null, foodConsumptionBase: null, foodConsumptionMult: null,
+    favoriteKibble: null, favoriteFood: null, eats: null, specialFoodValues: null,
+    wakeAffinityMult: null, wakeFoodDeplMult: null, usesCustomAffinityLogic: null,
+    constantFeedingInterval: null, resultCorrection: null,
+    ...(value ?? {}),
+  };
+  const used = [];
+  const put = (field, asbValue) => {
+    if (asbValue === null) return;
+    const before = merged[field];
+    if (Number.isFinite(before) && !near(before, asbValue)) {
+      conflicts.push({ name, field, wiki: before, asb: asbValue });
+    }
+    if (!Number.isFinite(before) || !near(before, asbValue)) used.push(field);
+    merged[field] = asbValue;
+  };
+
+  put('affinityBase', posNum(t.affinityNeeded0));
+  put('affinityPerLevel', posNum(t.affinityIncreasePL));
+  put('ineffectiveness', posNum(t.tamingIneffectiveness));
+  put('torporDepletionPS0', posNum(t.torporDepletionPS0));
+  put('foodConsumptionBase', posNum(t.foodConsumptionBase));
+  put('foodConsumptionMult', posNum(t.foodConsumptionMult));
+  // 平和テイムの倍率は 0 も意味のある値（餌でaffinityが入らない特殊テイム）
+  if (Number.isFinite(num(t.wakeAffinityMult))) merged.wakeAffinityMult = num(t.wakeAffinityMult);
+  if (Number.isFinite(num(t.wakeFoodDeplMult))) merged.wakeFoodDeplMult = num(t.wakeFoodDeplMult);
+  // 気絶値は ASB ではステータス側にある
+  const torpor = asb.statsRaw?.torpor ?? null;
+  if (torpor && Number.isFinite(torpor.base)) {
+    put('torpor1', torpor.base);
+    put('torporIncrease', Number.isFinite(torpor.incWild) ? torpor.base * torpor.incWild : null);
+  }
+  if (t.nonViolent) merged.method = 'passive';
+  else if (t.violent) merged.method = 'knockout';
+
+  return { value: orNull(merged), used };
+}
+
+// 近接攻撃と移動速度は ASB では倍率（1 = 100%）で持っている。ゲーム内の表示に合わせて % にする
+const PERCENT_STATS = new Set(['damage', 'speed']);
+const displayStat = (key, v) => (v === null ? null : PERCENT_STATS.has(key) ? v * 100 : v);
+
+/** ステータスの基礎値に ASB の値を重ねる */
+function applyAsbStats(value, statsRaw, { name, conflicts }) {
+  if (!statsRaw) return { value, used: [] };
+  const merged = { ...(value ?? {}) };
+  const used = [];
+  for (const [key, raw] of Object.entries(statsRaw)) {
+    const asbValue = displayStat(key, num(raw.base));
+    if (asbValue === null) continue;
+    const before = merged[key];
+    if (Number.isFinite(before) && !near(before, asbValue)) {
+      conflicts.push({ name, field: key, wiki: before, asb: asbValue });
+    }
+    if (!Number.isFinite(before) || !near(before, asbValue)) used.push(key);
+    merged[key] = asbValue;
+  }
+  return { value: orNull(merged), used };
+}
+
+/**
+ * 成長率。日本語Wikiの表が無い生物は ASB の値から作る。
+ * 野生は「1レベルあたりの増分」、テイム後は Wiki の表記に合わせて割合（%）で持つ。
+ * テイム後の伸びは公式サーバーの既定倍率 0.2 を掛けた値が Wiki に載っている。
+ */
+function growthFromAsb(statsRaw) {
+  if (!statsRaw) return null;
+  const wild = {};
+  const tamed = {};
+  for (const [key, raw] of Object.entries(statsRaw)) {
+    const base = displayStat(key, num(raw.base));
+    if (base !== null && Number.isFinite(raw.incWild)) wild[key] = round4(base * raw.incWild);
+    if (Number.isFinite(raw.incTamed)) tamed[key] = round4(raw.incTamed * 0.2 * 100);
+  }
+  const w = orNull(wild);
+  const t = orNull(tamed);
+  return w || t ? { wild: w, tamed: t } : null;
+}
+
+const round4 = (v) => Math.round(v * 10000) / 10000;
+
 /**
  * 生物データをまとめる。
  * @returns {{creatures: object[], stats: object}}
@@ -319,6 +458,7 @@ function buildGrowth(jaStat) {
 export function mergeCreatures({
   creatures, creatureStats, dv, tamingCreatures, ja,
   jaTimes = {}, jaNames = {}, jaDossierNames = {}, jaStats = {}, nameOverrides = {},
+  asb = new Map(),
 }) {
   const dvResolved = resolveInherits(dv);
   const dvByKey = new Map(Object.entries(dvResolved).map(([k, v]) => [norm(k), v]));
@@ -336,8 +476,9 @@ export function mergeCreatures({
     total: creatures.length, asa: 0, ase: 0, asaNew: 0,
     dvMatched: 0, jaMatched: 0, jaFilled: 0, conflicts, statConflicts,
     nameJa: { arkja: 0, wikiwiki: 0, manual: 0, none: 0 },
-    statsSource: { ja: 0, cargo: 0, both: 0, none: 0 },
+    statsSource: { asb: 0, ja: 0, cargo: 0, both: 0, none: 0 },
     growth: 0, mapsFromJa: 0, swaps: [],
+    asb: { matched: 0, breeding: 0, taming: 0, stats: 0, conflicts: [] },
   };
 
   // 1回目: 英語Wiki側を組み立てる（入れ替わり検出に全種の値が要る）
@@ -391,16 +532,48 @@ export function mergeCreatures({
 
     const creatureStat = buildStats(statsByPage.get(name), jaStat);
     for (const c of creatureStat.conflicts) statConflicts.push({ name, ...c });
-    const growth = buildGrowth(jaStat);
+    let growth = buildGrowth(jaStat);
+
+    // ここから Smart Breeding（ゲームファイル由来）を最優先で重ねる
+    const asbEntry = asb.get(str(row.EntityId)) ?? null;
+    let statsRaw = null;
+    if (asbEntry) {
+      stats.asb.matched++;
+      const asbConflicts = stats.asb.conflicts;
+
+      const b = applyAsbBreeding(breeding.value, asbEntry.breeding, { name, conflicts: asbConflicts });
+      if (b.used.length) {
+        stats.asb.breeding++;
+        breeding.value = b.value;
+        breeding.source = breeding.source ? `asb+${breeding.source}` : 'asb';
+      }
+
+      const t = applyAsbTaming(taming.value, asbEntry, { name, conflicts: asbConflicts });
+      if (t.used.length) {
+        stats.asb.taming++;
+        taming.value = t.value;
+        taming.source = taming.source ? `asb+${taming.source}` : 'asb';
+      }
+
+      const st = applyAsbStats(creatureStat.value, asbEntry.statsRaw, { name, conflicts: asbConflicts });
+      if (st.used.length) {
+        stats.asb.stats++;
+        creatureStat.value = st.value;
+        creatureStat.source = creatureStat.source ? `asb+${creatureStat.source}` : 'asb';
+      }
+      statsRaw = asbEntry.statsRaw;
+      // 基礎値を ASB に差し替えたら、伸びも同じ出どころに揃える（近接攻撃と移動速度は % 表記）
+      growth = growthFromAsb(asbEntry.statsRaw) ?? growth;
+    }
     const maps = mergeMaps(row.WildMaps, jaRow?.wildMaps);
 
     // 日本語名。手書きの補完を最優先にし、wiki 側が誤っていたときに直せるようにする
     const nameJa = pickJaName(name, nameOverrides, jaNames, jaDossierNames);
 
     stats.nameJa[nameJa.source ?? 'none']++;
-    stats.statsSource[
-      creatureStat.source === 'ja+cargo' ? 'both' : creatureStat.source ?? 'none'
-    ]++;
+    // 出所は 'asb+ja+cargo' のように連なるので、先頭（最優先で採ったもの）で数える
+    const statsFrom = creatureStat.source?.split('+')[0] ?? 'none';
+    stats.statsSource[statsFrom] = (stats.statsSource[statsFrom] ?? 0) + 1;
     if (growth) stats.growth++;
     if (maps.source?.includes('ja')) stats.mapsFromJa++;
     stats.asa++;
@@ -427,6 +600,9 @@ export function mergeCreatures({
       breeding: breeding.value,
       taming: taming.value,
       stats: creatureStat.value,
+      // ASB の生の5つ組（基礎値・野生の伸び・テイム後の伸び・テイム時の加算・乗算）。
+      // レベル別のステータス計算に使う
+      statsRaw,
       growth,
       ja: jaRow,
       sources: {
