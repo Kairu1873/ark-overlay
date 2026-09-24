@@ -103,6 +103,16 @@ function chipsHtml(list, kind) {
     .join('')}</div>`;
 }
 
+/**
+ * 一番短い共通文字列を1件。2文字以上で見つからなければ1文字まで下げる。
+ * Stone と Metal から Obsidian を外すときのように、使えるのが 1 文字（"e" など）しか無いことがある
+ */
+function shortestCommon(targets, allNames, avoid) {
+  const opt = { limit: 1, order: 'length', exclude: avoid };
+  const found = commonStrings(targets, allNames, opt);
+  return found.length ? found : commonStrings(targets, allNames, { ...opt, min: 1 });
+}
+
 function renderPicked() {
   const el = $('#itemPicked');
   const chosen = pickedItems();
@@ -119,7 +129,7 @@ function renderPicked() {
     ? []
     : quality()
       ? [qualityString(targets, allNames, { quality: quality(), exclude: avoid })].filter(Boolean)
-      : commonStrings(targets, allNames, { limit: 1, order: 'length', exclude: avoid });
+      : shortestCommon(targets, allNames, avoid);
 
   el.innerHTML = `<div class="card">
     <div class="section-head">
