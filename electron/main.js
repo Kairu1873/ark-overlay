@@ -13,7 +13,12 @@ let update = null; // 落とし終えた更新 { version }
 if (!app.requestSingleInstanceLock()) {
   app.quit();
 } else {
-  app.on('second-instance', showWindow);
+  app.on('second-instance', () => {
+    showWindow();
+    // ×で閉じるとトレイに隠れるだけなので、起動し直したつもりでも前の起動のままになる。
+    // もう一度起動しようとしたときにも更新を見に行く
+    checkForUpdate();
+  });
   app.whenReady().then(init);
 }
 
@@ -51,8 +56,23 @@ function initUpdater() {
   // 更新の失敗でアプリが止まっては困るので、記録するだけにする
   autoUpdater.on('error', (e) => console.warn('更新を確認できませんでした:', e?.message ?? e));
 
-  // 確認は起動時の1回だけにする。付けっぱなしで使うので、動作中に落とし始めても嬉しくない
-  autoUpdater.checkForUpdates().catch(() => {});
+  // 確認は起動時と、もう一度起動しようとしたときだけにする。
+  // 付けっぱなしで使うので、黙って定期的に落とし始めても嬉しくない
+  checkForUpdate();
+}
+
+let checking = false;
+
+/** 更新を見に行く。落とし終えたものがあるときと、確認中のときは何もしない */
+function checkForUpdate() {
+  if (!app.isPackaged || update || checking) return;
+  checking = true;
+  autoUpdater
+    .checkForUpdates()
+    .catch(() => {})
+    .finally(() => {
+      checking = false;
+    });
 }
 
 /** 落とし終えた更新を当てて再起動する */
