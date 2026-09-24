@@ -1,7 +1,7 @@
 {
   "name": "ark-overlay",
   "productName": "ARK Overlay",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "ARK用オーバーレイ（タイマー・生物データ）",
   "main": "electron/main.js",
   "author": "Kairu",
