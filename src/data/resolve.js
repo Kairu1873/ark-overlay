@@ -45,7 +45,7 @@ export function timersFor(creature, rates, override) {
   else add('incubationSec', '孵化', 'speed', 'eggHatchSpeed');
 
   add('maturationSec', '成体まで', 'speed', 'babyMatureSpeed');
-  add('matingCooldownMinSec', '交配クールダウン', 'interval', 'matingInterval');
+  addMatingCooldown(rows, creature, b, rates, override);
 
   // インプリント間隔は生物に依らない（MOD生物以外は一律8時間）。
   // Wiki にデータが無い ASA 新規生物でも必ず出せる
@@ -59,6 +59,30 @@ export function timersFor(creature, rates, override) {
   });
 
   return rows;
+}
+
+/**
+ * 交配クールダウンの行。ゲーム内の値は最短〜最長の幅を持ち、どこに落ちるかは分からない。
+ * タイマーは確実に明けている最長側で鳴らし、最短側は表示用に rangeMinSec で渡す。
+ * 利用者が実測値を入れていれば、それをそのまま使う。
+ */
+function addMatingCooldown(rows, creature, b, rates, override) {
+  const field = 'matingCooldownMinSec';
+  const min = pick(b, override, field);
+  const max = pick(b, null, 'matingCooldownMaxSec');
+  const useMax = !min.manual && max.sec !== null;
+  const sec = useMax ? max.sec : min.sec;
+  const scale = (v) => (v === null ? null : applyRate(v, rates.matingInterval, 'interval'));
+  const label = '交配クールダウン';
+  rows.push({
+    field,
+    label,
+    name: `${creature.name} ${label}`,
+    baseSec: sec,
+    seconds: scale(sec),
+    rangeMinSec: useMax && min.sec !== null && min.sec !== max.sec ? scale(min.sec) : null,
+    manual: min.manual,
+  });
 }
 
 /** 交配クールダウンの最長側（表示の補足に使う） */

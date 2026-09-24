@@ -4,7 +4,7 @@
 
 import { loadData, onDataChanged, searchCreatures, findCreature, getData } from '../data/store.js';
 import { RATE_DEFS, normalizeRates } from '../data/rates.js';
-import { timersFor, matingCooldownMax, coverageOf } from '../data/resolve.js';
+import { timersFor, coverageOf } from '../data/resolve.js';
 import { tamingPlan, NARCOTIC_DEFS, DEFAULT_TAMING_LEVEL } from '../data/taming.js';
 import { STAT_LABELS, wildStatAt, wildGainPerLevel, roundStat } from '../data/stats.js';
 
@@ -136,7 +136,6 @@ function timerRowsHtml(c) {
   const ov = overrideOf(c.key);
   // 繁殖できない生物に「データなし」を並べても仕方がないので、行ごと出さない
   const rows = c.breedable ? timersFor(c, r, ov) : [];
-  const cdMax = matingCooldownMax(c, r, ov);
 
   if (!rows.length) return `<p class="empty">この生物は繁殖できないため、繁殖まわりのタイマーはない</p>`;
   return rows
@@ -145,10 +144,11 @@ function timerRowsHtml(c) {
       const value =
         row.seconds === null
           ? `<span class="none">データなし</span>`
-          : `<span class="dur">${longDuration(row.seconds)}</span>` +
-            (row.field === 'matingCooldownMinSec' && cdMax !== null && cdMax !== row.seconds
-              ? `<span class="sub"> 〜 ${longDuration(cdMax)}</span>`
+          : // 幅のある値は「最短 〜 最長」と出す。タイマーは最長側で鳴る
+            (row.rangeMinSec
+              ? `<span class="dur">${longDuration(row.rangeMinSec)}</span><span class="sub"> 〜 </span>`
               : '') +
+            `<span class="dur">${longDuration(row.seconds)}</span>` +
             (row.manual ? `<span class="tag">手入力</span>` : '');
       const editor = editing
         ? `<div class="editor">

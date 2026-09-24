@@ -35,8 +35,12 @@ console.log('倍率がすべて 1 のとき');
   const rows = timersFor(rex, r, null);
   eq('孵化 = 17998.56秒（4:59:58）', rowOf(rows, 'incubationSec'), 17998.56);
   eq('成体まで = 333333.31秒（3日20:35:33）', rowOf(rows, 'maturationSec'), 333333.31);
-  eq('交配CD（最短） = 64800秒（18時間）', rowOf(rows, 'matingCooldownMinSec'), 64800);
+  // タイマーは確実に明けている最長側で鳴らす。最短側は表示用に持つ
+  eq('交配CDのタイマー = 最長の172800秒（48時間）', rowOf(rows, 'matingCooldownMinSec'), 172800);
+  eq('交配CDの表示の最短側 = 64800秒（18時間）', rows.find((x) => x.field === 'matingCooldownMinSec').rangeMinSec, 64800);
   eq('交配CD（最長） = 172800秒（48時間）', matingCooldownMax(rex, r, null), 172800);
+  const measured = timersFor(rex, r, { matingCooldownMinSec: 90000 });
+  eq('実測値を入れたらそれで鳴らす', rowOf(measured, 'matingCooldownMinSec'), 90000);
   eq('インプリント間隔 = 28800秒（8時間）', rowOf(rows, 'cuddle'), CUDDLE_BASE_SEC);
 }
 
@@ -51,7 +55,7 @@ console.log('\n「間隔」系の倍率は時間を掛ける（値を下げる�
 {
   const r = normalizeRates({ matingInterval: 0.5, cuddleInterval: 0.25 });
   const rows = timersFor(rex, r, null);
-  eq('交配間隔0.5x → 32400秒（9時間）', rowOf(rows, 'matingCooldownMinSec'), 32400);
+  eq('交配間隔0.5x → 最長側 86400秒（24時間）', rowOf(rows, 'matingCooldownMinSec'), 86400);
   eq('インプリント間隔0.25x → 7200秒（2時間）', rowOf(rows, 'cuddle'), 7200);
 }
 
