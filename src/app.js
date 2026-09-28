@@ -335,8 +335,16 @@ function bindWindowControls() {
     $('#winPin').classList.toggle('on', next);
   });
   // トレイ側から切り替えられたときも表示を合わせる
-  desktop.onStateChanged?.(({ alwaysOnTop }) => $('#winPin').classList.toggle('on', alwaysOnTop));
-  desktop.getState?.().then(({ alwaysOnTop }) => $('#winPin').classList.toggle('on', alwaysOnTop));
+  const showState = ({ alwaysOnTop, clickThrough }) => {
+    $('#winPin').classList.toggle('on', alwaysOnTop);
+    document.body.classList.toggle('click-through', Boolean(clickThrough));
+  };
+  desktop.onStateChanged?.(showState);
+  desktop.getState?.().then(showState);
+  // クリック透過中も上部のバーだけは押せるよう、乗ったこと・離れたことを知らせる
+  const bar = $('.top');
+  bar.addEventListener('mouseenter', () => desktop.hoverBar?.(true));
+  bar.addEventListener('mouseleave', () => desktop.hoverBar?.(false));
 }
 
 /** 更新が落とし終わったら、上部に「更新して再起動」を出す */

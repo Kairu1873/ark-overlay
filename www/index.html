@@ -123,6 +123,14 @@
           <input id="setTransparency" type="range" min="10" max="100" step="5" />
           <p class="hint">100% で背景が無くなり、ゲーム画面がそのまま透ける。文字を載せる面の濃さは変わらない</p>
         </div>
+        <div id="setWindow" class="card settings" hidden>
+          <div id="setClickThrough" class="mode">
+            <span>クリック</span>
+            <button type="button" data-through="false">受ける</button>
+            <button type="button" data-through="true">透過する</button>
+          </div>
+          <p class="hint">透過すると、窓の上をクリックしても下のゲームに届く。上部のバー（タブや ⚙ の並び）だけは押せるので、ここから戻せる。トレイメニューからも切り替えられる</p>
+        </div>
       </section>
     </div>
   </main>

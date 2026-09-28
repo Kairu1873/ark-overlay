@@ -1,6 +1,7 @@
 const { app, BrowserWindow, Tray, Menu, Notification, ipcMain, nativeImage, clipboard } = require('electron');
 const path = require('path');
 const wikiData = require('./data');
+const settings = require('./settings');
 const { autoUpdater } = require('electron-updater');
 
 const APP_ID = 'com.kairu.arkoverlay'; // package.json の build.appId と同じにする（Windows通知に必要）
@@ -109,6 +110,8 @@ function createWindow() {
   win.loadFile(path.join(__dirname, '..', 'www', 'index.html'));
   // ゲーム（ボーダーレスウィンドウ）の上に出すため、通常より高い階層で前面に置く
   setAlwaysOnTop(true);
+  clickThrough = Boolean(settings.get().clickThrough);
+  applyMouse();
   win.on('close', (e) => {
     if (quitting) return;
     e.preventDefault();
@@ -130,7 +133,35 @@ function setAlwaysOnTop(on) {
   alwaysOnTop = on;
   if (win && !win.isDestroyed()) win.setAlwaysOnTop(on, 'screen-saver');
   if (tray) refreshTrayMenu();
-  if (win && !win.isDestroyed()) win.webContents.send('window:state', { alwaysOnTop });
+  sendWindowState();
+}
+
+let clickThrough = false;
+let overBar = false; // マウスが上部のバーに乗っているか
+
+/**
+ * クリックを透過する（ゲームへ素通しする）か。
+ * 透過中も上部のバーだけは押せるようにする。forward でマウスの動きだけは画面に届くので、
+ * 画面側がバーに乗ったこと・離れたことを知らせてくる（window:hover-bar）。
+ */
+function setClickThrough(on) {
+  clickThrough = on;
+  settings.set({ clickThrough: on });
+  applyMouse();
+  if (tray) refreshTrayMenu();
+  sendWindowState();
+}
+
+function applyMouse() {
+  if (!win || win.isDestroyed()) return;
+  const ignore = clickThrough && !overBar;
+  win.setIgnoreMouseEvents(ignore, ignore ? { forward: true } : undefined);
+}
+
+const windowState = () => ({ alwaysOnTop, clickThrough });
+
+function sendWindowState() {
+  if (win && !win.isDestroyed()) win.webContents.send('window:state', windowState());
 }
 
 function showWindow() {
@@ -160,6 +191,12 @@ function refreshTrayMenu() {
         type: 'checkbox',
         checked: alwaysOnTop,
         click: (item) => setAlwaysOnTop(item.checked),
+      },
+      {
+        label: 'クリックを透過（上部のバーは押せる）',
+        type: 'checkbox',
+        checked: clickThrough,
+        click: (item) => setClickThrough(item.checked),
       },
       {
         label: 'Windows起動時に自動で起動',
@@ -195,7 +232,12 @@ ipcMain.handle('data:get', () => wikiData.get());
 ipcMain.on('window:minimize', () => win?.minimize());
 ipcMain.on('window:hide', () => win?.close()); // close は握って hide になる
 ipcMain.on('window:always-on-top', (_e, on) => setAlwaysOnTop(Boolean(on)));
-ipcMain.handle('window:state', () => ({ alwaysOnTop }));
+ipcMain.on('window:click-through', (_e, on) => setClickThrough(Boolean(on)));
+ipcMain.on('window:hover-bar', (_e, on) => {
+  overBar = Boolean(on);
+  applyMouse();
+});
+ipcMain.handle('window:state', () => windowState());
 
 // 更新まわり
 ipcMain.handle('update:state', () => update);

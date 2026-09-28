@@ -28,4 +28,30 @@ export function initSettings({ state, save }) {
     show();
     save();
   });
+
+  initWindowSettings();
+}
+
+/**
+ * ウィンドウに関わる設定。値はメインプロセスが持つので、ここでは送って、返ってきた状態を映すだけ。
+ * ブラウザで開いたときは窓を操作できないので出さない。
+ */
+function initWindowSettings() {
+  const desktop = window.arkOverlayDesktop?.window;
+  if (!desktop) return;
+  $('#setWindow').hidden = false;
+
+  const through = $('#setClickThrough');
+  const show = ({ clickThrough }) => {
+    for (const b of through.querySelectorAll('[data-through]')) {
+      b.classList.toggle('on', b.dataset.through === String(Boolean(clickThrough)));
+    }
+  };
+  through.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-through]');
+    if (b) desktop.setClickThrough(b.dataset.through === 'true');
+  });
+  // トレイから切り替えられたときも表示を合わせる
+  desktop.onStateChanged?.(show);
+  desktop.getState?.().then(show);
 }

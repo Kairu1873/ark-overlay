@@ -26,6 +26,9 @@ contextBridge.exposeInMainWorld('arkOverlayDesktop', {
     minimize: () => ipcRenderer.send('window:minimize'),
     hide: () => ipcRenderer.send('window:hide'),
     setAlwaysOnTop: (on) => ipcRenderer.send('window:always-on-top', on),
+    // クリックをゲームへ素通しするか。透過中はバーに乗ったときだけクリックを受ける
+    setClickThrough: (on) => ipcRenderer.send('window:click-through', on),
+    hoverBar: (on) => ipcRenderer.send('window:hover-bar', on),
     getState: () => ipcRenderer.invoke('window:state'),
     onStateChanged: (cb) => ipcRenderer.on('window:state', (_e, state) => cb(state)),
   },

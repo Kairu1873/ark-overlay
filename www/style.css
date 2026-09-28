@@ -251,6 +251,11 @@ input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; }
 .settings .set-row + .set-row, .settings .hint + .set-row { margin-top: 16px; }
 .settings output { font-variant-numeric: tabular-nums; color: var(--accent-text); font-weight: 700; }
 .settings .hint { margin: 6px 0 0; }
+.settings + .settings { margin-top: 10px; }
+.settings .mode:first-child { margin-top: 0; }
+.settings .mode span { font-size: 14px; color: var(--text); }
+/* クリック透過中は、押せるのが上部のバーだけだと分かるよう下に線を引く */
+body.click-through .top { box-shadow: inset 0 -2px 0 var(--accent); }
 input[type=range] {
   padding: 0; margin: 10px 0 0; background: none; border: 0;
   accent-color: var(--accent); cursor: pointer;
