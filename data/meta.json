@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-22T19:01:45.159Z",
+ "generatedAt": "2026-09-28T23:44:17.928Z",
  "license": {
   "name": "Creative Commons Attribution-Non-Commercial-ShareAlike 4.0 License",
   "url": "https://creativecommons.org/licenses/by-nc-sa/4.0"
@@ -7,7 +7,7 @@
  "sources": {
   "ark.wiki.gg": {
    "cargo": {
-    "creatures": 966,
+    "creatures": 967,
     "items": 2620
    },
    "modules": {
@@ -204,6 +204,12 @@
    "field": "torpor",
    "en": 100,
    "ja": 500
+  },
+  {
+   "name": "Roll Rat",
+   "field": "health",
+   "en": 850,
+   "ja": 765
   },
   {
    "name": "Shastasaurus",
@@ -1398,6 +1404,12 @@
    "field": "damage",
    "wiki": 120,
    "asb": 100
+  },
+  {
+   "name": "Roll Rat",
+   "field": "health",
+   "wiki": 765,
+   "asb": 850
   },
   {
    "name": "Roll Rat",

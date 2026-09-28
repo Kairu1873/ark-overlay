@@ -26461,6 +26461,7 @@
   "saddleLevel": null,
   "wildMaps": [
    "The Island",
+   "Scorched Earth",
    "Aberration",
    "Extinction",
    "Genesis: Part 1",
@@ -26470,7 +26471,9 @@
    "The Center",
    "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": null,
   "taming": {
@@ -26584,7 +26587,7 @@
    }
   },
   "ja": {
-   "wildMaps": "原種：変種：X種：",
+   "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Astraeos, ValgueroX種：Genesis: Part 1",
    "temperament": "中立",
    "diet": "肉食",
    "breedingNote": "不可",
@@ -26596,7 +26599,7 @@
    "breeding": null,
    "taming": "asb+dv",
    "stats": "asb+ja+cargo",
-   "wildMaps": "cargo",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -27083,7 +27086,9 @@
   "saddle": "Shastasaurus Submarine Saddle",
   "saddleLevel": 100,
   "wildMaps": [
-   "The Center"
+   "Genesis: Part 1",
+   "The Center",
+   "Astraeos"
   ],
   "breeding": {
    "incubationSec": null,
@@ -27206,13 +27211,14 @@
    }
   },
   "ja": {
-   "wildMaps": "The Center",
+   "wildMaps": "The Center, Astraeos, Genesis: Part 1",
    "temperament": "中立",
    "diet": "肉食",
    "breedingNote": "胎生",
    "drops": "霜降り肉、皮",
-   "tamingMethod": "特殊な手渡しテイム・騎乗可能",
+   "tamingMethod": "特殊テイム",
    "foodPriority": "特級キブル",
+   "rideable": "可能",
    "saddleLevel": "100"
   },
   "sources": {
