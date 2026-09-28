@@ -1,15 +1,16 @@
 // 設定画面。上部の ⚙ から開く。
 //
-// 背景の透過率は画面だけで完結するので、ほかの画面と同じ state（localStorage）に置く。
+// 背景の透過率とテーマ色は画面だけで完結するので、ほかの画面と同じ state（localStorage）に置く。
 // クリック透過とショートカットは窓に関わるので、メインプロセスが持つ。
 
-import { normalizeAppearance, backgroundColor, toAccelerator } from '../settings.js';
+import { normalizeAppearance, backgroundColor, toAccelerator, THEMES } from '../settings.js';
 
 const $ = (sel) => document.querySelector(sel);
 
 /** 見た目の設定を画面に当てる */
 function applyAppearance(a) {
   document.documentElement.style.setProperty('--bg', backgroundColor(a.transparency));
+  document.documentElement.dataset.theme = a.theme;
 }
 
 export function initSettings({ state, save }) {
@@ -27,6 +28,23 @@ export function initSettings({ state, save }) {
     state.appearance = normalizeAppearance({ ...state.appearance, transparency: slider.value });
     applyAppearance(state.appearance);
     show();
+    save();
+  });
+
+  const themes = $('#setTheme');
+  const showTheme = () => {
+    themes.innerHTML = THEMES.map(
+      (t) =>
+        `<button type="button" data-theme-id="${t.id}" class="${t.id === state.appearance.theme ? 'on' : ''}" style="--swatch: ${t.color}"><i></i>${t.name}</button>`,
+    ).join('');
+  };
+  showTheme();
+  themes.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-theme-id]');
+    if (!b) return;
+    state.appearance = normalizeAppearance({ ...state.appearance, theme: b.dataset.themeId });
+    applyAppearance(state.appearance);
+    showTheme();
     save();
   });
 

@@ -1,12 +1,25 @@
 // 設定の値そのものの扱い（画面に依存しない部分）。
 //
-// 見た目（背景の透過率）は画面側の state に、ウィンドウに関わるものはメインプロセス側に置く。
+// 見た目（背景の透過率・テーマ色）は画面側の state に、ウィンドウに関わるものはメインプロセス側に置く。
 // ここでは保存された値を既定値で埋め、範囲外の値を丸める。
 
 /** 背景の透過率（%）。100 で背景なし。文字の面は別に濃さを持つので、ここを上げても文字は読める */
 export const TRANSPARENCY_MIN = 10;
 export const TRANSPARENCY_MAX = 100;
 export const TRANSPARENCY_DEFAULT = 70; // これまでの黒30%と同じ
+
+/**
+ * テーマ色。色そのものは www/style.css の `:root[data-theme]` にあり、ここは選ぶための一覧。
+ * color は設定画面の見本に使う（CSS の --accent と同じ値）。
+ */
+export const THEMES = [
+  { id: 'wakaba', name: '若葉', color: '#a8ff3e' },
+  { id: 'sora', name: '空色', color: '#5cc8ff' },
+  { id: 'kohaku', name: '琥珀', color: '#ffb13d' },
+  { id: 'sakura', name: '桜', color: '#ff8fc8' },
+  { id: 'fuji', name: '藤', color: '#b69cff' },
+];
+export const THEME_DEFAULT = 'wakaba'; // これまでの緑
 
 const clamp = (n, lo, hi) => Math.min(hi, Math.max(lo, n));
 
@@ -17,6 +30,7 @@ export function normalizeAppearance(a) {
     transparency: Number.isFinite(t)
       ? clamp(Math.round(t), TRANSPARENCY_MIN, TRANSPARENCY_MAX)
       : TRANSPARENCY_DEFAULT,
+    theme: THEMES.some((x) => x.id === a?.theme) ? a.theme : THEME_DEFAULT,
   };
 }
 

@@ -2,9 +2,12 @@
 //
 //   node tools/test-settings.mjs
 
+import { readFileSync } from 'node:fs';
 import {
   normalizeAppearance,
   toAccelerator,
+  THEMES,
+  THEME_DEFAULT,
   backgroundColor,
   TRANSPARENCY_DEFAULT,
   TRANSPARENCY_MIN,
@@ -27,6 +30,22 @@ console.log('背景の透過率');
   eq('上限より大きければ丸める', normalizeAppearance({ transparency: 150 }).transparency, TRANSPARENCY_MAX);
   eq('文字列でも受ける（スライダーの値）', normalizeAppearance({ transparency: '85' }).transparency, 85);
   eq('壊れた値は既定', normalizeAppearance({ transparency: 'abc' }).transparency, TRANSPARENCY_DEFAULT);
+}
+
+console.log('\nテーマ色');
+{
+  eq('保存が無ければ若葉（これまでの緑）', normalizeAppearance(undefined).theme, THEME_DEFAULT);
+  eq('一覧にあるものはそのまま', normalizeAppearance({ theme: 'sora' }).theme, 'sora');
+  eq('一覧に無いものは既定', normalizeAppearance({ theme: 'nope' }).theme, THEME_DEFAULT);
+  eq('透過率だけ保存されていても既定で埋まる', normalizeAppearance({ transparency: 50 }), { transparency: 50, theme: THEME_DEFAULT });
+
+  // 一覧と CSS がずれると、選んでも色が変わらない
+  const css = readFileSync(new URL('../www/style.css', import.meta.url), 'utf8');
+  const accentOf = (id) =>
+    id === THEME_DEFAULT
+      ? /:root \{[^}]*--accent: (#[0-9a-f]{6});/.exec(css)?.[1]
+      : new RegExp(`:root\\[data-theme="${id}"\\][^{]*\\{[^}]*--accent: (#[0-9a-f]{6});`).exec(css)?.[1];
+  for (const t of THEMES) eq(`${t.name} の見本は CSS の --accent と同じ`, accentOf(t.id), t.color);
 }
 
 console.log('\nショートカットの表記');

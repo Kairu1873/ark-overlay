@@ -4,7 +4,7 @@
   --bg: rgba(0, 0, 0, .30);        /* 画面全体。設定の「背景の透過率」で上書きされる */
   --card: rgba(0, 0, 0, .46);      /* 文字を載せる面は少し濃く */
   --card-2: rgba(0, 0, 0, .62);
-  --line: rgba(168, 255, 62, .30);
+  --line: color-mix(in srgb, var(--accent) 30%, transparent);
   --text: #eaffd6;
   --muted: #93a886;
   --accent: #a8ff3e;
@@ -15,6 +15,12 @@
   --shade: rgba(0, 0, 0, .55);     /* 入力欄やバーの内側 */
   --radius: 14px;
 }
+/* テーマ色。設定から選ぶ。既定（若葉）は上の :root の値で、ここでは色味に関わるものだけ差し替える。
+   一覧は src/settings.js の THEMES と揃える */
+:root[data-theme="sora"]   { --accent: #5cc8ff; --accent-text: #9edcff; --accent-ink: #001a2b; --text: #e2f4ff; --muted: #8aa3b3; }
+:root[data-theme="kohaku"] { --accent: #ffb13d; --accent-text: #ffd08a; --accent-ink: #2a1600; --text: #fff1dc; --muted: #b3a080; }
+:root[data-theme="sakura"] { --accent: #ff8fc8; --accent-text: #ffc0e0; --accent-ink: #2b0016; --text: #ffe8f3; --muted: #b3919f; }
+:root[data-theme="fuji"]   { --accent: #b69cff; --accent-text: #d4c5ff; --accent-ink: #150a33; --text: #eee8ff; --muted: #9d95b3; }
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 /* html を透明にしておかないと、窓の透過が効かない */
 html { margin: 0; background: transparent; }
@@ -258,6 +264,13 @@ input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; }
 .settings .shortcut input { flex: 1; min-width: 0; font-size: 15px; padding: 8px 12px; cursor: pointer; font-family: Consolas, "Courier New", monospace; }
 .settings .shortcut button { padding: 6px 14px; font-size: 13px; }
 .settings .hint.error { color: var(--danger); }
+.themes { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.themes button {
+  display: flex; align-items: center; gap: 6px; padding: 6px 12px 6px 8px; font-size: 13px;
+  background: var(--shade); color: var(--muted);
+}
+.themes button i { width: 16px; height: 16px; border-radius: 50%; background: var(--swatch); }
+.themes button.on { color: var(--text); border-color: var(--accent); font-weight: 700; }
 /* クリック透過中は、押せるのが上部のバーだけだと分かるよう下に線を引く */
 body.click-through .top { box-shadow: inset 0 -2px 0 var(--accent); }
 input[type=range] {
@@ -268,5 +281,5 @@ input[type=range] {
 /* スクロールバーも半透明に馴染ませる */
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: rgba(0, 0, 0, .25); }
-::-webkit-scrollbar-thumb { background: rgba(168, 255, 62, .35); border-radius: 5px; }
-::-webkit-scrollbar-thumb:hover { background: rgba(168, 255, 62, .6); }
+::-webkit-scrollbar-thumb { background: color-mix(in srgb, var(--accent) 35%, transparent); border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: color-mix(in srgb, var(--accent) 60%, transparent); }
