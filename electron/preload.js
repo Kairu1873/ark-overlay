@@ -29,6 +29,8 @@ contextBridge.exposeInMainWorld('arkOverlayDesktop', {
     // クリックをゲームへ素通しするか。透過中はバーに乗ったときだけクリックを受ける
     setClickThrough: (on) => ipcRenderer.send('window:click-through', on),
     hoverBar: (on) => ipcRenderer.send('window:hover-bar', on),
+    // 設定画面を開いている間は透過しない
+    settingsOpen: (on) => ipcRenderer.send('window:settings-open', on),
     // クリック透過を切り替える全体ショートカット。null で使わない。{ ok, shortcut } が返る
     setShortcut: (accel) => ipcRenderer.invoke('shortcut:set', accel),
     getState: () => ipcRenderer.invoke('window:state'),

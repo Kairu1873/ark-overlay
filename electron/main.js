@@ -152,11 +152,13 @@ function setAlwaysOnTop(on) {
 
 let clickThrough = false;
 let overBar = false; // マウスが上部のバーに乗っているか
+let settingsOpen = false; // 設定画面を開いているか
 
 /**
  * クリックを透過する（ゲームへ素通しする）か。
  * 透過中も上部のバーだけは押せるようにする。forward でマウスの動きだけは画面に届くので、
  * 画面側がバーに乗ったこと・離れたことを知らせてくる（window:hover-bar）。
+ * 設定画面を開いている間は、設定を操作できるよう透過しない（window:settings-open）。
  */
 function setClickThrough(on) {
   clickThrough = on;
@@ -168,7 +170,7 @@ function setClickThrough(on) {
 
 function applyMouse() {
   if (!win || win.isDestroyed()) return;
-  const ignore = clickThrough && !overBar;
+  const ignore = clickThrough && !overBar && !settingsOpen;
   win.setIgnoreMouseEvents(ignore, ignore ? { forward: true } : undefined);
 }
 
@@ -289,6 +291,10 @@ ipcMain.on('window:always-on-top', (_e, on) => setAlwaysOnTop(Boolean(on)));
 ipcMain.on('window:click-through', (_e, on) => setClickThrough(Boolean(on)));
 ipcMain.on('window:hover-bar', (_e, on) => {
   overBar = Boolean(on);
+  applyMouse();
+});
+ipcMain.on('window:settings-open', (_e, on) => {
+  settingsOpen = Boolean(on);
   applyMouse();
 });
 ipcMain.handle('window:state', () => windowState());

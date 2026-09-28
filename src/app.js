@@ -143,6 +143,8 @@ function setTab(tab) {
   save();
   for (const b of document.querySelectorAll('[data-tab]')) b.classList.toggle('on', b.dataset.tab === tab);
   $('#openSettings').classList.toggle('on', tab === 'settings');
+  // 設定画面はクリック透過の設定にかかわらず操作できるようにする
+  window.arkOverlayDesktop?.window?.settingsOpen?.(tab === 'settings');
   for (const p of document.querySelectorAll('[data-panel]')) p.hidden = p.dataset.panel !== tab;
 }
 
