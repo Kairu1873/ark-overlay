@@ -1,12 +1,14 @@
 import { platform, requestPermission, syncSchedules, notifyNow } from './notifier.js';
 import { initCreatures } from './ui/creatures.js';
 import { initItems } from './ui/items.js';
+import { initSettings } from './ui/settings.js';
 
 const STORE_KEY = 'arkOverlay.v1';
 
 // ---------- 状態 ----------
-// rates（サーバー倍率）・overrides（生物ごとの手入力値）・tab（開いていたタブ）は後から足した任意キー。
-// 既存の保存内容を壊さないよう、STORE_KEY は据え置きで既定値を埋める。
+// rates（サーバー倍率）・overrides（生物ごとの手入力値）・tab（開いていたタブ）・appearance（見た目の設定）は
+// 後から足した任意キー。既存の保存内容を壊さないよう、STORE_KEY は据え置きで既定値を埋める。
+// appearance の既定値は initSettings が埋める。
 let state = load();
 function load() {
   try {
@@ -133,10 +135,14 @@ const $ = (sel) => document.querySelector(sel);
 let editPresets = false;
 
 /** 「タイマー」「図鑑」の切り替え。開いていたタブは次回の起動に持ち越す */
+let tabBeforeSettings = 'timer'; // 設定を閉じたときに戻るタブ
+
 function setTab(tab) {
+  if (tab === 'settings' && state.tab !== 'settings') tabBeforeSettings = state.tab;
   state.tab = tab;
   save();
   for (const b of document.querySelectorAll('[data-tab]')) b.classList.toggle('on', b.dataset.tab === tab);
+  $('#openSettings').classList.toggle('on', tab === 'settings');
   for (const p of document.querySelectorAll('[data-panel]')) p.hidden = p.dataset.panel !== tab;
 }
 
@@ -264,6 +270,10 @@ function bind() {
     const b = e.target.closest('[data-tab]');
     if (b) setTab(b.dataset.tab);
   });
+  // ⚙ をもう一度押すと、開く前のタブへ戻る
+  $('#openSettings').addEventListener('click', () =>
+    setTab(state.tab === 'settings' ? tabBeforeSettings : 'settings'),
+  );
 
   $('#form').addEventListener('submit', (e) => {
     e.preventDefault();
@@ -346,6 +356,8 @@ function bindUpdate() {
 }
 
 document.documentElement.dataset.platform = platform;
+// 見た目は描画より先に当てる。後からだと既定の濃さで一瞬ちらつく
+initSettings({ state, save });
 bind();
 bindWindowControls();
 bindUpdate();

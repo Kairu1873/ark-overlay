@@ -1,7 +1,7 @@
 /* ゲームに重ねて使うオーバーレイ。窓そのものが透過しているので、
    背景は「黒を薄く敷く」だけにして、下のゲーム画面を透かせる。 */
 :root {
-  --bg: rgba(0, 0, 0, .30);        /* 画面全体。ここが透過の濃さ */
+  --bg: rgba(0, 0, 0, .30);        /* 画面全体。設定の「背景の透過率」で上書きされる */
   --card: rgba(0, 0, 0, .46);      /* 文字を載せる面は少し濃く */
   --card-2: rgba(0, 0, 0, .62);
   --line: rgba(168, 255, 62, .30);
@@ -44,6 +44,12 @@ main { max-width: 640px; margin: 0 auto; padding: 0 16px 32px; }
   background: var(--accent); border-color: var(--accent); color: var(--accent-ink);
   -webkit-app-region: no-drag;
 }
+.gear {
+  flex-shrink: 0; min-width: 28px; padding: 5px 7px; font-size: 13px; line-height: 1;
+  background: var(--shade); color: var(--muted);
+}
+.gear:hover { color: var(--text); }
+.gear.on { color: var(--accent-ink); background: var(--accent); border-color: var(--accent); }
 .win-ctl { display: flex; gap: 4px; flex-shrink: 0; }
 .win-ctl button {
   min-width: 28px; padding: 5px 7px; font-size: 12px; line-height: 1;
@@ -238,6 +244,16 @@ input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; }
 .tag {
   padding: 1px 6px; border-radius: 8px;
   background: var(--card-2); color: var(--accent-text); font-size: 11px;
+}
+
+/* 設定 */
+.settings .set-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: 14px; }
+.settings .set-row + .set-row, .settings .hint + .set-row { margin-top: 16px; }
+.settings output { font-variant-numeric: tabular-nums; color: var(--accent-text); font-weight: 700; }
+.settings .hint { margin: 6px 0 0; }
+input[type=range] {
+  padding: 0; margin: 10px 0 0; background: none; border: 0;
+  accent-color: var(--accent); cursor: pointer;
 }
 
 /* スクロールバーも半透明に馴染ませる */

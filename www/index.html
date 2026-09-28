@@ -16,6 +16,7 @@
       <button type="button" class="tab" data-tab="items" id="tabItems" hidden>アイテム</button>
     </nav>
     <button type="button" id="updateReady" class="update-btn" hidden></button>
+    <button type="button" id="openSettings" class="gear" title="設定">⚙</button>
     <div id="winCtl" class="win-ctl" hidden>
       <button type="button" id="winPin" class="on" title="常に手前に表示">前面</button>
       <button type="button" id="winMin" title="最小化">−</button>
@@ -106,6 +107,22 @@
         </div>
         <div id="itemPicked"></div>
         <div id="itemResults" class="dex-list"></div>
+      </section>
+    </div>
+
+    <div data-panel="settings" hidden>
+      <section>
+        <div class="section-head">
+          <h2>設定</h2>
+        </div>
+        <div class="card settings">
+          <div class="set-row">
+            <label for="setTransparency">背景の透過率</label>
+            <output id="setTransparencyValue" for="setTransparency"></output>
+          </div>
+          <input id="setTransparency" type="range" min="10" max="100" step="5" />
+          <p class="hint">100% で背景が無くなり、ゲーム画面がそのまま透ける。文字を載せる面の濃さは変わらない</p>
+        </div>
       </section>
     </div>
   </main>

@@ -86,7 +86,7 @@ function installUpdate() {
 
 function createWindow() {
   // ゲームに重ねて使うため、枠なし・背景透過のウィンドウにする。
-  // 背景の濃さは www/style.css の --bg（既定で黒30%）が決める。
+  // 背景の濃さは www/style.css の --bg（既定で黒30%）が決め、設定の「背景の透過率」で変えられる。
   win = new BrowserWindow({
     width: 440,
     height: 760,
