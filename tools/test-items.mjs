@@ -14,6 +14,7 @@ import {
   qualityString,
   qualityVariants,
   QUALITIES,
+  typingCost,
 } from '../src/data/items.js';
 
 const items = JSON.parse(
@@ -103,10 +104,22 @@ console.log('\n短い順（画面はこれを1件だけ出す）');
     commonStrings(sel, allNames, { limit: 1, order: 'length', exclude })[0]?.text ?? null;
   eq('短いものが先に来る', shortest(['Raw Meat', 'Raw Prime Meat']), 'aw');
   // 非対象を指定すると、そこに当たる短い候補は消え、残った中で一番短いものになる
-  eq('非対象を避けた一番短いもの', shortest(['Raw Prime Meat'], ['Raw Meat', 'Raw Mutton']), 'Pr');
+  eq('非対象を避けた一番短いもの', shortest(['Raw Prime Meat'], ['Raw Meat', 'Raw Mutton']), 'e ');
   eq('分けられないときは null', shortest(['Raw Meat', 'Raw Prime Meat'], ['Raw Mutton', 'Raw Fish Meat']), null);
   // 既定の並び（一致件数の少ない順）は変わっていない
   eq('既定は絞り込める順のまま', commonStrings(['Raw Meat', 'Raw Prime Meat'], FIXTURE, { limit: 1 })[0].text, 'Raw ');
+}
+
+console.log('\n同じ長さなら左手で打ちやすいものを先に');
+{
+  const shortest1 = (sel, exclude) =>
+    commonStrings(sel, allNames, { limit: 1, order: 'length', exclude, min: 1 })[0]?.text ?? null;
+  eq('QWE・ASDF は同じ一番軽い重み', [...'qweasdf'].every((k) => typingCost(k) === 0), true);
+  eq('QWE・ASDF はその外側より軽い', typingCost('e') < typingCost('r') && typingCost('a') < typingCost('t'), true);
+  eq('左手の上段は右手より軽い', typingCost('e') < typingCost('o'), true);
+  eq('大文字小文字は問わない', typingCost('E'), typingCost('e'));
+  // 石と鉄鉱石から黒曜石を外すと "t" と "e" が残る。押しやすい e を出す
+  eq('石と鉄鉱石（黒曜石を除く）', shortest1(['Stone', 'Metal'], ['Obsidian']), 'e');
 }
 
 console.log('\n品質で絞るとき');

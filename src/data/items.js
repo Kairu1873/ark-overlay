@@ -44,6 +44,31 @@ export function countMatches(allNames, text) {
 }
 
 /**
+ * キーの押しやすさ。左手をホームポジションに置いたまま届く QWE・ASDF を一番軽くし、離れるほど重くする。
+ * マウスを右手に持ったまま検索欄に打つ前提で、右手のキーは重くしてある。
+ */
+const KEY_COST = {
+  q: 0, w: 0, e: 0, a: 0, s: 0, d: 0, f: 0,
+  ' ': 1, r: 1, g: 1,
+  t: 2, z: 2, x: 2, c: 2, v: 2,
+  b: 3, 1: 3, 2: 3, 3: 3, 4: 3, 5: 3,
+};
+/** 右手のキー（上に無い英数字） */
+const RIGHT_HAND_COST = 5;
+/** 記号など。Shift が要るものも多い */
+const OTHER_COST = 8;
+
+/** 文字列を打つ手間。小さいほど左手だけで楽に打てる */
+export function typingCost(text) {
+  let cost = 0;
+  for (const ch of lower(text)) {
+    if (ch in KEY_COST) cost += KEY_COST[ch];
+    else cost += /[a-z0-9]/.test(ch) ? RIGHT_HAND_COST : OTHER_COST;
+  }
+  return cost;
+}
+
+/**
  * 品質。ゲーム内では名前の頭に付く（`Ascendant Gacha Crystal`）。低いものから並べてある。
  */
 export const QUALITIES = ['Primitive', 'Ramshackle', 'Apprentice', 'Journeyman', 'Mastercraft', 'Ascendant'];
@@ -98,8 +123,8 @@ export function qualityString(targetNames, allNames, { quality, exclude = [] } =
  * @param {string[]} selectedNames 選択したアイテムの英名
  * @param {string[]} allNames 全アイテムの英名（一致件数を数えるのに使う）
  * 並べ方は2つ。'hits' は一致件数の少ない順（よく絞り込める順）、'length' は短い順
- * （打つのが楽な順）。非対象を指定してあれば、残った候補はどれも非対象に当たらないので、
- * 短いものを選んでも取りこぼさない。
+ * （打つのが楽な順。同じ長さなら左手のホームポジション近くで打てるものを先に）。
+ * 非対象を指定してあれば、残った候補はどれも非対象に当たらないので、短いものを選んでも取りこぼさない。
  *
  * @param {{min?: number, limit?: number, exclude?: string[], order?: 'hits'|'length'}} opt
  * @returns {{text: string, hits: number}[]}
@@ -153,8 +178,14 @@ export function commonStrings(
     kept.push({ text, hits });
   }
   if (order === 'length') {
-    // 短いものから。同じ長さなら絞り込めるほうを先に
-    kept.sort((a, b) => a.text.length - b.text.length || a.hits - b.hits || a.text.localeCompare(b.text));
+    // 短いものから。同じ長さなら左手で打ちやすいもの、それも同じなら絞り込めるほうを先に
+    kept.sort(
+      (a, b) =>
+        a.text.length - b.text.length ||
+        typingCost(a.text) - typingCost(b.text) ||
+        a.hits - b.hits ||
+        a.text.localeCompare(b.text),
+    );
   } else {
     // 一番絞り込めるものから。件数が同じなら打つのが楽な短いほうを先に
     kept.sort((a, b) => a.hits - b.hits || a.text.length - b.text.length || a.text.localeCompare(b.text));
