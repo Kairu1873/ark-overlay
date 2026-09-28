@@ -1,4 +1,14 @@
-const { app, BrowserWindow, Tray, Menu, Notification, ipcMain, nativeImage, clipboard } = require('electron');
+const {
+  app,
+  BrowserWindow,
+  Tray,
+  Menu,
+  Notification,
+  ipcMain,
+  nativeImage,
+  clipboard,
+  globalShortcut,
+} = require('electron');
 const path = require('path');
 const wikiData = require('./data');
 const settings = require('./settings');
@@ -28,6 +38,10 @@ function init() {
   Menu.setApplicationMenu(null);
   createWindow();
   createTray();
+  // 保存したキーが他のアプリに取られていたら、使えないまま起動する（設定画面に出す）
+  registerShortcut(settings.get().shortcut);
+  refreshTrayMenu();
+  sendWindowState();
   // メインプロセスで時刻を監視（ウィンドウを閉じてもトレイ常駐中は通知される）
   setInterval(checkSchedules, 1000);
   // データ更新は起動を待たせない。失敗しても同梱データで動く
@@ -158,7 +172,45 @@ function applyMouse() {
   win.setIgnoreMouseEvents(ignore, ignore ? { forward: true } : undefined);
 }
 
-const windowState = () => ({ alwaysOnTop, clickThrough });
+let shortcut = null; // 登録できているショートカット
+
+/**
+ * クリック透過を切り替える全体ショートカットを登録し直す。ゲームに手前を取られていても効く。
+ * 他のアプリが使っているキーは登録できないので false を返す（そのときは何も登録されていない）
+ */
+function registerShortcut(accel) {
+  if (shortcut) globalShortcut.unregister(shortcut);
+  shortcut = null;
+  if (!accel) return true;
+  let ok = false;
+  try {
+    ok = globalShortcut.register(accel, () => setClickThrough(!clickThrough));
+  } catch (_) {
+    ok = false; // 表記が壊れているとき
+  }
+  if (ok) shortcut = accel;
+  return ok;
+}
+
+/** ショートカットを変える。登録できなければ前のキーに戻す */
+function setShortcut(accel) {
+  const prev = shortcut;
+  const next = accel ? String(accel) : null;
+  const ok = registerShortcut(next);
+  if (ok) settings.set({ shortcut: next });
+  else registerShortcut(prev);
+  if (tray) refreshTrayMenu();
+  sendWindowState();
+  return { ok, shortcut };
+}
+
+const windowState = () => ({
+  alwaysOnTop,
+  clickThrough,
+  shortcut,
+  // 保存してあるのに登録できなかったキー（他のアプリが使っている）
+  shortcutUnavailable: settings.get().shortcut && !shortcut ? settings.get().shortcut : null,
+});
 
 function sendWindowState() {
   if (win && !win.isDestroyed()) win.webContents.send('window:state', windowState());
@@ -194,6 +246,8 @@ function refreshTrayMenu() {
       },
       {
         label: 'クリックを透過（上部のバーは押せる）',
+        // キーは表示するだけ。登録は globalShortcut が持つ
+        ...(shortcut ? { accelerator: shortcut, registerAccelerator: false } : {}),
         type: 'checkbox',
         checked: clickThrough,
         click: (item) => setClickThrough(item.checked),
@@ -238,6 +292,7 @@ ipcMain.on('window:hover-bar', (_e, on) => {
   applyMouse();
 });
 ipcMain.handle('window:state', () => windowState());
+ipcMain.handle('shortcut:set', (_e, accel) => setShortcut(accel));
 
 // 更新まわり
 ipcMain.handle('update:state', () => update);
@@ -276,6 +331,7 @@ function checkSchedules() {
 app.on('before-quit', () => {
   quitting = true;
 });
+app.on('will-quit', () => globalShortcut.unregisterAll());
 app.on('window-all-closed', () => {
   /* トレイ常駐のため終了しない */
 });

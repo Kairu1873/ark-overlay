@@ -4,6 +4,7 @@
 
 import {
   normalizeAppearance,
+  toAccelerator,
   backgroundColor,
   TRANSPARENCY_DEFAULT,
   TRANSPARENCY_MIN,
@@ -26,6 +27,28 @@ console.log('背景の透過率');
   eq('上限より大きければ丸める', normalizeAppearance({ transparency: 150 }).transparency, TRANSPARENCY_MAX);
   eq('文字列でも受ける（スライダーの値）', normalizeAppearance({ transparency: '85' }).transparency, 85);
   eq('壊れた値は既定', normalizeAppearance({ transparency: 'abc' }).transparency, TRANSPARENCY_DEFAULT);
+}
+
+console.log('\nショートカットの表記');
+{
+  const k = (code, mods = '') => ({
+    code,
+    ctrlKey: mods.includes('c'),
+    altKey: mods.includes('a'),
+    shiftKey: mods.includes('s'),
+    metaKey: mods.includes('m'),
+  });
+  eq('Alt+Shift+英字', toAccelerator(k('KeyX', 'as')), 'Alt+Shift+X');
+  eq('修飾キーは Ctrl, Alt, Shift, Super の順', toAccelerator(k('KeyT', 'msac')), 'Ctrl+Alt+Shift+Super+T');
+  eq('数字', toAccelerator(k('Digit1', 'c')), 'Ctrl+1');
+  eq('テンキー', toAccelerator(k('Numpad5', 'a')), 'Alt+num5');
+  eq('F キー', toAccelerator(k('F12', 'c')), 'Ctrl+F12');
+  eq('移動系', toAccelerator(k('ArrowUp', 'a')), 'Alt+Up');
+  eq('修飾キーなしは受けない', toAccelerator(k('KeyX')), null);
+  eq('Shift だけでは受けない', toAccelerator(k('KeyX', 's')), null);
+  eq('修飾キーだけでは受けない', toAccelerator(k('AltLeft', 'a')), null);
+  eq('記号キーは受けない（配列で刻印がずれる）', toAccelerator(k('Semicolon', 'c')), null);
+  eq('F25 は無い', toAccelerator(k('F25', 'c')), null);
 }
 
 console.log(failed ? `\n${failed}件 失敗しました` : '\nすべて通りました');

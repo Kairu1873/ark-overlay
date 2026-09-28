@@ -130,6 +130,14 @@
             <button type="button" data-through="true">透過する</button>
           </div>
           <p class="hint">透過すると、窓の上をクリックしても下のゲームに届く。上部のバー（タブや ⚙ の並び）だけは押せるので、ここから戻せる。トレイメニューからも切り替えられる</p>
+          <div class="set-row">
+            <label for="setShortcut">透過を切り替えるキー</label>
+          </div>
+          <div class="shortcut">
+            <input id="setShortcut" type="text" readonly placeholder="なし" />
+            <button type="button" id="clearShortcut">なし</button>
+          </div>
+          <p id="shortcutMsg" class="hint">欄を押してから、使いたい組み合わせを押す（Ctrl・Alt のどちらかと一緒に）。ゲームを操作している最中でも効く</p>
         </div>
       </section>
     </div>

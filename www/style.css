@@ -254,6 +254,10 @@ input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; }
 .settings + .settings { margin-top: 10px; }
 .settings .mode:first-child { margin-top: 0; }
 .settings .mode span { font-size: 14px; color: var(--text); }
+.settings .shortcut { display: flex; gap: 8px; margin-top: 8px; }
+.settings .shortcut input { flex: 1; min-width: 0; font-size: 15px; padding: 8px 12px; cursor: pointer; font-family: Consolas, "Courier New", monospace; }
+.settings .shortcut button { padding: 6px 14px; font-size: 13px; }
+.settings .hint.error { color: var(--danger); }
 /* クリック透過中は、押せるのが上部のバーだけだと分かるよう下に線を引く */
 body.click-through .top { box-shadow: inset 0 -2px 0 var(--accent); }
 input[type=range] {

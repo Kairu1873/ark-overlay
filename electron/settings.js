@@ -1,4 +1,4 @@
-// ウィンドウに関わる設定（クリック透過など）の保存。
+// ウィンドウに関わる設定（クリック透過・ショートカット）の保存。
 //
 // 画面側の設定は localStorage に置いているが、ここにあるものは窓を作る時点でメインプロセスが
 // 知っている必要があるため、userData/settings.json に置く。
@@ -10,6 +10,7 @@ const fs = require('fs');
 
 const DEFAULTS = {
   clickThrough: false, // クリックをゲームへ素通しするか
+  shortcut: 'Alt+Shift+X', // クリック透過を切り替える全体ショートカット。null で使わない
 };
 
 // userData は app.setName の影響を受けるので、ready 前に確定させない
