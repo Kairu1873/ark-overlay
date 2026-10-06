@@ -136,6 +136,182 @@
   }
  },
  {
+  "key": "achatina",
+  "name": "Achatina",
+  "nameJa": "アフリカマイマイ",
+  "origin": "asa",
+  "entityId": "Achatina_Character_BP_C",
+  "group": "Invertebrates",
+  "diet": "Herbivore",
+  "temperament": "Passive",
+  "tameable": true,
+  "breedable": true,
+  "rideable": false,
+  "saddle": null,
+  "saddleLevel": null,
+  "wildMaps": [
+   "The Island",
+   "Scorched Earth",
+   "Aberration",
+   "Extinction",
+   "Genesis: Part 1",
+   "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
+   "Lost Island",
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
+  ],
+  "breeding": {
+   "incubationSec": null,
+   "gestationSec": 28571.4286,
+   "maturationSec": 333333.333,
+   "matingCooldownMinSec": 64800,
+   "matingCooldownMaxSec": 172800,
+   "egg": null,
+   "eggTempMin": null,
+   "eggTempMax": null
+  },
+  "taming": {
+   "method": "knockout",
+   "affinityBase": 4000,
+   "affinityPerLevel": 150,
+   "torpor1": 50,
+   "torporIncrease": 3,
+   "torporDepletionPS0": 0.3,
+   "ineffectiveness": 0.2,
+   "foodConsumptionBase": 0.001736,
+   "foodConsumptionMult": 864.055298,
+   "favoriteKibble": null,
+   "favoriteFood": "Sweet Vegetable Cake",
+   "eats": [
+    "Sweet Vegetable Cake"
+   ],
+   "specialFoodValues": {
+    "Sweet Vegetable Cake": {
+     "value": 195,
+     "affinity": 400
+    }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
+  },
+  "stats": {
+   "health": 75,
+   "stamina": 100,
+   "oxygen": 150,
+   "food": 450,
+   "weight": 60,
+   "torpor": 50,
+   "damage": 100,
+   "speed": 100
+  },
+  "statsRaw": {
+   "health": {
+    "base": 75,
+    "incWild": 0.2,
+    "incTamed": 0.27,
+    "addTamed": 0.5,
+    "multTamed": 0
+   },
+   "stamina": {
+    "base": 100,
+    "incWild": 0.1,
+    "incTamed": 0.1,
+    "addTamed": 0,
+    "multTamed": 0
+   },
+   "torpor": {
+    "base": 50,
+    "incWild": 0.06,
+    "incTamed": 0,
+    "addTamed": 0.5,
+    "multTamed": 0
+   },
+   "oxygen": {
+    "base": 150,
+    "incWild": 0.1,
+    "incTamed": 0.1,
+    "addTamed": 0,
+    "multTamed": 0
+   },
+   "food": {
+    "base": 450,
+    "incWild": 0.1,
+    "incTamed": 0.1,
+    "addTamed": 0,
+    "multTamed": 0
+   },
+   "weight": {
+    "base": 60,
+    "incWild": 0.02,
+    "incTamed": 0.04,
+    "addTamed": 0,
+    "multTamed": 0
+   },
+   "damage": {
+    "base": 1,
+    "incWild": 0.05,
+    "incTamed": 0.1,
+    "addTamed": 0.5,
+    "multTamed": 0.4
+   },
+   "speed": {
+    "base": 1,
+    "incWild": 0,
+    "incTamed": 0.01,
+    "addTamed": 0,
+    "multTamed": 0
+   }
+  },
+  "growth": {
+   "wild": {
+    "health": 15,
+    "stamina": 10,
+    "torpor": 3,
+    "oxygen": 15,
+    "food": 45,
+    "weight": 1.2,
+    "damage": 5,
+    "speed": 0
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 2,
+    "torpor": 0,
+    "oxygen": 2,
+    "food": 2,
+    "weight": 0.8,
+    "damage": 2,
+    "speed": 0.2
+   }
+  },
+  "ja": {
+   "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration",
+   "temperament": "友好的",
+   "diet": "スイートベジタブルケーキ",
+   "breedingNote": "胎生",
+   "drops": "生肉、キチン",
+   "tamingMethod": "昏睡テイム",
+   "foodPriority": "スイートベジタブルケーキ",
+   "rideable": "不可"
+  },
+  "sources": {
+   "breeding": "dv",
+   "taming": "dv+tamingTable",
+   "stats": "asb+ja",
+   "wildMaps": "cargo+ja",
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
+  }
+ },
+ {
   "key": "acrocanthosaurus",
   "name": "Acrocanthosaurus",
   "nameJa": "アクロカントサウルス",
@@ -3136,7 +3312,7 @@
   },
   "ja": {
    "wildMaps": "Lost Colony, Genesis: Part 1, Astraeos, Ragnarok, Valguero",
-   "temperament": "テリトリー型",
+   "temperament": "攻撃的",
    "diet": "草食",
    "breedingNote": "胎生",
    "drops": "生肉、皮、ケラチン",
@@ -3982,7 +4158,8 @@
    "breedingNote": "胎生",
    "tamingMethod": "手渡しテイム",
    "foodPriority": "ニンジン、キブル",
-   "rideable": "可能。"
+   "rideable": "可能。",
+   "saddleLevel": "33"
   },
   "sources": {
    "breeding": "asb+ja(gestationSec,maturationSec)",
@@ -4863,6 +5040,82 @@
    "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "manual"
+  }
+ },
+ {
+  "key": "cerberax",
+  "name": "Cerberax",
+  "nameJa": null,
+  "origin": "asa",
+  "entityId": "Cerberus_Character_BP_C",
+  "group": "Mammals",
+  "diet": "Carnivore",
+  "temperament": "Aggressive",
+  "tameable": true,
+  "breedable": true,
+  "rideable": true,
+  "saddle": "Cerberax Saddle",
+  "saddleLevel": 74,
+  "wildMaps": [
+   "Scorched Earth",
+   "Extinction",
+   "Genesis: Part 1",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Astraeos",
+   "Lost Colony"
+  ],
+  "breeding": null,
+  "taming": null,
+  "stats": {
+   "health": 1400,
+   "stamina": 500,
+   "oxygen": 150,
+   "food": 3000,
+   "weight": 666,
+   "torpor": 1350,
+   "damage": 62,
+   "speed": 100
+  },
+  "statsRaw": null,
+  "growth": {
+   "wild": {
+    "health": 280,
+    "stamina": 50,
+    "oxygen": 15,
+    "food": 300,
+    "weight": 13.32,
+    "damage": 3.1,
+    "torpor": 81
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 10,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7
+   }
+  },
+  "ja": {
+   "wildMaps": "The Center, Scorched Earth, Ragnarok, Extinction, Valguero, Genesis: Part 1, Astraeos, Lost Colony",
+   "temperament": "攻撃的",
+   "diet": "肉食",
+   "breedingNote": "胎生",
+   "drops": "生肉、皮",
+   "tamingMethod": "特殊テイム",
+   "foodPriority": "こんがり魚<魚肉<こんがり肉<こんがり大トロ<生肉<大トロ＜こんがり霜降り肉<ラムチョップ＜霜降り肉＜羊肉＜特級キブル(水色)",
+   "rideable": "可能",
+   "saddleLevel": "74"
+  },
+  "sources": {
+   "breeding": null,
+   "taming": null,
+   "stats": "ja+cargo",
+   "wildMaps": "ja",
+   "ja": "wikiwiki",
+   "nameJa": null
   }
  },
  {
@@ -11164,6 +11417,68 @@
    "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
+  }
+ },
+ {
+  "key": "gargantar",
+  "name": "Gargantar",
+  "nameJa": null,
+  "origin": "asa",
+  "entityId": "Gargantar_Character_BP_C",
+  "group": "Reptiles",
+  "diet": "Omnivore",
+  "temperament": "Neutral",
+  "tameable": true,
+  "breedable": true,
+  "rideable": true,
+  "saddle": "Gargantar Saddle",
+  "saddleLevel": null,
+  "wildMaps": [
+   "Dragontopia"
+  ],
+  "breeding": null,
+  "taming": null,
+  "stats": {
+   "health": 1500,
+   "stamina": 400,
+   "oxygen": 150,
+   "food": 4500,
+   "weight": 950,
+   "torpor": 475,
+   "damage": 25,
+   "speed": 100
+  },
+  "statsRaw": null,
+  "growth": {
+   "wild": {
+    "health": 225,
+    "stamina": 20,
+    "oxygen": 15,
+    "food": 450,
+    "weight": 19,
+    "damage": 1.25,
+    "torpor": 28.5
+   },
+   "tamed": {
+    "health": 2.16,
+    "stamina": 5,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7
+   }
+  },
+  "ja": {
+   "wildMaps": "Dragontopia",
+   "saddleLevel": "-"
+  },
+  "sources": {
+   "breeding": null,
+   "taming": null,
+   "stats": "ja+cargo",
+   "wildMaps": "ja",
+   "ja": "wikiwiki",
+   "nameJa": null
   }
  },
  {
@@ -23812,7 +24127,7 @@
   "entityId": "Pirate_Character_BP_Base_C",
   "group": "Mammals",
   "diet": "Omnivore",
-  "temperament": null,
+  "temperament": "Territorial",
   "tameable": false,
   "breedable": false,
   "rideable": false,
@@ -23821,14 +24136,23 @@
   "wildMaps": null,
   "breeding": null,
   "taming": null,
-  "stats": null,
+  "stats": {
+   "health": 100,
+   "stamina": 150,
+   "oxygen": 150,
+   "food": 1200,
+   "weight": 140,
+   "torpor": 180,
+   "damage": 100,
+   "speed": 100
+  },
   "statsRaw": null,
   "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
    "taming": null,
-   "stats": null,
+   "stats": "cargo",
    "wildMaps": null,
    "ja": null,
    "nameJa": null
@@ -24546,192 +24870,6 @@
    "foodPriority": "生肉<<腐った肉<<キブル(通常)",
    "rideable": "可能。",
    "saddleLevel": "22"
-  },
-  "sources": {
-   "breeding": "dv",
-   "taming": "dv+tamingTable",
-   "stats": "asb+ja",
-   "wildMaps": "cargo+ja",
-   "ja": "wikiwiki",
-   "nameJa": "arkja"
-  }
- },
- {
-  "key": "purlovia",
-  "name": "Purlovia",
-  "nameJa": "プルロヴィア",
-  "origin": "ase",
-  "entityId": "Purlovia_Character_BP_C",
-  "group": "Synapsids",
-  "diet": "Carnivore",
-  "temperament": "Patient",
-  "tameable": true,
-  "breedable": true,
-  "rideable": false,
-  "saddle": null,
-  "saddleLevel": null,
-  "wildMaps": [
-   "The Island",
-   "Scorched Earth",
-   "Aberration",
-   "Extinction",
-   "Genesis: Part 1",
-   "Genesis: Part 2",
-   "Ragnarok",
-   "Valguero",
-   "The Center",
-   "Crystal Isles",
-   "Lost Island",
-   "Fjordur",
-   "Astraeos",
-   "Lost Colony"
-  ],
-  "breeding": {
-   "incubationSec": null,
-   "gestationSec": 15037.592773,
-   "maturationSec": 175438.59375,
-   "matingCooldownMinSec": 64800,
-   "matingCooldownMaxSec": 172800,
-   "egg": null,
-   "eggTempMin": null,
-   "eggTempMax": null
-  },
-  "taming": {
-   "method": "knockout",
-   "affinityBase": 2250,
-   "affinityPerLevel": 100,
-   "torpor1": 500,
-   "torporIncrease": 30,
-   "torporDepletionPS0": 0.3,
-   "ineffectiveness": 3.125,
-   "foodConsumptionBase": 0.001543,
-   "foodConsumptionMult": 288.039185,
-   "favoriteKibble": "Regular",
-   "favoriteFood": "Raw Mutton",
-   "eats": [
-    "Kibble",
-    "Raw Mutton",
-    "Cooked Lamb Chop",
-    "Raw Prime Meat",
-    "Cooked Prime Meat",
-    "Raw Prime Fish Meat",
-    "Raw Meat",
-    "Cooked Prime Fish Meat",
-    "Cooked Meat",
-    "Raw Fish Meat",
-    "Cooked Fish Meat"
-   ],
-   "specialFoodValues": {
-    "Kibble": {
-     "value": 53.279999,
-     "affinity": 400
-    }
-   },
-   "wakeAffinityMult": null,
-   "wakeFoodDeplMult": null,
-   "usesCustomAffinityLogic": null,
-   "constantFeedingInterval": null,
-   "resultCorrection": null
-  },
-  "stats": {
-   "health": 275,
-   "stamina": 300,
-   "oxygen": 150,
-   "food": 4000,
-   "weight": 400,
-   "torpor": 500,
-   "damage": 100,
-   "speed": 100
-  },
-  "statsRaw": {
-   "health": {
-    "base": 275,
-    "incWild": 0.2,
-    "incTamed": 0.27,
-    "addTamed": 0.5,
-    "multTamed": 0
-   },
-   "stamina": {
-    "base": 300,
-    "incWild": 0.1,
-    "incTamed": 0.1,
-    "addTamed": 0,
-    "multTamed": 0
-   },
-   "torpor": {
-    "base": 500,
-    "incWild": 0.06,
-    "incTamed": 0,
-    "addTamed": 0.5,
-    "multTamed": 0
-   },
-   "oxygen": {
-    "base": 150,
-    "incWild": 0.1,
-    "incTamed": 0.1,
-    "addTamed": 0,
-    "multTamed": 0
-   },
-   "food": {
-    "base": 4000,
-    "incWild": 0.1,
-    "incTamed": 0.1,
-    "addTamed": 0,
-    "multTamed": 0
-   },
-   "weight": {
-    "base": 400,
-    "incWild": 0.02,
-    "incTamed": 0.04,
-    "addTamed": 0,
-    "multTamed": 0
-   },
-   "damage": {
-    "base": 1,
-    "incWild": 0.05,
-    "incTamed": 0.1,
-    "addTamed": 0.5,
-    "multTamed": 0.4
-   },
-   "speed": {
-    "base": 1,
-    "incWild": 0,
-    "incTamed": 0.01,
-    "addTamed": 0,
-    "multTamed": 0
-   }
-  },
-  "growth": {
-   "wild": {
-    "health": 55,
-    "stamina": 30,
-    "torpor": 30,
-    "oxygen": 15,
-    "food": 400,
-    "weight": 8,
-    "damage": 5,
-    "speed": 0
-   },
-   "tamed": {
-    "health": 5.4,
-    "stamina": 2,
-    "torpor": 0,
-    "oxygen": 2,
-    "food": 2,
-    "weight": 0.8,
-    "damage": 2,
-    "speed": 0.2
-   }
-  },
-  "ja": {
-   "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration",
-   "temperament": "攻撃的",
-   "diet": "肉食",
-   "breedingNote": "胎生",
-   "drops": "生肉、霜降り肉、皮",
-   "tamingMethod": "昏睡テイム",
-   "foodPriority": "生肉<<大トロこんがり霜降り肉<ラムチョップ<<霜降り肉<羊肉<キブル(通常)",
-   "rideable": "不可。サドル無し。"
   },
   "sources": {
    "breeding": "dv",

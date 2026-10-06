@@ -11006,7 +11006,35 @@
   "category": "Saddles",
   "stackSize": 1,
   "weight": 20,
-  "blueprint": null
+  "blueprint": "\"Blueprint'/Game/ASA/Dinos/Cerberus/PrimalItemArmor_CerberusSaddle.PrimalItemArmor_CerberusSaddle'\"",
+  "crafting": {
+   "category": "Saddles",
+   "requiredLevel": 74,
+   "engramPoints": 40,
+   "craftingTimeSec": null,
+   "craftedIn": [
+    "Smithy",
+    "Castoroides Saddle",
+    "Argentavis Saddle",
+    "Thorny Dragon Saddle",
+    "Helicoprion Saddle",
+    "Tek Replicator"
+   ],
+   "ingredients": [
+    {
+     "name": "Hide",
+     "qty": 550
+    },
+    {
+     "name": "Fiber",
+     "qty": 350
+    },
+    {
+     "name": "Metal Ingot or Scrap Metal Ingot",
+     "qty": 300
+    }
+   ]
+  }
  },
  {
   "key": "chainbola",
@@ -24662,7 +24690,7 @@
   "category": "Eggs",
   "stackSize": 100,
   "weight": 50,
-  "blueprint": null,
+  "blueprint": "\"Blueprint'/Game/Dragontopia/Dragons/GasBagRhino/Egg/PrimalItemConsumable_Egg_Draco_Fertilized_Gargantar.PrimalItemConsumable_Egg_Draco_Fertilized_Gargantar'\"",
   "consumable": {
    "addsFood": null,
    "addsWater": null,
@@ -24682,7 +24710,7 @@
   "category": "Saddles",
   "stackSize": 1,
   "weight": 20,
-  "blueprint": null
+  "blueprint": "\"Blueprint'/Game/Dragontopia/Dragons/GasBagRhino/Saddle/PrimalItemArmor_GargantarSaddle.PrimalItemArmor_GargantarSaddle'\""
  },
  {
   "key": "gascollector",

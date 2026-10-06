@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-28T23:44:17.928Z",
+ "generatedAt": "2026-10-06T00:38:17.658Z",
  "license": {
   "name": "Creative Commons Attribution-Non-Commercial-ShareAlike 4.0 License",
   "url": "https://creativecommons.org/licenses/by-nc-sa/4.0"
@@ -7,7 +7,7 @@
  "sources": {
   "ark.wiki.gg": {
    "cargo": {
-    "creatures": 967,
+    "creatures": 983,
     "items": 2620
    },
    "modules": {
@@ -41,14 +41,14 @@
    "stats": 180
   },
   "wikiwiki.jp/arksa": {
-   "creatures": 162,
+   "creatures": 164,
    "breedingTimes": 114,
    "filledGaps": 33,
    "skipped": false
   }
  },
  "counts": {
-  "creatures": 207,
+  "creatures": 209,
   "items": 2593
  },
  "conflicts": [
@@ -120,6 +120,18 @@
    "field": "damage",
    "en": 35,
    "ja": 31.5
+  },
+  {
+   "name": "Basilisk",
+   "field": "weight",
+   "en": 2200,
+   "ja": 800
+  },
+  {
+   "name": "Basilisk",
+   "field": "damage",
+   "en": 55,
+   "ja": 44
   },
   {
    "name": "Boaratos",
@@ -272,6 +284,18 @@
  ],
  "asbConflicts": [
   {
+   "name": "Achatina",
+   "field": "weight",
+   "wiki": 150,
+   "asb": 60
+  },
+  {
+   "name": "Achatina",
+   "field": "damage",
+   "wiki": 0,
+   "asb": 100
+  },
+  {
    "name": "Acrocanthosaurus",
    "field": "damage",
    "wiki": 58,
@@ -318,12 +342,6 @@
    "field": "damage",
    "wiki": 15,
    "asb": 100
-  },
-  {
-   "name": "Arthropluera",
-   "field": "oxygen",
-   "wiki": 1550,
-   "asb": 150
   },
   {
    "name": "Arthropluera",
@@ -1355,12 +1373,6 @@
    "name": "Pulmonoscorpius",
    "field": "damage",
    "wiki": 15,
-   "asb": 100
-  },
-  {
-   "name": "Purlovia",
-   "field": "damage",
-   "wiki": 32,
    "asb": 100
   },
   {
