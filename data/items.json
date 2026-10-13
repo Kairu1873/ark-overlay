@@ -7715,14 +7715,18 @@
   "nameJa": null,
   "nameJaSource": null,
   "itemId": null,
-  "category": "Resources",
+  "category": null,
   "stackSize": 1,
   "weight": 0.5,
   "blueprint": null,
-  "resource": {
-   "rarity": "Uncommon",
-   "renewable": false,
-   "refineable": false
+  "consumable": {
+   "addsFood": null,
+   "addsWater": null,
+   "addsHealth": null,
+   "addsStamina": null,
+   "addsTorpor": null,
+   "spoilsInSec": 14400,
+   "cookingTimeSec": null
   }
  },
  {
@@ -18096,8 +18100,12 @@
    ],
    "ingredients": [
     {
-     "name": "Cooked Meat, Cooked Fish Meat, or Cooked Meat Jerky",
-     "qty": 50
+     "name": "Gravestone",
+     "qty": 20
+    },
+    {
+     "name": "Dinosaur Bone",
+     "qty": 5
     }
    ]
   },
@@ -66538,6 +66546,70 @@
    "ingredients": [
     {
      "name": "Element Dust",
+     "qty": 10
+    }
+   ]
+  },
+  "resource": {
+   "rarity": "Common",
+   "renewable": true,
+   "refineable": false
+  }
+ },
+ {
+  "key": "unstableredelement",
+  "name": "Unstable Red Element",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Resources",
+  "stackSize": 1,
+  "weight": 0.05,
+  "blueprint": null,
+  "crafting": {
+   "category": "Resources",
+   "requiredLevel": 58,
+   "engramPoints": 6,
+   "craftingTimeSec": 30,
+   "craftedIn": [
+    "Inventory",
+    "Bloodforge"
+   ],
+   "ingredients": [
+    {
+     "name": "Red Element Dust",
+     "qty": 1000
+    }
+   ]
+  },
+  "resource": {
+   "rarity": "Uncommon",
+   "renewable": true,
+   "refineable": false
+  }
+ },
+ {
+  "key": "unstableredelementshard",
+  "name": "Unstable Red Element Shard",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Resources",
+  "stackSize": 1,
+  "weight": 0.05,
+  "blueprint": "\"Blueprint'/Game/Extinction/CoreBlueprints/Resources/PrimalItemResource_ShardRefined.PrimalItemResource_ShardRefined'\"",
+  "crafting": {
+   "category": "Resources",
+   "requiredLevel": 55,
+   "engramPoints": 6,
+   "craftingTimeSec": 5,
+   "craftedIn": [
+    "Inventory",
+    "Bloodforge"
+   ],
+   "ingredients": [
+    {
+     "name": "Red Element Dust",
      "qty": 10
     }
    ]

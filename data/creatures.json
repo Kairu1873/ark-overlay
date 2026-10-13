@@ -15,121 +15,15 @@
   "saddleLevel": null,
   "wildMaps": null,
   "breeding": null,
-  "taming": {
-   "method": null,
-   "affinityBase": 10000,
-   "affinityPerLevel": 5,
-   "torpor1": 1200,
-   "torporIncrease": 72,
-   "torporDepletionPS0": null,
-   "ineffectiveness": 2000,
-   "foodConsumptionBase": 0.01,
-   "foodConsumptionMult": 0.05,
-   "favoriteKibble": null,
-   "favoriteFood": null,
-   "eats": null,
-   "specialFoodValues": null,
-   "wakeAffinityMult": null,
-   "wakeFoodDeplMult": null,
-   "usesCustomAffinityLogic": null,
-   "constantFeedingInterval": null,
-   "resultCorrection": null
-  },
-  "stats": {
-   "health": 1500,
-   "stamina": 100,
-   "torpor": 1200,
-   "oxygen": 600,
-   "food": 3500,
-   "weight": 1500,
-   "damage": 100,
-   "speed": 100
-  },
-  "statsRaw": {
-   "health": {
-    "base": 1500,
-    "incWild": 0,
-    "incTamed": 0.27,
-    "addTamed": 0.5,
-    "multTamed": 0
-   },
-   "stamina": {
-    "base": 100,
-    "incWild": 0.1,
-    "incTamed": 0.1,
-    "addTamed": 0,
-    "multTamed": 0
-   },
-   "torpor": {
-    "base": 1200,
-    "incWild": 0.06,
-    "incTamed": 0,
-    "addTamed": 0.5,
-    "multTamed": 0
-   },
-   "oxygen": {
-    "base": 600,
-    "incWild": 0.1,
-    "incTamed": 0.1,
-    "addTamed": 0,
-    "multTamed": 0
-   },
-   "food": {
-    "base": 3500,
-    "incWild": 0.1,
-    "incTamed": 0.1,
-    "addTamed": 0,
-    "multTamed": 0
-   },
-   "weight": {
-    "base": 1500,
-    "incWild": 0.02,
-    "incTamed": 0.04,
-    "addTamed": 0,
-    "multTamed": 0
-   },
-   "damage": {
-    "base": 1,
-    "incWild": 0,
-    "incTamed": 0.1,
-    "addTamed": 0.5,
-    "multTamed": 0.4
-   },
-   "speed": {
-    "base": 1,
-    "incWild": 0,
-    "incTamed": 0.01,
-    "addTamed": 0.7,
-    "multTamed": 0
-   }
-  },
-  "growth": {
-   "wild": {
-    "health": 0,
-    "stamina": 10,
-    "torpor": 72,
-    "oxygen": 60,
-    "food": 350,
-    "weight": 30,
-    "damage": 0,
-    "speed": 0
-   },
-   "tamed": {
-    "health": 5.4,
-    "stamina": 2,
-    "torpor": 0,
-    "oxygen": 2,
-    "food": 2,
-    "weight": 0.8,
-    "damage": 2,
-    "speed": 0.2
-   }
-  },
+  "taming": null,
+  "stats": null,
+  "statsRaw": null,
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
-   "taming": "asb",
-   "stats": "asb",
+   "taming": null,
+   "stats": null,
    "wildMaps": null,
    "ja": null,
    "nameJa": null
@@ -2172,12 +2066,12 @@
    "eggTempMax": 32
   },
   "taming": {
-   "method": "knockout",
+   "method": null,
    "affinityBase": 2200,
    "affinityPerLevel": 100,
    "torpor1": 450,
    "torporIncrease": 27,
-   "torporDepletionPS0": 0.3,
+   "torporDepletionPS0": null,
    "ineffectiveness": 3.125,
    "foodConsumptionBase": 0.001543,
    "foodConsumptionMult": 216.0294,
@@ -3504,36 +3398,124 @@
   "wildMaps": [
    "Astraeos"
   ],
-  "breeding": null,
-  "taming": null,
+  "breeding": {
+   "incubationSec": null,
+   "gestationSec": 28571.4286,
+   "maturationSec": 296296.296,
+   "matingCooldownMinSec": 64800,
+   "matingCooldownMaxSec": 172800,
+   "egg": null,
+   "eggTempMin": null,
+   "eggTempMax": null
+  },
+  "taming": {
+   "method": "knockout",
+   "affinityBase": 3000,
+   "affinityPerLevel": 130,
+   "torpor1": 5000,
+   "torporIncrease": 300,
+   "torporDepletionPS0": 100,
+   "ineffectiveness": 1.44143,
+   "foodConsumptionBase": 0.01,
+   "foodConsumptionMult": 288.0392,
+   "favoriteKibble": null,
+   "favoriteFood": null,
+   "eats": null,
+   "specialFoodValues": null,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
+  },
   "stats": {
    "health": 1050,
    "stamina": 400,
    "oxygen": 150,
-   "food": 5750,
+   "food": 5000,
    "weight": 500,
    "torpor": 5000,
-   "damage": 60,
+   "damage": 100,
    "speed": 100
   },
-  "statsRaw": null,
+  "statsRaw": {
+   "health": {
+    "base": 1050,
+    "incWild": 0.2,
+    "incTamed": 0.27,
+    "addTamed": 0.5,
+    "multTamed": 0
+   },
+   "stamina": {
+    "base": 400,
+    "incWild": 0.1,
+    "incTamed": 0.1,
+    "addTamed": 0,
+    "multTamed": 0
+   },
+   "torpor": {
+    "base": 5000,
+    "incWild": 0.06,
+    "incTamed": 0,
+    "addTamed": 0.5,
+    "multTamed": 0
+   },
+   "oxygen": {
+    "base": 150,
+    "incWild": 0.1,
+    "incTamed": 0.1,
+    "addTamed": 0,
+    "multTamed": 0
+   },
+   "food": {
+    "base": 5000,
+    "incWild": 0.1,
+    "incTamed": 0.1,
+    "addTamed": 0,
+    "multTamed": 0.15
+   },
+   "weight": {
+    "base": 500,
+    "incWild": 0.02,
+    "incTamed": 0.04,
+    "addTamed": 0,
+    "multTamed": 0
+   },
+   "damage": {
+    "base": 1,
+    "incWild": 0.05,
+    "incTamed": 0.1,
+    "addTamed": 0.4,
+    "multTamed": 0.35
+   },
+   "speed": {
+    "base": 1,
+    "incWild": 0,
+    "incTamed": 0.01,
+    "addTamed": 0,
+    "multTamed": 0
+   }
+  },
   "growth": {
    "wild": {
     "health": 210,
     "stamina": 40,
+    "torpor": 300,
     "oxygen": 15,
-    "food": 575,
+    "food": 500,
     "weight": 10,
     "damage": 5,
-    "torpor": 300
+    "speed": 0
    },
    "tamed": {
     "health": 5.4,
-    "stamina": 10,
-    "oxygen": 10,
-    "food": 10,
-    "weight": 4,
-    "damage": 1.7
+    "stamina": 2,
+    "torpor": 0,
+    "oxygen": 2,
+    "food": 2,
+    "weight": 0.8,
+    "damage": 2,
+    "speed": 0.2
    }
   },
   "ja": {
@@ -3547,9 +3529,9 @@
    "saddleLevel": "-"
   },
   "sources": {
-   "breeding": null,
-   "taming": null,
-   "stats": "ja+cargo",
+   "breeding": "asb",
+   "taming": "asb",
+   "stats": "asb+ja+cargo",
    "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "manual"
@@ -5066,8 +5048,36 @@
    "Astraeos",
    "Lost Colony"
   ],
-  "breeding": null,
-  "taming": null,
+  "breeding": {
+   "incubationSec": null,
+   "gestationSec": 35714.2857,
+   "maturationSec": 416666.667,
+   "matingCooldownMinSec": 64800,
+   "matingCooldownMaxSec": 172800,
+   "egg": null,
+   "eggTempMin": null,
+   "eggTempMax": null
+  },
+  "taming": {
+   "method": "passive",
+   "affinityBase": 3600,
+   "affinityPerLevel": 180,
+   "torpor1": 1350,
+   "torporIncrease": 81,
+   "torporDepletionPS0": 0.725,
+   "ineffectiveness": 1.08105,
+   "foodConsumptionBase": 0.0025,
+   "foodConsumptionMult": 180,
+   "favoriteKibble": null,
+   "favoriteFood": null,
+   "eats": null,
+   "specialFoodValues": null,
+   "wakeAffinityMult": 1.6,
+   "wakeFoodDeplMult": 2,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
+  },
   "stats": {
    "health": 1400,
    "stamina": 500,
@@ -5075,31 +5085,91 @@
    "food": 3000,
    "weight": 666,
    "torpor": 1350,
-   "damage": 62,
+   "damage": 100,
    "speed": 100
   },
-  "statsRaw": null,
+  "statsRaw": {
+   "health": {
+    "base": 1400,
+    "incWild": 0.2,
+    "incTamed": 0.27,
+    "addTamed": 0.5,
+    "multTamed": 0
+   },
+   "stamina": {
+    "base": 500,
+    "incWild": 0.1,
+    "incTamed": 0.1,
+    "addTamed": 0,
+    "multTamed": 0
+   },
+   "torpor": {
+    "base": 1350,
+    "incWild": 0.06,
+    "incTamed": 0,
+    "addTamed": 0.5,
+    "multTamed": 0
+   },
+   "oxygen": {
+    "base": 150,
+    "incWild": 0.1,
+    "incTamed": 0.1,
+    "addTamed": 0,
+    "multTamed": 0
+   },
+   "food": {
+    "base": 3000,
+    "incWild": 0.1,
+    "incTamed": 0.1,
+    "addTamed": 0,
+    "multTamed": 0
+   },
+   "weight": {
+    "base": 666,
+    "incWild": 0.02,
+    "incTamed": 0.04,
+    "addTamed": 0,
+    "multTamed": 0
+   },
+   "damage": {
+    "base": 1,
+    "incWild": 0.05,
+    "incTamed": 0.1,
+    "addTamed": 0.5,
+    "multTamed": 0.4
+   },
+   "speed": {
+    "base": 1,
+    "incWild": 0,
+    "incTamed": 0.01,
+    "addTamed": 0,
+    "multTamed": 0
+   }
+  },
   "growth": {
    "wild": {
     "health": 280,
     "stamina": 50,
+    "torpor": 81,
     "oxygen": 15,
     "food": 300,
     "weight": 13.32,
-    "damage": 3.1,
-    "torpor": 81
+    "damage": 5,
+    "speed": 0
    },
    "tamed": {
     "health": 5.4,
-    "stamina": 10,
-    "oxygen": 10,
-    "food": 10,
-    "weight": 4,
-    "damage": 1.7
+    "stamina": 2,
+    "torpor": 0,
+    "oxygen": 2,
+    "food": 2,
+    "weight": 0.8,
+    "damage": 2,
+    "speed": 0.2
    }
   },
   "ja": {
-   "wildMaps": "The Center, Scorched Earth, Ragnarok, Extinction, Valguero, Genesis: Part 1, Astraeos, Lost Colony",
+   "wildMaps": "Scorched Earth, Extinction, Lost Colony, Genesis: Part 1, The Center, Astraeos, Ragnarok, Valguero",
    "temperament": "攻撃的",
    "diet": "肉食",
    "breedingNote": "胎生",
@@ -5110,9 +5180,9 @@
    "saddleLevel": "74"
   },
   "sources": {
-   "breeding": null,
-   "taming": null,
-   "stats": "ja+cargo",
+   "breeding": "asb+ja(gestationSec,maturationSec)",
+   "taming": "asb",
+   "stats": "asb+ja+cargo",
    "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": null
@@ -5673,8 +5743,36 @@
    "Ragnarok",
    "Astraeos"
   ],
-  "breeding": null,
-  "taming": null,
+  "breeding": {
+   "incubationSec": 17998.5601,
+   "gestationSec": null,
+   "maturationSec": 166666.667,
+   "matingCooldownMinSec": 64800,
+   "matingCooldownMaxSec": 172800,
+   "egg": null,
+   "eggTempMin": 50,
+   "eggTempMax": 53
+  },
+  "taming": {
+   "method": "passive",
+   "affinityBase": 1200,
+   "affinityPerLevel": 60,
+   "torpor1": 800,
+   "torporIncrease": 48,
+   "torporDepletionPS0": null,
+   "ineffectiveness": null,
+   "foodConsumptionBase": 0.001852,
+   "foodConsumptionMult": 199.984,
+   "favoriteKibble": null,
+   "favoriteFood": null,
+   "eats": null,
+   "specialFoodValues": null,
+   "wakeAffinityMult": 1.6,
+   "wakeFoodDeplMult": 2,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
+  },
   "stats": {
    "health": 425,
    "stamina": 350,
@@ -5682,20 +5780,98 @@
    "food": 2500,
    "weight": 325,
    "torpor": 800,
-   "damage": 27,
+   "damage": 100,
    "speed": 100
   },
-  "statsRaw": null,
-  "growth": null,
+  "statsRaw": {
+   "health": {
+    "base": 425,
+    "incWild": 0.2,
+    "incTamed": 0.27,
+    "addTamed": 0.5,
+    "multTamed": 0
+   },
+   "stamina": {
+    "base": 350,
+    "incWild": 0.1,
+    "incTamed": 0.1,
+    "addTamed": 0,
+    "multTamed": 0
+   },
+   "torpor": {
+    "base": 800,
+    "incWild": 0.06,
+    "incTamed": 0,
+    "addTamed": 0.5,
+    "multTamed": 0
+   },
+   "oxygen": {
+    "base": 150,
+    "incWild": 0.1,
+    "incTamed": 0.1,
+    "addTamed": 0,
+    "multTamed": 0
+   },
+   "food": {
+    "base": 2500,
+    "incWild": 0.1,
+    "incTamed": 0.1,
+    "addTamed": 0,
+    "multTamed": 0
+   },
+   "weight": {
+    "base": 325,
+    "incWild": 0.02,
+    "incTamed": 0.04,
+    "addTamed": 0,
+    "multTamed": 0
+   },
+   "damage": {
+    "base": 1,
+    "incWild": 0.05,
+    "incTamed": 0.1,
+    "addTamed": 0.5,
+    "multTamed": 0.4
+   },
+   "speed": {
+    "base": 1,
+    "incWild": 0,
+    "incTamed": 0.01,
+    "addTamed": 0,
+    "multTamed": 0
+   }
+  },
+  "growth": {
+   "wild": {
+    "health": 85,
+    "stamina": 35,
+    "torpor": 48,
+    "oxygen": 15,
+    "food": 250,
+    "weight": 6.5,
+    "damage": 5,
+    "speed": 0
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 2,
+    "torpor": 0,
+    "oxygen": 2,
+    "food": 2,
+    "weight": 0.8,
+    "damage": 2,
+    "speed": 0.2
+   }
+  },
   "ja": {
    "wildMaps": "原種：Scorched Earth, Extinction, Astraeos, Ragnarok変種：AberrationX種：Genesis: Part 1",
    "rideable": "可能",
    "saddleLevel": "-"
   },
   "sources": {
-   "breeding": null,
-   "taming": null,
-   "stats": "cargo",
+   "breeding": "asb",
+   "taming": "asb",
+   "stats": "asb+cargo",
    "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": "manual"
@@ -10404,7 +10580,7 @@
   "entityId": "Fasola_Character_BP_C",
   "group": "Reptiles",
   "diet": "Carnivore",
-  "temperament": "Aggressive (Ambusher)",
+  "temperament": "Aggressive",
   "tameable": true,
   "breedable": true,
   "rideable": true,
@@ -11436,8 +11612,36 @@
   "wildMaps": [
    "Dragontopia"
   ],
-  "breeding": null,
-  "taming": null,
+  "breeding": {
+   "incubationSec": 17998.5601,
+   "gestationSec": null,
+   "maturationSec": 333333.333,
+   "matingCooldownMinSec": 64800,
+   "matingCooldownMaxSec": 172800,
+   "egg": null,
+   "eggTempMin": 80,
+   "eggTempMax": 90
+  },
+  "taming": {
+   "method": "passive",
+   "affinityBase": 12500,
+   "affinityPerLevel": 100,
+   "torpor1": 475,
+   "torporIncrease": 28.5,
+   "torporDepletionPS0": null,
+   "ineffectiveness": 0.4,
+   "foodConsumptionBase": 0.000185,
+   "foodConsumptionMult": 199.984,
+   "favoriteKibble": null,
+   "favoriteFood": null,
+   "eats": null,
+   "specialFoodValues": null,
+   "wakeAffinityMult": 0,
+   "wakeFoodDeplMult": 1,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
+  },
   "stats": {
    "health": 1500,
    "stamina": 400,
@@ -11445,27 +11649,87 @@
    "food": 4500,
    "weight": 950,
    "torpor": 475,
-   "damage": 25,
+   "damage": 100,
    "speed": 100
   },
-  "statsRaw": null,
+  "statsRaw": {
+   "health": {
+    "base": 1500,
+    "incWild": 0.15,
+    "incTamed": 0.108,
+    "addTamed": 0.5,
+    "multTamed": 0
+   },
+   "stamina": {
+    "base": 400,
+    "incWild": 0.05,
+    "incTamed": 0.05,
+    "addTamed": 0,
+    "multTamed": 0
+   },
+   "torpor": {
+    "base": 475,
+    "incWild": 0.06,
+    "incTamed": 0,
+    "addTamed": 0.5,
+    "multTamed": 0
+   },
+   "oxygen": {
+    "base": 150,
+    "incWild": 0.1,
+    "incTamed": 0.1,
+    "addTamed": 0,
+    "multTamed": 0
+   },
+   "food": {
+    "base": 4500,
+    "incWild": 0.1,
+    "incTamed": 0.1,
+    "addTamed": 0,
+    "multTamed": 0
+   },
+   "weight": {
+    "base": 950,
+    "incWild": 0.02,
+    "incTamed": 0.04,
+    "addTamed": 0,
+    "multTamed": 0
+   },
+   "damage": {
+    "base": 1,
+    "incWild": 0.05,
+    "incTamed": 0.1,
+    "addTamed": -0.25,
+    "multTamed": 0.4
+   },
+   "speed": {
+    "base": 1,
+    "incWild": 0,
+    "incTamed": 0.01,
+    "addTamed": 0,
+    "multTamed": 0
+   }
+  },
   "growth": {
    "wild": {
     "health": 225,
     "stamina": 20,
+    "torpor": 28.5,
     "oxygen": 15,
     "food": 450,
     "weight": 19,
-    "damage": 1.25,
-    "torpor": 28.5
+    "damage": 5,
+    "speed": 0
    },
    "tamed": {
     "health": 2.16,
-    "stamina": 5,
-    "oxygen": 10,
-    "food": 10,
-    "weight": 4,
-    "damage": 1.7
+    "stamina": 1,
+    "torpor": 0,
+    "oxygen": 2,
+    "food": 2,
+    "weight": 0.8,
+    "damage": 2,
+    "speed": 0.2
    }
   },
   "ja": {
@@ -11473,9 +11737,9 @@
    "saddleLevel": "-"
   },
   "sources": {
-   "breeding": null,
-   "taming": null,
-   "stats": "ja+cargo",
+   "breeding": "asb",
+   "taming": "asb",
+   "stats": "asb+ja+cargo",
    "wildMaps": "ja",
    "ja": "wikiwiki",
    "nameJa": null
@@ -15506,7 +15770,7 @@
    "health": {
     "base": 1200,
     "incWild": 0.2,
-    "incTamed": 0.27,
+    "incTamed": 0.216,
     "addTamed": 0.5,
     "multTamed": 0
    },
@@ -15572,7 +15836,7 @@
     "speed": 0
    },
    "tamed": {
-    "health": 5.4,
+    "health": 4.32,
     "stamina": 2,
     "torpor": 0,
     "oxygen": 2,
