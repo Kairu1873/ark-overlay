@@ -7613,8 +7613,8 @@
   "blueprint": "\"Blueprint'/Game/ASA/Dinos/Boaratos/PrimalItemArmor_BoaratosSaddle.PrimalItemArmor_BoaratosSaddle'\"",
   "crafting": {
    "category": "Saddles",
-   "requiredLevel": null,
-   "engramPoints": null,
+   "requiredLevel": 66,
+   "engramPoints": 35,
    "craftingTimeSec": null,
    "craftedIn": [
     "Smithy",
@@ -7624,7 +7624,24 @@
     "Helicoprion Saddle",
     "Tek Replicator"
    ],
-   "ingredients": null
+   "ingredients": [
+    {
+     "name": "Hide",
+     "qty": 250
+    },
+    {
+     "name": "Fiber",
+     "qty": 300
+    },
+    {
+     "name": "Metal Ingot or Scrap Metal Ingot",
+     "qty": 50
+    },
+    {
+     "name": "Obsidian",
+     "qty": 50
+    }
+   ]
   }
  },
  {
@@ -18100,12 +18117,8 @@
    ],
    "ingredients": [
     {
-     "name": "Gravestone",
-     "qty": 20
-    },
-    {
-     "name": "Dinosaur Bone",
-     "qty": 5
+     "name": "Cooked Meat, Cooked Fish Meat, or Cooked Meat Jerky",
+     "qty": 50
     }
    ]
   },
@@ -24718,7 +24731,43 @@
   "category": "Saddles",
   "stackSize": 1,
   "weight": 20,
-  "blueprint": "\"Blueprint'/Game/Dragontopia/Dragons/GasBagRhino/Saddle/PrimalItemArmor_GargantarSaddle.PrimalItemArmor_GargantarSaddle'\""
+  "blueprint": "\"Blueprint'/Game/Dragontopia/Dragons/GasBagRhino/Saddle/PrimalItemArmor_GargantarSaddle.PrimalItemArmor_GargantarSaddle'\"",
+  "crafting": {
+   "category": "Saddles",
+   "requiredLevel": 52,
+   "engramPoints": 16,
+   "craftingTimeSec": null,
+   "craftedIn": [
+    "Smithy",
+    "Argentavis Saddle",
+    "Castoroides Saddle",
+    "Thorny Dragon Saddle",
+    "Helicoprion Saddle",
+    "Tek Replicator"
+   ],
+   "ingredients": [
+    {
+     "name": "Hide",
+     "qty": 220
+    },
+    {
+     "name": "Fiber",
+     "qty": 450
+    },
+    {
+     "name": "Wood or Fungal Wood",
+     "qty": 125
+    },
+    {
+     "name": "Thatch",
+     "qty": 85
+    },
+    {
+     "name": "Metal Ingot or Scrap Metal Ingot",
+     "qty": 85
+    }
+   ]
+  }
  },
  {
   "key": "gascollector",
@@ -28344,8 +28393,8 @@
   "blueprint": "\"Blueprint'/Game/Mods/AAHelicoprion/Dinos/Saddle/PrimalItemArmor_Helicoprion.PrimalItemArmor_Helicoprion'\"",
   "crafting": {
    "category": "Saddles",
-   "requiredLevel": 76,
-   "engramPoints": 43,
+   "requiredLevel": 91,
+   "engramPoints": 50,
    "craftingTimeSec": 10,
    "craftedIn": [
     "Smithy",
@@ -45767,7 +45816,7 @@
   "blueprint": "\"Blueprint'/Game/LostColony/Dinos/SnowMonster/PrimalItemArmor_SnowMonsterSaddle.PrimalItemArmor_SnowMonsterSaddle'\"",
   "crafting": {
    "category": "Saddles",
-   "requiredLevel": 76,
+   "requiredLevel": 74,
    "engramPoints": 40,
    "craftingTimeSec": null,
    "craftedIn": [
@@ -64084,6 +64133,42 @@
   "blueprint": null
  },
  {
+  "key": "toflights",
+  "name": "TOF Lights",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Structures",
+  "stackSize": 100,
+  "weight": 4,
+  "blueprint": null,
+  "crafting": {
+   "category": "Structures",
+   "requiredLevel": 48,
+   "engramPoints": 10,
+   "craftingTimeSec": null,
+   "craftedIn": [
+    "Fabricator",
+    "Tek Replicator",
+    "Exo-Mek"
+   ],
+   "ingredients": [
+    {
+     "name": "Metal Ingot or Scrap Metal Ingot",
+     "qty": 10
+    },
+    {
+     "name": "Crystal or Primal Crystal",
+     "qty": 8
+    },
+    {
+     "name": "Electronics",
+     "qty": 1
+    }
+   ]
+  }
+ },
+ {
   "key": "tofuprimitiveplus",
   "name": "Tofu (Primitive Plus)",
   "nameJa": null,
@@ -70117,6 +70202,26 @@
   "blueprint": "\"Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_ApexDrop_FireWyvern.PrimalItemResource_ApexDrop_FireWyvern'\""
  },
  {
+  "key": "xeranoxegg",
+  "name": "Xeranox Egg",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Eggs",
+  "stackSize": 100,
+  "weight": 50,
+  "blueprint": null,
+  "consumable": {
+   "addsFood": null,
+   "addsWater": null,
+   "addsHealth": null,
+   "addsStamina": null,
+   "addsTorpor": null,
+   "spoilsInSec": 691200,
+   "cookingTimeSec": null
+  }
+ },
+ {
   "key": "xiphactinusegg",
   "name": "Xiphactinus Egg",
   "nameJa": "シファクティヌスの卵",
@@ -70148,8 +70253,8 @@
   "blueprint": "\"Blueprint'/Game/ASA/Dinos/Xiphactinus/Dinos/Saddle/PrimalItemArmor_XiphSaddle_ASA.PrimalItemArmor_XiphSaddle_ASA'\"",
   "crafting": {
    "category": "Saddles",
-   "requiredLevel": 60,
-   "engramPoints": 40,
+   "requiredLevel": 55,
+   "engramPoints": 15,
    "craftingTimeSec": null,
    "craftedIn": [
     "Smithy",

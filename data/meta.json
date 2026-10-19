@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-13T01:08:58.987Z",
+ "generatedAt": "2026-10-19T22:55:46.388Z",
  "license": {
   "name": "Creative Commons Attribution-Non-Commercial-ShareAlike 4.0 License",
   "url": "https://creativecommons.org/licenses/by-nc-sa/4.0"
@@ -7,8 +7,8 @@
  "sources": {
   "ark.wiki.gg": {
    "cargo": {
-    "creatures": 985,
-    "items": 2622
+    "creatures": 986,
+    "items": 2624
    },
    "modules": {
     "Module:TamingTable/creatures": {
@@ -26,7 +26,7 @@
    }
   },
   "ark.wiki.gg/ja": {
-   "creatureNames": 157,
+   "creatureNames": 158,
    "itemNames": 1510
   },
   "ARKStatsExtractor": {
@@ -35,21 +35,21 @@
     "ase": "358.17.12291776",
     "food": "285.106.3"
    },
-   "matched": 185,
+   "matched": 186,
    "breeding": 55,
    "taming": 101,
-   "stats": 183
+   "stats": 184
   },
   "wikiwiki.jp/arksa": {
-   "creatures": 164,
-   "breedingTimes": 115,
+   "creatures": 165,
+   "breedingTimes": 116,
    "filledGaps": 34,
    "skipped": false
   }
  },
  "counts": {
-  "creatures": 209,
-  "items": 2595
+  "creatures": 210,
+  "items": 2597
  },
  "conflicts": [
   {
@@ -1391,6 +1391,12 @@
    "name": "Pulmonoscorpius",
    "field": "damage",
    "wiki": 15,
+   "asb": 100
+  },
+  {
+   "name": "Purlovia",
+   "field": "damage",
+   "wiki": 32,
    "asb": 100
   },
   {

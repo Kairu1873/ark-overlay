@@ -11608,7 +11608,7 @@
   "breedable": true,
   "rideable": true,
   "saddle": "Gargantar Saddle",
-  "saddleLevel": null,
+  "saddleLevel": 52,
   "wildMaps": [
    "Dragontopia"
   ],
@@ -25134,6 +25134,192 @@
    "foodPriority": "生肉<<腐った肉<<キブル(通常)",
    "rideable": "可能。",
    "saddleLevel": "22"
+  },
+  "sources": {
+   "breeding": "dv",
+   "taming": "dv+tamingTable",
+   "stats": "asb+ja",
+   "wildMaps": "cargo+ja",
+   "ja": "wikiwiki",
+   "nameJa": "arkja"
+  }
+ },
+ {
+  "key": "purlovia",
+  "name": "Purlovia",
+  "nameJa": "プルロヴィア",
+  "origin": "ase",
+  "entityId": "Purlovia_Character_BP_C",
+  "group": "Synapsids",
+  "diet": "Carnivore",
+  "temperament": "Patient",
+  "tameable": true,
+  "breedable": true,
+  "rideable": false,
+  "saddle": null,
+  "saddleLevel": null,
+  "wildMaps": [
+   "The Island",
+   "Scorched Earth",
+   "Aberration",
+   "Extinction",
+   "Genesis: Part 1",
+   "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
+   "The Center",
+   "Crystal Isles",
+   "Lost Island",
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
+  ],
+  "breeding": {
+   "incubationSec": null,
+   "gestationSec": 15037.592773,
+   "maturationSec": 175438.59375,
+   "matingCooldownMinSec": 64800,
+   "matingCooldownMaxSec": 172800,
+   "egg": null,
+   "eggTempMin": null,
+   "eggTempMax": null
+  },
+  "taming": {
+   "method": "knockout",
+   "affinityBase": 2250,
+   "affinityPerLevel": 100,
+   "torpor1": 500,
+   "torporIncrease": 30,
+   "torporDepletionPS0": 0.3,
+   "ineffectiveness": 3.125,
+   "foodConsumptionBase": 0.001543,
+   "foodConsumptionMult": 288.039185,
+   "favoriteKibble": "Regular",
+   "favoriteFood": "Raw Mutton",
+   "eats": [
+    "Kibble",
+    "Raw Mutton",
+    "Cooked Lamb Chop",
+    "Raw Prime Meat",
+    "Cooked Prime Meat",
+    "Raw Prime Fish Meat",
+    "Raw Meat",
+    "Cooked Prime Fish Meat",
+    "Cooked Meat",
+    "Raw Fish Meat",
+    "Cooked Fish Meat"
+   ],
+   "specialFoodValues": {
+    "Kibble": {
+     "value": 53.279999,
+     "affinity": 400
+    }
+   },
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
+  },
+  "stats": {
+   "health": 275,
+   "stamina": 300,
+   "oxygen": 150,
+   "food": 4000,
+   "weight": 400,
+   "torpor": 500,
+   "damage": 100,
+   "speed": 100
+  },
+  "statsRaw": {
+   "health": {
+    "base": 275,
+    "incWild": 0.2,
+    "incTamed": 0.27,
+    "addTamed": 0.5,
+    "multTamed": 0
+   },
+   "stamina": {
+    "base": 300,
+    "incWild": 0.1,
+    "incTamed": 0.1,
+    "addTamed": 0,
+    "multTamed": 0
+   },
+   "torpor": {
+    "base": 500,
+    "incWild": 0.06,
+    "incTamed": 0,
+    "addTamed": 0.5,
+    "multTamed": 0
+   },
+   "oxygen": {
+    "base": 150,
+    "incWild": 0.1,
+    "incTamed": 0.1,
+    "addTamed": 0,
+    "multTamed": 0
+   },
+   "food": {
+    "base": 4000,
+    "incWild": 0.1,
+    "incTamed": 0.1,
+    "addTamed": 0,
+    "multTamed": 0
+   },
+   "weight": {
+    "base": 400,
+    "incWild": 0.02,
+    "incTamed": 0.04,
+    "addTamed": 0,
+    "multTamed": 0
+   },
+   "damage": {
+    "base": 1,
+    "incWild": 0.05,
+    "incTamed": 0.1,
+    "addTamed": 0.5,
+    "multTamed": 0.4
+   },
+   "speed": {
+    "base": 1,
+    "incWild": 0,
+    "incTamed": 0.01,
+    "addTamed": 0,
+    "multTamed": 0
+   }
+  },
+  "growth": {
+   "wild": {
+    "health": 55,
+    "stamina": 30,
+    "torpor": 30,
+    "oxygen": 15,
+    "food": 400,
+    "weight": 8,
+    "damage": 5,
+    "speed": 0
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 2,
+    "torpor": 0,
+    "oxygen": 2,
+    "food": 2,
+    "weight": 0.8,
+    "damage": 2,
+    "speed": 0.2
+   }
+  },
+  "ja": {
+   "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony, Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration",
+   "temperament": "攻撃的",
+   "diet": "肉食",
+   "breedingNote": "胎生",
+   "drops": "生肉、霜降り肉、皮",
+   "tamingMethod": "昏睡テイム",
+   "foodPriority": "生肉<<大トロこんがり霜降り肉<ラムチョップ<<霜降り肉<羊肉<キブル(通常)",
+   "rideable": "不可。サドル無し。"
   },
   "sources": {
    "breeding": "dv",
