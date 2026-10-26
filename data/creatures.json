@@ -21972,6 +21972,36 @@
   }
  },
  {
+  "key": "npcship",
+  "name": "NPC Ship",
+  "nameJa": null,
+  "origin": "asa",
+  "entityId": "SloopShipPlayerFollowingBP_C",
+  "group": null,
+  "diet": "N/A",
+  "temperament": "Territorial",
+  "tameable": false,
+  "breedable": false,
+  "rideable": false,
+  "saddle": null,
+  "saddleLevel": null,
+  "wildMaps": null,
+  "breeding": null,
+  "taming": null,
+  "stats": null,
+  "statsRaw": null,
+  "growth": null,
+  "ja": null,
+  "sources": {
+   "breeding": null,
+   "taming": null,
+   "stats": null,
+   "wildMaps": null,
+   "ja": null,
+   "nameJa": null
+  }
+ },
+ {
   "key": "oasisaur",
   "name": "Oasisaur",
   "nameJa": "オアシサウルス",

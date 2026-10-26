@@ -3922,7 +3922,7 @@
      "qty": 150
     },
     {
-     "name": "Polymer or Organic Polymer",
+     "name": "Polymer, Organic Polymer, or Corrupted Nodule",
      "qty": 50
     }
    ]
@@ -7427,7 +7427,7 @@
   "name": "Bloodforge",
   "nameJa": null,
   "nameJaSource": null,
-  "itemId": 0,
+  "itemId": null,
   "category": "Crafting Stations",
   "stackSize": 1,
   "weight": 4,
@@ -7438,7 +7438,8 @@
    "engramPoints": 20,
    "craftingTimeSec": null,
    "craftedIn": [
-    "Tek Replicator"
+    "Tek Replicator",
+    "Exo-Mek"
    ],
    "ingredients": [
     {
@@ -14483,8 +14484,8 @@
   "nameJa": null,
   "nameJaSource": null,
   "itemId": null,
-  "category": "Structures",
-  "stackSize": null,
+  "category": "Furniture",
+  "stackSize": 100,
   "weight": null,
   "blueprint": null
  },
@@ -16288,7 +16289,7 @@
   "name": "Cryo Hospital",
   "nameJa": null,
   "nameJaSource": null,
-  "itemId": 0,
+  "itemId": null,
   "category": "Containers",
   "stackSize": 1,
   "weight": 4,
@@ -16299,7 +16300,8 @@
    "engramPoints": 20,
    "craftingTimeSec": null,
    "craftedIn": [
-    "Tek Replicator"
+    "Tek Replicator",
+    "Exo-Mek"
    ],
    "ingredients": [
     {
@@ -19085,6 +19087,72 @@
     }
    ]
   }
+ },
+ {
+  "key": "draconicbootsskin",
+  "name": "Draconic Boots Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
+  "key": "draconiccapeskin",
+  "name": "Draconic Cape Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
+  "key": "draconicglovesskin",
+  "name": "Draconic Gloves Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
+  "key": "draconichatskin",
+  "name": "Draconic Hat Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
+  "key": "draconicpantsskin",
+  "name": "Draconic Pants Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
+  "key": "draconicshirtskin",
+  "name": "Draconic Shirt Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
  },
  {
   "key": "dragonflag",
@@ -33580,6 +33648,116 @@
   }
  },
  {
+  "key": "lostacolytebootsskin",
+  "name": "Lost Acolyte Boots Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
+  "key": "lostacolyteglovesskin",
+  "name": "Lost Acolyte Gloves Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
+  "key": "lostacolytehelmetskin",
+  "name": "Lost Acolyte Helmet Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
+  "key": "lostacolytepantszombieunderwearskin",
+  "name": "Lost Acolyte Pants (Zombie Underwear) Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
+  "key": "lostacolytepantsskin",
+  "name": "Lost Acolyte Pants Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
+  "key": "lostacolyteshirtzombiebraskin",
+  "name": "Lost Acolyte Shirt (Zombie Bra) Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
+  "key": "lostacolyteshirtskin",
+  "name": "Lost Acolyte Shirt Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
+  "key": "lostassaultrifleskin",
+  "name": "Lost Assault Rifle Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
+  "key": "lostballistaturretskin",
+  "name": "Lost Ballista Turret Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
+  "key": "lostbolaskin",
+  "name": "Lost Bola Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
   "key": "lostbootsskin",
   "name": "Lost Boots Skin",
   "nameJa": null,
@@ -33589,6 +33767,17 @@
   "stackSize": 1,
   "weight": 0,
   "blueprint": "\"Blueprint'/Game/LostColony/CoreBlueprints/Items/PrimalItemSkin_Thrall_T0_Boots.PrimalItemSkin_Thrall_T0_Boots'\""
+ },
+ {
+  "key": "lostcarnosaddleskin",
+  "name": "Lost Carno Saddle Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
  },
  {
   "key": "lostceratosaurussaddleskin",
@@ -33649,6 +33838,28 @@
   "blueprint": "\"Blueprint'/Game/LostColony/Structures/Skins/PrimalItemStructureSkin_Tileset_LC.PrimalItemStructureSkin_Tileset_LC'\""
  },
  {
+  "key": "lostcompoundbowskin",
+  "name": "Lost Compound Bow Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
+  "key": "lostcryolophosaurussaddleskin",
+  "name": "Lost Cryolophosaurus Saddle Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
   "key": "lostdesmodussaddleskin",
   "name": "Lost Desmodus Saddle Skin",
   "nameJa": null,
@@ -33660,6 +33871,17 @@
   "blueprint": "\"Blueprint'/Game/LostColony/CoreBlueprints/Items/Skins/Saddles/PrimalItemSkin_ThrallSaddle_Desmodus.PrimalItemSkin_ThrallSaddle_Desmodus'\""
  },
  {
+  "key": "lostdirebearsaddleskin",
+  "name": "Lost Direbear Saddle Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
   "key": "lostdrakelingcostume",
   "name": "Lost Drakeling Costume",
   "nameJa": null,
@@ -33669,6 +33891,39 @@
   "stackSize": 1,
   "weight": 0,
   "blueprint": "\"Blueprint'/Game/ASA/Dinos/ShoulderDragon/Variants/Lost/PrimalItemCostume_ShoulderDragonLost.PrimalItemCostume_ShoulderDragonLost'\""
+ },
+ {
+  "key": "lostfabricatedpistolskin",
+  "name": "Lost Fabricated Pistol Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
+  "key": "lostfabricatedsniperrifleskin",
+  "name": "Lost Fabricated Sniper Rifle Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
+  "key": "lostflamethrowerskin",
+  "name": "Lost Flamethrower Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
  },
  {
   "key": "lostglidersuit",
@@ -33726,6 +33981,17 @@
   "blueprint": null
  },
  {
+  "key": "lostmegatheriumsaddleskin",
+  "name": "Lost Megatherium Saddle Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
   "key": "lostpantsskin",
   "name": "Lost Pants Skin",
   "nameJa": null,
@@ -33737,6 +34003,17 @@
   "blueprint": "\"Blueprint'/Game/LostColony/CoreBlueprints/Items/PrimalItemSkin_Thrall_T0_Pants.PrimalItemSkin_Thrall_T0_Pants'\""
  },
  {
+  "key": "lostpikeskin",
+  "name": "Lost Pike Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
   "key": "lostponchoskin",
   "name": "Lost Poncho Skin",
   "nameJa": null,
@@ -33746,6 +34023,28 @@
   "stackSize": 1,
   "weight": 0,
   "blueprint": "\"Blueprint'/Game/LostColony/CoreBlueprints/Items/PrimalItemSkin_Thrall_T0_Shirt_Poncho.PrimalItemSkin_Thrall_T0_Shirt_Poncho'\""
+ },
+ {
+  "key": "lostpulmonoscorpiussaddleskin",
+  "name": "Lost Pulmonoscorpius Saddle Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
+  "key": "lostpumpactionshotgunskin",
+  "name": "Lost Pump Action Shotgun Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
  },
  {
   "key": "lostqueenflag",
@@ -33770,6 +34069,61 @@
   "blueprint": null
  },
  {
+  "key": "lostraptorsaddleskin",
+  "name": "Lost Raptor Saddle Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
+  "key": "lostrexsaddleskin",
+  "name": "Lost Rex Saddle Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
+  "key": "lostrocketlauncherskin",
+  "name": "Lost Rocket Launcher Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
+  "key": "lostsabertoothsaddleskin",
+  "name": "Lost Sabertooth Saddle Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
+  "key": "lostshieldskin",
+  "name": "Lost Shield Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
   "key": "lostshirtskin",
   "name": "Lost Shirt Skin",
   "nameJa": null,
@@ -33781,6 +34135,94 @@
   "blueprint": "\"Blueprint'/Game/LostColony/CoreBlueprints/Items/PrimalItemSkin_Thrall_T0_Shirt.PrimalItemSkin_Thrall_T0_Shirt'\""
  },
  {
+  "key": "lostspinosaddleskin",
+  "name": "Lost Spino Saddle Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
+  "key": "lostswordskin",
+  "name": "Lost Sword Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
+  "key": "lostt2bootsskin",
+  "name": "Lost T2 Boots Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
+  "key": "lostt2glovesskin",
+  "name": "Lost T2 Gloves Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
+  "key": "lostt2helmetskin",
+  "name": "Lost T2 Helmet Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
+  "key": "lostt2pantsskin",
+  "name": "Lost T2 Pants Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
+  "key": "lostt2shirtskin",
+  "name": "Lost T2 Shirt Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
+  "key": "losttekscytheskin",
+  "name": "Lost Tek Scythe Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
   "key": "losttekswordskin",
   "name": "Lost Tek Sword Skin",
   "nameJa": null,
@@ -33790,6 +34232,61 @@
   "stackSize": 1,
   "weight": 0,
   "blueprint": "\"Blueprint'/Game/LostColony/CoreBlueprints/Items/PrimalItemSkin_ThrallTekSword.PrimalItemSkin_ThrallTekSword'\""
+ },
+ {
+  "key": "losttherizinosaurussaddleskin",
+  "name": "Lost Therizinosaurus Saddle Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
+  "key": "lostthylacoleosaddleskin",
+  "name": "Lost Thylacoleo Saddle Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
+  "key": "lostwhipskin",
+  "name": "Lost Whip Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
+  "key": "lostwoollyrhinosaddleskin",
+  "name": "Lost Woolly Rhino Saddle Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
+ },
+ {
+  "key": "lostyutyrannussaddleskin",
+  "name": "Lost Yutyrannus Saddle Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": null
  },
  {
   "key": "loveheart",
@@ -34972,7 +35469,7 @@
   "category": "Resources",
   "stackSize": 200,
   "weight": 0.01,
-  "blueprint": null,
+  "blueprint": "\"Blueprint'/Game/Dragontopia/CoreBlueprints/Resources/PrimalItemResource_LuminaScale.PrimalItemResource_LuminaScale'\"",
   "resource": {
    "rarity": null,
    "renewable": true,
@@ -35572,7 +36069,7 @@
      "qty": 180
     },
     {
-     "name": "Chitin or Keratin",
+     "name": "Chitin, Keratin, or Shell Fragment",
      "qty": 60
     }
    ]
@@ -47826,6 +48323,28 @@
     }
    ]
   }
+ },
+ {
+  "key": "playdeademote",
+  "name": "Play Dead Emote",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Emotes",
+  "stackSize": 100,
+  "weight": 0.1,
+  "blueprint": null,
+  "crafting": {
+   "category": "Emotes",
+   "requiredLevel": null,
+   "engramPoints": null,
+   "craftingTimeSec": null,
+   "craftedIn": [
+    "Smithy"
+   ],
+   "ingredients": null
+  },
+  "consumable": null
  },
  {
   "key": "plesiosaurplatformsaddle",
@@ -60209,6 +60728,28 @@
   }
  },
  {
+  "key": "tekbunker",
+  "name": "Tek Bunker",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Tek",
+  "stackSize": null,
+  "weight": null,
+  "blueprint": null,
+  "crafting": {
+   "category": "Tek",
+   "requiredLevel": null,
+   "engramPoints": null,
+   "craftingTimeSec": null,
+   "craftedIn": [
+    "Tek Replicator",
+    "Exo-Mek"
+   ],
+   "ingredients": null
+  }
+ },
+ {
   "key": "tekcanoecostume",
   "name": "Tek Canoe Costume",
   "nameJa": "TEKカヌースキン",
@@ -67425,7 +67966,9 @@
    "engramPoints": 21,
    "craftingTimeSec": null,
    "craftedIn": [
-    "Fabricator"
+    "Fabricator",
+    "Tek Replicator",
+    "Exo-Mek"
    ],
    "ingredients": [
     {
@@ -67437,7 +67980,7 @@
      "qty": 150
     },
     {
-     "name": "Wood",
+     "name": "Wood or Fungal Wood",
      "qty": 600
     },
     {
@@ -67445,7 +67988,7 @@
      "qty": 400
     },
     {
-     "name": "Polymer",
+     "name": "Polymer, Organic Polymer, or Corrupted Nodule",
      "qty": 120
     }
    ]
