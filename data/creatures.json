@@ -13597,7 +13597,7 @@
   "breedable": true,
   "rideable": true,
   "saddle": "Helicoprion Saddle",
-  "saddleLevel": 76,
+  "saddleLevel": 91,
   "wildMaps": [
    "The Island",
    "Genesis: Part 1",
@@ -31978,7 +31978,7 @@
   "breedable": true,
   "rideable": true,
   "saddle": "Xiphactinus Saddle",
-  "saddleLevel": 60,
+  "saddleLevel": 55,
   "wildMaps": [
    "The Island"
   ],

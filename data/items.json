@@ -7486,6 +7486,36 @@
   }
  },
  {
+  "key": "bloodstalkerghostcostume",
+  "name": "Bloodstalker Ghost Costume",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": "\"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemCostume_GhostBogSpider.PrimalItemCostume_GhostBogSpider'\"",
+  "crafting": {
+   "category": "Skins",
+   "requiredLevel": null,
+   "engramPoints": null,
+   "craftingTimeSec": null,
+   "craftedIn": [
+    "Smithy"
+   ],
+   "ingredients": [
+    {
+     "name": "Ectoplasm (Bloodstalker)",
+     "qty": 1
+    },
+    {
+     "name": "Dinosaur Bone",
+     "qty": 25
+    }
+   ]
+  }
+ },
+ {
   "key": "bluecoloring",
   "name": "Blue Coloring",
   "nameJa": "青色の染料",
@@ -9263,6 +9293,36 @@
   "stackSize": null,
   "weight": null,
   "blueprint": null
+ },
+ {
+  "key": "burrowbuckghostcostume",
+  "name": "Burrowbuck Ghost Costume",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": "\"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemCostume_GhostJackalope.PrimalItemCostume_GhostJackalope'\"",
+  "crafting": {
+   "category": "Skins",
+   "requiredLevel": null,
+   "engramPoints": null,
+   "craftingTimeSec": null,
+   "craftedIn": [
+    "Smithy"
+   ],
+   "ingredients": [
+    {
+     "name": "Ectoplasm (Burrowbuck)",
+     "qty": 1
+    },
+    {
+     "name": "Dinosaur Bone",
+     "qty": 25
+    }
+   ]
+  }
  },
  {
   "key": "burrowbucksaddle",
@@ -19892,12 +19952,8 @@
    ],
    "ingredients": [
     {
-     "name": "Mutagen Ooze",
-     "qty": 10
-    },
-    {
      "name": "Dinosaur Bone",
-     "qty": 10
+     "qty": 50
     }
    ]
   }
@@ -21142,7 +21198,7 @@
   "category": "Bows",
   "stackSize": 1,
   "weight": 8,
-  "blueprint": null,
+  "blueprint": "\"Blueprint'/Game/LostColony/Weapons/FabricatedCrossbow/PrimalItem_WeaponCrossbow_Fab.PrimalItem_WeaponCrossbow_Fab'\"",
   "crafting": {
    "category": "Bows",
    "requiredLevel": 58,
@@ -21290,6 +21346,28 @@
     }
    ]
   }
+ },
+ {
+  "key": "fakedeathemote",
+  "name": "Fake Death Emote",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Emotes",
+  "stackSize": 100,
+  "weight": 0.1,
+  "blueprint": null,
+  "crafting": {
+   "category": "Emotes",
+   "requiredLevel": null,
+   "engramPoints": null,
+   "craftingTimeSec": null,
+   "craftedIn": [
+    "Smithy"
+   ],
+   "ingredients": null
+  },
+  "consumable": null
  },
  {
   "key": "fanballcapskin",
@@ -24788,6 +24866,36 @@
    "addsTorpor": null,
    "spoilsInSec": 691200,
    "cookingTimeSec": null
+  }
+ },
+ {
+  "key": "gargantarghostcostume",
+  "name": "Gargantar Ghost Costume",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": "\"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemCostume_GhostGargantar.PrimalItemCostume_GhostGargantar'\"",
+  "crafting": {
+   "category": "Skins",
+   "requiredLevel": null,
+   "engramPoints": null,
+   "craftingTimeSec": null,
+   "craftedIn": [
+    "Smithy"
+   ],
+   "ingredients": [
+    {
+     "name": "Ectoplasm (Gargantar)",
+     "qty": 1
+    },
+    {
+     "name": "Dinosaur Bone",
+     "qty": 25
+    }
+   ]
   }
  },
  {
@@ -37335,6 +37443,36 @@
   }
  },
  {
+  "key": "megaraptorghostcostume",
+  "name": "Megaraptor Ghost Costume",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": "\"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemCostume_GhostValMegaraptor.PrimalItemCostume_GhostValMegaraptor'\"",
+  "crafting": {
+   "category": "Skins",
+   "requiredLevel": null,
+   "engramPoints": null,
+   "craftingTimeSec": null,
+   "craftedIn": [
+    "Smithy"
+   ],
+   "ingredients": [
+    {
+     "name": "Ectoplasm (Megaraptor)",
+     "qty": 1
+    },
+    {
+     "name": "Dinosaur Bone",
+     "qty": 25
+    }
+   ]
+  }
+ },
+ {
   "key": "megaraptorsaddle",
   "name": "Megaraptor Saddle",
   "nameJa": "サドル(メガラプトル)",
@@ -48323,28 +48461,6 @@
     }
    ]
   }
- },
- {
-  "key": "playdeademote",
-  "name": "Play Dead Emote",
-  "nameJa": null,
-  "nameJaSource": null,
-  "itemId": null,
-  "category": "Emotes",
-  "stackSize": 100,
-  "weight": 0.1,
-  "blueprint": null,
-  "crafting": {
-   "category": "Emotes",
-   "requiredLevel": null,
-   "engramPoints": null,
-   "craftingTimeSec": null,
-   "craftedIn": [
-    "Smithy"
-   ],
-   "ingredients": null
-  },
-  "consumable": null
  },
  {
   "key": "plesiosaurplatformsaddle",
@@ -64091,6 +64207,36 @@
   }
  },
  {
+  "key": "therizinosaurusghostcostume",
+  "name": "Therizinosaurus Ghost Costume",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": "\"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemCostume_GhostTherizino.PrimalItemCostume_GhostTherizino'\"",
+  "crafting": {
+   "category": "Skins",
+   "requiredLevel": null,
+   "engramPoints": null,
+   "craftingTimeSec": null,
+   "craftedIn": [
+    "Smithy"
+   ],
+   "ingredients": [
+    {
+     "name": "Ectoplasm (Therizinosaurus)",
+     "qty": 1
+    },
+    {
+     "name": "Dinosaur Bone",
+     "qty": 25
+    }
+   ]
+  }
+ },
+ {
   "key": "therizinosaurussaddle",
   "name": "Therizinosaurus Saddle",
   "nameJa": "サドル(テリジノサウルス)",
@@ -64341,6 +64487,36 @@
    "addsTorpor": null,
    "spoilsInSec": 691200,
    "cookingTimeSec": null
+  }
+ },
+ {
+  "key": "tidepupghostcostume",
+  "name": "Tidepup Ghost Costume",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": "\"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemCostume_GhostAxolotl.PrimalItemCostume_GhostAxolotl'\"",
+  "crafting": {
+   "category": "Skins",
+   "requiredLevel": null,
+   "engramPoints": null,
+   "craftingTimeSec": null,
+   "craftedIn": [
+    "Smithy"
+   ],
+   "ingredients": [
+    {
+     "name": "Ectoplasm (Tidepup)",
+     "qty": 1
+    },
+    {
+     "name": "Dinosaur Bone",
+     "qty": 25
+    }
+   ]
   }
  },
  {

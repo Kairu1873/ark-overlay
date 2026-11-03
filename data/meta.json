@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-26T23:07:17.738Z",
+ "generatedAt": "2026-11-03T01:29:22.471Z",
  "license": {
   "name": "Creative Commons Attribution-Non-Commercial-ShareAlike 4.0 License",
   "url": "https://creativecommons.org/licenses/by-nc-sa/4.0"
@@ -7,8 +7,8 @@
  "sources": {
   "ark.wiki.gg": {
    "cargo": {
-    "creatures": 1000,
-    "items": 2671
+    "creatures": 1006,
+    "items": 2677
    },
    "modules": {
     "Module:TamingTable/creatures": {
@@ -49,7 +49,7 @@
  },
  "counts": {
   "creatures": 211,
-  "items": 2644
+  "items": 2650
  },
  "conflicts": [
   {
