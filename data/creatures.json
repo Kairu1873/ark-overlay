@@ -1,5 +1,37 @@
 [
  {
+  "key": "abyssalus",
+  "name": "Abyssalus",
+  "nameJa": null,
+  "origin": "asa",
+  "entityId": "Kraken_Character_BP_C",
+  "group": "Bosses",
+  "diet": null,
+  "temperament": "Aggressive",
+  "tameable": false,
+  "breedable": false,
+  "rideable": false,
+  "saddle": null,
+  "saddleLevel": null,
+  "wildMaps": null,
+  "breeding": null,
+  "taming": null,
+  "stats": null,
+  "statsRaw": null,
+  "growth": null,
+  "ja": {
+   "saddleLevel": "-"
+  },
+  "sources": {
+   "breeding": null,
+   "taming": null,
+   "stats": null,
+   "wildMaps": null,
+   "ja": "wikiwiki",
+   "nameJa": null
+  }
+ },
+ {
   "key": "abyssalustentacle",
   "name": "Abyssalus Tentacle",
   "nameJa": null,
@@ -3394,7 +3426,7 @@
   "breedable": true,
   "rideable": true,
   "saddle": "Boaratos Saddle",
-  "saddleLevel": null,
+  "saddleLevel": 66,
   "wildMaps": [
    "Astraeos"
   ],
@@ -8918,7 +8950,7 @@
   "entityId": "DarkPegasus_Character_BP_C",
   "group": "Mammals",
   "diet": "Carnivore",
-  "temperament": "Aggressive near carcasses",
+  "temperament": "Reactive",
   "tameable": true,
   "breedable": true,
   "rideable": true,
@@ -9612,7 +9644,7 @@
   "entityId": "SpiritBear_Character_BP_C",
   "group": "Mammals",
   "diet": "Omnivore",
-  "temperament": "Passive",
+  "temperament": "Docile",
   "tameable": false,
   "breedable": true,
   "rideable": true,
@@ -10097,6 +10129,69 @@
    "wildMaps": "cargo",
    "ja": "wikiwiki",
    "nameJa": "arkja"
+  }
+ },
+ {
+  "key": "enigmasaur",
+  "name": "Enigmasaur",
+  "nameJa": null,
+  "origin": "asa",
+  "entityId": "Chameleon_Character_BP_C",
+  "group": "Reptiles",
+  "diet": "Insectivore",
+  "temperament": "Evasive",
+  "tameable": true,
+  "breedable": true,
+  "rideable": true,
+  "saddle": "Enigmasaur Saddle",
+  "saddleLevel": 50,
+  "wildMaps": null,
+  "breeding": null,
+  "taming": null,
+  "stats": {
+   "health": 375,
+   "stamina": 300,
+   "oxygen": 150,
+   "food": 2000,
+   "weight": 300,
+   "torpor": 350,
+   "damage": 35,
+   "speed": 100
+  },
+  "statsRaw": null,
+  "growth": {
+   "wild": {
+    "health": 75,
+    "stamina": 30,
+    "oxygen": 15,
+    "food": 200,
+    "weight": 6,
+    "damage": 1.75,
+    "torpor": 21
+   },
+   "tamed": {
+    "health": 5.4,
+    "stamina": 5,
+    "oxygen": 10,
+    "food": 10,
+    "weight": 4,
+    "damage": 1.7
+   }
+  },
+  "ja": {
+   "drops": "例:生肉?、皮?",
+   "tamingMethod": "例:テイム可、テイムは通常の手法",
+   "foodPriority": "例:Mejoberry < 農作物 < Basic kibble",
+   "rideable": "例:騎乗不可",
+   "saddleLevel": "-"
+  },
+  "sources": {
+   "breeding": null,
+   "taming": null,
+   "stats": "ja+cargo",
+   "wildMaps": null,
+   "ja": "wikiwiki",
+   "nameJa": null
   }
  },
  {
@@ -12406,7 +12501,7 @@
    "drops": "生肉、霜降り肉、皮、ギガノトサウルスの心臓(1個確定)",
    "tamingMethod": "昏睡テイム",
    "foodPriority": "生肉<<大トロ<霜降りこんがり肉<ラムチョップ<<霜降り肉<羊肉<キブル(超級)",
-   "rideable": "可能。",
+   "rideable": "可能",
    "saddleLevel": "96"
   },
   "sources": {
@@ -22162,7 +22257,7 @@
   "breedable": true,
   "rideable": true,
   "saddle": "Ossidon Saddle",
-  "saddleLevel": 76,
+  "saddleLevel": 74,
   "wildMaps": [
    "Lost Colony"
   ],

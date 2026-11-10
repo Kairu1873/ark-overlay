@@ -2408,6 +2408,32 @@
   }
  },
  {
+  "key": "apexoffering",
+  "name": "Apex Offering",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Resources",
+  "stackSize": 100,
+  "weight": 0.1,
+  "blueprint": "\"Blueprint'/Game/PrimalEarth/Dinos/Giganotosaurus/PrimalItemResource_Challenge_Gigant.PrimalItemResource_Challenge_Gigant'\"",
+  "crafting": {
+   "category": "Resources",
+   "requiredLevel": 96,
+   "engramPoints": 5,
+   "craftingTimeSec": null,
+   "craftedIn": [
+    "Inventory"
+   ],
+   "ingredients": [
+    {
+     "name": "Alpha Tributes",
+     "qty": 3
+    }
+   ]
+  }
+ },
+ {
   "key": "apsmailboxprimitiveplus",
   "name": "APS Mailbox (Primitive Plus)",
   "nameJa": null,
@@ -9275,6 +9301,17 @@
  {
   "key": "buriedhexinfectedjunk",
   "name": "Buried Hex-infected Junk",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Stone",
+  "stackSize": null,
+  "weight": null,
+  "blueprint": null
+ },
+ {
+  "key": "buriedtreasurecache",
+  "name": "Buried Treasure Cache",
   "nameJa": null,
   "nameJaSource": null,
   "itemId": null,
@@ -19297,6 +19334,17 @@
   }
  },
  {
+  "key": "drakelingchest",
+  "name": "Drakeling Chest",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Stone",
+  "stackSize": null,
+  "weight": null,
+  "blueprint": null
+ },
+ {
   "key": "drakelingghostcostume",
   "name": "Drakeling Ghost Costume",
   "nameJa": null,
@@ -20837,7 +20885,30 @@
   "category": "Saddles",
   "stackSize": 1,
   "weight": 20,
-  "blueprint": null
+  "blueprint": "\"Blueprint'/Game/ASA/Dinos/Chameleon/PrimalItemArmor_ChameleonSaddle.PrimalItemArmor_ChameleonSaddle'\"",
+  "crafting": {
+   "category": "Saddles",
+   "requiredLevel": 50,
+   "engramPoints": 25,
+   "craftingTimeSec": null,
+   "craftedIn": [
+    "Smithy"
+   ],
+   "ingredients": [
+    {
+     "name": "Hide",
+     "qty": 320
+    },
+    {
+     "name": "Fiber",
+     "qty": 170
+    },
+    {
+     "name": "Metal Ingot or Scrap Metal Ingot",
+     "qty": 30
+    }
+   ]
+  }
  },
  {
   "key": "equussaddle",
@@ -57374,6 +57445,17 @@
    "spoilsInSec": 1800,
    "cookingTimeSec": null
   }
+ },
+ {
+  "key": "spanishcolonialstructuresskin",
+  "name": "Spanish Colonial Structures Skin",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Skins",
+  "stackSize": 1,
+  "weight": 0,
+  "blueprint": "\"Blueprint'/Game/Packs/TidesOfFortune/Structures/Skins/Tileset/PrimalItemStructureSkin_ToF_Tileset.PrimalItemStructureSkin_ToF_Tileset'\""
  },
  {
   "key": "sparkpowder",

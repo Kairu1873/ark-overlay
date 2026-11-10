@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-03T01:29:22.471Z",
+ "generatedAt": "2026-11-10T02:05:36.398Z",
  "license": {
   "name": "Creative Commons Attribution-Non-Commercial-ShareAlike 4.0 License",
   "url": "https://creativecommons.org/licenses/by-nc-sa/4.0"
@@ -7,8 +7,8 @@
  "sources": {
   "ark.wiki.gg": {
    "cargo": {
-    "creatures": 1006,
-    "items": 2677
+    "creatures": 1009,
+    "items": 2681
    },
    "modules": {
     "Module:TamingTable/creatures": {
@@ -41,15 +41,15 @@
    "stats": 184
   },
   "wikiwiki.jp/arksa": {
-   "creatures": 165,
+   "creatures": 167,
    "breedingTimes": 116,
    "filledGaps": 34,
    "skipped": false
   }
  },
  "counts": {
-  "creatures": 211,
-  "items": 2650
+  "creatures": 213,
+  "items": 2654
  },
  "conflicts": [
   {
