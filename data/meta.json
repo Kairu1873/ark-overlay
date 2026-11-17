@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-10T02:05:36.398Z",
+ "generatedAt": "2026-11-17T02:27:53.542Z",
  "license": {
   "name": "Creative Commons Attribution-Non-Commercial-ShareAlike 4.0 License",
   "url": "https://creativecommons.org/licenses/by-nc-sa/4.0"
@@ -7,7 +7,7 @@
  "sources": {
   "ark.wiki.gg": {
    "cargo": {
-    "creatures": 1009,
+    "creatures": 1031,
     "items": 2681
    },
    "modules": {
@@ -31,24 +31,24 @@
   },
   "ARKStatsExtractor": {
    "versions": {
-    "asa": "94.7.2",
+    "asa": "97.0.1",
     "ase": "358.17.12291776",
     "food": "285.106.3"
    },
-   "matched": 186,
+   "matched": 185,
    "breeding": 55,
-   "taming": 101,
-   "stats": 184
+   "taming": 100,
+   "stats": 183
   },
   "wikiwiki.jp/arksa": {
    "creatures": 167,
-   "breedingTimes": 116,
-   "filledGaps": 34,
+   "breedingTimes": 119,
+   "filledGaps": 35,
    "skipped": false
   }
  },
  "counts": {
-  "creatures": 213,
+  "creatures": 212,
   "items": 2654
  },
  "conflicts": [
@@ -111,6 +111,12 @@
   },
   {
    "name": "Aureliax",
+   "field": "health",
+   "en": 1000,
+   "ja": 1250
+  },
+  {
+   "name": "Aureliax",
    "field": "damage",
    "en": 100,
    "ja": 35
@@ -143,7 +149,7 @@
    "name": "Dreadnoughtus",
    "field": "damage",
    "en": 1080,
-   "ja": 3240
+   "ja": 5400
   },
   {
    "name": "Electrophorus",
@@ -167,7 +173,7 @@
    "name": "Giganotosaurus",
    "field": "damage",
    "en": 1000,
-   "ja": 500
+   "ja": 600
   },
   {
    "name": "Helicoprion",
@@ -360,6 +366,12 @@
    "field": "damage",
    "wiki": 24,
    "asb": 100
+  },
+  {
+   "name": "Aureliax",
+   "field": "health",
+   "wiki": 1250,
+   "asb": 1000
   },
   {
    "name": "Aureliax",
@@ -700,7 +712,7 @@
   {
    "name": "Dreadnoughtus",
    "field": "damage",
-   "wiki": 3240,
+   "wiki": 5400,
    "asb": 100
   },
   {
@@ -749,6 +761,12 @@
    "name": "Enforcer",
    "field": "damage",
    "wiki": 34,
+   "asb": 100
+  },
+  {
+   "name": "Enigmasaur",
+   "field": "damage",
+   "wiki": 35,
    "asb": 100
   },
   {
@@ -874,7 +892,7 @@
   {
    "name": "Giganotosaurus",
    "field": "damage",
-   "wiki": 500,
+   "wiki": 600,
    "asb": 100
   },
   {
@@ -1223,12 +1241,6 @@
    "name": "Microraptor",
    "field": "damage",
    "wiki": 8,
-   "asb": 100
-  },
-  {
-   "name": "Minotarchos",
-   "field": "damage",
-   "wiki": 1008,
    "asb": 100
   },
   {

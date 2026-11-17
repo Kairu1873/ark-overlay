@@ -2265,7 +2265,7 @@
    "resultCorrection": null
   },
   "stats": {
-   "health": 1250,
+   "health": 1000,
    "stamina": 800,
    "oxygen": 150,
    "food": 2000,
@@ -2276,8 +2276,8 @@
   },
   "statsRaw": {
    "health": {
-    "base": 1250,
-    "incWild": 0.2,
+    "base": 1000,
+    "incWild": 0.16,
     "incTamed": 0.135,
     "addTamed": 0.5,
     "multTamed": 0
@@ -2334,7 +2334,7 @@
   },
   "growth": {
    "wild": {
-    "health": 250,
+    "health": 160,
     "stamina": 80,
     "torpor": 90,
     "oxygen": 15,
@@ -5091,7 +5091,7 @@
    "eggTempMax": null
   },
   "taming": {
-   "method": "passive",
+   "method": "knockout",
    "affinityBase": 3600,
    "affinityPerLevel": 180,
    "torpor1": 1350,
@@ -5104,8 +5104,8 @@
    "favoriteFood": null,
    "eats": null,
    "specialFoodValues": null,
-   "wakeAffinityMult": 1.6,
-   "wakeFoodDeplMult": 2,
+   "wakeAffinityMult": null,
+   "wakeFoodDeplMult": null,
    "usesCustomAffinityLogic": null,
    "constantFeedingInterval": null,
    "resultCorrection": null
@@ -9786,7 +9786,7 @@
    "diet": "雑食",
    "breedingNote": "交配完了後にエルダークローの種を産み落とす",
    "drops": "わら、木材、繊維、レアマッシュルーム、レアフラワー",
-   "tamingMethod": "可。種子を手に入れ育成する。",
+   "tamingMethod": "特殊テイム。種子を手に入れ育成する。",
    "foodPriority": "-",
    "rideable": "可。",
    "saddleLevel": "サドルは元から付属"
@@ -10146,8 +10146,36 @@
   "saddle": "Enigmasaur Saddle",
   "saddleLevel": 50,
   "wildMaps": null,
-  "breeding": null,
-  "taming": null,
+  "breeding": {
+   "incubationSec": 3999.68003,
+   "gestationSec": null,
+   "maturationSec": 166666.667,
+   "matingCooldownMinSec": 64800,
+   "matingCooldownMaxSec": 172800,
+   "egg": null,
+   "eggTempMin": 30,
+   "eggTempMax": 34
+  },
+  "taming": {
+   "method": "passive",
+   "affinityBase": 2000,
+   "affinityPerLevel": 35,
+   "torpor1": 350,
+   "torporIncrease": 21,
+   "torporDepletionPS0": null,
+   "ineffectiveness": 0.45045,
+   "foodConsumptionBase": 0.001852,
+   "foodConsumptionMult": 199.984,
+   "favoriteKibble": null,
+   "favoriteFood": null,
+   "eats": null,
+   "specialFoodValues": null,
+   "wakeAffinityMult": 1,
+   "wakeFoodDeplMult": 2,
+   "usesCustomAffinityLogic": null,
+   "constantFeedingInterval": null,
+   "resultCorrection": null
+  },
   "stats": {
    "health": 375,
    "stamina": 300,
@@ -10155,27 +10183,87 @@
    "food": 2000,
    "weight": 300,
    "torpor": 350,
-   "damage": 35,
+   "damage": 100,
    "speed": 100
   },
-  "statsRaw": null,
+  "statsRaw": {
+   "health": {
+    "base": 375,
+    "incWild": 0.2,
+    "incTamed": 0.27,
+    "addTamed": 0.5,
+    "multTamed": 0
+   },
+   "stamina": {
+    "base": 300,
+    "incWild": 0.1,
+    "incTamed": 0.1,
+    "addTamed": 0,
+    "multTamed": 0
+   },
+   "torpor": {
+    "base": 350,
+    "incWild": 0.06,
+    "incTamed": 0,
+    "addTamed": 0.5,
+    "multTamed": 0
+   },
+   "oxygen": {
+    "base": 150,
+    "incWild": 0.1,
+    "incTamed": 0.1,
+    "addTamed": 0,
+    "multTamed": 0
+   },
+   "food": {
+    "base": 2000,
+    "incWild": 0.1,
+    "incTamed": 0.1,
+    "addTamed": 0,
+    "multTamed": 0
+   },
+   "weight": {
+    "base": 300,
+    "incWild": 0.02,
+    "incTamed": 0.04,
+    "addTamed": 0,
+    "multTamed": 0
+   },
+   "damage": {
+    "base": 1,
+    "incWild": 0.05,
+    "incTamed": 0.1,
+    "addTamed": 0.5,
+    "multTamed": 0.4
+   },
+   "speed": {
+    "base": 1,
+    "incWild": 0,
+    "incTamed": 0.0125,
+    "addTamed": 0,
+    "multTamed": 0
+   }
+  },
   "growth": {
    "wild": {
     "health": 75,
     "stamina": 30,
+    "torpor": 21,
     "oxygen": 15,
     "food": 200,
     "weight": 6,
-    "damage": 1.75,
-    "torpor": 21
+    "damage": 5,
+    "speed": 0
    },
    "tamed": {
     "health": 5.4,
-    "stamina": 5,
-    "oxygen": 10,
-    "food": 10,
-    "weight": 4,
-    "damage": 1.7
+    "stamina": 2,
+    "torpor": 0,
+    "oxygen": 2,
+    "food": 2,
+    "weight": 0.8,
+    "damage": 2,
+    "speed": 0.25
    }
   },
   "ja": {
@@ -10186,9 +10274,9 @@
    "saddleLevel": "-"
   },
   "sources": {
-   "breeding": null,
-   "taming": null,
-   "stats": "ja+cargo",
+   "breeding": "asb",
+   "taming": "asb",
+   "stats": "asb+ja+cargo",
    "wildMaps": null,
    "ja": "wikiwiki",
    "nameJa": null
@@ -14229,7 +14317,7 @@
   "name": "Hydraskos",
   "nameJa": null,
   "origin": "asa",
-  "entityId": "Hydra_Character_BP_Boss_Hard_C",
+  "entityId": "Hydra_Character_BP_Boss_C",
   "group": "Bosses",
   "diet": null,
   "temperament": "Aggressive",
@@ -14240,121 +14328,15 @@
   "saddleLevel": null,
   "wildMaps": null,
   "breeding": null,
-  "taming": {
-   "method": null,
-   "affinityBase": 10000,
-   "affinityPerLevel": 5,
-   "torpor1": 100000,
-   "torporIncrease": 6000,
-   "torporDepletionPS0": null,
-   "ineffectiveness": 2000,
-   "foodConsumptionBase": 0.001929,
-   "foodConsumptionMult": 432.0028,
-   "favoriteKibble": null,
-   "favoriteFood": null,
-   "eats": null,
-   "specialFoodValues": null,
-   "wakeAffinityMult": null,
-   "wakeFoodDeplMult": null,
-   "usesCustomAffinityLogic": null,
-   "constantFeedingInterval": null,
-   "resultCorrection": null
-  },
-  "stats": {
-   "health": 1200000,
-   "stamina": 1500,
-   "torpor": 100000,
-   "oxygen": 150,
-   "food": 1500,
-   "weight": 4000,
-   "damage": 100,
-   "speed": 100
-  },
-  "statsRaw": {
-   "health": {
-    "base": 1200000,
-    "incWild": 0.2,
-    "incTamed": 0.27,
-    "addTamed": 0.5,
-    "multTamed": 0
-   },
-   "stamina": {
-    "base": 1500,
-    "incWild": 0.1,
-    "incTamed": 0.1,
-    "addTamed": 0,
-    "multTamed": 0
-   },
-   "torpor": {
-    "base": 100000,
-    "incWild": 0.06,
-    "incTamed": 0,
-    "addTamed": 0.5,
-    "multTamed": 0
-   },
-   "oxygen": {
-    "base": 150,
-    "incWild": 0.1,
-    "incTamed": 0.1,
-    "addTamed": 0,
-    "multTamed": 0
-   },
-   "food": {
-    "base": 1500,
-    "incWild": 0.1,
-    "incTamed": 0.1,
-    "addTamed": 0,
-    "multTamed": 0
-   },
-   "weight": {
-    "base": 4000,
-    "incWild": 0.02,
-    "incTamed": 0.04,
-    "addTamed": 0,
-    "multTamed": 0
-   },
-   "damage": {
-    "base": 1,
-    "incWild": 0.05,
-    "incTamed": 0.1,
-    "addTamed": 0.5,
-    "multTamed": 0.4
-   },
-   "speed": {
-    "base": 1,
-    "incWild": 0,
-    "incTamed": 0.01,
-    "addTamed": 0.151,
-    "multTamed": 0
-   }
-  },
-  "growth": {
-   "wild": {
-    "health": 240000,
-    "stamina": 150,
-    "torpor": 6000,
-    "oxygen": 15,
-    "food": 150,
-    "weight": 80,
-    "damage": 5,
-    "speed": 0
-   },
-   "tamed": {
-    "health": 5.4,
-    "stamina": 2,
-    "torpor": 0,
-    "oxygen": 2,
-    "food": 2,
-    "weight": 0.8,
-    "damage": 2,
-    "speed": 0.2
-   }
-  },
+  "taming": null,
+  "stats": null,
+  "statsRaw": null,
+  "growth": null,
   "ja": null,
   "sources": {
    "breeding": null,
-   "taming": "asb",
-   "stats": "asb",
+   "taming": null,
+   "stats": null,
    "wildMaps": null,
    "ja": null,
    "nameJa": null
@@ -20711,151 +20693,6 @@
    "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
-  }
- },
- {
-  "key": "minotarchos",
-  "name": "Minotarchos",
-  "nameJa": "ミノタルコス",
-  "origin": "asa",
-  "entityId": "MinotaurTempleBoss_Character_BP_C",
-  "group": "Bosses",
-  "diet": null,
-  "temperament": "Aggressive",
-  "tameable": false,
-  "breedable": false,
-  "rideable": false,
-  "saddle": null,
-  "saddleLevel": null,
-  "wildMaps": null,
-  "breeding": {
-   "incubationSec": null,
-   "gestationSec": null,
-   "maturationSec": 333333.333,
-   "matingCooldownMinSec": 64800,
-   "matingCooldownMaxSec": 172800,
-   "egg": null,
-   "eggTempMin": null,
-   "eggTempMax": null
-  },
-  "taming": {
-   "method": null,
-   "affinityBase": 10000,
-   "affinityPerLevel": 5,
-   "torpor1": 2500,
-   "torporIncrease": 150,
-   "torporDepletionPS0": null,
-   "ineffectiveness": 2000,
-   "foodConsumptionBase": 0.001929,
-   "foodConsumptionMult": 432.0028,
-   "favoriteKibble": null,
-   "favoriteFood": null,
-   "eats": null,
-   "specialFoodValues": null,
-   "wakeAffinityMult": null,
-   "wakeFoodDeplMult": null,
-   "usesCustomAffinityLogic": null,
-   "constantFeedingInterval": null,
-   "resultCorrection": null
-  },
-  "stats": {
-   "health": 200000,
-   "stamina": 1320,
-   "oxygen": 300,
-   "food": 5000,
-   "weight": 600,
-   "torpor": 2500,
-   "damage": 100,
-   "speed": 100
-  },
-  "statsRaw": {
-   "health": {
-    "base": 200000,
-    "incWild": 0.05,
-    "incTamed": 0.27,
-    "addTamed": 0.5,
-    "multTamed": 0
-   },
-   "stamina": {
-    "base": 1320,
-    "incWild": 0,
-    "incTamed": 0,
-    "addTamed": 0,
-    "multTamed": 0
-   },
-   "torpor": {
-    "base": 2500,
-    "incWild": 0.06,
-    "incTamed": 0,
-    "addTamed": 0.5,
-    "multTamed": 0
-   },
-   "oxygen": {
-    "base": 300,
-    "incWild": 0,
-    "incTamed": 0,
-    "addTamed": 0,
-    "multTamed": 0
-   },
-   "food": {
-    "base": 5000,
-    "incWild": 0,
-    "incTamed": 0,
-    "addTamed": 0,
-    "multTamed": 0
-   },
-   "weight": {
-    "base": 600,
-    "incWild": 0,
-    "incTamed": 0,
-    "addTamed": 0,
-    "multTamed": 0
-   },
-   "damage": {
-    "base": 1,
-    "incWild": 0.05,
-    "incTamed": 0.1,
-    "addTamed": 0.5,
-    "multTamed": 0.4
-   },
-   "speed": {
-    "base": 1,
-    "incWild": 0,
-    "incTamed": 0,
-    "addTamed": 0.151,
-    "multTamed": 0
-   }
-  },
-  "growth": {
-   "wild": {
-    "health": 10000,
-    "stamina": 0,
-    "torpor": 150,
-    "oxygen": 0,
-    "food": 0,
-    "weight": 0,
-    "damage": 5,
-    "speed": 0
-   },
-   "tamed": {
-    "health": 5.4,
-    "stamina": 0,
-    "torpor": 0,
-    "oxygen": 0,
-    "food": 0,
-    "weight": 0,
-    "damage": 2,
-    "speed": 0
-   }
-  },
-  "ja": null,
-  "sources": {
-   "breeding": "asb",
-   "taming": "asb",
-   "stats": "asb+ja",
-   "wildMaps": null,
-   "ja": null,
-   "nameJa": "manual"
   }
  },
  {
@@ -27935,7 +27772,7 @@
    "saddleLevel": "100"
   },
   "sources": {
-   "breeding": "asb",
+   "breeding": "asb+ja(gestationSec,maturationSec)",
    "taming": "asb",
    "stats": "asb+ja+cargo",
    "wildMaps": "ja",
@@ -27961,6 +27798,8 @@
    "Aberration",
    "Genesis: Part 1",
    "Genesis: Part 2",
+   "Ragnarok",
+   "Valguero",
    "Fjordur"
   ],
   "breeding": {
@@ -28116,19 +27955,20 @@
    }
   },
   "ja": {
-   "wildMaps": "Aberration",
+   "wildMaps": "Aberration, Genesis: Part 1, Ragnarok, Valguero",
    "temperament": "逃走",
    "diet": "草食",
    "breedingNote": "可",
    "drops": "生肉、皮",
-   "tamingMethod": "可。肩乗せ可",
-   "foodPriority": "こんがり肉<アクアティックマッシュルーム<プラントZの種"
+   "tamingMethod": "手渡しテイム",
+   "foodPriority": "こんがり肉<アクアティックマッシュルーム<プラントZの種",
+   "rideable": "不可。肩乗せ可"
   },
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
    "stats": "asb+ja+cargo",
-   "wildMaps": "cargo",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
@@ -28190,7 +28030,8 @@
    "Extinction",
    "Genesis: Part 2",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos"
   ],
   "breeding": {
    "incubationSec": 10587.388672,
@@ -28325,19 +28166,20 @@
    }
   },
   "ja": {
-   "wildMaps": "Extinction",
+   "wildMaps": "Extinction, Astraeos",
    "temperament": "攻撃的",
    "breedingNote": "可",
-   "drops": "Raw Meat , Hide",
-   "tamingMethod": "共に可能、テイムは通常の手法、騎乗にはサドルが必要",
-   "foodPriority": "Raw Meat < Cooked Prime Meat< Prime Meat < Kibble (Superior Augmented)",
+   "drops": "生肉 , 皮",
+   "tamingMethod": "昏睡テイム",
+   "foodPriority": "生肉 < Cooked Prime Meat< Prime Meat < Kibble (Superior Augmented)",
+   "rideable": "可能。",
    "saddleLevel": "61"
   },
   "sources": {
    "breeding": "dv",
    "taming": "dv+tamingTable",
    "stats": "asb+ja",
-   "wildMaps": "cargo",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
