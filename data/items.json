@@ -2192,6 +2192,22 @@
   }
  },
  {
+  "key": "angelicsnowflake",
+  "name": "Angelic Snowflake",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Resources",
+  "stackSize": 1,
+  "weight": 0.01,
+  "blueprint": null,
+  "resource": {
+   "rarity": null,
+   "renewable": false,
+   "refineable": false
+  }
+ },
+ {
   "key": "angleregg",
   "name": "Angler Egg",
   "nameJa": "アンコウの卵",
@@ -2542,6 +2558,46 @@
     {
      "name": "Cementing Paste or Achatina Paste",
      "qty": 50
+    }
+   ]
+  }
+ },
+ {
+  "key": "aquaticcompartment",
+  "name": "Aquatic Compartment",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Structures",
+  "stackSize": 5,
+  "weight": 4,
+  "blueprint": "\"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructure_Reve rseVacuumCompartment.PrimalItemStructure_ReverseVacuumCompartment'\"",
+  "crafting": {
+   "category": "Structures",
+   "requiredLevel": 60,
+   "engramPoints": 10,
+   "craftingTimeSec": null,
+   "craftedIn": [
+    "Fabricator",
+    "Tek Replicator",
+    "Exo-Mek"
+   ],
+   "ingredients": [
+    {
+     "name": "Crystal or Primal Crystal",
+     "qty": 80
+    },
+    {
+     "name": "Silica Pearls or Silicate",
+     "qty": 34
+    },
+    {
+     "name": "Metal Ingot or Scrap Metal Ingot",
+     "qty": 220
+    },
+    {
+     "name": "Polymer, Organic Polymer, or Corrupted Nodule",
+     "qty": 32
     }
    ]
   }
@@ -7993,6 +8049,53 @@
   }
  },
  {
+  "key": "bountyboard",
+  "name": "Bounty Board",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Structures",
+  "stackSize": 5,
+  "weight": 25,
+  "blueprint": "\"Blueprint'/Game/Pac ks/TidesOfFortune/Structures/BountyBoar d/PrimalItemStructure_BountyBoard.Primal\nItemStructure_BountyBoard'\"",
+  "crafting": {
+   "category": "Structures",
+   "requiredLevel": 34,
+   "engramPoints": 22,
+   "craftingTimeSec": null,
+   "craftedIn": [
+    "Smithy",
+    "Argentavis Saddle",
+    "Castoroides Saddle",
+    "Thorny Dragon Saddle",
+    "Tek Replicator",
+    "Exo-Mek"
+   ],
+   "ingredients": [
+    {
+     "name": "Wood or Fungal Wood",
+     "qty": 225
+    },
+    {
+     "name": "Fiber",
+     "qty": 350
+    },
+    {
+     "name": "Metal Ingot or Scrap Metal Ingot",
+     "qty": 20
+    },
+    {
+     "name": "Thatch",
+     "qty": 100
+    },
+    {
+     "name": "Chitin or Keratin",
+     "qty": 120
+    }
+   ]
+  }
+ },
+ {
   "key": "bountycontract",
   "name": "Bounty Contract",
   "nameJa": null,
@@ -9326,10 +9429,33 @@
   "nameJa": null,
   "nameJaSource": null,
   "itemId": null,
-  "category": "Stone",
-  "stackSize": null,
-  "weight": null,
-  "blueprint": null
+  "category": "Wood",
+  "stackSize": 1,
+  "weight": 4,
+  "blueprint": "\"Blueprint'/Game/Packs/Frontier/Structures/TreasureCache/PrimalltemStructure_TreasureCache_ASA.PrimalltemStructure_TreasureCache_ASA'\"",
+  "crafting": {
+   "category": "Wood",
+   "requiredLevel": 20,
+   "engramPoints": 8,
+   "craftingTimeSec": null,
+   "craftedIn": [
+    "Smithy",
+    "Tek Replicator",
+    "Argentavis Saddle",
+    "Castoroides Saddle",
+    "Helicoprion Saddle"
+   ],
+   "ingredients": [
+    {
+     "name": "Metal Ingot or Scrap Metal Ingot",
+     "qty": 2
+    },
+    {
+     "name": "Hide",
+     "qty": 15
+    }
+   ]
+  }
  },
  {
   "key": "burrowbuckghostcostume",
@@ -10481,6 +10607,45 @@
    "addsTorpor": null,
    "spoilsInSec": 28800,
    "cookingTimeSec": null
+  }
+ },
+ {
+  "key": "cargoledger",
+  "name": "Cargo Ledger",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Structures",
+  "stackSize": 100,
+  "weight": 4,
+  "blueprint": "\"Blueprint'/Game/Pac ks/TidesOfFortune/Structures/CargoLedge r/PrimalItemStructure_CargoLedger_ToF.Pr imalItemStructure_CargoLedger_ToF'\"",
+  "crafting": {
+   "category": "Structures",
+   "requiredLevel": 22,
+   "engramPoints": 5,
+   "craftingTimeSec": null,
+   "craftedIn": [
+    "Smithy",
+    "Argentavis Saddle",
+    "Castoroides Saddle",
+    "Thorny Dragon Saddle",
+    "Tek Replicator",
+    "Exo-Mek"
+   ],
+   "ingredients": [
+    {
+     "name": "Wood or Fungal Wood",
+     "qty": 200
+    },
+    {
+     "name": "Cementing Paste or Achatina Paste",
+     "qty": 50
+    },
+    {
+     "name": "Metal Ingot or Scrap Metal Ingot",
+     "qty": 75
+    }
+   ]
   }
  },
  {
@@ -14574,17 +14739,6 @@
     }
    ]
   }
- },
- {
-  "key": "companionbed",
-  "name": "Companion Bed",
-  "nameJa": null,
-  "nameJaSource": null,
-  "itemId": null,
-  "category": "Furniture",
-  "stackSize": 100,
-  "weight": null,
-  "blueprint": null
  },
  {
   "key": "companioncampinggear",
@@ -21130,6 +21284,37 @@
      "qty": 14
     }
    ]
+  }
+ },
+ {
+  "key": "exsanguinatedredelement",
+  "name": "Exsanguinated Red Element",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Resources",
+  "stackSize": 1,
+  "weight": 0.05,
+  "blueprint": null,
+  "crafting": {
+   "category": "Resources",
+   "requiredLevel": null,
+   "engramPoints": null,
+   "craftingTimeSec": 30,
+   "craftedIn": [
+    "Bloodforge"
+   ],
+   "ingredients": [
+    {
+     "name": "Red Element",
+     "qty": 1
+    }
+   ]
+  },
+  "resource": {
+   "rarity": "Uncommon",
+   "renewable": true,
+   "refineable": false
   }
  },
  {
@@ -27920,6 +28105,43 @@
   }
  },
  {
+  "key": "hangingsign",
+  "name": "Hanging Sign",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Structures",
+  "stackSize": 100,
+  "weight": 4,
+  "blueprint": "\"Blueprint'/Game/Pac ks/Frontier/Structures/HangingSign/Prima LItemStructure_HangingSign PrimalItemStr ucture_HangingSign'\"",
+  "crafting": {
+   "category": "Structures",
+   "requiredLevel": 22,
+   "engramPoints": 5,
+   "craftingTimeSec": null,
+   "craftedIn": [
+    "Smithy",
+    "Argentavis Saddle",
+    "Castoroides Saddle",
+    "Tek Replicator"
+   ],
+   "ingredients": [
+    {
+     "name": "Wood or Fungal Wood",
+     "qty": 5
+    },
+    {
+     "name": "Thatch",
+     "qty": 5
+    },
+    {
+     "name": "Metal Ingot or Scrap Metal Ingot",
+     "qty": 1
+    }
+   ]
+  }
+ },
+ {
   "key": "happyclapemote",
   "name": "Happy Clap Emote",
   "nameJa": "ハッピークラップエモート",
@@ -29199,6 +29421,46 @@
     {
      "name": "Wood",
      "qty": 80
+    }
+   ]
+  }
+ },
+ {
+  "key": "holodecoygrenade",
+  "name": "Holo-Decoy Grenade",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Weapons",
+  "stackSize": 10,
+  "weight": 0,
+  "blueprint": "\"Blueprint' /Game/Los tColony/Weapons/HoloDecoy/PrimalItem_Hol oDecoy PrimalItem_HoloDecoy'\"",
+  "crafting": {
+   "category": null,
+   "requiredLevel": 51,
+   "engramPoints": 22,
+   "craftingTimeSec": null,
+   "craftedIn": [
+    "Fabricator",
+    "Tek Replicator",
+    "Exo-Mek"
+   ],
+   "ingredients": [
+    {
+     "name": "Metal Ingot or Scrap Metal Ingot",
+     "qty": 20
+    },
+    {
+     "name": "Crystal or Primal Crystal",
+     "qty": 30
+    },
+    {
+     "name": "Polymer, Organic Polymer, or Corrupted Nodule",
+     "qty": 20
+    },
+    {
+     "name": "Cementing Paste or Achatina Paste",
+     "qty": 10
     }
    ]
   }
@@ -33617,7 +33879,44 @@
   "category": "Structures",
   "stackSize": null,
   "weight": null,
-  "blueprint": "\"Blueprint'/Game/Packs/Steampunk/Structures/LinkedStorage/PrimalItemStructure_LinkedStorage.PrimalItemStructure_LinkedStorage'\""
+  "blueprint": "\"Blueprint'/Game/Packs/Steampunk/Structures/LinkedStorage/PrimalItemStructure_LinkedStorage.PrimalItemStructure_LinkedStorage'\"",
+  "crafting": {
+   "category": null,
+   "requiredLevel": 100,
+   "engramPoints": 33,
+   "craftingTimeSec": null,
+   "craftedIn": [
+    "Fabricator",
+    "Tek Replicator",
+    "Exo-Mek"
+   ],
+   "ingredients": [
+    {
+     "name": "Metal Ingot or Scrap Metal Ingot",
+     "qty": 300
+    },
+    {
+     "name": "Cementing Paste or Achatina Paste",
+     "qty": 300
+    },
+    {
+     "name": "Black Pearls",
+     "qty": 60
+    },
+    {
+     "name": "Crystal or Primal Crystal",
+     "qty": 400
+    },
+    {
+     "name": "Polymer, Organic Polymer, or Corrupted Nodule",
+     "qty": 100
+    },
+    {
+     "name": "Electronics",
+     "qty": 120
+    }
+   ]
+  }
  },
  {
   "key": "littleratfishtreats",
@@ -36581,6 +36880,53 @@
   }
  },
  {
+  "key": "market",
+  "name": "Market",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Structures",
+  "stackSize": 1,
+  "weight": 60,
+  "blueprint": "\"Blueprint'/Game/Pac ks/TidesOfFortune/Structures/Market/Prim alItemStructure_Market.PrimalItemStructu\nre Market'\"",
+  "crafting": {
+   "category": "Structures",
+   "requiredLevel": 42,
+   "engramPoints": 18,
+   "craftingTimeSec": null,
+   "craftedIn": [
+    "Smithy",
+    "Argentavis Saddle",
+    "Castoroides Saddle",
+    "Thorny Dragon Saddle",
+    "Tek Replicator",
+    "Exo-Mek"
+   ],
+   "ingredients": [
+    {
+     "name": "Wood or Fungal Wood",
+     "qty": 825
+    },
+    {
+     "name": "Fiber",
+     "qty": 500
+    },
+    {
+     "name": "Metal Ingot or Scrap Metal Ingot",
+     "qty": 30
+    },
+    {
+     "name": "Hide",
+     "qty": 225
+    },
+    {
+     "name": "Chitin or Keratin",
+     "qty": 60
+    }
+   ]
+  }
+ },
+ {
   "key": "marketstallprimitiveplus",
   "name": "Market Stall (Primitive Plus)",
   "nameJa": null,
@@ -36812,9 +37158,34 @@
   "nameJaSource": null,
   "itemId": null,
   "category": "Structures",
-  "stackSize": null,
-  "weight": null,
-  "blueprint": null
+  "stackSize": 5,
+  "weight": 4,
+  "blueprint": "\"Blueprint'/Game/Los tColony/Structures/MedicalStand/Item/Pri malItemStructure_LostColony_MedicalStan\nd. PrimalItemStructure_LostColony_Medical\nStand'\"",
+  "crafting": {
+   "category": null,
+   "requiredLevel": 60,
+   "engramPoints": 20,
+   "craftingTimeSec": 5,
+   "craftedIn": [
+    "Smithy",
+    "Argentavis Saddle",
+    "Tek Replicator"
+   ],
+   "ingredients": [
+    {
+     "name": "Metal Ingot or Scrap Metal Ingot",
+     "qty": 50
+    },
+    {
+     "name": "Polymer, Organic Polymer, or Corrupted Nodule",
+     "qty": 20
+    },
+    {
+     "name": "Blood Pack",
+     "qty": 4
+    }
+   ]
+  }
  },
  {
   "key": "mediumanimalfeces",
@@ -52801,6 +53172,40 @@
   }
  },
  {
+  "key": "saloonchair",
+  "name": "Saloon Chair",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Structures",
+  "stackSize": 100,
+  "weight": 4,
+  "blueprint": "\"Blueprint'Blueprint/Game/Packs/Frontier/Structures/SaloonChair/ PrimalltemStructure_Furniture_SaloonChair.PrimalltemStructure_Furniture_SaloonChair'\"",
+  "crafting": {
+   "category": "Structures",
+   "requiredLevel": 20,
+   "engramPoints": 0,
+   "craftingTimeSec": null,
+   "craftedIn": [
+    "Inventory"
+   ],
+   "ingredients": [
+    {
+     "name": "Wood or Fungal Wood",
+     "qty": 30
+    },
+    {
+     "name": "Cementing Paste or Achatina Paste",
+     "qty": 5
+    },
+    {
+     "name": "Metal Ingot or Scrap Metal Ingot",
+     "qty": 1
+    }
+   ]
+  }
+ },
+ {
   "key": "saloonpiano",
   "name": "Saloon Piano",
   "nameJa": null,
@@ -52828,6 +53233,40 @@
     {
      "name": "Chitin, Keratin, or Shell Fragment",
      "qty": 20
+    }
+   ]
+  }
+ },
+ {
+  "key": "saloontable",
+  "name": "Saloon Table",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Structures",
+  "stackSize": 100,
+  "weight": 4,
+  "blueprint": "\"Blueprint'/Game/Pac ks/Frontier/Structures/SaloonTable/Prima lItemStructure_Furniture_SaloonTable.Pri malItemStructure_Furniture_SaloonTable'\"",
+  "crafting": {
+   "category": "Structures",
+   "requiredLevel": 20,
+   "engramPoints": 0,
+   "craftingTimeSec": null,
+   "craftedIn": [
+    "Inventory"
+   ],
+   "ingredients": [
+    {
+     "name": "Wood or Fungal Wood",
+     "qty": 200
+    },
+    {
+     "name": "Cementing Paste or Achatina Paste",
+     "qty": 20
+    },
+    {
+     "name": "Metal Ingot or Scrap Metal Ingot",
+     "qty": 5
     }
    ]
   }
@@ -57822,7 +58261,32 @@
   "category": "Structures",
   "stackSize": null,
   "weight": null,
-  "blueprint": "\"Blueprint'/Game/Packs/Steampunk/Structures/SpotLight/PrimalItemStructure_SpotLight.PrimalItemStructure_SpotLight'\""
+  "blueprint": "\"Blueprint'/Game/Packs/Steampunk/Structures/SpotLight/PrimalItemStructure_SpotLight.PrimalItemStructure_SpotLight'\"",
+  "crafting": {
+   "category": null,
+   "requiredLevel": 54,
+   "engramPoints": 8,
+   "craftingTimeSec": null,
+   "craftedIn": [
+    "Fabricator",
+    "Tek Replicator",
+    "Exo-Mek"
+   ],
+   "ingredients": [
+    {
+     "name": "Metal Ingot or Scrap Metal Ingot",
+     "qty": 150
+    },
+    {
+     "name": "Crystal or Primal Crystal",
+     "qty": 200
+    },
+    {
+     "name": "Electronics",
+     "qty": 10
+    }
+   ]
+  }
  },
  {
   "key": "spraypainter",
@@ -59624,7 +60088,40 @@
   "category": null,
   "stackSize": null,
   "weight": null,
-  "blueprint": "\"Blueprint'/Game/Packs/Steampunk/Weapons/Stopwatch/PrimalItem_Stopwatch.PrimalItem_Stopwatch'\""
+  "blueprint": "\"Blueprint'/Game/Packs/Steampunk/Weapons/Stopwatch/PrimalItem_Stopwatch.PrimalItem_Stopwatch'\"",
+  "crafting": {
+   "category": null,
+   "requiredLevel": 99,
+   "engramPoints": 27,
+   "craftingTimeSec": null,
+   "craftedIn": [
+    "Fabricator",
+    "Tek Replicator",
+    "Exo-Mek"
+   ],
+   "ingredients": [
+    {
+     "name": "Metal Ingot or Scrap Metal Ingot",
+     "qty": 60
+    },
+    {
+     "name": "Electronics",
+     "qty": 60
+    },
+    {
+     "name": "Polymer or Organic Polymer",
+     "qty": 80
+    },
+    {
+     "name": "Crystal or Primal Crystal",
+     "qty": 120
+    },
+    {
+     "name": "Black Pearls",
+     "qty": 40
+    }
+   ]
+  }
  },
  {
   "key": "storagebarrelprimitiveplus",
@@ -60088,6 +60585,44 @@
    "addsTorpor": null,
    "spoilsInSec": 4800,
    "cookingTimeSec": null
+  }
+ },
+ {
+  "key": "swivelstool",
+  "name": "Swivel Stool",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Structures",
+  "stackSize": 100,
+  "weight": 4,
+  "blueprint": "\"Blueprint'/Game/Pac ks/Frontier/Structures/SaloonStool/Prima LItemStructure_SaloonStool.PrimalItemstr ucture _SaloonStool'\"",
+  "crafting": {
+   "category": "Structures",
+   "requiredLevel": 20,
+   "engramPoints": 6,
+   "craftingTimeSec": null,
+   "craftedIn": [
+    "Inventory"
+   ],
+   "ingredients": [
+    {
+     "name": "Wood or Fungal Wood",
+     "qty": 20
+    },
+    {
+     "name": "Fiber",
+     "qty": 5
+    },
+    {
+     "name": "Thatch",
+     "qty": 10
+    },
+    {
+     "name": "Metal Ingot or Scrap Metal Ingot",
+     "qty": 5
+    }
+   ]
   }
  },
  {
@@ -60932,19 +61467,44 @@
   "nameJaSource": null,
   "itemId": null,
   "category": "Tek",
-  "stackSize": null,
-  "weight": null,
-  "blueprint": null,
+  "stackSize": 1,
+  "weight": 4,
+  "blueprint": "\"Blueprint'/Game/LostColony/Structures/TekBunker/Items/PrimalItemStructure_LostColony_TekBunker.PrimalItemStructure_LostColony_TekBunker'\"",
   "crafting": {
    "category": "Tek",
-   "requiredLevel": null,
-   "engramPoints": null,
-   "craftingTimeSec": null,
+   "requiredLevel": 80,
+   "engramPoints": 60,
+   "craftingTimeSec": 5,
    "craftedIn": [
     "Tek Replicator",
     "Exo-Mek"
    ],
-   "ingredients": null
+   "ingredients": [
+    {
+     "name": "Metal Ingot or Scrap Metal Ingot",
+     "qty": 5000
+    },
+    {
+     "name": "Electronics",
+     "qty": 300
+    },
+    {
+     "name": "Element",
+     "qty": 300
+    },
+    {
+     "name": "Black Pearl",
+     "qty": 150
+    },
+    {
+     "name": "Crystal or Primal Crystal",
+     "qty": 200
+    },
+    {
+     "name": "Cementing Paste or Achatina Paste",
+     "qty": 500
+    }
+   ]
   }
  },
  {
@@ -65263,6 +65823,45 @@
   "consumable": null
  },
  {
+  "key": "townbell",
+  "name": "Town Bell",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Structures",
+  "stackSize": 1,
+  "weight": 4,
+  "blueprint": "\"Blueprint'/Game/Packs/Frontier/Structures/TownBell/PrimalltemStructure_TownBell.PrimalltemStructure_TownBell'\"",
+  "crafting": {
+   "category": "Structures",
+   "requiredLevel": 28,
+   "engramPoints": 11,
+   "craftingTimeSec": null,
+   "craftedIn": [
+    "Smithy",
+    "Argentavis Saddle",
+    "Castoroides Saddle",
+    "Thorny Dragon Saddle",
+    "Tek Replicator",
+    "Exo-Mek"
+   ],
+   "ingredients": [
+    {
+     "name": "Wood or Fungal Wood",
+     "qty": 10
+    },
+    {
+     "name": "Fiber",
+     "qty": 50
+    },
+    {
+     "name": "Metal Ingot or Scrap Metal Ingot",
+     "qty": 30
+    }
+   ]
+  }
+ },
+ {
   "key": "tradingcratebreadprimitiveplus",
   "name": "Trading Crate (Bread) (Primitive Plus)",
   "nameJa": null,
@@ -65428,6 +66027,84 @@
     {
      "name": "Sparkpowder",
      "qty": 500
+    }
+   ]
+  }
+ },
+ {
+  "key": "trainplatformcar",
+  "name": "Train Platform Car",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Structures",
+  "stackSize": 1,
+  "weight": 4,
+  "blueprint": "\"Blueprint'/Game/Packs/Frontier/Structures/TrainCarts/Primalltem_TrainCar_Platform.Primalltem_TrainCar_Platform'\"",
+  "crafting": {
+   "category": "Structures",
+   "requiredLevel": 43,
+   "engramPoints": 35,
+   "craftingTimeSec": null,
+   "craftedIn": [
+    "Smithy",
+    "Argentavis Saddle",
+    "Castoroides Saddle",
+    "Thorny Dragon Saddle",
+    "Tek Replicator",
+    "Exo-Mek"
+   ],
+   "ingredients": [
+    {
+     "name": "Wood or Fungal Wood",
+     "qty": 400
+    },
+    {
+     "name": "Cementing Paste or Achatina Paste",
+     "qty": 100
+    },
+    {
+     "name": "Metal Ingot or Scrap Metal Ingot",
+     "qty": 250
+    }
+   ]
+  }
+ },
+ {
+  "key": "traintrack",
+  "name": "Train Track",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Structures",
+  "stackSize": 100,
+  "weight": 4,
+  "blueprint": "\"Blueprint'/Game/Pac ks/Frontier/Structures/TrainTracks/Auto/ Wood/PrimalItemStructure_TrainTrack_Auto _Wood.PrimalItemStructure_TrainTrack_Aut\n•_Wood'\"",
+  "crafting": {
+   "category": "Structures",
+   "requiredLevel": 43,
+   "engramPoints": 10,
+   "craftingTimeSec": null,
+   "craftedIn": [
+    "Smithy",
+    "Argentavis Saddle",
+    "Castoroides Saddle",
+    "Thorny Dragon Saddle",
+    "Tek Replicator",
+    "Exo-Mek"
+   ],
+   "ingredients": [
+    {
+     "name": "Wood or Fungal Wood",
+     "qty": 400
+    },
+    {
+     "name": "Cementing Paste or Achatina Paste",
+     "qty": 50
+    },
+    {
+     "name": "Metal Ingot or Scrap Metal Ingot",
+     "qty": 200
     }
    ]
   }
@@ -69418,6 +70095,40 @@
     {
      "name": "Fiber",
      "qty": 2
+    }
+   ]
+  }
+ },
+ {
+  "key": "woodscaffolding",
+  "name": "Wood Scaffolding",
+  "nameJa": null,
+  "nameJaSource": null,
+  "itemId": null,
+  "category": "Structures",
+  "stackSize": 100,
+  "weight": 4,
+  "blueprint": "\"Blueprint'/Game/Pac ks/Frontier/Structures/Scaffolding/Prima lItemStructure_Wall_Scaffolding PrimalIt emStructure_Wall_Scaffolding'\"",
+  "crafting": {
+   "category": "Structures",
+   "requiredLevel": 12,
+   "engramPoints": 0,
+   "craftingTimeSec": null,
+   "craftedIn": [
+    "Inventory"
+   ],
+   "ingredients": [
+    {
+     "name": "Wood or Fungal Wood",
+     "qty": 40
+    },
+    {
+     "name": "Thatch",
+     "qty": 10
+    },
+    {
+     "name": "Fiber",
+     "qty": 7
     }
    ]
   }

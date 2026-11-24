@@ -10267,10 +10267,11 @@
    }
   },
   "ja": {
-   "drops": "例:生肉?、皮?",
-   "tamingMethod": "例:テイム可、テイムは通常の手法",
-   "foodPriority": "例:Mejoberry < 農作物 < Basic kibble",
-   "rideable": "例:騎乗不可",
+   "temperament": "中立",
+   "drops": "生肉、皮",
+   "tamingMethod": "特殊テイム",
+   "foodPriority": "-",
+   "rideable": "可能",
    "saddleLevel": "-"
   },
   "sources": {
@@ -28327,8 +28328,9 @@
    "diet": "肉食",
    "breedingNote": "可。ただしベールウィンが産まれる",
    "drops": "生肉、皮、純粋なヴァルパイト（特定条件下）",
-   "tamingMethod": "可。ただし野生個体のテイムはできない",
-   "foodPriority": "ベールウィンに無傷のヴァルパイトを与える"
+   "tamingMethod": "進化テイム",
+   "foodPriority": "ベールウィンに無傷のヴァルパイトを与える",
+   "rideable": "可能"
   },
   "sources": {
    "breeding": "asb",
@@ -28355,6 +28357,7 @@
   "saddleLevel": 26,
   "wildMaps": [
    "The Island",
+   "Scorched Earth",
    "Aberration",
    "Extinction",
    "Genesis: Part 1",
@@ -28364,7 +28367,9 @@
    "The Center",
    "Crystal Isles",
    "Lost Island",
-   "Fjordur"
+   "Fjordur",
+   "Astraeos",
+   "Lost Colony"
   ],
   "breeding": {
    "incubationSec": 9999.200195,
@@ -28502,7 +28507,7 @@
    }
   },
   "ja": {
-   "wildMaps": "The Island, The Center",
+   "wildMaps": "原種：The Island, Scorched Earth, Extinction, Lost Colony,Genesis: Part 1,The Center, Astraeos, Ragnarok, Valguero変種：Aberration, Astraeos, Valguero",
    "temperament": "中立",
    "diet": "草食",
    "breedingNote": "卵生。キブル(通常)の素材。",
@@ -28515,7 +28520,7 @@
    "breeding": "dv",
    "taming": "dv+tamingTable",
    "stats": "asb+ja+cargo",
-   "wildMaps": "cargo",
+   "wildMaps": "cargo+ja",
    "ja": "wikiwiki",
    "nameJa": "arkja"
   }
